@@ -1,6 +1,6 @@
 ﻿namespace MoyoData
 {
-    partial class Form1
+    partial class PaginaPrincipal
     {
         /// <summary>
         /// Required designer variable.
