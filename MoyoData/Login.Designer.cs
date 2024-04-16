@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -159,12 +160,22 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(574, 90);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panelIzquierdo);
@@ -192,5 +203,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelLine;
+        private System.Windows.Forms.Button button1;
     }
 }
