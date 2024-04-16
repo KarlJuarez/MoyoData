@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace MoyoData
 {
-    public partial class Form1 : System.Windows.Forms.Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
-
-
     }
 }
