@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MoyoData
 {
-    public partial class Form3 : Form
+    public partial class SalidaProducto : Form
     {
-        public Form3()
+        public SalidaProducto()
         {
             InitializeComponent();
         }
