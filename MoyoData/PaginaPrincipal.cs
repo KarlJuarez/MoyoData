@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoyoData.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace MoyoData
 {
     public partial class PaginaPrincipal : System.Windows.Forms.Form
     {
-        public PaginaPrincipal()
+        Usuario usuario;
+        public PaginaPrincipal(Usuario usuario)
         {
+            this.usuario = usuario;
             InitializeComponent();
+            MessageBox.Show(usuario.usuario);
         }
 
 

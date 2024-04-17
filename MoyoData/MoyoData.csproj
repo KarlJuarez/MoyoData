@@ -112,6 +112,7 @@
     <Compile Include="EntradaProducto.Designer.cs">
       <DependentUpon>EntradaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="SalidaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,7 +157,6 @@
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
