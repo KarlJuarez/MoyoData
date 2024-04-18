@@ -28,10 +28,9 @@ namespace MoyoData
         //---------------------------------------------------------------------
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string resultado = "";
             string nombreUsuario = TbxCorreo.Text;
             string password = TbxPassword.Text;
-            string rol = "";
+            //string rol = "";
             MySqlDataReader mySqlDataReader = null;
             string consulta = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
 
@@ -43,7 +42,7 @@ namespace MoyoData
 
                 if (!mySqlDataReader.HasRows)
                 {
-                    mySqlDataReader = null;
+                    mySqlDataReader.Close();
                     MessageBox.Show("No se encontraron resultados.");
                 }
                 else
@@ -56,8 +55,10 @@ namespace MoyoData
                             if (usuario.rol == "1")
                             { 
                                 MessageBox.Show("Validación exitosa.");
+                                mySqlDataReader.Close();
                                 PaginaPrincipal paginaPrincipal = new PaginaPrincipal(usuario);
                                 paginaPrincipal.Show();
+                                break;
                             }
                             else
                             {
@@ -68,13 +69,12 @@ namespace MoyoData
                         {
                             MessageBox.Show("Constraseña incorrecta.");
                         }                        
-                        
                     }
                 }
             }
             else 
             {
-                MessageBox.Show("Ayudaaaaaaaaaaaaaa");
+                MessageBox.Show("Error al conectar la base de datos.");
             }
         }
     }
