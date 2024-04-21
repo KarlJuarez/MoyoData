@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 
 namespace MoyoData
 {
@@ -30,68 +31,94 @@ namespace MoyoData
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
             // Validación
-            if (TbxUsuario.Text != "Usuario")
+            if (TbxUsuario.Text == "Usuario")
             {
-                if (TbxPassword.Text != "Contraseña")
+                MensajeError("Usuario obligatorio");
+                return;
+            }
+
+            if (TbxPassword.Text == "Contraseña")
+            {
+                MensajeError("Contraseña obligatoria");
+                return;
+            }
+
+            if (conexion.Conectar () == null)
+            {
+                MessageBox.Show("Error al conectar la base de datos.");
+                return;
+            }
+                
+            //Entidades a usar.
+            string nombreUsuario = TbxUsuario.Text;
+            string password = GenerarSHA1(TbxPassword.Text);
+            //string rol = ""; Se tiene planeado tener distintas vistas dependiendo el rol.
+            MySqlDataReader mySqlDataReader = null;
+            string consulta = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+            mySqlCommand.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (!mySqlDataReader.HasRows)
+            {
+                mySqlDataReader.Close();
+                MessageBox.Show("No se encontraron resultados.");
+                return;
+            }
+            
+            while (mySqlDataReader.Read())
+            {
+                usuario = new Usuario(mySqlDataReader["usuario"].ToString(), mySqlDataReader["password"].ToString(), mySqlDataReader["troles_idrol"].ToString());
+
+                if (password != usuario.password)
                 {
-                    string nombreUsuario = TbxUsuario.Text;
-                    string password = TbxPassword.Text;
-                    //string rol = "";
-                    MySqlDataReader mySqlDataReader = null;
-                    string consulta = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
+                    MessageBox.Show("Constraseña incorrecta.");
+                    mySqlDataReader.Close();
+                    return;
+                }
 
-                    if (conexion.Conectar() != null)
-                    {
-                        MySqlCommand mySqlCommand = new MySqlCommand(consulta);
-                        mySqlCommand.Connection = conexion.Conectar();
-                        mySqlDataReader = mySqlCommand.ExecuteReader();
-
-                        if (!mySqlDataReader.HasRows)
-                        {
-                            mySqlDataReader.Close();
-                            MessageBox.Show("No se encontraron resultados.");
-                        }
-                        else
-                        {
-                            while (mySqlDataReader.Read())
-                            {
-                                usuario = new Usuario(mySqlDataReader["usuario"].ToString(), mySqlDataReader["password"].ToString(), mySqlDataReader["troles_idrol"].ToString());
-                                if (password == usuario.password)
-                                {
-                                    if (usuario.rol == "1")
-                                    {
-                                        MessageBox.Show("Validación exitosa.");
-                                        mySqlDataReader.Close();
-                                        PaginaPrincipal paginaPrincipal = new PaginaPrincipal(usuario);
-                                        paginaPrincipal.Show();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Usted no es administrador.");
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Constraseña incorrecta.");
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al conectar la base de datos.");
-                    }
+                if (usuario.rol == "1")
+                {
+                    MessageBox.Show("Validación exitosa.");
+                    mySqlDataReader.Close();
+                    PaginaPrincipal paginaPrincipal = new PaginaPrincipal(usuario);
+                    paginaPrincipal.Show();
+                    return;
                 }
                 else
                 {
-                    MensajeError("Contraseña obligatoria");
+                    MessageBox.Show("Usted no es administrador.");
+                    mySqlDataReader.Close();
+                    return;
                 }
             }
-            else
+        }
+
+        //---------------------------------------------------------------------
+        //Función que cifra la contraseña.
+        //---------------------------------------------------------------------
+        private string GenerarSHA1(string cadena)
+        {
+            UTF8Encoding enc = new UTF8Encoding();
+            byte[] data = enc.GetBytes(cadena);
+            byte[] resultado;
+
+            SHA1CryptoServiceProvider sha = new SHA1CryptoServiceProvider();
+
+            resultado = sha.ComputeHash(data);
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < resultado.Length; i++)
             {
-                MensajeError("Usuario obligatorio");
+                if (resultado[i] < 16)
+                {
+                    sb.Append("0");
+                }
+                sb.Append(resultado[i].ToString("x"));
             }
+
+            return sb.ToString();
         }
 
         //--------------------------------
