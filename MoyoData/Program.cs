@@ -16,7 +16,7 @@ namespace MoyoData
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EntradaProducto());
+            Application.Run(new Form());
         }
     }
 }
