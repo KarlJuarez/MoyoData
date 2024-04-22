@@ -10,17 +10,19 @@ using System.Windows.Forms;
 
 namespace MoyoData
 {
-    public partial class Form1 : System.Windows.Forms.Form
+    public partial class SalidaProducto : Form
     {
         bool sidebarExpand = false;
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
             sidebar.Width = sidebar.MinimumSize.Width;
         }
 
+
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
+
             if (sidebarExpand)
             {
                 sidebar.Width -= 10;

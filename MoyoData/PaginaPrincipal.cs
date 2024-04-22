@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace MoyoData
 {
-    public partial class Form2 : Form
+    public partial class PaginaPrincipal : System.Windows.Forms.Form
     {
         bool sidebarExpand = false;
-        public Form2()
+        public Form1()
         {
             InitializeComponent();
             sidebar.Width = sidebar.MinimumSize.Width;
