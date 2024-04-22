@@ -409,7 +409,7 @@
             this.LblFechaExpedicion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LblFechaExpedicion.Location = new System.Drawing.Point(190, 128);
             this.LblFechaExpedicion.Name = "LblFechaExpedicion";
-            this.LblFechaExpedicion.Size = new System.Drawing.Size(113, 36);
+            this.LblFechaExpedicion.Size = new System.Drawing.Size(90, 29);
             this.LblFechaExpedicion.TabIndex = 1;
             this.LblFechaExpedicion.Text = "Fecha ";
             // 
@@ -420,7 +420,7 @@
             this.LblSProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LblSProducto.Location = new System.Drawing.Point(188, 42);
             this.LblSProducto.Name = "LblSProducto";
-            this.LblSProducto.Size = new System.Drawing.Size(560, 48);
+            this.LblSProducto.Size = new System.Drawing.Size(448, 38);
             this.LblSProducto.TabIndex = 0;
             this.LblSProducto.Text = "ENTRADA DE PRODUCTO";
             this.LblSProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

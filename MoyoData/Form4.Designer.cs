@@ -146,10 +146,10 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::MoyoData.Properties.Resources._5_icon__plus_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-24, 0);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 50);
+            this.button1.Size = new System.Drawing.Size(221, 50);
             this.button1.TabIndex = 3;
             this.button1.Text = "     Agregar producto";
             this.button1.UseVisualStyleBackColor = false;
@@ -275,7 +275,7 @@
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::MoyoData.Properties.Resources._1icon__menu_;
             this.menuButton.Location = new System.Drawing.Point(13, 70);
-            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(39, 27);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -301,7 +301,7 @@
             this.button4.Image = global::MoyoData.Properties.Resources.icon__add_user_;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(-3, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(245, 63);
@@ -327,7 +327,7 @@
             this.button6.Image = global::MoyoData.Properties.Resources.Inv;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(-3, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(245, 63);
@@ -354,7 +354,7 @@
             this.button7.Image = global::MoyoData.Properties.Resources.car2_icon__add_user_;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(-3, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.button7.Size = new System.Drawing.Size(245, 63);
@@ -380,7 +380,7 @@
             this.button8.Image = global::MoyoData.Properties.Resources.truck;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(-3, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(245, 63);
@@ -391,7 +391,7 @@
             // panel5
             // 
             this.panel5.Location = new System.Drawing.Point(4, 469);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(241, 218);
             this.panel5.TabIndex = 7;
@@ -405,7 +405,7 @@
             this.button5.Image = global::MoyoData.Properties.Resources.exit_left;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(4, 695);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(245, 63);
@@ -424,7 +424,7 @@
             this.PnlFondo.Controls.Add(this.panel1);
             this.PnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnlFondo.Location = new System.Drawing.Point(245, 0);
-            this.PnlFondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PnlFondo.Margin = new System.Windows.Forms.Padding(4);
             this.PnlFondo.Name = "PnlFondo";
             this.PnlFondo.Size = new System.Drawing.Size(1664, 921);
             this.PnlFondo.TabIndex = 9;
