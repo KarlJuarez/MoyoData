@@ -35,7 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnTrabajador = new System.Windows.Forms.Button();
-            this.TxtContraseña = new System.Windows.Forms.TextBox();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
             this.LblContraseña = new System.Windows.Forms.Label();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.LblApellido = new System.Windows.Forms.Label();
@@ -151,7 +151,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.TxtNombre);
             this.panel1.Controls.Add(this.BtnTrabajador);
-            this.panel1.Controls.Add(this.TxtContraseña);
+            this.panel1.Controls.Add(this.TxtPassword);
             this.panel1.Controls.Add(this.LblContraseña);
             this.panel1.Controls.Add(this.TxtApellido);
             this.panel1.Controls.Add(this.LblApellido);
@@ -189,19 +189,20 @@
             this.BtnTrabajador.TabIndex = 9;
             this.BtnTrabajador.Text = "Registrar";
             this.BtnTrabajador.UseVisualStyleBackColor = false;
+            this.BtnTrabajador.Click += new System.EventHandler(this.BtnTrabajador_Click);
             // 
-            // TxtContraseña
+            // TxtPassword
             // 
-            this.TxtContraseña.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.TxtContraseña.Location = new System.Drawing.Point(729, 327);
-            this.TxtContraseña.Multiline = true;
-            this.TxtContraseña.Name = "TxtContraseña";
-            this.TxtContraseña.Size = new System.Drawing.Size(345, 50);
-            this.TxtContraseña.TabIndex = 8;
-            this.TxtContraseña.Text = "Ingrese la contraseña";
+            this.TxtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.TxtPassword.Location = new System.Drawing.Point(729, 327);
+            this.TxtPassword.Multiline = true;
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(345, 50);
+            this.TxtPassword.TabIndex = 8;
+            this.TxtPassword.Text = "Ingrese la contraseña";
             // 
             // LblContraseña
             // 
@@ -805,6 +806,7 @@
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
             // Form1
+
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -816,7 +818,7 @@
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PnlTitulo);
-            this.Name = "Form1";
+            this.Name = "PaginaPrincipal";
             this.Text = "RegistroT";
             this.PnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBoxMenu)).EndInit();
@@ -855,7 +857,7 @@
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.TextBox TxtCorreo;
         private System.Windows.Forms.Label LblCorreo;
-        private System.Windows.Forms.TextBox TxtContraseña;
+        private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.Label LblContraseña;
         private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.Label LblApellido;
