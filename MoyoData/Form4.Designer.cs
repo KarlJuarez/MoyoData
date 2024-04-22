@@ -1,6 +1,6 @@
 ﻿namespace MoyoData
 {
-    partial class SalidaProducto
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TxtFecha = new System.Windows.Forms.TextBox();
-            this.BtnTrabajador = new System.Windows.Forms.Button();
-            this.TxtProducto = new System.Windows.Forms.TextBox();
-            this.LblProducto = new System.Windows.Forms.Label();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
-            this.LblUsuario = new System.Windows.Forms.Label();
-            this.TxtCantidad = new System.Windows.Forms.TextBox();
-            this.LblCantidad = new System.Windows.Forms.Label();
-            this.LblFechaExpedicion = new System.Windows.Forms.Label();
-            this.LblSProducto = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlTitulo = new System.Windows.Forms.Panel();
             this.PBoxLogo = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
@@ -56,9 +56,11 @@
             this.button8 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.PnlFondo = new System.Windows.Forms.Panel();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.PnlFondo = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxLogo)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -73,155 +75,156 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.TxtFecha);
-            this.panel1.Controls.Add(this.BtnTrabajador);
-            this.panel1.Controls.Add(this.TxtProducto);
-            this.panel1.Controls.Add(this.LblProducto);
-            this.panel1.Controls.Add(this.TxtUsuario);
-            this.panel1.Controls.Add(this.LblUsuario);
-            this.panel1.Controls.Add(this.TxtCantidad);
-            this.panel1.Controls.Add(this.LblCantidad);
-            this.panel1.Controls.Add(this.LblFechaExpedicion);
-            this.panel1.Controls.Add(this.LblSProducto);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(3, 156);
+            this.panel1.Location = new System.Drawing.Point(3, 192);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2227, 874);
-            this.panel1.TabIndex = 4;
+            this.panel1.Size = new System.Drawing.Size(3715, 1641);
+            this.panel1.TabIndex = 6;
             // 
-            // TxtFecha
+            // button2
             // 
-            this.TxtFecha.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.TxtFecha.Location = new System.Drawing.Point(195, 175);
-            this.TxtFecha.Multiline = true;
-            this.TxtFecha.Name = "TxtFecha";
-            this.TxtFecha.Size = new System.Drawing.Size(345, 50);
-            this.TxtFecha.TabIndex = 10;
-            this.TxtFecha.Text = "Ingrese la fecha";
+            this.button2.AutoSize = true;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::MoyoData.Properties.Resources._2_icon__trash_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(1253, 78);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(245, 50);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "     Eliminar producto";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // BtnTrabajador
+            // button3
             // 
-            this.BtnTrabajador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
-            this.BtnTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTrabajador.ForeColor = System.Drawing.Color.White;
-            this.BtnTrabajador.Location = new System.Drawing.Point(1096, 428);
-            this.BtnTrabajador.Name = "BtnTrabajador";
-            this.BtnTrabajador.Size = new System.Drawing.Size(173, 53);
-            this.BtnTrabajador.TabIndex = 9;
-            this.BtnTrabajador.Text = "Registrar";
-            this.BtnTrabajador.UseVisualStyleBackColor = false;
+            this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::MoyoData.Properties.Resources._2_icon__edit_pencil_;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(1504, 78);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 50);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "    Editar";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // TxtProducto
+            // panel2
             // 
-            this.TxtProducto.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.TxtProducto.Location = new System.Drawing.Point(729, 327);
-            this.TxtProducto.Multiline = true;
-            this.TxtProducto.Name = "TxtProducto";
-            this.TxtProducto.Size = new System.Drawing.Size(345, 50);
-            this.TxtProducto.TabIndex = 8;
-            this.TxtProducto.Text = "Ingrese el producto";
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(1027, 78);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(221, 50);
+            this.panel2.TabIndex = 4;
             // 
-            // LblProducto
+            // button1
             // 
-            this.LblProducto.AutoSize = true;
-            this.LblProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblProducto.Location = new System.Drawing.Point(724, 287);
-            this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(114, 29);
-            this.LblProducto.TabIndex = 7;
-            this.LblProducto.Text = "Producto";
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::MoyoData.Properties.Resources._5_icon__plus_;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(221, 50);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "     Agregar producto";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // TxtUsuario
+            // dataGridView1
             // 
-            this.TxtUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.TxtUsuario.Location = new System.Drawing.Point(729, 175);
-            this.TxtUsuario.Multiline = true;
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(345, 50);
-            this.TxtUsuario.TabIndex = 6;
-            this.TxtUsuario.Text = "Ingrese al usuario";
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(37)))), ((int)(((byte)(28)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(37)))), ((int)(((byte)(28)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgvProducto,
+            this.DgvCategoria,
+            this.DgvStock,
+            this.DgvDescripcion});
+            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.dataGridView1.Location = new System.Drawing.Point(49, 160);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1581, 250);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabStop = false;
             // 
-            // LblUsuario
+            // DgvProducto
             // 
-            this.LblUsuario.AutoSize = true;
-            this.LblUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblUsuario.Location = new System.Drawing.Point(724, 128);
-            this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(100, 29);
-            this.LblUsuario.TabIndex = 5;
-            this.LblUsuario.Text = "Usuario";
+            this.DgvProducto.HeaderText = "Producto";
+            this.DgvProducto.MinimumWidth = 6;
+            this.DgvProducto.Name = "DgvProducto";
             // 
-            // TxtCantidad
+            // DgvCategoria
             // 
-            this.TxtCantidad.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.TxtCantidad.Location = new System.Drawing.Point(195, 327);
-            this.TxtCantidad.Multiline = true;
-            this.TxtCantidad.Name = "TxtCantidad";
-            this.TxtCantidad.Size = new System.Drawing.Size(345, 50);
-            this.TxtCantidad.TabIndex = 4;
-            this.TxtCantidad.Text = "Ingrese la Cantidad";
+            this.DgvCategoria.HeaderText = "Categoria";
+            this.DgvCategoria.MinimumWidth = 6;
+            this.DgvCategoria.Name = "DgvCategoria";
             // 
-            // LblCantidad
+            // DgvStock
             // 
-            this.LblCantidad.AutoSize = true;
-            this.LblCantidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblCantidad.Location = new System.Drawing.Point(190, 280);
-            this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(114, 29);
-            this.LblCantidad.TabIndex = 3;
-            this.LblCantidad.Text = "Cantidad";
+            this.DgvStock.HeaderText = "Stock";
+            this.DgvStock.MinimumWidth = 6;
+            this.DgvStock.Name = "DgvStock";
             // 
-            // LblFechaExpedicion
+            // DgvDescripcion
             // 
-            this.LblFechaExpedicion.AutoSize = true;
-            this.LblFechaExpedicion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblFechaExpedicion.Location = new System.Drawing.Point(190, 128);
-            this.LblFechaExpedicion.Name = "LblFechaExpedicion";
-            this.LblFechaExpedicion.Size = new System.Drawing.Size(246, 29);
-            this.LblFechaExpedicion.TabIndex = 1;
-            this.LblFechaExpedicion.Text = "Fecha de expedición";
-            // 
-            // LblSProducto
-            // 
-            this.LblSProducto.AutoSize = true;
-            this.LblSProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblSProducto.Location = new System.Drawing.Point(188, 42);
-            this.LblSProducto.Name = "LblSProducto";
-            this.LblSProducto.Size = new System.Drawing.Size(405, 38);
-            this.LblSProducto.TabIndex = 0;
-            this.LblSProducto.Text = "SALIDA DE PRODUCTO";
-            this.LblSProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DgvDescripcion.HeaderText = "Descripción";
+            this.DgvDescripcion.MinimumWidth = 6;
+            this.DgvDescripcion.Name = "DgvDescripcion";
             // 
             // PnlTitulo
             // 
-            this.PnlTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlTitulo.BackColor = System.Drawing.Color.White;
             this.PnlTitulo.Controls.Add(this.PBoxLogo);
-            this.PnlTitulo.Location = new System.Drawing.Point(3, 3);
+            this.PnlTitulo.Location = new System.Drawing.Point(3, 22);
+            this.PnlTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnlTitulo.Name = "PnlTitulo";
-            this.PnlTitulo.Size = new System.Drawing.Size(5498, 114);
-            this.PnlTitulo.TabIndex = 3;
+            this.PnlTitulo.Size = new System.Drawing.Size(3715, 145);
+            this.PnlTitulo.TabIndex = 5;
             // 
             // PBoxLogo
             // 
             this.PBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.PBoxLogo.Image = global::MoyoData.Properties.Resources.Group_3;
-            this.PBoxLogo.Location = new System.Drawing.Point(473, 36);
+            this.PBoxLogo.Location = new System.Drawing.Point(684, 34);
+            this.PBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PBoxLogo.Name = "PBoxLogo";
             this.PBoxLogo.Size = new System.Drawing.Size(415, 44);
             this.PBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +247,7 @@
             this.sidebar.MinimumSize = new System.Drawing.Size(61, 865);
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(245, 865);
-            this.sidebar.TabIndex = 9;
+            this.sidebar.TabIndex = 8;
             // 
             // panel3
             // 
@@ -253,14 +256,14 @@
             this.panel3.Location = new System.Drawing.Point(3, 2);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(243, 158);
+            this.panel3.Size = new System.Drawing.Size(243, 193);
             this.panel3.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 47);
+            this.label1.Location = new System.Drawing.Point(72, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 40);
@@ -271,7 +274,7 @@
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::MoyoData.Properties.Resources._1icon__menu_;
-            this.menuButton.Location = new System.Drawing.Point(13, 50);
+            this.menuButton.Location = new System.Drawing.Point(13, 70);
             this.menuButton.Margin = new System.Windows.Forms.Padding(4);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(39, 27);
@@ -283,7 +286,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.button4);
-            this.panel4.Location = new System.Drawing.Point(3, 164);
+            this.panel4.Location = new System.Drawing.Point(3, 199);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(243, 63);
@@ -309,7 +312,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.button6);
-            this.panel6.Location = new System.Drawing.Point(3, 231);
+            this.panel6.Location = new System.Drawing.Point(3, 266);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(243, 63);
@@ -336,7 +339,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.button7);
-            this.panel7.Location = new System.Drawing.Point(3, 298);
+            this.panel7.Location = new System.Drawing.Point(3, 333);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(243, 63);
@@ -362,7 +365,7 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.button8);
-            this.panel8.Location = new System.Drawing.Point(3, 365);
+            this.panel8.Location = new System.Drawing.Point(3, 400);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(243, 63);
@@ -387,7 +390,7 @@
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(4, 434);
+            this.panel5.Location = new System.Drawing.Point(4, 469);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(241, 218);
@@ -401,7 +404,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = global::MoyoData.Properties.Resources.exit_left;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(4, 660);
+            this.button5.Location = new System.Drawing.Point(4, 695);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
@@ -410,32 +413,37 @@
             this.button5.Text = "Cerrar sesión";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // PnlFondo
-            // 
-            this.PnlFondo.Controls.Add(this.PnlTitulo);
-            this.PnlFondo.Controls.Add(this.panel1);
-            this.PnlFondo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlFondo.Location = new System.Drawing.Point(245, 0);
-            this.PnlFondo.Name = "PnlFondo";
-            this.PnlFondo.Size = new System.Drawing.Size(4344, 860);
-            this.PnlFondo.TabIndex = 10;
-            // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // Form3
+            // PnlFondo
+            // 
+            this.PnlFondo.Controls.Add(this.PnlTitulo);
+            this.PnlFondo.Controls.Add(this.panel1);
+            this.PnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlFondo.Location = new System.Drawing.Point(245, 0);
+            this.PnlFondo.Margin = new System.Windows.Forms.Padding(4);
+            this.PnlFondo.Name = "PnlFondo";
+            this.PnlFondo.Size = new System.Drawing.Size(1664, 921);
+            this.PnlFondo.TabIndex = 9;
+            // 
+            // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1687, 860);
+            this.ClientSize = new System.Drawing.Size(1909, 921);
             this.Controls.Add(this.PnlFondo);
             this.Controls.Add(this.sidebar);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form4";
+            this.Text = "Form4";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.PnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBoxLogo)).EndInit();
             this.sidebar.ResumeLayout(false);
@@ -454,22 +462,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox TxtFecha;
-        private System.Windows.Forms.Button BtnTrabajador;
-        private System.Windows.Forms.TextBox TxtProducto;
-        private System.Windows.Forms.Label LblProducto;
-        private System.Windows.Forms.TextBox TxtUsuario;
-        private System.Windows.Forms.Label LblUsuario;
-        private System.Windows.Forms.TextBox TxtCantidad;
-        private System.Windows.Forms.Label LblCantidad;
-        private System.Windows.Forms.Label LblFechaExpedicion;
-        private System.Windows.Forms.Label LblSProducto;
         private System.Windows.Forms.Panel PnlTitulo;
         private System.Windows.Forms.PictureBox PBoxLogo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgvProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgvCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgvStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgvDescripcion;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox menuButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel6;
@@ -480,7 +485,9 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel PnlFondo;
+        private System.Windows.Forms.PictureBox menuButton;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.Panel PnlFondo;
     }
 }
