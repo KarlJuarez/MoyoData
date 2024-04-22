@@ -32,7 +32,6 @@
             this.PBoxMenu = new System.Windows.Forms.PictureBox();
             this.PBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TxtFecha = new System.Windows.Forms.TextBox();
             this.BtnTrabajador = new System.Windows.Forms.Button();
             this.TxtProducto = new System.Windows.Forms.TextBox();
             this.LblProducto = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.LblCantidad = new System.Windows.Forms.Label();
             this.LblFecha = new System.Windows.Forms.Label();
             this.LblEProducto = new System.Windows.Forms.Label();
+            this.DtpFecha = new System.Windows.Forms.DateTimePicker();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxLogo)).BeginInit();
@@ -85,7 +85,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.TxtFecha);
+            this.panel1.Controls.Add(this.DtpFecha);
             this.panel1.Controls.Add(this.BtnTrabajador);
             this.panel1.Controls.Add(this.TxtProducto);
             this.panel1.Controls.Add(this.LblProducto);
@@ -100,19 +100,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1339, 514);
             this.panel1.TabIndex = 2;
-            // 
-            // TxtFecha
-            // 
-            this.TxtFecha.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.TxtFecha.Location = new System.Drawing.Point(195, 175);
-            this.TxtFecha.Multiline = true;
-            this.TxtFecha.Name = "TxtFecha";
-            this.TxtFecha.Size = new System.Drawing.Size(345, 50);
-            this.TxtFecha.TabIndex = 10;
-            this.TxtFecha.Text = "Ingrese la fecha";
             // 
             // BtnTrabajador
             // 
@@ -217,14 +204,21 @@
             this.LblEProducto.Text = "ENTRADA DE PRODUCTO";
             this.LblEProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Form2
+            // DtpFecha
+            // 
+            this.DtpFecha.Location = new System.Drawing.Point(195, 175);
+            this.DtpFecha.Name = "DtpFecha";
+            this.DtpFecha.Size = new System.Drawing.Size(345, 36);
+            this.DtpFecha.TabIndex = 11;
+            // 
+            // EntradaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1476, 764);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PnlTitulo);
-            this.Name = "Form2";
+            this.Name = "EntradaProducto";
             this.Text = "Form2";
             this.PnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBoxMenu)).EndInit();
@@ -241,7 +235,6 @@
         private System.Windows.Forms.PictureBox PBoxMenu;
         private System.Windows.Forms.PictureBox PBoxLogo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox TxtFecha;
         private System.Windows.Forms.Button BtnTrabajador;
         private System.Windows.Forms.TextBox TxtProducto;
         private System.Windows.Forms.Label LblProducto;
@@ -251,5 +244,6 @@
         private System.Windows.Forms.Label LblCantidad;
         private System.Windows.Forms.Label LblFecha;
         private System.Windows.Forms.Label LblEProducto;
+        private System.Windows.Forms.DateTimePicker DtpFecha;
     }
 }
