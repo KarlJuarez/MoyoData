@@ -29,7 +29,7 @@ namespace MoyoData
         //---------------------------------------------------------------------
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string nombreUsuario = TbxCorreo.Text;
+            string nombreUsuario = TbxUsuario.Text;
             string password = TbxPassword.Text;
             //string rol = "";
             MySqlDataReader mySqlDataReader = null;

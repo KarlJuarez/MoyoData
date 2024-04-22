@@ -612,7 +612,7 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // Form2
+            // EntradaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -621,7 +621,7 @@
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PnlTitulo);
-            this.Name = "Form2";
+            this.Name = "EntradaProducto";
             this.Text = "Form2";
             this.PnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBoxMenu)).EndInit();
