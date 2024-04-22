@@ -39,8 +39,8 @@
             this.LblContraseña = new System.Windows.Forms.Label();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.LblApellido = new System.Windows.Forms.Label();
-            this.TxtCorreo = new System.Windows.Forms.TextBox();
-            this.LblCorreo = new System.Windows.Forms.Label();
+            this.TxtConfirmarPassword = new System.Windows.Forms.TextBox();
+            this.LblConfirmarPassword = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblRegistro = new System.Windows.Forms.Label();
             this.PnlFondo = new System.Windows.Forms.Panel();
@@ -155,8 +155,8 @@
             this.panel1.Controls.Add(this.LblContraseña);
             this.panel1.Controls.Add(this.TxtApellido);
             this.panel1.Controls.Add(this.LblApellido);
-            this.panel1.Controls.Add(this.TxtCorreo);
-            this.panel1.Controls.Add(this.LblCorreo);
+            this.panel1.Controls.Add(this.TxtConfirmarPassword);
+            this.panel1.Controls.Add(this.LblConfirmarPassword);
             this.panel1.Controls.Add(this.LblNombre);
             this.panel1.Controls.Add(this.LblRegistro);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,7 +197,7 @@
             this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.TxtPassword.Location = new System.Drawing.Point(729, 327);
+            this.TxtPassword.Location = new System.Drawing.Point(195, 317);
             this.TxtPassword.Multiline = true;
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(345, 50);
@@ -208,7 +208,7 @@
             // 
             this.LblContraseña.AutoSize = true;
             this.LblContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblContraseña.Location = new System.Drawing.Point(724, 287);
+            this.LblContraseña.Location = new System.Drawing.Point(190, 270);
             this.LblContraseña.Name = "LblContraseña";
             this.LblContraseña.Size = new System.Drawing.Size(143, 29);
             this.LblContraseña.TabIndex = 7;
@@ -237,28 +237,28 @@
             this.LblApellido.TabIndex = 5;
             this.LblApellido.Text = "Apellido";
             // 
-            // TxtCorreo
+            // TxtConfirmarPassword
             // 
-            this.TxtCorreo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.TxtCorreo.Location = new System.Drawing.Point(195, 327);
-            this.TxtCorreo.Multiline = true;
-            this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(318, 50);
-            this.TxtCorreo.TabIndex = 4;
-            this.TxtCorreo.Text = "Ingrese el Correo";
+            this.TxtConfirmarPassword.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtConfirmarPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtConfirmarPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtConfirmarPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.TxtConfirmarPassword.Location = new System.Drawing.Point(729, 317);
+            this.TxtConfirmarPassword.Multiline = true;
+            this.TxtConfirmarPassword.Name = "TxtConfirmarPassword";
+            this.TxtConfirmarPassword.Size = new System.Drawing.Size(345, 50);
+            this.TxtConfirmarPassword.TabIndex = 4;
+            this.TxtConfirmarPassword.Text = "Ingrese el Correo";
             // 
-            // LblCorreo
+            // LblConfirmarPassword
             // 
-            this.LblCorreo.AutoSize = true;
-            this.LblCorreo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblCorreo.Location = new System.Drawing.Point(190, 280);
-            this.LblCorreo.Name = "LblCorreo";
-            this.LblCorreo.Size = new System.Drawing.Size(89, 29);
-            this.LblCorreo.TabIndex = 3;
-            this.LblCorreo.Text = "Correo";
+            this.LblConfirmarPassword.AutoSize = true;
+            this.LblConfirmarPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblConfirmarPassword.Location = new System.Drawing.Point(724, 270);
+            this.LblConfirmarPassword.Name = "LblConfirmarPassword";
+            this.LblConfirmarPassword.Size = new System.Drawing.Size(256, 29);
+            this.LblConfirmarPassword.TabIndex = 3;
+            this.LblConfirmarPassword.Text = "Confirmar contraseña";
             // 
             // LblNombre
             // 
@@ -855,8 +855,8 @@
         private System.Windows.Forms.PictureBox PBoxMenu;
         private System.Windows.Forms.Label LblRegistro;
         private System.Windows.Forms.Label LblNombre;
-        private System.Windows.Forms.TextBox TxtCorreo;
-        private System.Windows.Forms.Label LblCorreo;
+        private System.Windows.Forms.TextBox TxtConfirmarPassword;
+        private System.Windows.Forms.Label LblConfirmarPassword;
         private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.Label LblContraseña;
         private System.Windows.Forms.TextBox TxtApellido;
