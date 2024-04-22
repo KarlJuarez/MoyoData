@@ -1,6 +1,7 @@
 ﻿using MoyoData.Models;
 using MySql.Data.MySqlClient;
 using System;
+using System.Drawing;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -13,13 +14,13 @@ namespace MoyoData
 
         Usuario usuario;
         BaseDeDatos conexion;
-        public PaginaPrincipal(Usuario usuario)
+        public PaginaPrincipal()
 
         {
-            this.usuario = usuario;
+            //this.usuario = usuario;
             InitializeComponent();
             sidebar.Width = sidebar.MinimumSize.Width;
-            MessageBox.Show(usuario.usuario);
+            //MessageBox.Show(usuario.usuario);
             conexion = new BaseDeDatos();
         }
 

@@ -82,7 +82,7 @@ namespace MoyoData
                 {
                     MessageBox.Show("Validación exitosa.");
                     mySqlDataReader.Close();
-                    PaginaPrincipal paginaPrincipal = new PaginaPrincipal(usuario);
+                    PaginaPrincipal paginaPrincipal = new PaginaPrincipal();
                     paginaPrincipal.Show();
                     return;
                 }

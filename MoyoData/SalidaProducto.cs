@@ -13,7 +13,7 @@ namespace MoyoData
     public partial class SalidaProducto : Form
     {
         bool sidebarExpand = false;
-        public Form3()
+        public SalidaProducto()
         {
             InitializeComponent();
             sidebar.Width = sidebar.MinimumSize.Width;

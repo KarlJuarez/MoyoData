@@ -45,32 +45,32 @@
             this.LblRegistro = new System.Windows.Forms.Label();
             this.PnlFondo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PtbLogo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.LblFechaExpedicion = new System.Windows.Forms.Label();
-            this.LblSProducto = new System.Windows.Forms.Label();
+            this.TbxNombreTrabajador = new System.Windows.Forms.TextBox();
+            this.BtnRegistrarTrabajador = new System.Windows.Forms.Button();
+            this.TbxPasswordTrabajador = new System.Windows.Forms.TextBox();
+            this.LblPasswordTrabajador = new System.Windows.Forms.Label();
+            this.TbxApellidoTrabajador = new System.Windows.Forms.TextBox();
+            this.LblApellidoTrabajador = new System.Windows.Forms.Label();
+            this.TbxRolTrabajador = new System.Windows.Forms.TextBox();
+            this.LblRolTrabajador = new System.Windows.Forms.Label();
+            this.LblNombreTrabajador = new System.Windows.Forms.Label();
+            this.LblRegistrarTrabajador = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.menuButton = new System.Windows.Forms.PictureBox();
+            this.LblNombreYRol = new System.Windows.Forms.Label();
+            this.BtnDesplegarMenu = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnMenuRegistrarTrabajador = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BtnMenuInventario = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnMenuEntradaProducto = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.BtnMenuSalidaProducto = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.BtnMenuCerrarSesion = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.TxtFecha = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -92,11 +92,11 @@
             this.panel1.SuspendLayout();
             this.PnlFondo.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbLogo)).BeginInit();
             this.panel3.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnDesplegarMenu)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -297,157 +297,157 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.PtbLogo);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5498, 114);
             this.panel2.TabIndex = 3;
             // 
-            // pictureBox1
+            // PtbLogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::MoyoData.Properties.Resources.Group_3;
-            this.pictureBox1.Location = new System.Drawing.Point(473, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(415, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PtbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PtbLogo.Image = global::MoyoData.Properties.Resources.Group_3;
+            this.PtbLogo.Location = new System.Drawing.Point(473, 36);
+            this.PtbLogo.Name = "PtbLogo";
+            this.PtbLogo.Size = new System.Drawing.Size(415, 44);
+            this.PtbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbLogo.TabIndex = 0;
+            this.PtbLogo.TabStop = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.LblFechaExpedicion);
-            this.panel3.Controls.Add(this.LblSProducto);
+            this.panel3.Controls.Add(this.TbxNombreTrabajador);
+            this.panel3.Controls.Add(this.BtnRegistrarTrabajador);
+            this.panel3.Controls.Add(this.TbxPasswordTrabajador);
+            this.panel3.Controls.Add(this.LblPasswordTrabajador);
+            this.panel3.Controls.Add(this.TbxApellidoTrabajador);
+            this.panel3.Controls.Add(this.LblApellidoTrabajador);
+            this.panel3.Controls.Add(this.TbxRolTrabajador);
+            this.panel3.Controls.Add(this.LblRolTrabajador);
+            this.panel3.Controls.Add(this.LblNombreTrabajador);
+            this.panel3.Controls.Add(this.LblRegistrarTrabajador);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(3, 156);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(2227, 874);
             this.panel3.TabIndex = 4;
             // 
-            // textBox1
+            // TbxNombreTrabajador
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.textBox1.Location = new System.Drawing.Point(195, 175);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 50);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Ingrese el nombre";
+            this.TbxNombreTrabajador.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TbxNombreTrabajador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbxNombreTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxNombreTrabajador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.TbxNombreTrabajador.Location = new System.Drawing.Point(195, 175);
+            this.TbxNombreTrabajador.Multiline = true;
+            this.TbxNombreTrabajador.Name = "TbxNombreTrabajador";
+            this.TbxNombreTrabajador.Size = new System.Drawing.Size(345, 50);
+            this.TbxNombreTrabajador.TabIndex = 10;
+            this.TbxNombreTrabajador.Text = "Ingrese el nombre";
             // 
-            // button1
+            // BtnRegistrarTrabajador
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1096, 428);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 53);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnRegistrarTrabajador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
+            this.BtnRegistrarTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrarTrabajador.ForeColor = System.Drawing.Color.White;
+            this.BtnRegistrarTrabajador.Location = new System.Drawing.Point(1096, 428);
+            this.BtnRegistrarTrabajador.Name = "BtnRegistrarTrabajador";
+            this.BtnRegistrarTrabajador.Size = new System.Drawing.Size(173, 53);
+            this.BtnRegistrarTrabajador.TabIndex = 9;
+            this.BtnRegistrarTrabajador.Text = "Registrar";
+            this.BtnRegistrarTrabajador.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // TbxPasswordTrabajador
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.textBox2.Location = new System.Drawing.Point(729, 327);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(345, 50);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "Ingrese la contraseña";
+            this.TbxPasswordTrabajador.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TbxPasswordTrabajador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbxPasswordTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxPasswordTrabajador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.TbxPasswordTrabajador.Location = new System.Drawing.Point(729, 327);
+            this.TbxPasswordTrabajador.Multiline = true;
+            this.TbxPasswordTrabajador.Name = "TbxPasswordTrabajador";
+            this.TbxPasswordTrabajador.Size = new System.Drawing.Size(345, 50);
+            this.TbxPasswordTrabajador.TabIndex = 8;
+            this.TbxPasswordTrabajador.Text = "Ingrese la contraseña";
             // 
-            // label1
+            // LblPasswordTrabajador
             // 
-            this.label1.AutoSize = true;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(724, 287);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 29);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Contraseña";
+            this.LblPasswordTrabajador.AutoSize = true;
+            this.LblPasswordTrabajador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblPasswordTrabajador.Location = new System.Drawing.Point(724, 287);
+            this.LblPasswordTrabajador.Name = "LblPasswordTrabajador";
+            this.LblPasswordTrabajador.Size = new System.Drawing.Size(143, 29);
+            this.LblPasswordTrabajador.TabIndex = 7;
+            this.LblPasswordTrabajador.Text = "Contraseña";
             // 
-            // textBox3
+            // TbxApellidoTrabajador
             // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.textBox3.Location = new System.Drawing.Point(729, 175);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(345, 50);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "Ingrese el apellido";
+            this.TbxApellidoTrabajador.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TbxApellidoTrabajador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbxApellidoTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxApellidoTrabajador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.TbxApellidoTrabajador.Location = new System.Drawing.Point(729, 175);
+            this.TbxApellidoTrabajador.Multiline = true;
+            this.TbxApellidoTrabajador.Name = "TbxApellidoTrabajador";
+            this.TbxApellidoTrabajador.Size = new System.Drawing.Size(345, 50);
+            this.TbxApellidoTrabajador.TabIndex = 6;
+            this.TbxApellidoTrabajador.Text = "Ingrese el apellido";
             // 
-            // label2
+            // LblApellidoTrabajador
             // 
-            this.label2.AutoSize = true;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(724, 128);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 29);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Apellido";
+            this.LblApellidoTrabajador.AutoSize = true;
+            this.LblApellidoTrabajador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblApellidoTrabajador.Location = new System.Drawing.Point(724, 128);
+            this.LblApellidoTrabajador.Name = "LblApellidoTrabajador";
+            this.LblApellidoTrabajador.Size = new System.Drawing.Size(104, 29);
+            this.LblApellidoTrabajador.TabIndex = 5;
+            this.LblApellidoTrabajador.Text = "Apellido";
             // 
-            // textBox4
+            // TbxRolTrabajador
             // 
-            this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.textBox4.Location = new System.Drawing.Point(195, 327);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(345, 50);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "Ingrese la Cantidad";
+            this.TbxRolTrabajador.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TbxRolTrabajador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbxRolTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxRolTrabajador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.TbxRolTrabajador.Location = new System.Drawing.Point(195, 327);
+            this.TbxRolTrabajador.Multiline = true;
+            this.TbxRolTrabajador.Name = "TbxRolTrabajador";
+            this.TbxRolTrabajador.Size = new System.Drawing.Size(345, 50);
+            this.TbxRolTrabajador.TabIndex = 4;
+            this.TbxRolTrabajador.Text = "Ingrese la Cantidad";
             // 
-            // label3
+            // LblRolTrabajador
             // 
-            this.label3.AutoSize = true;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(190, 280);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 29);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Rol encargado";
+            this.LblRolTrabajador.AutoSize = true;
+            this.LblRolTrabajador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblRolTrabajador.Location = new System.Drawing.Point(190, 280);
+            this.LblRolTrabajador.Name = "LblRolTrabajador";
+            this.LblRolTrabajador.Size = new System.Drawing.Size(177, 29);
+            this.LblRolTrabajador.TabIndex = 3;
+            this.LblRolTrabajador.Text = "Rol encargado";
             // 
-            // LblFechaExpedicion
+            // LblNombreTrabajador
             // 
-            this.LblFechaExpedicion.AutoSize = true;
-            this.LblFechaExpedicion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblFechaExpedicion.Location = new System.Drawing.Point(190, 128);
-            this.LblFechaExpedicion.Name = "LblFechaExpedicion";
-            this.LblFechaExpedicion.Size = new System.Drawing.Size(103, 29);
-            this.LblFechaExpedicion.TabIndex = 1;
-            this.LblFechaExpedicion.Text = "Nombre";
+            this.LblNombreTrabajador.AutoSize = true;
+            this.LblNombreTrabajador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblNombreTrabajador.Location = new System.Drawing.Point(190, 128);
+            this.LblNombreTrabajador.Name = "LblNombreTrabajador";
+            this.LblNombreTrabajador.Size = new System.Drawing.Size(103, 29);
+            this.LblNombreTrabajador.TabIndex = 1;
+            this.LblNombreTrabajador.Text = "Nombre";
             // 
-            // LblSProducto
+            // LblRegistrarTrabajador
             // 
-            this.LblSProducto.AutoSize = true;
-            this.LblSProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblSProducto.Location = new System.Drawing.Point(188, 42);
-            this.LblSProducto.Name = "LblSProducto";
-            this.LblSProducto.Size = new System.Drawing.Size(461, 38);
-            this.LblSProducto.TabIndex = 0;
-            this.LblSProducto.Text = "REGISTRAR TRABAJADOR";
-            this.LblSProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblRegistrarTrabajador.AutoSize = true;
+            this.LblRegistrarTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRegistrarTrabajador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblRegistrarTrabajador.Location = new System.Drawing.Point(188, 42);
+            this.LblRegistrarTrabajador.Name = "LblRegistrarTrabajador";
+            this.LblRegistrarTrabajador.Size = new System.Drawing.Size(461, 38);
+            this.LblRegistrarTrabajador.TabIndex = 0;
+            this.LblRegistrarTrabajador.Text = "REGISTRAR TRABAJADOR";
+            this.LblRegistrarTrabajador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // sidebar
             // 
@@ -457,7 +457,7 @@
             this.sidebar.Controls.Add(this.panel7);
             this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel9);
-            this.sidebar.Controls.Add(this.button5);
+            this.sidebar.Controls.Add(this.BtnMenuCerrarSesion);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Margin = new System.Windows.Forms.Padding(3, 2, 7, 2);
@@ -469,142 +469,142 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.menuButton);
+            this.panel4.Controls.Add(this.LblNombreYRol);
+            this.panel4.Controls.Add(this.BtnDesplegarMenu);
             this.panel4.Location = new System.Drawing.Point(3, 2);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(243, 158);
             this.panel4.TabIndex = 9;
             // 
-            // label4
+            // LblNombreYRol
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(72, 47);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 40);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "EMILIO MORALES\r\nAdministrador";
+            this.LblNombreYRol.AutoSize = true;
+            this.LblNombreYRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombreYRol.Location = new System.Drawing.Point(72, 47);
+            this.LblNombreYRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblNombreYRol.Name = "LblNombreYRol";
+            this.LblNombreYRol.Size = new System.Drawing.Size(152, 40);
+            this.LblNombreYRol.TabIndex = 1;
+            this.LblNombreYRol.Text = "EMILIO MORALES\r\nAdministrador";
             // 
-            // menuButton
+            // BtnDesplegarMenu
             // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::MoyoData.Properties.Resources._1icon__menu_;
-            this.menuButton.Location = new System.Drawing.Point(13, 50);
-            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(39, 27);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuButton.TabIndex = 2;
-            this.menuButton.TabStop = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            this.BtnDesplegarMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDesplegarMenu.Image = global::MoyoData.Properties.Resources._1icon__menu_;
+            this.BtnDesplegarMenu.Location = new System.Drawing.Point(13, 50);
+            this.BtnDesplegarMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnDesplegarMenu.Name = "BtnDesplegarMenu";
+            this.BtnDesplegarMenu.Size = new System.Drawing.Size(39, 27);
+            this.BtnDesplegarMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnDesplegarMenu.TabIndex = 2;
+            this.BtnDesplegarMenu.TabStop = false;
+            this.BtnDesplegarMenu.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.BtnMenuRegistrarTrabajador);
             this.panel5.Location = new System.Drawing.Point(3, 164);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(243, 63);
             this.panel5.TabIndex = 9;
             // 
-            // button4
+            // BtnMenuRegistrarTrabajador
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::MoyoData.Properties.Resources.icon__add_user_;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-3, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(245, 63);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "    Registrar trabajador";
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnMenuRegistrarTrabajador.BackColor = System.Drawing.Color.White;
+            this.BtnMenuRegistrarTrabajador.FlatAppearance.BorderSize = 0;
+            this.BtnMenuRegistrarTrabajador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMenuRegistrarTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMenuRegistrarTrabajador.Image = global::MoyoData.Properties.Resources.icon__add_user_;
+            this.BtnMenuRegistrarTrabajador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMenuRegistrarTrabajador.Location = new System.Drawing.Point(-3, 0);
+            this.BtnMenuRegistrarTrabajador.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnMenuRegistrarTrabajador.Name = "BtnMenuRegistrarTrabajador";
+            this.BtnMenuRegistrarTrabajador.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.BtnMenuRegistrarTrabajador.Size = new System.Drawing.Size(245, 63);
+            this.BtnMenuRegistrarTrabajador.TabIndex = 7;
+            this.BtnMenuRegistrarTrabajador.Text = "    Registrar trabajador";
+            this.BtnMenuRegistrarTrabajador.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.BtnMenuInventario);
             this.panel6.Location = new System.Drawing.Point(3, 231);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(243, 63);
             this.panel6.TabIndex = 10;
             // 
-            // button6
+            // BtnMenuInventario
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::MoyoData.Properties.Resources.Inv;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-3, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(245, 63);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "          Inventario";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
+            this.BtnMenuInventario.BackColor = System.Drawing.Color.White;
+            this.BtnMenuInventario.FlatAppearance.BorderSize = 0;
+            this.BtnMenuInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMenuInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMenuInventario.Image = global::MoyoData.Properties.Resources.Inv;
+            this.BtnMenuInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMenuInventario.Location = new System.Drawing.Point(-3, 0);
+            this.BtnMenuInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnMenuInventario.Name = "BtnMenuInventario";
+            this.BtnMenuInventario.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.BtnMenuInventario.Size = new System.Drawing.Size(245, 63);
+            this.BtnMenuInventario.TabIndex = 7;
+            this.BtnMenuInventario.Text = "          Inventario";
+            this.BtnMenuInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMenuInventario.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button7);
+            this.panel7.Controls.Add(this.BtnMenuEntradaProducto);
             this.panel7.Location = new System.Drawing.Point(3, 298);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(243, 63);
             this.panel7.TabIndex = 11;
             // 
-            // button7
+            // BtnMenuEntradaProducto
             // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = global::MoyoData.Properties.Resources.car2_icon__add_user_;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(-3, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(245, 63);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "    Entrada de producto";
-            this.button7.UseVisualStyleBackColor = false;
+            this.BtnMenuEntradaProducto.BackColor = System.Drawing.Color.White;
+            this.BtnMenuEntradaProducto.FlatAppearance.BorderSize = 0;
+            this.BtnMenuEntradaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMenuEntradaProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMenuEntradaProducto.Image = global::MoyoData.Properties.Resources.car2_icon__add_user_;
+            this.BtnMenuEntradaProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMenuEntradaProducto.Location = new System.Drawing.Point(-3, 0);
+            this.BtnMenuEntradaProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnMenuEntradaProducto.Name = "BtnMenuEntradaProducto";
+            this.BtnMenuEntradaProducto.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.BtnMenuEntradaProducto.Size = new System.Drawing.Size(245, 63);
+            this.BtnMenuEntradaProducto.TabIndex = 7;
+            this.BtnMenuEntradaProducto.Text = "    Entrada de producto";
+            this.BtnMenuEntradaProducto.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button8);
+            this.panel8.Controls.Add(this.BtnMenuSalidaProducto);
             this.panel8.Location = new System.Drawing.Point(3, 365);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(243, 63);
             this.panel8.TabIndex = 12;
             // 
-            // button8
+            // BtnMenuSalidaProducto
             // 
-            this.button8.BackColor = System.Drawing.Color.White;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Image = global::MoyoData.Properties.Resources.truck;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(-3, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(245, 63);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "  Salida de producto";
-            this.button8.UseVisualStyleBackColor = false;
+            this.BtnMenuSalidaProducto.BackColor = System.Drawing.Color.White;
+            this.BtnMenuSalidaProducto.FlatAppearance.BorderSize = 0;
+            this.BtnMenuSalidaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMenuSalidaProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMenuSalidaProducto.Image = global::MoyoData.Properties.Resources.truck;
+            this.BtnMenuSalidaProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMenuSalidaProducto.Location = new System.Drawing.Point(-3, 0);
+            this.BtnMenuSalidaProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnMenuSalidaProducto.Name = "BtnMenuSalidaProducto";
+            this.BtnMenuSalidaProducto.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.BtnMenuSalidaProducto.Size = new System.Drawing.Size(245, 63);
+            this.BtnMenuSalidaProducto.TabIndex = 7;
+            this.BtnMenuSalidaProducto.Text = "  Salida de producto";
+            this.BtnMenuSalidaProducto.UseVisualStyleBackColor = false;
             // 
             // panel9
             // 
@@ -614,22 +614,22 @@
             this.panel9.Size = new System.Drawing.Size(241, 218);
             this.panel9.TabIndex = 7;
             // 
-            // button5
+            // BtnMenuCerrarSesion
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = global::MoyoData.Properties.Resources.exit_left;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(4, 660);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(245, 63);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Cerrar sesión";
-            this.button5.UseVisualStyleBackColor = false;
+            this.BtnMenuCerrarSesion.BackColor = System.Drawing.Color.White;
+            this.BtnMenuCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.BtnMenuCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMenuCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMenuCerrarSesion.Image = global::MoyoData.Properties.Resources.exit_left;
+            this.BtnMenuCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMenuCerrarSesion.Location = new System.Drawing.Point(4, 660);
+            this.BtnMenuCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnMenuCerrarSesion.Name = "BtnMenuCerrarSesion";
+            this.BtnMenuCerrarSesion.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.BtnMenuCerrarSesion.Size = new System.Drawing.Size(245, 63);
+            this.BtnMenuCerrarSesion.TabIndex = 13;
+            this.BtnMenuCerrarSesion.Text = "Cerrar sesión";
+            this.BtnMenuCerrarSesion.UseVisualStyleBackColor = false;
             // 
             // panel10
             // 
@@ -805,8 +805,7 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // Form1
-
+            // PaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -827,13 +826,13 @@
             this.panel1.PerformLayout();
             this.PnlFondo.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbLogo)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.sidebar.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnDesplegarMenu)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -865,32 +864,32 @@
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Panel PnlFondo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PtbLogo;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LblFechaExpedicion;
-        private System.Windows.Forms.Label LblSProducto;
+        private System.Windows.Forms.TextBox TbxNombreTrabajador;
+        private System.Windows.Forms.Button BtnRegistrarTrabajador;
+        private System.Windows.Forms.TextBox TbxPasswordTrabajador;
+        private System.Windows.Forms.Label LblPasswordTrabajador;
+        private System.Windows.Forms.TextBox TbxApellidoTrabajador;
+        private System.Windows.Forms.Label LblApellidoTrabajador;
+        private System.Windows.Forms.TextBox TbxRolTrabajador;
+        private System.Windows.Forms.Label LblRolTrabajador;
+        private System.Windows.Forms.Label LblNombreTrabajador;
+        private System.Windows.Forms.Label LblRegistrarTrabajador;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox menuButton;
+        private System.Windows.Forms.Label LblNombreYRol;
+        private System.Windows.Forms.PictureBox BtnDesplegarMenu;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnMenuRegistrarTrabajador;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BtnMenuInventario;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtnMenuEntradaProducto;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button BtnMenuSalidaProducto;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnMenuCerrarSesion;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox TxtFecha;
         private System.Windows.Forms.Button button2;

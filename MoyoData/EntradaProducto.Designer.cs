@@ -125,7 +125,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.DtpFecha);
             this.panel1.Controls.Add(this.BtnTrabajador);
             this.panel1.Controls.Add(this.TxtProducto);
             this.panel1.Controls.Add(this.LblProducto);
