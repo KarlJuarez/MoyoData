@@ -92,8 +92,10 @@ namespace MoyoData
                 {
                     MessageBox.Show("Validación exitosa.");
                     mySqlDataReader.Close();
-                    Registrar VentanaInicio = new Registrar();
-                    VentanaInicio.Show();
+                    VentanaInicio VentanaInicio = new VentanaInicio();
+                    this.Hide();
+                    VentanaInicio.ShowDialog();
+                    this.Close();
                     return;
                 }
                 else

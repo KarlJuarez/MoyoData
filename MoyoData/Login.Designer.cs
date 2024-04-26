@@ -29,42 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.PnlIzquierdo = new System.Windows.Forms.Panel();
             this.LblMensajeError = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelLine = new System.Windows.Forms.Label();
-            this.LinkLblRecuperarPassword = new System.Windows.Forms.LinkLabel();
+            this.LblGuionBajoPassword = new System.Windows.Forms.Label();
+            this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
             this.BtnIniciarSesion = new System.Windows.Forms.Button();
             this.TbxPassword = new System.Windows.Forms.TextBox();
             this.TbxUsuario = new System.Windows.Forms.TextBox();
             this.PbxNombreEmpresa = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
-            this.pictureBoxHormiga1 = new System.Windows.Forms.PictureBox();
-            this.panelIzquierdo.SuspendLayout();
+            this.PbxHormiga = new System.Windows.Forms.PictureBox();
+            this.LinkLblRecuperarPassword = new System.Windows.Forms.LinkLabel();
+            this.PnlIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHormiga1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxHormiga)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelIzquierdo
+            // PnlIzquierdo
             // 
-            this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.panelIzquierdo.Controls.Add(this.LblMensajeError);
-            this.panelIzquierdo.Controls.Add(this.label1);
-            this.panelIzquierdo.Controls.Add(this.labelLine);
-            this.panelIzquierdo.Controls.Add(this.LinkLblRecuperarPassword);
-            this.panelIzquierdo.Controls.Add(this.BtnIniciarSesion);
-            this.panelIzquierdo.Controls.Add(this.TbxPassword);
-            this.panelIzquierdo.Controls.Add(this.TbxUsuario);
-            this.panelIzquierdo.Controls.Add(this.PbxNombreEmpresa);
-            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(395, 330);
-            this.panelIzquierdo.TabIndex = 1;
-            this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
+            this.PnlIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.PnlIzquierdo.Controls.Add(this.LblMensajeError);
+            this.PnlIzquierdo.Controls.Add(this.LblGuionBajoPassword);
+            this.PnlIzquierdo.Controls.Add(this.LblGuionBajoUsuario);
+            this.PnlIzquierdo.Controls.Add(this.LinkLblRecuperarPassword);
+            this.PnlIzquierdo.Controls.Add(this.BtnIniciarSesion);
+            this.PnlIzquierdo.Controls.Add(this.TbxPassword);
+            this.PnlIzquierdo.Controls.Add(this.TbxUsuario);
+            this.PnlIzquierdo.Controls.Add(this.PbxNombreEmpresa);
+            this.PnlIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PnlIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.PnlIzquierdo.Name = "PnlIzquierdo";
+            this.PnlIzquierdo.Size = new System.Drawing.Size(395, 330);
+            this.PnlIzquierdo.TabIndex = 1;
+            this.PnlIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
             // LblMensajeError
             // 
@@ -79,43 +79,30 @@
             this.LblMensajeError.Text = "Mensaje de error";
             this.LblMensajeError.Visible = false;
             // 
-            // label1
+            // LblGuionBajoPassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 178);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "________________________________________";
+            this.LblGuionBajoPassword.AutoSize = true;
+            this.LblGuionBajoPassword.Location = new System.Drawing.Point(51, 178);
+            this.LblGuionBajoPassword.Name = "LblGuionBajoPassword";
+            this.LblGuionBajoPassword.Size = new System.Drawing.Size(287, 16);
+            this.LblGuionBajoPassword.TabIndex = 6;
+            this.LblGuionBajoPassword.Text = "________________________________________";
             // 
-            // labelLine
+            // LblGuionBajoUsuario
             // 
-            this.labelLine.AutoSize = true;
-            this.labelLine.Location = new System.Drawing.Point(51, 121);
-            this.labelLine.Name = "labelLine";
-            this.labelLine.Size = new System.Drawing.Size(287, 16);
-            this.labelLine.TabIndex = 5;
-            this.labelLine.Text = "________________________________________";
-            // 
-            // LinkLblRecuperarPassword
-            // 
-            this.LinkLblRecuperarPassword.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.LinkLblRecuperarPassword.AutoSize = true;
-            this.LinkLblRecuperarPassword.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLblRecuperarPassword.LinkColor = System.Drawing.Color.DimGray;
-            this.LinkLblRecuperarPassword.Location = new System.Drawing.Point(92, 306);
-            this.LinkLblRecuperarPassword.Name = "LinkLblRecuperarPassword";
-            this.LinkLblRecuperarPassword.Size = new System.Drawing.Size(182, 15);
-            this.LinkLblRecuperarPassword.TabIndex = 0;
-            this.LinkLblRecuperarPassword.TabStop = true;
-            this.LinkLblRecuperarPassword.Text = "¿Olvidaste tu contraseña?";
+            this.LblGuionBajoUsuario.AutoSize = true;
+            this.LblGuionBajoUsuario.Location = new System.Drawing.Point(51, 121);
+            this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
+            this.LblGuionBajoUsuario.Size = new System.Drawing.Size(287, 16);
+            this.LblGuionBajoUsuario.TabIndex = 5;
+            this.LblGuionBajoUsuario.Text = "________________________________________";
             // 
             // BtnIniciarSesion
             // 
             this.BtnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
             this.BtnIniciarSesion.FlatAppearance.BorderSize = 0;
             this.BtnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIniciarSesion.Font = new System.Drawing.Font("Rosario", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIniciarSesion.ForeColor = System.Drawing.Color.White;
             this.BtnIniciarSesion.Location = new System.Drawing.Point(85, 242);
             this.BtnIniciarSesion.Name = "BtnIniciarSesion";
@@ -123,17 +110,17 @@
             this.BtnIniciarSesion.TabIndex = 3;
             this.BtnIniciarSesion.Text = "Iniciar sesión";
             this.BtnIniciarSesion.UseVisualStyleBackColor = false;
-//            this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
+            this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
             // 
             // TbxPassword
             // 
             this.TbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.TbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TbxPassword.Font = new System.Drawing.Font("Rosario", 10F);
+            this.TbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TbxPassword.ForeColor = System.Drawing.Color.DimGray;
             this.TbxPassword.Location = new System.Drawing.Point(54, 161);
             this.TbxPassword.Name = "TbxPassword";
-            this.TbxPassword.Size = new System.Drawing.Size(289, 21);
+            this.TbxPassword.Size = new System.Drawing.Size(289, 19);
             this.TbxPassword.TabIndex = 2;
             this.TbxPassword.Text = "Contraseña";
             this.TbxPassword.Enter += new System.EventHandler(this.TbxPassword_Enter);
@@ -143,11 +130,11 @@
             // 
             this.TbxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.TbxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TbxUsuario.Font = new System.Drawing.Font("Rosario", 10F);
+            this.TbxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TbxUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.TbxUsuario.Location = new System.Drawing.Point(54, 104);
             this.TbxUsuario.Name = "TbxUsuario";
-            this.TbxUsuario.Size = new System.Drawing.Size(289, 21);
+            this.TbxUsuario.Size = new System.Drawing.Size(289, 19);
             this.TbxUsuario.TabIndex = 1;
             this.TbxUsuario.Text = "Usuario";
             this.TbxUsuario.Enter += new System.EventHandler(this.TbxUsuario_Enter);
@@ -185,15 +172,28 @@
             this.BtnMinimizar.TabStop = false;
             this.BtnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
             // 
-            // pictureBoxHormiga1
+            // PbxHormiga
             // 
-            this.pictureBoxHormiga1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHormiga1.Image")));
-            this.pictureBoxHormiga1.Location = new System.Drawing.Point(488, 73);
-            this.pictureBoxHormiga1.Name = "pictureBoxHormiga1";
-            this.pictureBoxHormiga1.Size = new System.Drawing.Size(217, 181);
-            this.pictureBoxHormiga1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxHormiga1.TabIndex = 4;
-            this.pictureBoxHormiga1.TabStop = false;
+            this.PbxHormiga.Image = ((System.Drawing.Image)(resources.GetObject("PbxHormiga.Image")));
+            this.PbxHormiga.Location = new System.Drawing.Point(488, 73);
+            this.PbxHormiga.Name = "PbxHormiga";
+            this.PbxHormiga.Size = new System.Drawing.Size(217, 181);
+            this.PbxHormiga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxHormiga.TabIndex = 4;
+            this.PbxHormiga.TabStop = false;
+            // 
+            // LinkLblRecuperarPassword
+            // 
+            this.LinkLblRecuperarPassword.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.LinkLblRecuperarPassword.AutoSize = true;
+            this.LinkLblRecuperarPassword.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLblRecuperarPassword.LinkColor = System.Drawing.Color.DimGray;
+            this.LinkLblRecuperarPassword.Location = new System.Drawing.Point(92, 306);
+            this.LinkLblRecuperarPassword.Name = "LinkLblRecuperarPassword";
+            this.LinkLblRecuperarPassword.Size = new System.Drawing.Size(182, 15);
+            this.LinkLblRecuperarPassword.TabIndex = 0;
+            this.LinkLblRecuperarPassword.TabStop = true;
+            this.LinkLblRecuperarPassword.Text = "¿Olvidaste tu contraseña?";
             // 
             // Login
             // 
@@ -201,38 +201,38 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
-            this.Controls.Add(this.pictureBoxHormiga1);
+            this.Controls.Add(this.PbxHormiga);
             this.Controls.Add(this.BtnMinimizar);
             this.Controls.Add(this.BtnCerrar);
-            this.Controls.Add(this.panelIzquierdo);
+            this.Controls.Add(this.PnlIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
-            this.panelIzquierdo.ResumeLayout(false);
-            this.panelIzquierdo.PerformLayout();
+            this.PnlIzquierdo.ResumeLayout(false);
+            this.PnlIzquierdo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHormiga1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxHormiga)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelIzquierdo;
+        private System.Windows.Forms.Panel PnlIzquierdo;
         private System.Windows.Forms.PictureBox PbxNombreEmpresa;
         private System.Windows.Forms.TextBox TbxUsuario;
         private System.Windows.Forms.TextBox TbxPassword;
         private System.Windows.Forms.Button BtnIniciarSesion;
-        private System.Windows.Forms.LinkLabel LinkLblRecuperarPassword;
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.PictureBox BtnMinimizar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelLine;
-        private System.Windows.Forms.PictureBox pictureBoxHormiga1;
+        private System.Windows.Forms.Label LblGuionBajoPassword;
+        private System.Windows.Forms.Label LblGuionBajoUsuario;
+        private System.Windows.Forms.PictureBox PbxHormiga;
         private System.Windows.Forms.Label LblMensajeError;
+        private System.Windows.Forms.LinkLabel LinkLblRecuperarPassword;
     }
 }

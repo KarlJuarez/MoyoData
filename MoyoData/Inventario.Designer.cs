@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PnlTitulo = new System.Windows.Forms.Panel();
             this.LblRegistrar = new System.Windows.Forms.Label();
             this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,7 @@
             this.ColumCantidadInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumTipoInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCategoriaInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumSeleccionInventario = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -183,20 +183,21 @@
             // 
             this.DgvProductos.AllowUserToAddRows = false;
             this.DgvProductos.AllowUserToDeleteRows = false;
+            this.DgvProductos.AllowUserToOrderColumns = true;
             this.DgvProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvProductos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(37)))), ((int)(((byte)(28)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(37)))), ((int)(((byte)(28)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(37)))), ((int)(((byte)(28)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(37)))), ((int)(((byte)(28)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumIDInventario,
@@ -206,6 +207,7 @@
             this.ColumTipoInventario,
             this.ColumCategoriaInventario,
             this.ColumSeleccionInventario});
+            this.DgvProductos.Cursor = System.Windows.Forms.Cursors.Default;
             this.DgvProductos.ImeMode = System.Windows.Forms.ImeMode.On;
             this.DgvProductos.Location = new System.Drawing.Point(26, 274);
             this.DgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -257,6 +259,8 @@
             this.ColumSeleccionInventario.HeaderText = "Selección";
             this.ColumSeleccionInventario.MinimumWidth = 6;
             this.ColumSeleccionInventario.Name = "ColumSeleccionInventario";
+            this.ColumSeleccionInventario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccionInventario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Inventario
             // 
@@ -302,6 +306,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidadInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumTipoInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCategoriaInventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumSeleccionInventario;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionInventario;
     }
 }

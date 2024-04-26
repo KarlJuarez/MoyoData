@@ -43,17 +43,15 @@ namespace MoyoData
         //--------------------------
         private void BtnRegistrarUsuario_Click(object sender, EventArgs e)
         {
+            //Validación.
+
+
+
             //Variables para ingresar usuario.
             string nombreUsuario = TbxRegistrarNombres.Text + " " + TbxRegistrarApellidos.Text;
             string password = GenerarSHA1(TbxRegistrarPassword.Text);
-            string conPassword = GenerarSHA1(TbxRegistrarPassword.Text); //TxtConfirmarPassword
-
-            //Validación.
-            if (conPassword != password)
-            {
-                MessageBox.Show("Las contraseñas no coinciden.");
-                return;
-            }
+            int rol = CbxRegistrarRol.SelectedIndex;
+            
 
             if (conexion.Conectar() == null)
             {
@@ -64,7 +62,7 @@ namespace MoyoData
             //Variables para la base de datos.
             MySqlDataReader mySqlDataReader = null;
             string consulta = "Insert Into tusuarios (usuario, password, troles_idrol) " +
-                "Values ('" + nombreUsuario + "', '" + password + "', 1)";
+                "Values ('" + nombreUsuario + "', '" + password + "', "+ rol.ToString() +")";
             string buscar = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
 
             //Generación de las consultas para buscar si existe el nombre.
