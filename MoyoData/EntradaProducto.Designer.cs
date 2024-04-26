@@ -41,19 +41,19 @@
             this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
             this.BtnEntradaProductoIngresar = new System.Windows.Forms.Button();
             this.DgvProductos = new System.Windows.Forms.DataGridView();
+            this.DgvProductosSeleccionados = new System.Windows.Forms.DataGridView();
+            this.ColumIDSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumProductoSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumCantidadSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TbxUsuarioEntradaProducto = new System.Windows.Forms.TextBox();
+            this.NumUDCantidadEntradaProducto = new System.Windows.Forms.NumericUpDown();
             this.ColumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvProductosSeleccionados = new System.Windows.Forms.DataGridView();
-            this.TbxUsuarioEntradaProducto = new System.Windows.Forms.TextBox();
-            this.NumUDCantidadEntradaProducto = new System.Windows.Forms.NumericUpDown();
-            this.ColumIDSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumProductoSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumCantidadSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumSeleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             this.PnlTitulo.SuspendLayout();
@@ -203,6 +203,56 @@
             this.DgvProductos.Size = new System.Drawing.Size(925, 257);
             this.DgvProductos.TabIndex = 14;
             // 
+            // DgvProductosSeleccionados
+            // 
+            this.DgvProductosSeleccionados.AllowUserToAddRows = false;
+            this.DgvProductosSeleccionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvProductosSeleccionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumIDSeleccionados,
+            this.ColumProductoSeleccionados,
+            this.ColumCantidadSeleccionados});
+            this.DgvProductosSeleccionados.Location = new System.Drawing.Point(716, 200);
+            this.DgvProductosSeleccionados.Name = "DgvProductosSeleccionados";
+            this.DgvProductosSeleccionados.RowHeadersWidth = 51;
+            this.DgvProductosSeleccionados.RowTemplate.Height = 24;
+            this.DgvProductosSeleccionados.Size = new System.Drawing.Size(424, 264);
+            this.DgvProductosSeleccionados.TabIndex = 15;
+            // 
+            // ColumIDSeleccionados
+            // 
+            this.ColumIDSeleccionados.HeaderText = "ID";
+            this.ColumIDSeleccionados.MinimumWidth = 6;
+            this.ColumIDSeleccionados.Name = "ColumIDSeleccionados";
+            this.ColumIDSeleccionados.Width = 125;
+            // 
+            // ColumProductoSeleccionados
+            // 
+            this.ColumProductoSeleccionados.HeaderText = "Producto";
+            this.ColumProductoSeleccionados.MinimumWidth = 6;
+            this.ColumProductoSeleccionados.Name = "ColumProductoSeleccionados";
+            this.ColumProductoSeleccionados.Width = 125;
+            // 
+            // ColumCantidadSeleccionados
+            // 
+            this.ColumCantidadSeleccionados.HeaderText = "Cantidad";
+            this.ColumCantidadSeleccionados.MinimumWidth = 6;
+            this.ColumCantidadSeleccionados.Name = "ColumCantidadSeleccionados";
+            this.ColumCantidadSeleccionados.Width = 125;
+            // 
+            // TbxUsuarioEntradaProducto
+            // 
+            this.TbxUsuarioEntradaProducto.Location = new System.Drawing.Point(393, 263);
+            this.TbxUsuarioEntradaProducto.Name = "TbxUsuarioEntradaProducto";
+            this.TbxUsuarioEntradaProducto.Size = new System.Drawing.Size(186, 22);
+            this.TbxUsuarioEntradaProducto.TabIndex = 16;
+            // 
+            // NumUDCantidadEntradaProducto
+            // 
+            this.NumUDCantidadEntradaProducto.Location = new System.Drawing.Point(89, 369);
+            this.NumUDCantidadEntradaProducto.Name = "NumUDCantidadEntradaProducto";
+            this.NumUDCantidadEntradaProducto.Size = new System.Drawing.Size(200, 22);
+            this.NumUDCantidadEntradaProducto.TabIndex = 17;
+            // 
             // ColumID
             // 
             this.ColumID.HeaderText = "ID";
@@ -250,57 +300,9 @@
             this.ColumSeleccion.HeaderText = "Selección";
             this.ColumSeleccion.MinimumWidth = 6;
             this.ColumSeleccion.Name = "ColumSeleccion";
+            this.ColumSeleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ColumSeleccion.Width = 125;
-            // 
-            // DgvProductosSeleccionados
-            // 
-            this.DgvProductosSeleccionados.AllowUserToAddRows = false;
-            this.DgvProductosSeleccionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvProductosSeleccionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumIDSeleccionados,
-            this.ColumProductoSeleccionados,
-            this.ColumCantidadSeleccionados});
-            this.DgvProductosSeleccionados.Location = new System.Drawing.Point(716, 200);
-            this.DgvProductosSeleccionados.Name = "DgvProductosSeleccionados";
-            this.DgvProductosSeleccionados.RowHeadersWidth = 51;
-            this.DgvProductosSeleccionados.RowTemplate.Height = 24;
-            this.DgvProductosSeleccionados.Size = new System.Drawing.Size(424, 264);
-            this.DgvProductosSeleccionados.TabIndex = 15;
-            // 
-            // TbxUsuarioEntradaProducto
-            // 
-            this.TbxUsuarioEntradaProducto.Location = new System.Drawing.Point(393, 263);
-            this.TbxUsuarioEntradaProducto.Name = "TbxUsuarioEntradaProducto";
-            this.TbxUsuarioEntradaProducto.Size = new System.Drawing.Size(186, 22);
-            this.TbxUsuarioEntradaProducto.TabIndex = 16;
-            // 
-            // NumUDCantidadEntradaProducto
-            // 
-            this.NumUDCantidadEntradaProducto.Location = new System.Drawing.Point(89, 369);
-            this.NumUDCantidadEntradaProducto.Name = "NumUDCantidadEntradaProducto";
-            this.NumUDCantidadEntradaProducto.Size = new System.Drawing.Size(200, 22);
-            this.NumUDCantidadEntradaProducto.TabIndex = 17;
-            // 
-            // ColumIDSeleccionados
-            // 
-            this.ColumIDSeleccionados.HeaderText = "ID";
-            this.ColumIDSeleccionados.MinimumWidth = 6;
-            this.ColumIDSeleccionados.Name = "ColumIDSeleccionados";
-            this.ColumIDSeleccionados.Width = 125;
-            // 
-            // ColumProductoSeleccionados
-            // 
-            this.ColumProductoSeleccionados.HeaderText = "Producto";
-            this.ColumProductoSeleccionados.MinimumWidth = 6;
-            this.ColumProductoSeleccionados.Name = "ColumProductoSeleccionados";
-            this.ColumProductoSeleccionados.Width = 125;
-            // 
-            // ColumCantidadSeleccionados
-            // 
-            this.ColumCantidadSeleccionados.HeaderText = "Cantidad";
-            this.ColumCantidadSeleccionados.MinimumWidth = 6;
-            this.ColumCantidadSeleccionados.Name = "ColumCantidadSeleccionados";
-            this.ColumCantidadSeleccionados.Width = 125;
             // 
             // EntradaProducto
             // 
@@ -349,18 +351,18 @@
         private System.Windows.Forms.Panel PnlTitulo;
         private System.Windows.Forms.Button BtnEntradaProductoIngresar;
         private System.Windows.Forms.DataGridView DgvProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumSeleccion;
         private System.Windows.Forms.DataGridView DgvProductosSeleccionados;
         private System.Windows.Forms.TextBox TbxUsuarioEntradaProducto;
         private System.Windows.Forms.NumericUpDown NumUDCantidadEntradaProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDSeleccionados;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumProductoSeleccionados;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidadSeleccionados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumCategoria;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccion;
     }
 }

@@ -155,7 +155,7 @@ namespace MoyoData
             // Variables
             int cantidad = Convert.ToInt32(NumUDCantidadEntradaProducto.Value);
             int totalSeleccion = DgvProductos.Rows.Cast<DataGridViewRow>().
-                Where(p => Convert.ToBoolean(p.Cells["Seleccion"].Value)).Count();
+                Where(p => Convert.ToBoolean(p.Cells["ColumSeleccion"].Value)).Count();
             int indice;
             int cantidadTotal;
 
@@ -163,32 +163,40 @@ namespace MoyoData
             {
                 foreach (DataGridViewRow row in DgvProductos.Rows)
                 {
-                    if (Convert.ToBoolean(row.Cells["Seleccion"].Value))
+                    if (Convert.ToBoolean(row.Cells["ColumSeleccion"].Value))
                     {
-                        if (Convert.ToInt32(row.Cells["Stock"].Value) < (cantidad + Convert.ToInt32(row.Cells["Cantidad"].Value)))
+                        if (Convert.ToInt32(row.Cells["ColumStock"].Value) < (cantidad + Convert.ToInt32(row.Cells["ColumCantidad"].Value)))
                         {
-                            MessageBox.Show("La cantidad del producto " + row.Cells["Producto"].Value + " es mayor al permitido en el almacén.");
+                            MessageBox.Show("La cantidad del producto " + row.Cells["ColumProducto"].Value + " es mayor al permitido en el almacén.");
                             continue;
                         }
 
                         if (DgvProductosSeleccionados.Rows.Count != 0)
                         {
-                            indice = BuscarEnDgv(DgvProductosSeleccionados, DgvProductosSeleccionados.Rows[row.Index].Cells["ProductoSeleccionado"].ColumnIndex, row.Cells["Producto"].Value.ToString());
-                            cantidadTotal = Convert.ToInt32(DgvProductosSeleccionados.Rows[indice].Cells["CantidadSeleccionado"].Value) + cantidad + Convert.ToInt32(row.Cells["Cantidad"].Value);
+                            indice = BuscarEnDgv(DgvProductosSeleccionados, DgvProductosSeleccionados.Columns["ColumProductoSeleccionados"].Index, row.Cells["ColumProducto"].Value.ToString());
 
-                            if (cantidadTotal > Convert.ToInt32(row.Cells["Stock"].Value))
+                            if (indice == -1)
                             {
-                                MessageBox.Show("La cantidad del producto" + row.Cells["Producto"].Value + " es mayor al permitido en el almacén.");
+                                DgvProductosSeleccionados.Rows.Add(row.Cells["ColumID"].Value, row.Cells["ColumProducto"].Value, cantidad);
+                                DgvProductos.Rows[row.Index].Cells["ColumSeleccion"].Value = false;
                                 continue;
                             }
 
-                            DgvProductosSeleccionados.Rows[indice].Cells["CantidadSeleccionado"].Value = cantidadTotal;
+                            cantidadTotal = Convert.ToInt32(DgvProductosSeleccionados.Rows[indice].Cells["ColumCantidadSeleccionados"].Value) + cantidad + Convert.ToInt32(row.Cells["ColumCantidad"].Value);
+
+                            if (cantidadTotal > Convert.ToInt32(row.Cells["ColumStock"].Value))
+                            {
+                                MessageBox.Show("La cantidad del producto" + row.Cells["ColumProducto"].Value + " es mayor al permitido en el almacén.");
+                                continue;
+                            }
+
+                            DgvProductosSeleccionados.Rows[indice].Cells["ColumCantidadSeleccionados"].Value = cantidadTotal;
                         }
                         else
                         {
-                            DgvProductosSeleccionados.Rows.Add(row.Cells["id"].Value, row.Cells["Producto"].Value, cantidad);
+                            DgvProductosSeleccionados.Rows.Add(row.Cells["ColumID"].Value, row.Cells["ColumProducto"].Value, cantidad);
                         }
-                        DgvProductos.Rows[row.Index].Cells["Seleccion"].Value = false;
+                        DgvProductos.Rows[row.Index].Cells["ColumSeleccion"].Value = false;
                     }
                 }
             }
@@ -281,12 +289,12 @@ namespace MoyoData
                 mySqlDataReader.Close();
                 foreach (DataGridViewRow row in DgvProductosSeleccionados.Rows)
                 {
-                    indiceProducto = Convert.ToInt32(row.Cells["idSeleccion"].Value);
-                    cantidadProducto = Convert.ToInt32(row.Cells["CantidadSeleccionado"].Value);
+                    indiceProducto = Convert.ToInt32(row.Cells["ColumIDSeleccionados"].Value);
+                    cantidadProducto = Convert.ToInt32(row.Cells["ColumCantidadSeleccionados"].Value);
                     int cantidadActualProducto;
 
                     consulta = "Insert Into TEntradaProductos_has_TProductos (TEntradaProductos_idEntradaProducto, TProductos_idProducto, CantidadProducto)" +
-                               "Values (" + indiceProducto.ToString() + ", " + indiceEntrada.ToString() + ", " + cantidadProducto.ToString() + ")";
+                               "Values (" + indiceEntrada.ToString() + ", " + indiceProducto.ToString() + ", " + cantidadProducto.ToString() + ")";
 
                     mySqlCommandInsertar = new MySqlCommand(consulta);
                     mySqlCommandInsertar.Connection = conexion.Conectar();

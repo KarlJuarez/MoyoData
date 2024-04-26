@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoyoData.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +18,13 @@ namespace MoyoData
         // ATRIBUTOS
         //-------------------------------------//
         bool SidebarExpand = true;
+        Usuario usuario;
 
-        public VentanaInicio()
+        public VentanaInicio(Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            LblMenu.Text = usuario.usuario;
         }
 
         #region Movimiento de la ventana
@@ -39,7 +43,9 @@ namespace MoyoData
         //--------------------------------
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
 
         //--------------------------------
@@ -166,5 +172,12 @@ namespace MoyoData
         }
         #endregion
 
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            usuario = null;
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }

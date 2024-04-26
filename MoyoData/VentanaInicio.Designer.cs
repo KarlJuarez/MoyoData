@@ -76,7 +76,7 @@
             // 
             this.LblMenu.AutoSize = true;
             this.LblMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMenu.Location = new System.Drawing.Point(94, 40);
+            this.LblMenu.Location = new System.Drawing.Point(112, 22);
             this.LblMenu.Name = "LblMenu";
             this.LblMenu.Size = new System.Drawing.Size(66, 28);
             this.LblMenu.TabIndex = 1;
@@ -266,6 +266,7 @@
             this.BtnCerrarSesion.Text = "           Cerrar Sesión";
             this.BtnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCerrarSesion.UseVisualStyleBackColor = true;
+            this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
             // VentanaInicio
             // 

@@ -151,38 +151,46 @@ namespace MoyoData
 
             int cantidad = Convert.ToInt32(NumUDCantidadSalidaProducto.Value);
             int totalSeleccion = DgvProductos.Rows.Cast<DataGridViewRow>().
-                Where(p => Convert.ToBoolean(p.Cells["Seleccion"].Value)).Count();
+                Where(p => Convert.ToBoolean(p.Cells["ColumSeleccion"].Value)).Count();
             int indice;
             int cantidadTotal;
             if (totalSeleccion >= 1)
             {
                 foreach (DataGridViewRow row in DgvProductos.Rows)
                 {
-                    if (Convert.ToBoolean(row.Cells["Seleccion"].Value))
+                    if (Convert.ToBoolean(row.Cells["ColumSeleccion"].Value))
                     {
-                        if (Convert.ToInt32(row.Cells["Cantidad"].Value) < cantidad)
+                        if (Convert.ToInt32(row.Cells["ColumLimite"].Value) < cantidad)
                         {
-                            MessageBox.Show("La cantidad del producto " + row.Cells["Producto"].Value + " es menor a la cantidad que se desea sacar.");
+                            MessageBox.Show("La cantidad del producto " + row.Cells["ColumProducto"].Value + " es menor a la cantidad que se desea sacar.");
                             continue;
                         }
 
                         if (DgvProductosSeleccionados.Rows.Count != 0)
                         {
-                            indice = BuscarEnDgv(DgvProductosSeleccionados, DgvProductosSeleccionados.Rows[row.Index].Cells["ProductoSeleccionado"].ColumnIndex, row.Cells["Producto"].Value.ToString());
-                            cantidadTotal = Convert.ToInt32(DgvProductosSeleccionados.Rows[indice].Cells["CantidadSeleccionado"].Value) + cantidad;
+                            indice = BuscarEnDgv(DgvProductosSeleccionados, DgvProductosSeleccionados.Columns["ColumProductosSeleccionados"].Index, row.Cells["ColumProducto"].Value.ToString());
 
-                            if (cantidadTotal > Convert.ToInt32(row.Cells["Cantidad"].Value) || cantidadTotal > Convert.ToInt32(row.Cells["Limite"].Value))
+                            if (indice == -1)
+                            {
+                                DgvProductosSeleccionados.Rows.Add(row.Cells["ColumID"].Value, row.Cells["ColumProducto"].Value, cantidad);
+                                DgvProductos.Rows[row.Index].Cells["ColumSeleccion"].Value = false;
+                                continue;
+                            }
+                            cantidadTotal = Convert.ToInt32(DgvProductosSeleccionados.Rows[indice].Cells["ColumCantidadSeleccionados"].Value) + cantidad;
+
+                            if (cantidadTotal > Convert.ToInt32(row.Cells["ColumLimite"].Value) || cantidadTotal > Convert.ToInt32(row.Cells["ColumLimite"].Value))
                             {
                                 MessageBox.Show("Debe de llevar menor cantidad de este producto");
                                 continue;
                             }
-                            DgvProductosSeleccionados.Rows[indice].Cells["CantidadSeleccionado"].Value = cantidadTotal;
+                            DgvProductosSeleccionados.Rows[indice].Cells["ColumCantidadSeleccionados"].Value = cantidadTotal;
+                            DgvProductos.Rows[row.Index].Cells["ColumSeleccion"].Value = false;
                         }
                         else
                         {
-                            DgvProductosSeleccionados.Rows.Add(row.Cells["id"].Value, row.Cells["Producto"].Value, cantidad);
+                            DgvProductosSeleccionados.Rows.Add(row.Cells["ColumID"].Value, row.Cells["ColumProducto"].Value, cantidad);
+                            DgvProductos.Rows[row.Index].Cells["ColumSeleccion"].Value = false;
                         }
-                        DgvProductos.Rows[row.Index].Cells["Seleccion"].Value = false;
                     }
                 }
             }
@@ -276,8 +284,8 @@ namespace MoyoData
                 mySqlDataReader.Close();
                 foreach (DataGridViewRow row in DgvProductosSeleccionados.Rows)
                 {
-                    indiceProducto = Convert.ToInt32(row.Cells["idSeleccion"].Value);
-                    cantidadProducto = Convert.ToInt32(row.Cells["CantidadSeleccionado"].Value);
+                    indiceProducto = Convert.ToInt32(row.Cells["ColumIDSeleccionados"].Value);
+                    cantidadProducto = Convert.ToInt32(row.Cells["ColumCantidadSeleccionados"].Value);
                     int cantidadActualProducto;
 
 
