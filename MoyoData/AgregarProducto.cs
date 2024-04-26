@@ -175,7 +175,6 @@ namespace MoyoData
                 mySqlCommandInsertar.ExecuteNonQuery();
                 MessageBox.Show("Se ha registrado el producto");
             }
-
         }
 
         private void CbxCategoriasAgregarProducto_SelectedIndexChanged(object sender, EventArgs e)

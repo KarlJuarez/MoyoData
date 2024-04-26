@@ -171,21 +171,62 @@ namespace MoyoData
                                             Convert.ToInt32(mySqlDataReader["LimiteSacarProducto"]),
                                             Convert.ToInt32(mySqlDataReader["TUnidadesMedidas_idUnidadMedida"]),
                                             Convert.ToInt32(mySqlDataReader["TTiposProductos_idTipoProducto"]));
-
+                    mySqlDataReader.Close();
                     EditarProductos editarProductos = new EditarProductos(producto);
                     editarProductos.ShowDialog();
                 }
             }
 
+            ActualizarTabla();
         }
         #endregion
+
+        //-----------------------------
+        // Actualizar tabla
+        //-----------------------------
+        private void ActualizarTabla()
+        {
+            DgvProductos.Rows.Clear();
+            SeleccionarProductos();
+        }
 
         //------------------------------------
         // Eliminar producto del inventario
         //------------------------------------
         private void BtnEliminarProductoInventario_Click(object sender, EventArgs e)
         {
+            MySqlDataReader mySqlDataReader = null;
+            Producto producto;
+            int id;
+            int totalSeleccion = DgvProductos.Rows.Cast<DataGridViewRow>().
+                Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionInventario"].Value)).Count();
+            if (totalSeleccion <= 0)
+            {
+                MessageBox.Show("Seleccione algún producto.");
+                return;
+            }
 
+            DialogResult result = MessageBox.Show("¿Quiéres borrar los productos?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                MessageBox.Show("Hola");
+                return;
+            }
+
+            foreach (DataGridViewRow row in DgvProductos.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells["ColumSeleccionInventario"].Value))
+                {
+                    id = Convert.ToInt32(row.Cells["ColumIDInventario"].Value);
+                    consulta = "Delete from TProductos where idProducto = " + id.ToString();
+                    MySqlCommand mySqlCommandBorrar = new MySqlCommand(consulta);
+                    mySqlCommandBorrar.Connection = conexion.Conectar();
+                    mySqlCommandBorrar.ExecuteNonQuery();
+                    
+                }
+            }
+            ActualizarTabla();
+            MessageBox.Show("Se ha borrado los producto");
         }
 
         private void BtnAgregarProductoInventario_Click(object sender, EventArgs e)
