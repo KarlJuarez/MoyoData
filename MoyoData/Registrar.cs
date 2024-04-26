@@ -18,15 +18,14 @@ namespace MoyoData
         //------------------------------//
         // ATRIBUTOS
         //------------------------------//
+        string consulta;
+        BaseDeDatos conexion = new BaseDeDatos();
         Usuario usuario;
-        BaseDeDatos conexion;
 
         public Registrar()
         {
-            //this.usuario = usuario;
             InitializeComponent();
-            //MessageBox.Show(usuario.usuario);
-            //conexion = new BaseDeDatos();
+            SeleccionarRoles();
         }
 
         //--------------------------
@@ -44,15 +43,40 @@ namespace MoyoData
         private void BtnRegistrarUsuario_Click(object sender, EventArgs e)
         {
             //Validación.
+            if (TbxRegistrarNombres.Text == "")
+            {
+                MessageBox.Show("Ingrese un nombre.");
+                return;
+            }
+
+            //Validación.
+            if (TbxRegistrarApellidos.Text == "")
+            {
+                MessageBox.Show("Ingrese un apellido.");
+                return;
+            }
+
+            //Validación.
+            if (TbxRegistrarPassword.Text == "")
+            {
+                MessageBox.Show("Ingrese una contraseña.");
+                return;
+            }
 
 
+            //Validación.
+            if (CbxRegistrarRol.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ingrese un rol.");
+                return;
+            }
 
             //Variables para ingresar usuario.
             string nombreUsuario = TbxRegistrarNombres.Text + " " + TbxRegistrarApellidos.Text;
             string password = GenerarSHA1(TbxRegistrarPassword.Text);
-            int rol = CbxRegistrarRol.SelectedIndex;
-            
+            int rol = CbxRegistrarRol.SelectedIndex + 1;
 
+            //Validación.
             if (conexion.Conectar() == null)
             {
                 MessageBox.Show("Error al conectar la base de datos.");
@@ -61,8 +85,8 @@ namespace MoyoData
 
             //Variables para la base de datos.
             MySqlDataReader mySqlDataReader = null;
-            string consulta = "Insert Into tusuarios (usuario, password, troles_idrol) " +
-                "Values ('" + nombreUsuario + "', '" + password + "', "+ rol.ToString() +")";
+            consulta = "Insert Into tusuarios (usuario, password, troles_idrol) " +
+                       "Values ('" + nombreUsuario + "', '" + password + "', " + rol + " )";
             string buscar = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
 
             //Generación de las consultas para buscar si existe el nombre.
@@ -85,9 +109,9 @@ namespace MoyoData
             }
         }
 
-        //-----------------------------------
-        // Función que cifra la contraseña
-        //-----------------------------------
+        //---------------------------------------------------------------------
+        //Función que cifra la contraseña.
+        //---------------------------------------------------------------------
         private string GenerarSHA1(string cadena)
         {
             UTF8Encoding enc = new UTF8Encoding();
@@ -110,5 +134,32 @@ namespace MoyoData
 
             return sb.ToString();
         }
+        //---------------------------------------------------------------------
+        //Función para mostrar las categorías.
+        //---------------------------------------------------------------------
+        private void SeleccionarRoles()
+        {
+            MySqlDataReader mySqlDataReader = null;
+            consulta = "Select rol from TRoles";
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+            mySqlCommand.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (!mySqlDataReader.HasRows)
+            {
+                mySqlDataReader.Close();
+                MessageBox.Show("No se encontraron roles");
+                return;
+            }
+
+            while (mySqlDataReader.Read())
+            {
+                CbxRegistrarRol.Items.Add(mySqlDataReader["Rol"].ToString());
+            }
+
+            mySqlDataReader.Close();
+        }
+
     }
 }
