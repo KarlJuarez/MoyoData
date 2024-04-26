@@ -25,9 +25,19 @@ namespace MoyoData
             conexion = new BaseDeDatos();
         }
 
-        //---------------------------------------------------------------------
-        //Botón para iniciar sesión.
-        //---------------------------------------------------------------------
+        //--------------------------------
+        // Importación para arrastrar
+        // ventana
+        //--------------------------------
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg,
+            int wparam, int lparam);
+
+        //-------------------------------
+        // Botón para iniciar sesión
+        //-------------------------------
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
             // Validación
@@ -82,8 +92,8 @@ namespace MoyoData
                 {
                     MessageBox.Show("Validación exitosa.");
                     mySqlDataReader.Close();
-                    PaginaPrincipal paginaPrincipal = new PaginaPrincipal();
-                    paginaPrincipal.Show();
+                    Registrar VentanaInicio = new Registrar();
+                    VentanaInicio.Show();
                     return;
                 }
                 else
@@ -121,16 +131,7 @@ namespace MoyoData
             return sb.ToString();
         }
 
-        //--------------------------------
-        // Importación para arrastrar
-        // ventana Login
-        //--------------------------------
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg,
-            int wparam, int lparam);
-
+        #region Movimiento de la ventana
         //--------------------------------
         // Cerrar ventana
         //--------------------------------
@@ -162,6 +163,9 @@ namespace MoyoData
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
+
+        #region Validacion de textboxes para iniciar sesion
         //-----------------------------------------------------
         // Resaltar cuando el puntero entra del
         // Textbox Usuario
@@ -221,5 +225,7 @@ namespace MoyoData
             LblMensajeError.Text = "    " + msg;
             LblMensajeError.Visible = true;
         }
+
+        #endregion
     }
 }
