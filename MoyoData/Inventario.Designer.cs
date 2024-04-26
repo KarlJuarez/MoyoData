@@ -178,6 +178,7 @@
             this.BtnAgregarProductoInventario.TabIndex = 3;
             this.BtnAgregarProductoInventario.Text = "     Agregar producto";
             this.BtnAgregarProductoInventario.UseVisualStyleBackColor = false;
+            this.BtnAgregarProductoInventario.Click += new System.EventHandler(this.BtnAgregarProductoInventario_Click);
             // 
             // DgvProductos
             // 

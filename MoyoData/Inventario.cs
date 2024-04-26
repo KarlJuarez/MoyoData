@@ -147,7 +147,7 @@ namespace MoyoData
             Producto producto;
             int id;
             int totalSeleccion = DgvProductos.Rows.Cast<DataGridViewRow>().
-                Where(p => Convert.ToBoolean(p.Cells["Seleccion"].Value)).Count();
+                Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionInventario"].Value)).Count();
             if (totalSeleccion <= 0)
             {
                 MessageBox.Show("Seleccione algún producto.");
@@ -156,9 +156,9 @@ namespace MoyoData
 
             foreach (DataGridViewRow row in DgvProductos.Rows)
             {
-                if (Convert.ToBoolean(row.Cells["Seleccion"].Value))
+                if (Convert.ToBoolean(row.Cells["ColumSeleccionInventario"].Value))
                 {
-                    id = Convert.ToInt32(row.Cells["Id"].Value);
+                    id = Convert.ToInt32(row.Cells["ColumIDInventario"].Value);
                     consulta = "Select * from TProductos where idProducto = " + id.ToString();
                     MySqlCommand mySqlCommand = new MySqlCommand(consulta);
                     mySqlCommand.Connection = conexion.Conectar();
@@ -186,6 +186,12 @@ namespace MoyoData
         private void BtnEliminarProductoInventario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnAgregarProductoInventario_Click(object sender, EventArgs e)
+        {
+            AgregarProducto agregarProducto = new AgregarProducto();
+            agregarProducto.ShowDialog();
         }
     }
 }
