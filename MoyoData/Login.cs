@@ -53,57 +53,73 @@ namespace MoyoData
                 return;
             }
 
-            if (conexion.Conectar () == null)
+            if (conexion.Conectar() == null)
             {
                 MessageBox.Show("Error al conectar la base de datos.");
                 return;
             }
-                
-            //Entidades a usar.
-            string nombreUsuario = TbxUsuario.Text;
-            string password = GenerarSHA1(TbxPassword.Text);
-            //string rol = ""; Se tiene planeado tener distintas vistas dependiendo el rol.
-            MySqlDataReader mySqlDataReader = null;
-            string consulta = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
 
-            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
-            mySqlCommand.Connection = conexion.Conectar();
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            if (!mySqlDataReader.HasRows)
+            try
             {
-                mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron resultados.");
-                return;
+                //Entidades a usar.
+                string nombreUsuario = TbxUsuario.Text;
+                string password = GenerarSHA1(TbxPassword.Text);
+                //string rol = ""; Se tiene planeado tener distintas vistas dependiendo el rol.
+                MySqlDataReader mySqlDataReader = null;
+                string consulta = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
+
+                MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+                mySqlCommand.Connection = conexion.Conectar();
+
+                if (mySqlCommand.Connection == null)
+                {
+                    MessageBox.Show("No se pudo conectar a la base de datos.");
+                    return;
+                }
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+                if (!mySqlDataReader.HasRows)
+                {
+                    mySqlDataReader.Close();
+                    MessageBox.Show("No se encontraron resultados.");
+                    return;
+                }
+
+                while (mySqlDataReader.Read())
+                {
+                    usuario = new Usuario(mySqlDataReader["usuario"].ToString(), mySqlDataReader["password"].ToString(), mySqlDataReader["troles_idrol"].ToString());
+
+                    if (password != usuario.password)
+                    {
+                        MessageBox.Show("Constraseña incorrecta.");
+                        mySqlDataReader.Close();
+                        return;
+                    }
+
+                    if (usuario.rol == "1")
+                    {
+                        MessageBox.Show("Validación exitosa.");
+                        mySqlDataReader.Close();
+                        VentanaInicio VentanaInicio = new VentanaInicio(usuario);
+                        this.Hide();
+                        VentanaInicio.ShowDialog();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no es administrador.");
+                        mySqlDataReader.Close();
+                        return;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar la base de datos");
             }
             
-            while (mySqlDataReader.Read())
-            {
-                usuario = new Usuario(mySqlDataReader["usuario"].ToString(), mySqlDataReader["password"].ToString(), mySqlDataReader["troles_idrol"].ToString());
-
-                if (password != usuario.password)
-                {
-                    MessageBox.Show("Constraseña incorrecta.");
-                    mySqlDataReader.Close();
-                    return;
-                }
-
-                if (usuario.rol == "1")
-                {
-                    MessageBox.Show("Validación exitosa.");
-                    mySqlDataReader.Close();
-                    VentanaInicio VentanaInicio = new VentanaInicio(usuario);
-                    this.Hide();
-                    VentanaInicio.ShowDialog();
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Usted no es administrador.");
-                    mySqlDataReader.Close();
-                    return;
-                }
-            }
+            
         }
 
         //---------------------------------------------------------------------

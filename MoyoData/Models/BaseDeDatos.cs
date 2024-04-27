@@ -43,7 +43,7 @@ namespace MoyoData.Models
             }
             catch (MySqlException e)
             {
-                MessageBox.Show(e.ToString());
+                
             }
             return conexion;
         }
