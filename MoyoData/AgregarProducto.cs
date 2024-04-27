@@ -26,6 +26,14 @@ namespace MoyoData
             SeleccionarUnidadMedida();
         }
 
+        //-----------------------------
+        // Cerrar formulario
+        //-----------------------------
+        private void PbxCerrarForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         //---------------------------------------------------------------------
         //Función para mostrar las categorías.
         //---------------------------------------------------------------------

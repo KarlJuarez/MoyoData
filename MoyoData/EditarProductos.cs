@@ -35,6 +35,14 @@ namespace MoyoData
             CbxTipoProductoEditarProducto.SelectedIndex = BuscarIndiceTipoProducto(producto.tipoProducto);//
         }
 
+        //----------------------
+        // Cerrar formulario
+        //----------------------
+        private void PbxCerrarForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void BtnEditarProducto_Click(object sender, EventArgs e)
         {
             //Validación.

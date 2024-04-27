@@ -39,11 +39,12 @@
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.Sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.BtnRegistrarUsuario = new System.Windows.Forms.Button();
+            this.BtnUsuarios = new System.Windows.Forms.Button();
             this.BtnInventario = new System.Windows.Forms.Button();
             this.BtnEntradaProducto = new System.Windows.Forms.Button();
             this.BtnSalidaProducto = new System.Windows.Forms.Button();
             this.PnlSidebarRelleno = new System.Windows.Forms.Panel();
+            this.BtnAspectos = new System.Windows.Forms.Button();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
             this.PnlDesplegarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxBotonMenu)).BeginInit();
@@ -52,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             this.Sidebar.SuspendLayout();
+            this.PnlSidebarRelleno.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidebarTimer
@@ -76,7 +78,7 @@
             // 
             this.LblMenu.AutoSize = true;
             this.LblMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMenu.Location = new System.Drawing.Point(112, 22);
+            this.LblMenu.Location = new System.Drawing.Point(109, 37);
             this.LblMenu.Name = "LblMenu";
             this.LblMenu.Size = new System.Drawing.Size(66, 28);
             this.LblMenu.TabIndex = 1;
@@ -148,7 +150,7 @@
             // 
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
             this.Sidebar.Controls.Add(this.PnlDesplegarMenu);
-            this.Sidebar.Controls.Add(this.BtnRegistrarUsuario);
+            this.Sidebar.Controls.Add(this.BtnUsuarios);
             this.Sidebar.Controls.Add(this.BtnInventario);
             this.Sidebar.Controls.Add(this.BtnEntradaProducto);
             this.Sidebar.Controls.Add(this.BtnSalidaProducto);
@@ -162,25 +164,25 @@
             this.Sidebar.Size = new System.Drawing.Size(220, 796);
             this.Sidebar.TabIndex = 0;
             // 
-            // BtnRegistrarUsuario
+            // BtnUsuarios
             // 
-            this.BtnRegistrarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnRegistrarUsuario.FlatAppearance.BorderSize = 0;
-            this.BtnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRegistrarUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistrarUsuario.ForeColor = System.Drawing.Color.Black;
-            this.BtnRegistrarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegistrarUsuario.Image")));
-            this.BtnRegistrarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegistrarUsuario.Location = new System.Drawing.Point(0, 102);
-            this.BtnRegistrarUsuario.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnRegistrarUsuario.Name = "BtnRegistrarUsuario";
-            this.BtnRegistrarUsuario.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnRegistrarUsuario.Size = new System.Drawing.Size(275, 61);
-            this.BtnRegistrarUsuario.TabIndex = 1;
-            this.BtnRegistrarUsuario.Text = "           Registrar";
-            this.BtnRegistrarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegistrarUsuario.UseVisualStyleBackColor = true;
-            this.BtnRegistrarUsuario.Click += new System.EventHandler(this.BtnRegistrarUsuario_Click);
+            this.BtnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUsuarios.FlatAppearance.BorderSize = 0;
+            this.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUsuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUsuarios.ForeColor = System.Drawing.Color.Black;
+            this.BtnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuarios.Image")));
+            this.BtnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUsuarios.Location = new System.Drawing.Point(0, 102);
+            this.BtnUsuarios.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnUsuarios.Name = "BtnUsuarios";
+            this.BtnUsuarios.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.BtnUsuarios.Size = new System.Drawing.Size(275, 61);
+            this.BtnUsuarios.TabIndex = 1;
+            this.BtnUsuarios.Text = "           Usuarios";
+            this.BtnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUsuarios.UseVisualStyleBackColor = true;
+            this.BtnUsuarios.Click += new System.EventHandler(this.BtnUsuarios_Click);
             // 
             // BtnInventario
             // 
@@ -244,10 +246,31 @@
             // 
             // PnlSidebarRelleno
             // 
+            this.PnlSidebarRelleno.Controls.Add(this.BtnAspectos);
             this.PnlSidebarRelleno.Location = new System.Drawing.Point(3, 349);
             this.PnlSidebarRelleno.Name = "PnlSidebarRelleno";
             this.PnlSidebarRelleno.Size = new System.Drawing.Size(229, 241);
             this.PnlSidebarRelleno.TabIndex = 5;
+            // 
+            // BtnAspectos
+            // 
+            this.BtnAspectos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAspectos.FlatAppearance.BorderSize = 0;
+            this.BtnAspectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAspectos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAspectos.ForeColor = System.Drawing.Color.Black;
+            this.BtnAspectos.Image = ((System.Drawing.Image)(resources.GetObject("BtnAspectos.Image")));
+            this.BtnAspectos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAspectos.Location = new System.Drawing.Point(0, 0);
+            this.BtnAspectos.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnAspectos.Name = "BtnAspectos";
+            this.BtnAspectos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.BtnAspectos.Size = new System.Drawing.Size(229, 61);
+            this.BtnAspectos.TabIndex = 6;
+            this.BtnAspectos.Text = "          Aspectos";
+            this.BtnAspectos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAspectos.UseVisualStyleBackColor = true;
+            this.BtnAspectos.Click += new System.EventHandler(this.BtnAspectos_Click);
             // 
             // BtnCerrarSesion
             // 
@@ -289,6 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.Sidebar.ResumeLayout(false);
+            this.PnlSidebarRelleno.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -298,7 +322,7 @@
         private System.Windows.Forms.Button BtnSalidaProducto;
         private System.Windows.Forms.Button BtnEntradaProducto;
         private System.Windows.Forms.Button BtnInventario;
-        private System.Windows.Forms.Button BtnRegistrarUsuario;
+        private System.Windows.Forms.Button BtnUsuarios;
         private System.Windows.Forms.Panel PnlDesplegarMenu;
         private System.Windows.Forms.Label LblMenu;
         private System.Windows.Forms.PictureBox PbxBotonMenu;
@@ -309,5 +333,6 @@
         private System.Windows.Forms.Panel PnlSidebarRelleno;
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.PictureBox BtnMinimizar;
+        private System.Windows.Forms.Button BtnAspectos;
     }
 }

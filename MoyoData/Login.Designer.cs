@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.PnlIzquierdo = new System.Windows.Forms.Panel();
             this.LblMensajeError = new System.Windows.Forms.Label();
-            this.LblGuionBajoPassword = new System.Windows.Forms.Label();
-            this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
+            this.LinkLblRecuperarPassword = new System.Windows.Forms.LinkLabel();
             this.BtnIniciarSesion = new System.Windows.Forms.Button();
             this.TbxPassword = new System.Windows.Forms.TextBox();
             this.TbxUsuario = new System.Windows.Forms.TextBox();
             this.PbxNombreEmpresa = new System.Windows.Forms.PictureBox();
+            this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
+            this.LblGuionBajoPassword = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.PbxHormiga = new System.Windows.Forms.PictureBox();
-            this.LinkLblRecuperarPassword = new System.Windows.Forms.LinkLabel();
             this.PnlIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -50,15 +50,15 @@
             // 
             // PnlIzquierdo
             // 
-            this.PnlIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.PnlIzquierdo.BackColor = System.Drawing.Color.White;
             this.PnlIzquierdo.Controls.Add(this.LblMensajeError);
-            this.PnlIzquierdo.Controls.Add(this.LblGuionBajoPassword);
-            this.PnlIzquierdo.Controls.Add(this.LblGuionBajoUsuario);
             this.PnlIzquierdo.Controls.Add(this.LinkLblRecuperarPassword);
             this.PnlIzquierdo.Controls.Add(this.BtnIniciarSesion);
             this.PnlIzquierdo.Controls.Add(this.TbxPassword);
             this.PnlIzquierdo.Controls.Add(this.TbxUsuario);
             this.PnlIzquierdo.Controls.Add(this.PbxNombreEmpresa);
+            this.PnlIzquierdo.Controls.Add(this.LblGuionBajoUsuario);
+            this.PnlIzquierdo.Controls.Add(this.LblGuionBajoPassword);
             this.PnlIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.PnlIzquierdo.Name = "PnlIzquierdo";
@@ -79,23 +79,18 @@
             this.LblMensajeError.Text = "Mensaje de error";
             this.LblMensajeError.Visible = false;
             // 
-            // LblGuionBajoPassword
+            // LinkLblRecuperarPassword
             // 
-            this.LblGuionBajoPassword.AutoSize = true;
-            this.LblGuionBajoPassword.Location = new System.Drawing.Point(51, 178);
-            this.LblGuionBajoPassword.Name = "LblGuionBajoPassword";
-            this.LblGuionBajoPassword.Size = new System.Drawing.Size(287, 16);
-            this.LblGuionBajoPassword.TabIndex = 6;
-            this.LblGuionBajoPassword.Text = "________________________________________";
-            // 
-            // LblGuionBajoUsuario
-            // 
-            this.LblGuionBajoUsuario.AutoSize = true;
-            this.LblGuionBajoUsuario.Location = new System.Drawing.Point(51, 121);
-            this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
-            this.LblGuionBajoUsuario.Size = new System.Drawing.Size(287, 16);
-            this.LblGuionBajoUsuario.TabIndex = 5;
-            this.LblGuionBajoUsuario.Text = "________________________________________";
+            this.LinkLblRecuperarPassword.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.LinkLblRecuperarPassword.AutoSize = true;
+            this.LinkLblRecuperarPassword.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLblRecuperarPassword.LinkColor = System.Drawing.Color.DimGray;
+            this.LinkLblRecuperarPassword.Location = new System.Drawing.Point(92, 306);
+            this.LinkLblRecuperarPassword.Name = "LinkLblRecuperarPassword";
+            this.LinkLblRecuperarPassword.Size = new System.Drawing.Size(182, 15);
+            this.LinkLblRecuperarPassword.TabIndex = 0;
+            this.LinkLblRecuperarPassword.TabStop = true;
+            this.LinkLblRecuperarPassword.Text = "¿Olvidaste tu contraseña?";
             // 
             // BtnIniciarSesion
             // 
@@ -114,13 +109,13 @@
             // 
             // TbxPassword
             // 
-            this.TbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.TbxPassword.BackColor = System.Drawing.Color.White;
             this.TbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TbxPassword.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxPassword.ForeColor = System.Drawing.Color.DimGray;
             this.TbxPassword.Location = new System.Drawing.Point(54, 161);
             this.TbxPassword.Name = "TbxPassword";
-            this.TbxPassword.Size = new System.Drawing.Size(289, 19);
+            this.TbxPassword.Size = new System.Drawing.Size(289, 21);
             this.TbxPassword.TabIndex = 2;
             this.TbxPassword.Text = "Contraseña";
             this.TbxPassword.Enter += new System.EventHandler(this.TbxPassword_Enter);
@@ -128,13 +123,13 @@
             // 
             // TbxUsuario
             // 
-            this.TbxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.TbxUsuario.BackColor = System.Drawing.Color.White;
             this.TbxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TbxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TbxUsuario.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.TbxUsuario.Location = new System.Drawing.Point(54, 104);
             this.TbxUsuario.Name = "TbxUsuario";
-            this.TbxUsuario.Size = new System.Drawing.Size(289, 19);
+            this.TbxUsuario.Size = new System.Drawing.Size(289, 21);
             this.TbxUsuario.TabIndex = 1;
             this.TbxUsuario.Text = "Usuario";
             this.TbxUsuario.Enter += new System.EventHandler(this.TbxUsuario_Enter);
@@ -149,6 +144,24 @@
             this.PbxNombreEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbxNombreEmpresa.TabIndex = 0;
             this.PbxNombreEmpresa.TabStop = false;
+            // 
+            // LblGuionBajoUsuario
+            // 
+            this.LblGuionBajoUsuario.AutoSize = true;
+            this.LblGuionBajoUsuario.Location = new System.Drawing.Point(51, 116);
+            this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
+            this.LblGuionBajoUsuario.Size = new System.Drawing.Size(287, 16);
+            this.LblGuionBajoUsuario.TabIndex = 5;
+            this.LblGuionBajoUsuario.Text = "________________________________________";
+            // 
+            // LblGuionBajoPassword
+            // 
+            this.LblGuionBajoPassword.AutoSize = true;
+            this.LblGuionBajoPassword.Location = new System.Drawing.Point(51, 172);
+            this.LblGuionBajoPassword.Name = "LblGuionBajoPassword";
+            this.LblGuionBajoPassword.Size = new System.Drawing.Size(287, 16);
+            this.LblGuionBajoPassword.TabIndex = 6;
+            this.LblGuionBajoPassword.Text = "________________________________________";
             // 
             // BtnCerrar
             // 
@@ -181,19 +194,6 @@
             this.PbxHormiga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbxHormiga.TabIndex = 4;
             this.PbxHormiga.TabStop = false;
-            // 
-            // LinkLblRecuperarPassword
-            // 
-            this.LinkLblRecuperarPassword.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.LinkLblRecuperarPassword.AutoSize = true;
-            this.LinkLblRecuperarPassword.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLblRecuperarPassword.LinkColor = System.Drawing.Color.DimGray;
-            this.LinkLblRecuperarPassword.Location = new System.Drawing.Point(92, 306);
-            this.LinkLblRecuperarPassword.Name = "LinkLblRecuperarPassword";
-            this.LinkLblRecuperarPassword.Size = new System.Drawing.Size(182, 15);
-            this.LinkLblRecuperarPassword.TabIndex = 0;
-            this.LinkLblRecuperarPassword.TabStop = true;
-            this.LinkLblRecuperarPassword.Text = "¿Olvidaste tu contraseña?";
             // 
             // Login
             // 

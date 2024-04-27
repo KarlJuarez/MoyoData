@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace MoyoData
 {
-    public partial class SalidaProducto : Form
+    public partial class AgregarSalidaProducto : Form
     {
         //------------------------//
         // ATRIBUTOS
@@ -21,7 +21,7 @@ namespace MoyoData
         BaseDeDatos conexion = new BaseDeDatos();
         string consulta;
         List<string> categorias = new List<string>();
-        public SalidaProducto()
+        public AgregarSalidaProducto()
         {
             InitializeComponent();
             ObtenerCategoria();

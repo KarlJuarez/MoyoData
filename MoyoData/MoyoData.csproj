@@ -112,17 +112,23 @@
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Aspectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aspectos.Designer.cs">
+      <DependentUpon>Aspectos.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarProductos.Designer.cs">
       <DependentUpon>EditarProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntradaProducto.cs">
+    <Compile Include="AgregarEntradaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntradaProducto.Designer.cs">
-      <DependentUpon>EntradaProducto.cs</DependentUpon>
+    <Compile Include="AgregarEntradaProducto.Designer.cs">
+      <DependentUpon>AgregarEntradaProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
@@ -132,17 +138,23 @@
     </Compile>
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Producto.cs" />
+    <Compile Include="MostrarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarUsuarios.Designer.cs">
+      <DependentUpon>MostrarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registrar.Designer.cs">
       <DependentUpon>Registrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalidaProducto.cs">
+    <Compile Include="AgregarSalidaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalidaProducto.Designer.cs">
-      <DependentUpon>SalidaProducto.cs</DependentUpon>
+    <Compile Include="AgregarSalidaProducto.Designer.cs">
+      <DependentUpon>AgregarSalidaProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaInicio.cs">
       <SubType>Form</SubType>
@@ -162,20 +174,26 @@
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Aspectos.resx">
+      <DependentUpon>Aspectos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarProductos.resx">
       <DependentUpon>EditarProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntradaProducto.resx">
-      <DependentUpon>EntradaProducto.cs</DependentUpon>
+    <EmbeddedResource Include="AgregarEntradaProducto.resx">
+      <DependentUpon>AgregarEntradaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MostrarUsuarios.resx">
+      <DependentUpon>MostrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registrar.resx">
       <DependentUpon>Registrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SalidaProducto.resx">
-      <DependentUpon>SalidaProducto.cs</DependentUpon>
+    <EmbeddedResource Include="AgregarSalidaProducto.resx">
+      <DependentUpon>AgregarSalidaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaInicio.resx">
       <DependentUpon>VentanaInicio.cs</DependentUpon>
