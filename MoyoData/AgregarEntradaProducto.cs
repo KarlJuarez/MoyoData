@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace MoyoData
 {
-    public partial class EntradaProducto : Form
+    public partial class AgregarEntradaProducto : Form
     {
         //---------------------------//
         // ATRIBUTOS
@@ -21,7 +21,7 @@ namespace MoyoData
         string consulta;
         List<string> categorias = new List<string>();
 
-        public EntradaProducto()
+        public AgregarEntradaProducto()
         {
             InitializeComponent();
             ObtenerCategoria();

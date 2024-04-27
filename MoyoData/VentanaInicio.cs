@@ -140,11 +140,11 @@ namespace MoyoData
 
         #region Abrir formularios hijo
         //-------------------------------------
-        // Abrir formulario RegistrarUsuario
+        // Abrir formulario MostrarUsuarios
         //-------------------------------------
-        private void BtnRegistrarUsuario_Click(object sender, EventArgs e)
+        private void BtnUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Registrar());
+            AbrirFormularioHijo(new MostrarUsuarios());
         }
 
         //-------------------------------------
@@ -155,23 +155,34 @@ namespace MoyoData
             AbrirFormularioHijo(new Inventario());
         }
 
-        //-------------------------------------
-        // Abrir formulario EntradaProducto
-        //-------------------------------------
+        //-------------------------------------------
+        // Abrir formulario AgregarEntradaProducto
+        //-------------------------------------------
         private void BtnEntradaProducto_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new EntradaProducto());
+            AbrirFormularioHijo(new AgregarEntradaProducto());
+        }
+
+        //------------------------------------------
+        // Abrir formulario AgregarSalidaProducto
+        //------------------------------------------
+        private void BtnSalidaProducto_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new AgregarSalidaProducto());
         }
 
         //-------------------------------------
-        // Abrir formulario SalidaProducto
+        // Abrir formulario Aspectos
         //-------------------------------------
-        private void BtnSalidaProducto_Click(object sender, EventArgs e)
+        private void BtnAspectos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new SalidaProducto());
+            AbrirFormularioHijo(new Aspectos());
         }
         #endregion
 
+        //-------------------------------------
+        // Cerrar sesión del usuario
+        //-------------------------------------
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
             usuario = null;
@@ -179,5 +190,6 @@ namespace MoyoData
             login.Show();
             this.Close();
         }
+
     }
 }

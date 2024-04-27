@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarProductos));
             this.NumUDLimiteEditarProducto = new System.Windows.Forms.NumericUpDown();
             this.LblLimite = new System.Windows.Forms.Label();
             this.CbxTipoProductoEditarProducto = new System.Windows.Forms.ComboBox();
@@ -43,80 +44,96 @@
             this.LblProducto = new System.Windows.Forms.Label();
             this.NumUDStockEditarProducto = new System.Windows.Forms.NumericUpDown();
             this.LblStock = new System.Windows.Forms.Label();
+            this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
+            this.PnlTitulo = new System.Windows.Forms.Panel();
+            this.LblEditarProducto = new System.Windows.Forms.Label();
+            this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
+            this.PnlLogo = new System.Windows.Forms.Panel();
+            this.PbxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDLimiteEditarProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidadEditarProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDStockEditarProducto)).BeginInit();
+            this.PnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
+            this.PnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // NumUDLimiteEditarProducto
             // 
-            this.NumUDLimiteEditarProducto.Location = new System.Drawing.Point(133, 315);
+            this.NumUDLimiteEditarProducto.BackColor = System.Drawing.Color.White;
+            this.NumUDLimiteEditarProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NumUDLimiteEditarProducto.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NumUDLimiteEditarProducto.Location = new System.Drawing.Point(210, 506);
             this.NumUDLimiteEditarProducto.Name = "NumUDLimiteEditarProducto";
-            this.NumUDLimiteEditarProducto.Size = new System.Drawing.Size(198, 22);
+            this.NumUDLimiteEditarProducto.Size = new System.Drawing.Size(270, 28);
             this.NumUDLimiteEditarProducto.TabIndex = 60;
             // 
             // LblLimite
             // 
             this.LblLimite.AutoSize = true;
-            this.LblLimite.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLimite.Location = new System.Drawing.Point(124, 263);
+            this.LblLimite.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLimite.Location = new System.Drawing.Point(201, 454);
             this.LblLimite.Name = "LblLimite";
-            this.LblLimite.Size = new System.Drawing.Size(332, 38);
+            this.LblLimite.Size = new System.Drawing.Size(267, 31);
             this.LblLimite.TabIndex = 59;
             this.LblLimite.Text = "Limite al sacar producto";
             // 
             // CbxTipoProductoEditarProducto
             // 
+            this.CbxTipoProductoEditarProducto.BackColor = System.Drawing.Color.White;
             this.CbxTipoProductoEditarProducto.FormattingEnabled = true;
-            this.CbxTipoProductoEditarProducto.Location = new System.Drawing.Point(586, 303);
+            this.CbxTipoProductoEditarProducto.Location = new System.Drawing.Point(664, 505);
             this.CbxTipoProductoEditarProducto.Name = "CbxTipoProductoEditarProducto";
-            this.CbxTipoProductoEditarProducto.Size = new System.Drawing.Size(200, 24);
+            this.CbxTipoProductoEditarProducto.Size = new System.Drawing.Size(270, 24);
             this.CbxTipoProductoEditarProducto.TabIndex = 58;
             // 
             // LblTipoProducto
             // 
             this.LblTipoProducto.AutoSize = true;
-            this.LblTipoProducto.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTipoProducto.Location = new System.Drawing.Point(577, 249);
+            this.LblTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTipoProducto.Location = new System.Drawing.Point(655, 451);
             this.LblTipoProducto.Name = "LblTipoProducto";
-            this.LblTipoProducto.Size = new System.Drawing.Size(243, 38);
+            this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
             this.LblTipoProducto.TabIndex = 57;
             this.LblTipoProducto.Text = "Tipo de Producto";
             // 
             // CbxCategoriasEditarProducto
             // 
+            this.CbxCategoriasEditarProducto.BackColor = System.Drawing.Color.White;
             this.CbxCategoriasEditarProducto.FormattingEnabled = true;
-            this.CbxCategoriasEditarProducto.Location = new System.Drawing.Point(133, 406);
+            this.CbxCategoriasEditarProducto.Location = new System.Drawing.Point(210, 597);
             this.CbxCategoriasEditarProducto.Name = "CbxCategoriasEditarProducto";
-            this.CbxCategoriasEditarProducto.Size = new System.Drawing.Size(200, 24);
+            this.CbxCategoriasEditarProducto.Size = new System.Drawing.Size(270, 24);
             this.CbxCategoriasEditarProducto.TabIndex = 56;
             this.CbxCategoriasEditarProducto.SelectedIndexChanged += new System.EventHandler(this.CbxCategoriasEditarProducto_SelectedIndexChanged);
             // 
             // LblCategorias
             // 
             this.LblCategorias.AutoSize = true;
-            this.LblCategorias.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCategorias.Location = new System.Drawing.Point(126, 352);
+            this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCategorias.Location = new System.Drawing.Point(203, 543);
             this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(155, 38);
+            this.LblCategorias.Size = new System.Drawing.Size(125, 31);
             this.LblCategorias.TabIndex = 55;
             this.LblCategorias.Text = "Categorias";
             // 
             // CbxUnidadesMedidasEditarProducto
             // 
+            this.CbxUnidadesMedidasEditarProducto.BackColor = System.Drawing.Color.White;
             this.CbxUnidadesMedidasEditarProducto.FormattingEnabled = true;
-            this.CbxUnidadesMedidasEditarProducto.Location = new System.Drawing.Point(586, 210);
+            this.CbxUnidadesMedidasEditarProducto.Location = new System.Drawing.Point(664, 412);
             this.CbxUnidadesMedidasEditarProducto.Name = "CbxUnidadesMedidasEditarProducto";
-            this.CbxUnidadesMedidasEditarProducto.Size = new System.Drawing.Size(200, 24);
+            this.CbxUnidadesMedidasEditarProducto.Size = new System.Drawing.Size(270, 24);
             this.CbxUnidadesMedidasEditarProducto.TabIndex = 54;
             // 
             // LblUnidadesMedida
             // 
             this.LblUnidadesMedida.AutoSize = true;
-            this.LblUnidadesMedida.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUnidadesMedida.Location = new System.Drawing.Point(579, 156);
+            this.LblUnidadesMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUnidadesMedida.Location = new System.Drawing.Point(657, 358);
             this.LblUnidadesMedida.Name = "LblUnidadesMedida";
-            this.LblUnidadesMedida.Size = new System.Drawing.Size(284, 38);
+            this.LblUnidadesMedida.Size = new System.Drawing.Size(232, 31);
             this.LblUnidadesMedida.TabIndex = 53;
             this.LblUnidadesMedida.Text = "Unidades de medida";
             // 
@@ -124,12 +141,11 @@
             // 
             this.BtnEditarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEditarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
-            this.BtnEditarProducto.FlatAppearance.BorderSize = 0;
             this.BtnEditarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditarProducto.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditarProducto.Location = new System.Drawing.Point(386, 463);
+            this.BtnEditarProducto.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEditarProducto.Location = new System.Drawing.Point(980, 706);
             this.BtnEditarProducto.Name = "BtnEditarProducto";
-            this.BtnEditarProducto.Size = new System.Drawing.Size(143, 56);
+            this.BtnEditarProducto.Size = new System.Drawing.Size(167, 56);
             this.BtnEditarProducto.TabIndex = 52;
             this.BtnEditarProducto.Text = "Agregar producto";
             this.BtnEditarProducto.UseVisualStyleBackColor = false;
@@ -137,60 +153,137 @@
             // 
             // NumUDCantidadEditarProducto
             // 
-            this.NumUDCantidadEditarProducto.Location = new System.Drawing.Point(586, 105);
+            this.NumUDCantidadEditarProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NumUDCantidadEditarProducto.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NumUDCantidadEditarProducto.Location = new System.Drawing.Point(664, 307);
             this.NumUDCantidadEditarProducto.Name = "NumUDCantidadEditarProducto";
-            this.NumUDCantidadEditarProducto.Size = new System.Drawing.Size(198, 22);
+            this.NumUDCantidadEditarProducto.Size = new System.Drawing.Size(270, 28);
             this.NumUDCantidadEditarProducto.TabIndex = 51;
             // 
             // LblCantidad
             // 
             this.LblCantidad.AutoSize = true;
-            this.LblCantidad.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCantidad.Location = new System.Drawing.Point(577, 53);
+            this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCantidad.Location = new System.Drawing.Point(655, 255);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(134, 38);
+            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
             this.LblCantidad.TabIndex = 50;
             this.LblCantidad.Text = "Cantidad";
             // 
             // TbxProductoEditarProducto
             // 
-            this.TbxProductoEditarProducto.Location = new System.Drawing.Point(131, 116);
+            this.TbxProductoEditarProducto.BackColor = System.Drawing.Color.White;
+            this.TbxProductoEditarProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbxProductoEditarProducto.Font = new System.Drawing.Font("Rosario", 10F);
+            this.TbxProductoEditarProducto.ForeColor = System.Drawing.Color.DimGray;
+            this.TbxProductoEditarProducto.Location = new System.Drawing.Point(208, 307);
             this.TbxProductoEditarProducto.Name = "TbxProductoEditarProducto";
-            this.TbxProductoEditarProducto.Size = new System.Drawing.Size(178, 22);
+            this.TbxProductoEditarProducto.Size = new System.Drawing.Size(267, 21);
             this.TbxProductoEditarProducto.TabIndex = 49;
+            this.TbxProductoEditarProducto.Text = "Escribe aquí";
             // 
             // LblProducto
             // 
             this.LblProducto.AutoSize = true;
-            this.LblProducto.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProducto.Location = new System.Drawing.Point(124, 53);
+            this.LblProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProducto.Location = new System.Drawing.Point(202, 255);
             this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(137, 38);
+            this.LblProducto.Size = new System.Drawing.Size(110, 31);
             this.LblProducto.TabIndex = 48;
             this.LblProducto.Text = "Producto";
             // 
             // NumUDStockEditarProducto
             // 
-            this.NumUDStockEditarProducto.Location = new System.Drawing.Point(135, 212);
+            this.NumUDStockEditarProducto.BackColor = System.Drawing.Color.White;
+            this.NumUDStockEditarProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NumUDStockEditarProducto.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NumUDStockEditarProducto.Location = new System.Drawing.Point(212, 403);
             this.NumUDStockEditarProducto.Name = "NumUDStockEditarProducto";
-            this.NumUDStockEditarProducto.Size = new System.Drawing.Size(198, 22);
+            this.NumUDStockEditarProducto.Size = new System.Drawing.Size(270, 28);
             this.NumUDStockEditarProducto.TabIndex = 62;
             // 
             // LblStock
             // 
             this.LblStock.AutoSize = true;
-            this.LblStock.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStock.Location = new System.Drawing.Point(126, 160);
+            this.LblStock.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStock.Location = new System.Drawing.Point(204, 362);
             this.LblStock.Name = "LblStock";
-            this.LblStock.Size = new System.Drawing.Size(89, 38);
+            this.LblStock.Size = new System.Drawing.Size(71, 31);
             this.LblStock.TabIndex = 61;
             this.LblStock.Text = "Stock";
+            // 
+            // LblGuionBajoUsuario
+            // 
+            this.LblGuionBajoUsuario.AutoSize = true;
+            this.LblGuionBajoUsuario.Location = new System.Drawing.Point(204, 316);
+            this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
+            this.LblGuionBajoUsuario.Size = new System.Drawing.Size(273, 16);
+            this.LblGuionBajoUsuario.TabIndex = 63;
+            this.LblGuionBajoUsuario.Text = "______________________________________";
+            // 
+            // PnlTitulo
+            // 
+            this.PnlTitulo.BackColor = System.Drawing.Color.Maroon;
+            this.PnlTitulo.Controls.Add(this.LblEditarProducto);
+            this.PnlTitulo.Controls.Add(this.PbxCerrarForm);
+            this.PnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlTitulo.Location = new System.Drawing.Point(0, 100);
+            this.PnlTitulo.Name = "PnlTitulo";
+            this.PnlTitulo.Size = new System.Drawing.Size(1186, 73);
+            this.PnlTitulo.TabIndex = 65;
+            // 
+            // LblEditarProducto
+            // 
+            this.LblEditarProducto.AutoSize = true;
+            this.LblEditarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblEditarProducto.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblEditarProducto.Location = new System.Drawing.Point(70, 20);
+            this.LblEditarProducto.Name = "LblEditarProducto";
+            this.LblEditarProducto.Size = new System.Drawing.Size(321, 38);
+            this.LblEditarProducto.TabIndex = 1;
+            this.LblEditarProducto.Text = "EDITAR PRODUCTOS";
+            // 
+            // PbxCerrarForm
+            // 
+            this.PbxCerrarForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PbxCerrarForm.Image = ((System.Drawing.Image)(resources.GetObject("PbxCerrarForm.Image")));
+            this.PbxCerrarForm.Location = new System.Drawing.Point(1117, 22);
+            this.PbxCerrarForm.Name = "PbxCerrarForm";
+            this.PbxCerrarForm.Size = new System.Drawing.Size(35, 29);
+            this.PbxCerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxCerrarForm.TabIndex = 11;
+            this.PbxCerrarForm.TabStop = false;
+            this.PbxCerrarForm.Click += new System.EventHandler(this.PbxCerrarForm_Click);
+            // 
+            // PnlLogo
+            // 
+            this.PnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
+            this.PnlLogo.Controls.Add(this.PbxLogo);
+            this.PnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.PnlLogo.Name = "PnlLogo";
+            this.PnlLogo.Size = new System.Drawing.Size(1186, 100);
+            this.PnlLogo.TabIndex = 64;
+            // 
+            // PbxLogo
+            // 
+            this.PbxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PbxLogo.Image = global::MoyoData.Properties.Resources.Group_3;
+            this.PbxLogo.Location = new System.Drawing.Point(377, 28);
+            this.PbxLogo.Name = "PbxLogo";
+            this.PbxLogo.Size = new System.Drawing.Size(415, 44);
+            this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxLogo.TabIndex = 1;
+            this.PbxLogo.TabStop = false;
             // 
             // EditarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 568);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1186, 796);
+            this.Controls.Add(this.PnlTitulo);
+            this.Controls.Add(this.PnlLogo);
             this.Controls.Add(this.NumUDStockEditarProducto);
             this.Controls.Add(this.LblStock);
             this.Controls.Add(this.NumUDLimiteEditarProducto);
@@ -206,11 +299,18 @@
             this.Controls.Add(this.LblCantidad);
             this.Controls.Add(this.TbxProductoEditarProducto);
             this.Controls.Add(this.LblProducto);
+            this.Controls.Add(this.LblGuionBajoUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditarProductos";
             this.Text = "EditarProductos";
             ((System.ComponentModel.ISupportInitialize)(this.NumUDLimiteEditarProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidadEditarProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDStockEditarProducto)).EndInit();
+            this.PnlTitulo.ResumeLayout(false);
+            this.PnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
+            this.PnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +333,11 @@
         private System.Windows.Forms.Label LblProducto;
         private System.Windows.Forms.NumericUpDown NumUDStockEditarProducto;
         private System.Windows.Forms.Label LblStock;
+        private System.Windows.Forms.Label LblGuionBajoUsuario;
+        private System.Windows.Forms.Panel PnlTitulo;
+        private System.Windows.Forms.Label LblEditarProducto;
+        private System.Windows.Forms.PictureBox PbxCerrarForm;
+        private System.Windows.Forms.Panel PnlLogo;
+        private System.Windows.Forms.PictureBox PbxLogo;
     }
 }
