@@ -15,15 +15,52 @@ namespace MoyoData
     public partial class EntradaProductos : Form
     {
         BaseDeDatos conexion = new BaseDeDatos();
-        string consulta;
         List<Producto> productos = new List<Producto>();
         List<Usuario> usuarios = new List<Usuario>();
-        public EntradaProductos()
+        List<Rol> roles = new List<Rol>();
+        Usuario usuario;
+        string idRol;
+        string consulta;
+        public EntradaProductos(Usuario usuario)
         {
             InitializeComponent();
             SeleccionarProductos();
             SeleccionarUsuarios();
+            SeleccionarRoles();
             CargarDatos();
+            this.usuario = usuario;
+            idRol = roles.Find(p => p.rol == "Administrador").id.ToString();
+
+            if (this.usuario.rol != idRol)
+            {
+               BtnEntradaProductoEliminar.Dispose();
+            }
+        }
+
+        private void SeleccionarRoles()
+        {
+            MySqlDataReader mySqlDataReader = null;
+            consulta = "Select * from TRoles";
+            Rol rol;
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+            mySqlCommand.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (!mySqlDataReader.HasRows)
+            {
+                mySqlDataReader.Close();
+                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            while (mySqlDataReader.Read())
+            {
+                rol = new Rol(Convert.ToInt32(mySqlDataReader["idRol"].ToString()), mySqlDataReader["Rol"].ToString());
+                roles.Add(rol);
+            }
+
+            mySqlDataReader.Close();
         }
 
         private void SeleccionarProductos()

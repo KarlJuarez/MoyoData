@@ -104,21 +104,13 @@ namespace MoyoData
                         return;
                     }
 
-                    if (usuario.rol == "1")
-                    {
-                        MessageBox.Show("Validación exitosa.");
-                        mySqlDataReader.Close();
-                        VentanaInicio VentanaInicio = new VentanaInicio(usuario);
-                        this.Hide();
-                        VentanaInicio.ShowDialog();
-                        return;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usted no es administrador.");
-                        mySqlDataReader.Close();
-                        return;
-                    }
+                    MessageBox.Show("Validación exitosa.");
+                    mySqlDataReader.Close();
+                    VentanaInicio VentanaInicio = new VentanaInicio(usuario);
+                    this.Hide();
+                    VentanaInicio.ShowDialog();
+                    return;
+
                 }
             }
             catch (Exception ex)

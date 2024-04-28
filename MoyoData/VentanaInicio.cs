@@ -1,4 +1,5 @@
 ﻿using MoyoData.Models;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,13 +19,49 @@ namespace MoyoData
         // ATRIBUTOS
         //-------------------------------------//
         bool SidebarExpand = true;
+        BaseDeDatos conexion = new BaseDeDatos();
         Usuario usuario;
+        List<Rol> roles = new List<Rol>();
+        string consulta;
+        string idRol;
 
         public VentanaInicio(Usuario usuario)
         {
             InitializeComponent();
             this.usuario = usuario;
             LblMenu.Text = usuario.usuario;
+            SeleccionarRoles();
+            idRol = roles.Find(p=> p.rol == "Administrador").id.ToString();
+
+            if (this.usuario.rol != idRol)
+            {
+                BtnUsuarios.Dispose();
+            }
+        }
+        private void SeleccionarRoles()
+        {
+            MySqlDataReader mySqlDataReader = null;
+            consulta = "Select * from TRoles";
+            Rol rol;
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+            mySqlCommand.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (!mySqlDataReader.HasRows)
+            {
+                mySqlDataReader.Close();
+                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            while (mySqlDataReader.Read())
+            {
+                rol = new Rol(Convert.ToInt32(mySqlDataReader["idRol"].ToString()), mySqlDataReader["Rol"].ToString());
+                roles.Add(rol);
+            }
+
+            mySqlDataReader.Close();
         }
 
         #region Movimiento de la ventana
@@ -152,7 +189,7 @@ namespace MoyoData
         //-------------------------------------
         private void BtnInventario_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Inventario());
+            AbrirFormularioHijo(new Inventario(usuario));
         }
 
         //-------------------------------------------
@@ -160,7 +197,7 @@ namespace MoyoData
         //-------------------------------------------
         private void BtnEntradaProducto_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new EntradaProductos());
+            AbrirFormularioHijo(new EntradaProductos(usuario));
         }
 
         //------------------------------------------
@@ -168,7 +205,7 @@ namespace MoyoData
         //------------------------------------------
         private void BtnSalidaProducto_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new SalidaProductos());
+            AbrirFormularioHijo(new SalidaProductos(usuario));
         }
 
         //-------------------------------------
@@ -176,7 +213,7 @@ namespace MoyoData
         //-------------------------------------
         private void BtnAspectos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Aspectos());
+            AbrirFormularioHijo(new Aspectos(usuario));
         }
         #endregion
 

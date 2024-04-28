@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -94,6 +95,8 @@ namespace MoyoData
         private void BtnEliminarUsuario_Click(object sender, EventArgs e)
         {
             int id;
+            List<int> idSalidaProducto = new List<int>();
+            List<int> idEntradaProducto = new List<int>();
             int totalSeleccion = DgvUsuarios.Rows.Cast<DataGridViewRow>().
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionUsuarios"].Value)).Count();
             if (totalSeleccion <= 0)
@@ -102,7 +105,7 @@ namespace MoyoData
                 return;
             }
 
-            DialogResult result = MessageBox.Show("¿Quiéres borrar los usuarios?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Quiéres borrar los usuarios? \n Se borrarán todas las salidas y entradas de productos relacionados al usuario.", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
                 return;
@@ -113,6 +116,65 @@ namespace MoyoData
                 if (Convert.ToBoolean(row.Cells["ColumSeleccionUsuarios"].Value))
                 {
                     id = Convert.ToInt32(row.Cells["ColumIDUsuarios"].Value);
+
+                    MySqlDataReader mySqlDataReader = null;
+                    consulta = "Select * from TSalidaProductos where TUsuarios_idUsuario = " + id;
+
+                    MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+                    mySqlCommand.Connection = conexion.Conectar();
+                    mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                    if (mySqlDataReader.HasRows)
+                    {
+                        while (mySqlDataReader.Read())
+                        {
+                            idSalidaProducto.Add(Convert.ToInt32(mySqlDataReader["idSalidaProducto"]));
+                        }
+                    }
+                    mySqlDataReader.Close();
+
+                    for (int i = 0; i < idSalidaProducto.Count; i++)
+                    {
+                        consulta = "Delete from TProductos_has_TSalidaProductos where TSalidaProductos_idSalidaProducto = " + idSalidaProducto[i].ToString();
+                        MySqlCommand mySqlCommandBorrarSalidaProductos = new MySqlCommand(consulta);
+                        mySqlCommandBorrarSalidaProductos.Connection = conexion.Conectar();
+                        mySqlCommandBorrarSalidaProductos.ExecuteNonQuery();
+
+                        consulta = "Delete from TSalidaProductos where idSalidaProducto = " + idSalidaProducto[i].ToString();
+                        mySqlCommandBorrarSalidaProductos = new MySqlCommand(consulta);
+                        mySqlCommandBorrarSalidaProductos.Connection = conexion.Conectar();
+                        mySqlCommandBorrarSalidaProductos.ExecuteNonQuery();
+                    }
+
+                    consulta = "Select * from TEntradaProductos where TUsuarios_idUsuario = " + id;
+
+                    mySqlCommand = new MySqlCommand(consulta);
+                    mySqlCommand.Connection = conexion.Conectar();
+                    mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                    if (mySqlDataReader.HasRows)
+                    {
+                        while (mySqlDataReader.Read())
+                        {
+                            idEntradaProducto.Add(Convert.ToInt32(mySqlDataReader["idEntradaProducto"]));
+                        }
+                    }
+
+                    mySqlDataReader.Close();
+
+                    for (int i = 0; i < idEntradaProducto.Count; i++)
+                    {
+                        consulta = "Delete from TEntradaProductos_has_TProductos where TEntradaProductos_idEntradaProducto = " + idEntradaProducto[i].ToString();
+                        MySqlCommand mySqlCommandBorrarSalidaProductos = new MySqlCommand(consulta);
+                        mySqlCommandBorrarSalidaProductos.Connection = conexion.Conectar();
+                        mySqlCommandBorrarSalidaProductos.ExecuteNonQuery();
+
+                        consulta = "Delete from TEntradaProductos where idEntradaProducto = " + idEntradaProducto[i].ToString();
+                        mySqlCommandBorrarSalidaProductos = new MySqlCommand(consulta);
+                        mySqlCommandBorrarSalidaProductos.Connection = conexion.Conectar();
+                        mySqlCommandBorrarSalidaProductos.ExecuteNonQuery();
+                    }
+
                     consulta = "Delete from TUsuarios where idusuario = " + id.ToString();
                     MySqlCommand mySqlCommandBorrar = new MySqlCommand(consulta);
                     mySqlCommandBorrar.Connection = conexion.Conectar();

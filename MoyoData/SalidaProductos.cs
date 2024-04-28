@@ -18,14 +18,50 @@ namespace MoyoData
         string consulta;
         List<Producto> productos = new List<Producto>();
         List <Usuario> usuarios = new List<Usuario>();
-        public SalidaProductos()
+        List<Rol> roles = new List<Rol>();
+        Usuario usuario;
+        string idRol;
+        public SalidaProductos(Usuario usuario)
         {
             InitializeComponent();
             SeleccionarProductos();
             SeleccionarUsuarios();
             CargarDatos();
+            SeleccionarRoles();
+            this.usuario = usuario;
+            idRol = roles.Find(p => p.rol == "Administrador").id.ToString();
+
+            if (this.usuario.rol != idRol)
+            {
+                BtnSalidaProductoEliminar.Dispose();
+            }
         }
 
+        private void SeleccionarRoles()
+        {
+            MySqlDataReader mySqlDataReader = null;
+            consulta = "Select * from TRoles";
+            Rol rol;
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+            mySqlCommand.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (!mySqlDataReader.HasRows)
+            {
+                mySqlDataReader.Close();
+                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            while (mySqlDataReader.Read())
+            {
+                rol = new Rol(Convert.ToInt32(mySqlDataReader["idRol"].ToString()), mySqlDataReader["Rol"].ToString());
+                roles.Add(rol);
+            }
+
+            mySqlDataReader.Close();
+        }
         private void SeleccionarProductos()
         {
             MySqlDataReader mySqlDataReader = null;
