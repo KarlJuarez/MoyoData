@@ -106,17 +106,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCategoria.Designer.cs">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarTipoProducto.Designer.cs">
+      <DependentUpon>AgregarTipoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarUnidadMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarUnidadMedida.Designer.cs">
+      <DependentUpon>AgregarUnidadMedida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Aspectos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aspectos.Designer.cs">
       <DependentUpon>Aspectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCategoria.Designer.cs">
+      <DependentUpon>EditarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="EditarProductos.cs">
       <SubType>Form</SubType>
@@ -130,12 +154,27 @@
     <Compile Include="AgregarEntradaProducto.Designer.cs">
       <DependentUpon>AgregarEntradaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarTipoProducto.Designer.cs">
+      <DependentUpon>EditarTipoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarUnidadMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarUnidadMedida.Designer.cs">
+      <DependentUpon>EditarUnidadMedida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\TipoProducto.cs" />
+    <Compile Include="Models\UnidadMedida.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="MostrarUsuarios.cs">
@@ -171,17 +210,35 @@
     <Compile Include="Models\BaseDeDatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarCategoria.resx">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarTipoProducto.resx">
+      <DependentUpon>AgregarTipoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarUnidadMedida.resx">
+      <DependentUpon>AgregarUnidadMedida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aspectos.resx">
       <DependentUpon>Aspectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCategoria.resx">
+      <DependentUpon>EditarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarProductos.resx">
       <DependentUpon>EditarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarEntradaProducto.resx">
       <DependentUpon>AgregarEntradaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarTipoProducto.resx">
+      <DependentUpon>EditarTipoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarUnidadMedida.resx">
+      <DependentUpon>EditarUnidadMedida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
