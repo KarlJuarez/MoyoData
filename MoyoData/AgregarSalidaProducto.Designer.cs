@@ -35,7 +35,17 @@
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.DgvProductosSeleccionados = new System.Windows.Forms.DataGridView();
+            this.ColumIDSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumProductosSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumCantidadSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgvProductos = new System.Windows.Forms.DataGridView();
+            this.ColumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumSeleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnSalidaProductoHacerPrestamo = new System.Windows.Forms.Button();
             this.BtnSalidaProductoAgregar = new System.Windows.Forms.Button();
             this.DtpFechaSalidaProducto = new System.Windows.Forms.DateTimePicker();
@@ -47,16 +57,6 @@
             this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
             this.LblProductosSeleccionados = new System.Windows.Forms.Label();
             this.LblProductos = new System.Windows.Forms.Label();
-            this.ColumSeleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumIDSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumProductosSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumCantidadSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -85,7 +85,7 @@
             this.LblSalidaProducto.Location = new System.Drawing.Point(70, 20);
             this.LblSalidaProducto.Name = "LblSalidaProducto";
             this.LblSalidaProducto.Size = new System.Drawing.Size(351, 38);
-            this.LblSalidaProducto.TabIndex = 1;
+            this.LblSalidaProducto.TabIndex = 100;
             this.LblSalidaProducto.Text = "SALIDA DE PRODUCTO";
             // 
             // PbxCerrarForm
@@ -137,6 +137,27 @@
             this.DgvProductosSeleccionados.Size = new System.Drawing.Size(426, 249);
             this.DgvProductosSeleccionados.TabIndex = 33;
             // 
+            // ColumIDSeleccionados
+            // 
+            this.ColumIDSeleccionados.HeaderText = "ID";
+            this.ColumIDSeleccionados.MinimumWidth = 6;
+            this.ColumIDSeleccionados.Name = "ColumIDSeleccionados";
+            this.ColumIDSeleccionados.Width = 125;
+            // 
+            // ColumProductosSeleccionados
+            // 
+            this.ColumProductosSeleccionados.HeaderText = "Producto";
+            this.ColumProductosSeleccionados.MinimumWidth = 6;
+            this.ColumProductosSeleccionados.Name = "ColumProductosSeleccionados";
+            this.ColumProductosSeleccionados.Width = 125;
+            // 
+            // ColumCantidadSeleccionados
+            // 
+            this.ColumCantidadSeleccionados.HeaderText = "Cantidad";
+            this.ColumCantidadSeleccionados.MinimumWidth = 6;
+            this.ColumCantidadSeleccionados.Name = "ColumCantidadSeleccionados";
+            this.ColumCantidadSeleccionados.Width = 125;
+            // 
             // DgvProductos
             // 
             this.DgvProductos.AllowUserToAddRows = false;
@@ -157,6 +178,57 @@
             this.DgvProductos.Size = new System.Drawing.Size(613, 440);
             this.DgvProductos.TabIndex = 32;
             // 
+            // ColumID
+            // 
+            this.ColumID.HeaderText = "ID";
+            this.ColumID.MinimumWidth = 6;
+            this.ColumID.Name = "ColumID";
+            this.ColumID.Width = 125;
+            // 
+            // ColumProducto
+            // 
+            this.ColumProducto.HeaderText = "Producto";
+            this.ColumProducto.MinimumWidth = 6;
+            this.ColumProducto.Name = "ColumProducto";
+            this.ColumProducto.Width = 125;
+            // 
+            // ColumStock
+            // 
+            this.ColumStock.HeaderText = "Stock";
+            this.ColumStock.MinimumWidth = 6;
+            this.ColumStock.Name = "ColumStock";
+            this.ColumStock.Width = 125;
+            // 
+            // ColumLimite
+            // 
+            this.ColumLimite.HeaderText = "Limite";
+            this.ColumLimite.MinimumWidth = 6;
+            this.ColumLimite.Name = "ColumLimite";
+            this.ColumLimite.Width = 125;
+            // 
+            // ColumTipo
+            // 
+            this.ColumTipo.HeaderText = "Tipo";
+            this.ColumTipo.MinimumWidth = 6;
+            this.ColumTipo.Name = "ColumTipo";
+            this.ColumTipo.Width = 125;
+            // 
+            // ColumCategoria
+            // 
+            this.ColumCategoria.HeaderText = "Categoría";
+            this.ColumCategoria.MinimumWidth = 6;
+            this.ColumCategoria.Name = "ColumCategoria";
+            this.ColumCategoria.Width = 125;
+            // 
+            // ColumSeleccion
+            // 
+            this.ColumSeleccion.HeaderText = "Selección";
+            this.ColumSeleccion.MinimumWidth = 6;
+            this.ColumSeleccion.Name = "ColumSeleccion";
+            this.ColumSeleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumSeleccion.Width = 125;
+            // 
             // BtnSalidaProductoHacerPrestamo
             // 
             this.BtnSalidaProductoHacerPrestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -166,7 +238,7 @@
             this.BtnSalidaProductoHacerPrestamo.Location = new System.Drawing.Point(1004, 706);
             this.BtnSalidaProductoHacerPrestamo.Name = "BtnSalidaProductoHacerPrestamo";
             this.BtnSalidaProductoHacerPrestamo.Size = new System.Drawing.Size(143, 56);
-            this.BtnSalidaProductoHacerPrestamo.TabIndex = 31;
+            this.BtnSalidaProductoHacerPrestamo.TabIndex = 27;
             this.BtnSalidaProductoHacerPrestamo.Text = "Hacer préstamo";
             this.BtnSalidaProductoHacerPrestamo.UseVisualStyleBackColor = false;
             this.BtnSalidaProductoHacerPrestamo.Click += new System.EventHandler(this.BtnSalidaProductoHacerPrestamo_Click);
@@ -191,7 +263,7 @@
             this.DtpFechaSalidaProducto.Location = new System.Drawing.Point(77, 430);
             this.DtpFechaSalidaProducto.Name = "DtpFechaSalidaProducto";
             this.DtpFechaSalidaProducto.Size = new System.Drawing.Size(270, 23);
-            this.DtpFechaSalidaProducto.TabIndex = 27;
+            this.DtpFechaSalidaProducto.TabIndex = 34;
             // 
             // LblUsuario
             // 
@@ -230,10 +302,15 @@
             this.TbxUsuarioSalidaProducto.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxUsuarioSalidaProducto.ForeColor = System.Drawing.Color.DimGray;
             this.TbxUsuarioSalidaProducto.Location = new System.Drawing.Point(77, 238);
+            this.TbxUsuarioSalidaProducto.MaxLength = 25;
             this.TbxUsuarioSalidaProducto.Name = "TbxUsuarioSalidaProducto";
+            this.TbxUsuarioSalidaProducto.ShortcutsEnabled = false;
             this.TbxUsuarioSalidaProducto.Size = new System.Drawing.Size(267, 21);
-            this.TbxUsuarioSalidaProducto.TabIndex = 34;
+            this.TbxUsuarioSalidaProducto.TabIndex = 31;
             this.TbxUsuarioSalidaProducto.Text = "Escribe aquí";
+            this.TbxUsuarioSalidaProducto.Enter += new System.EventHandler(this.TbxUsuarioSalidaProducto_Enter);
+            this.TbxUsuarioSalidaProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxUsuarioSalidaProducto_KeyPress);
+            this.TbxUsuarioSalidaProducto.Leave += new System.EventHandler(this.TbxUsuarioSalidaProducto_Leave);
             // 
             // NumUDCantidadSalidaProducto
             // 
@@ -273,79 +350,7 @@
             this.LblProductos.TabIndex = 37;
             this.LblProductos.Text = "Productos en el inventario";
             // 
-            // ColumSeleccion
-            // 
-            this.ColumSeleccion.HeaderText = "Selección";
-            this.ColumSeleccion.MinimumWidth = 6;
-            this.ColumSeleccion.Name = "ColumSeleccion";
-            this.ColumSeleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumSeleccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumSeleccion.Width = 125;
-            // 
-            // ColumCategoria
-            // 
-            this.ColumCategoria.HeaderText = "Categoría";
-            this.ColumCategoria.MinimumWidth = 6;
-            this.ColumCategoria.Name = "ColumCategoria";
-            this.ColumCategoria.Width = 125;
-            // 
-            // ColumTipo
-            // 
-            this.ColumTipo.HeaderText = "Tipo";
-            this.ColumTipo.MinimumWidth = 6;
-            this.ColumTipo.Name = "ColumTipo";
-            this.ColumTipo.Width = 125;
-            // 
-            // ColumLimite
-            // 
-            this.ColumLimite.HeaderText = "Limite";
-            this.ColumLimite.MinimumWidth = 6;
-            this.ColumLimite.Name = "ColumLimite";
-            this.ColumLimite.Width = 125;
-            // 
-            // ColumStock
-            // 
-            this.ColumStock.HeaderText = "Stock";
-            this.ColumStock.MinimumWidth = 6;
-            this.ColumStock.Name = "ColumStock";
-            this.ColumStock.Width = 125;
-            // 
-            // ColumProducto
-            // 
-            this.ColumProducto.HeaderText = "Producto";
-            this.ColumProducto.MinimumWidth = 6;
-            this.ColumProducto.Name = "ColumProducto";
-            this.ColumProducto.Width = 125;
-            // 
-            // ColumID
-            // 
-            this.ColumID.HeaderText = "ID";
-            this.ColumID.MinimumWidth = 6;
-            this.ColumID.Name = "ColumID";
-            this.ColumID.Width = 125;
-            // 
-            // ColumIDSeleccionados
-            // 
-            this.ColumIDSeleccionados.HeaderText = "ID";
-            this.ColumIDSeleccionados.MinimumWidth = 6;
-            this.ColumIDSeleccionados.Name = "ColumIDSeleccionados";
-            this.ColumIDSeleccionados.Width = 125;
-            // 
-            // ColumProductosSeleccionados
-            // 
-            this.ColumProductosSeleccionados.HeaderText = "Producto";
-            this.ColumProductosSeleccionados.MinimumWidth = 6;
-            this.ColumProductosSeleccionados.Name = "ColumProductosSeleccionados";
-            this.ColumProductosSeleccionados.Width = 125;
-            // 
-            // ColumCantidadSeleccionados
-            // 
-            this.ColumCantidadSeleccionados.HeaderText = "Cantidad";
-            this.ColumCantidadSeleccionados.MinimumWidth = 6;
-            this.ColumCantidadSeleccionados.Name = "ColumCantidadSeleccionados";
-            this.ColumCantidadSeleccionados.Width = 125;
-            // 
-            // SalidaProducto
+            // AgregarSalidaProducto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -367,7 +372,7 @@
             this.Controls.Add(this.LblGuionBajoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "SalidaProducto";
+            this.Name = "AgregarSalidaProducto";
             this.Text = "SalidaProducto";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();

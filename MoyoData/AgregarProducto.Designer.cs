@@ -44,16 +44,14 @@
             this.LblLimite = new System.Windows.Forms.Label();
             this.PnlTitulo = new System.Windows.Forms.Panel();
             this.LblAspectos = new System.Windows.Forms.Label();
-            this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
-            this.PnlLogo = new System.Windows.Forms.Panel();
-            this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.LblGuionBajoProducto = new System.Windows.Forms.Label();
+            this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
+            this.PbxNombreEmpresa = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidadAgregarProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDLimiteAgregarProducto)).BeginInit();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
-            this.PnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
             // TbxProductoAgregarProducto
@@ -62,17 +60,22 @@
             this.TbxProductoAgregarProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxProductoAgregarProducto.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxProductoAgregarProducto.ForeColor = System.Drawing.Color.DimGray;
-            this.TbxProductoAgregarProducto.Location = new System.Drawing.Point(225, 352);
+            this.TbxProductoAgregarProducto.Location = new System.Drawing.Point(213, 296);
+            this.TbxProductoAgregarProducto.MaxLength = 100;
             this.TbxProductoAgregarProducto.Name = "TbxProductoAgregarProducto";
+            this.TbxProductoAgregarProducto.ShortcutsEnabled = false;
             this.TbxProductoAgregarProducto.Size = new System.Drawing.Size(267, 21);
-            this.TbxProductoAgregarProducto.TabIndex = 36;
+            this.TbxProductoAgregarProducto.TabIndex = 39;
             this.TbxProductoAgregarProducto.Text = "Escribe aquí";
+            this.TbxProductoAgregarProducto.Enter += new System.EventHandler(this.TbxProductoAgregarProducto_Enter);
+            this.TbxProductoAgregarProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxProductoAgregarProducto_KeyPress);
+            this.TbxProductoAgregarProducto.Leave += new System.EventHandler(this.TbxProductoAgregarProducto_Leave);
             // 
             // LblProducto
             // 
             this.LblProducto.AutoSize = true;
             this.LblProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProducto.Location = new System.Drawing.Point(218, 303);
+            this.LblProducto.Location = new System.Drawing.Point(206, 247);
             this.LblProducto.Name = "LblProducto";
             this.LblProducto.Size = new System.Drawing.Size(110, 31);
             this.LblProducto.TabIndex = 35;
@@ -83,7 +86,7 @@
             this.NumUDCantidadAgregarProducto.BackColor = System.Drawing.Color.White;
             this.NumUDCantidadAgregarProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NumUDCantidadAgregarProducto.Font = new System.Drawing.Font("Roboto", 10F);
-            this.NumUDCantidadAgregarProducto.Location = new System.Drawing.Point(677, 356);
+            this.NumUDCantidadAgregarProducto.Location = new System.Drawing.Point(665, 300);
             this.NumUDCantidadAgregarProducto.Name = "NumUDCantidadAgregarProducto";
             this.NumUDCantidadAgregarProducto.Size = new System.Drawing.Size(309, 28);
             this.NumUDCantidadAgregarProducto.TabIndex = 38;
@@ -92,7 +95,7 @@
             // 
             this.LblCantidad.AutoSize = true;
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCantidad.Location = new System.Drawing.Point(671, 303);
+            this.LblCantidad.Location = new System.Drawing.Point(659, 247);
             this.LblCantidad.Name = "LblCantidad";
             this.LblCantidad.Size = new System.Drawing.Size(110, 31);
             this.LblCantidad.TabIndex = 37;
@@ -107,7 +110,7 @@
             this.BtnAgregarProducto.Location = new System.Drawing.Point(1004, 706);
             this.BtnAgregarProducto.Name = "BtnAgregarProducto";
             this.BtnAgregarProducto.Size = new System.Drawing.Size(143, 56);
-            this.BtnAgregarProducto.TabIndex = 39;
+            this.BtnAgregarProducto.TabIndex = 36;
             this.BtnAgregarProducto.Text = "Agregar producto";
             this.BtnAgregarProducto.UseVisualStyleBackColor = false;
             this.BtnAgregarProducto.Click += new System.EventHandler(this.BtnAgregarProducto_Click);
@@ -116,7 +119,7 @@
             // 
             this.CbxUnidadesMedidasAgregarProducto.BackColor = System.Drawing.Color.White;
             this.CbxUnidadesMedidasAgregarProducto.FormattingEnabled = true;
-            this.CbxUnidadesMedidasAgregarProducto.Location = new System.Drawing.Point(677, 460);
+            this.CbxUnidadesMedidasAgregarProducto.Location = new System.Drawing.Point(665, 404);
             this.CbxUnidadesMedidasAgregarProducto.Name = "CbxUnidadesMedidasAgregarProducto";
             this.CbxUnidadesMedidasAgregarProducto.Size = new System.Drawing.Size(309, 24);
             this.CbxUnidadesMedidasAgregarProducto.TabIndex = 41;
@@ -125,7 +128,7 @@
             // 
             this.LblUnidadesMedida.AutoSize = true;
             this.LblUnidadesMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUnidadesMedida.Location = new System.Drawing.Point(671, 406);
+            this.LblUnidadesMedida.Location = new System.Drawing.Point(659, 350);
             this.LblUnidadesMedida.Name = "LblUnidadesMedida";
             this.LblUnidadesMedida.Size = new System.Drawing.Size(232, 31);
             this.LblUnidadesMedida.TabIndex = 40;
@@ -135,7 +138,7 @@
             // 
             this.CbxCategoriasAgregarProducto.BackColor = System.Drawing.Color.White;
             this.CbxCategoriasAgregarProducto.FormattingEnabled = true;
-            this.CbxCategoriasAgregarProducto.Location = new System.Drawing.Point(224, 544);
+            this.CbxCategoriasAgregarProducto.Location = new System.Drawing.Point(212, 488);
             this.CbxCategoriasAgregarProducto.Name = "CbxCategoriasAgregarProducto";
             this.CbxCategoriasAgregarProducto.Size = new System.Drawing.Size(309, 24);
             this.CbxCategoriasAgregarProducto.TabIndex = 43;
@@ -145,7 +148,7 @@
             // 
             this.LblCategorias.AutoSize = true;
             this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCategorias.Location = new System.Drawing.Point(218, 499);
+            this.LblCategorias.Location = new System.Drawing.Point(206, 443);
             this.LblCategorias.Name = "LblCategorias";
             this.LblCategorias.Size = new System.Drawing.Size(125, 31);
             this.LblCategorias.TabIndex = 42;
@@ -155,7 +158,7 @@
             // 
             this.CbxTipoProductoAgregarProducto.BackColor = System.Drawing.Color.White;
             this.CbxTipoProductoAgregarProducto.FormattingEnabled = true;
-            this.CbxTipoProductoAgregarProducto.Location = new System.Drawing.Point(677, 544);
+            this.CbxTipoProductoAgregarProducto.Location = new System.Drawing.Point(665, 488);
             this.CbxTipoProductoAgregarProducto.Name = "CbxTipoProductoAgregarProducto";
             this.CbxTipoProductoAgregarProducto.Size = new System.Drawing.Size(309, 24);
             this.CbxTipoProductoAgregarProducto.TabIndex = 45;
@@ -164,7 +167,7 @@
             // 
             this.LblTipoProducto.AutoSize = true;
             this.LblTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTipoProducto.Location = new System.Drawing.Point(671, 499);
+            this.LblTipoProducto.Location = new System.Drawing.Point(659, 443);
             this.LblTipoProducto.Name = "LblTipoProducto";
             this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
             this.LblTipoProducto.TabIndex = 44;
@@ -175,7 +178,7 @@
             this.NumUDLimiteAgregarProducto.BackColor = System.Drawing.Color.White;
             this.NumUDLimiteAgregarProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NumUDLimiteAgregarProducto.Font = new System.Drawing.Font("Roboto", 10F);
-            this.NumUDLimiteAgregarProducto.Location = new System.Drawing.Point(224, 456);
+            this.NumUDLimiteAgregarProducto.Location = new System.Drawing.Point(212, 400);
             this.NumUDLimiteAgregarProducto.Name = "NumUDLimiteAgregarProducto";
             this.NumUDLimiteAgregarProducto.Size = new System.Drawing.Size(309, 28);
             this.NumUDLimiteAgregarProducto.TabIndex = 47;
@@ -184,7 +187,7 @@
             // 
             this.LblLimite.AutoSize = true;
             this.LblLimite.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLimite.Location = new System.Drawing.Point(218, 406);
+            this.LblLimite.Location = new System.Drawing.Point(206, 350);
             this.LblLimite.Name = "LblLimite";
             this.LblLimite.Size = new System.Drawing.Size(267, 31);
             this.LblLimite.TabIndex = 46;
@@ -193,13 +196,15 @@
             // PnlTitulo
             // 
             this.PnlTitulo.BackColor = System.Drawing.Color.Maroon;
+            this.PnlTitulo.Controls.Add(this.PbxNombreEmpresa);
             this.PnlTitulo.Controls.Add(this.LblAspectos);
             this.PnlTitulo.Controls.Add(this.PbxCerrarForm);
             this.PnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlTitulo.Location = new System.Drawing.Point(0, 100);
+            this.PnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.PnlTitulo.Name = "PnlTitulo";
             this.PnlTitulo.Size = new System.Drawing.Size(1186, 73);
             this.PnlTitulo.TabIndex = 49;
+            this.PnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlTitulo_MouseDown);
             // 
             // LblAspectos
             // 
@@ -210,7 +215,16 @@
             this.LblAspectos.Name = "LblAspectos";
             this.LblAspectos.Size = new System.Drawing.Size(339, 38);
             this.LblAspectos.TabIndex = 1;
-            this.LblAspectos.Text = "AGREGAR PRODCUTO";
+            this.LblAspectos.Text = "AGREGAR PRODUCTO";
+            // 
+            // LblGuionBajoProducto
+            // 
+            this.LblGuionBajoProducto.AutoSize = true;
+            this.LblGuionBajoProducto.Location = new System.Drawing.Point(207, 305);
+            this.LblGuionBajoProducto.Name = "LblGuionBajoProducto";
+            this.LblGuionBajoProducto.Size = new System.Drawing.Size(273, 16);
+            this.LblGuionBajoProducto.TabIndex = 50;
+            this.LblGuionBajoProducto.Text = "______________________________________";
             // 
             // PbxCerrarForm
             // 
@@ -224,44 +238,23 @@
             this.PbxCerrarForm.TabStop = false;
             this.PbxCerrarForm.Click += new System.EventHandler(this.PbxCerrarForm_Click);
             // 
-            // PnlLogo
+            // PbxNombreEmpresa
             // 
-            this.PnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
-            this.PnlLogo.Controls.Add(this.PbxLogo);
-            this.PnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.PnlLogo.Name = "PnlLogo";
-            this.PnlLogo.Size = new System.Drawing.Size(1186, 100);
-            this.PnlLogo.TabIndex = 48;
-            // 
-            // PbxLogo
-            // 
-            this.PbxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.PbxLogo.Image = global::MoyoData.Properties.Resources.Group_3;
-            this.PbxLogo.Location = new System.Drawing.Point(377, 28);
-            this.PbxLogo.Name = "PbxLogo";
-            this.PbxLogo.Size = new System.Drawing.Size(415, 44);
-            this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxLogo.TabIndex = 1;
-            this.PbxLogo.TabStop = false;
-            // 
-            // LblGuionBajoProducto
-            // 
-            this.LblGuionBajoProducto.AutoSize = true;
-            this.LblGuionBajoProducto.Location = new System.Drawing.Point(219, 361);
-            this.LblGuionBajoProducto.Name = "LblGuionBajoProducto";
-            this.LblGuionBajoProducto.Size = new System.Drawing.Size(273, 16);
-            this.LblGuionBajoProducto.TabIndex = 50;
-            this.LblGuionBajoProducto.Text = "______________________________________";
+            this.PbxNombreEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("PbxNombreEmpresa.Image")));
+            this.PbxNombreEmpresa.Location = new System.Drawing.Point(788, 24);
+            this.PbxNombreEmpresa.Name = "PbxNombreEmpresa";
+            this.PbxNombreEmpresa.Size = new System.Drawing.Size(276, 28);
+            this.PbxNombreEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxNombreEmpresa.TabIndex = 12;
+            this.PbxNombreEmpresa.TabStop = false;
             // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1186, 796);
+            this.ClientSize = new System.Drawing.Size(1168, 749);
             this.Controls.Add(this.PnlTitulo);
-            this.Controls.Add(this.PnlLogo);
             this.Controls.Add(this.NumUDLimiteAgregarProducto);
             this.Controls.Add(this.LblLimite);
             this.Controls.Add(this.CbxTipoProductoAgregarProducto);
@@ -277,15 +270,18 @@
             this.Controls.Add(this.LblProducto);
             this.Controls.Add(this.LblGuionBajoProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1186, 796);
+            this.MinimumSize = new System.Drawing.Size(1186, 796);
             this.Name = "AgregarProducto";
-            this.Text = "AgregarProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agregar producto";
             ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidadAgregarProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDLimiteAgregarProducto)).EndInit();
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
-            this.PnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,9 +304,8 @@
         private System.Windows.Forms.Label LblLimite;
         private System.Windows.Forms.Panel PnlTitulo;
         private System.Windows.Forms.Label LblAspectos;
-        private System.Windows.Forms.PictureBox PbxCerrarForm;
-        private System.Windows.Forms.Panel PnlLogo;
-        private System.Windows.Forms.PictureBox PbxLogo;
         private System.Windows.Forms.Label LblGuionBajoProducto;
+        private System.Windows.Forms.PictureBox PbxCerrarForm;
+        private System.Windows.Forms.PictureBox PbxNombreEmpresa;
     }
 }

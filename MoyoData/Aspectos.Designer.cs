@@ -112,9 +112,8 @@
             // 
             // DgvCategorias
             // 
-            this.DgvCategorias.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvCategorias.Location = new System.Drawing.Point(23, 315);
+            this.DgvCategorias.Location = new System.Drawing.Point(55, 315);
             this.DgvCategorias.Name = "DgvCategorias";
             this.DgvCategorias.RowHeadersWidth = 51;
             this.DgvCategorias.RowTemplate.Height = 24;
@@ -131,7 +130,7 @@
             this.BtnAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregarCategoria.Image = global::MoyoData.Properties.Resources._5_icon__plus_;
             this.BtnAgregarCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregarCategoria.Location = new System.Drawing.Point(42, 260);
+            this.BtnAgregarCategoria.Location = new System.Drawing.Point(74, 260);
             this.BtnAgregarCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAgregarCategoria.Name = "BtnAgregarCategoria";
             this.BtnAgregarCategoria.Size = new System.Drawing.Size(138, 50);
@@ -149,7 +148,7 @@
             this.BtnEditarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditarCategoria.Image = global::MoyoData.Properties.Resources._2_icon__edit_pencil_;
             this.BtnEditarCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditarCategoria.Location = new System.Drawing.Point(200, 260);
+            this.BtnEditarCategoria.Location = new System.Drawing.Point(232, 260);
             this.BtnEditarCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditarCategoria.Name = "BtnEditarCategoria";
             this.BtnEditarCategoria.Size = new System.Drawing.Size(123, 50);
@@ -162,7 +161,7 @@
             this.LblCategorias.AutoSize = true;
             this.LblCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCategorias.Location = new System.Drawing.Point(117, 217);
+            this.LblCategorias.Location = new System.Drawing.Point(149, 217);
             this.LblCategorias.Name = "LblCategorias";
             this.LblCategorias.Size = new System.Drawing.Size(125, 31);
             this.LblCategorias.TabIndex = 39;
@@ -170,9 +169,8 @@
             // 
             // DgvTiposProducto
             // 
-            this.DgvTiposProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DgvTiposProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTiposProducto.Location = new System.Drawing.Point(413, 315);
+            this.DgvTiposProducto.Location = new System.Drawing.Point(445, 315);
             this.DgvTiposProducto.Name = "DgvTiposProducto";
             this.DgvTiposProducto.RowHeadersWidth = 51;
             this.DgvTiposProducto.RowTemplate.Height = 24;
@@ -181,9 +179,8 @@
             // 
             // DgvUnidadesDeMedida
             // 
-            this.DgvUnidadesDeMedida.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.DgvUnidadesDeMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvUnidadesDeMedida.Location = new System.Drawing.Point(799, 315);
+            this.DgvUnidadesDeMedida.Location = new System.Drawing.Point(831, 315);
             this.DgvUnidadesDeMedida.Name = "DgvUnidadesDeMedida";
             this.DgvUnidadesDeMedida.RowHeadersWidth = 51;
             this.DgvUnidadesDeMedida.RowTemplate.Height = 24;
@@ -192,11 +189,10 @@
             // 
             // LblTiposProducto
             // 
-            this.LblTiposProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblTiposProducto.AutoSize = true;
             this.LblTiposProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblTiposProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTiposProducto.Location = new System.Drawing.Point(469, 217);
+            this.LblTiposProducto.Location = new System.Drawing.Point(515, 217);
             this.LblTiposProducto.Name = "LblTiposProducto";
             this.LblTiposProducto.Size = new System.Drawing.Size(206, 31);
             this.LblTiposProducto.TabIndex = 44;
@@ -204,7 +200,6 @@
             // 
             // BtnEditarTipoProducto
             // 
-            this.BtnEditarTipoProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnEditarTipoProducto.AutoSize = true;
             this.BtnEditarTipoProducto.BackColor = System.Drawing.Color.Transparent;
             this.BtnEditarTipoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -213,7 +208,7 @@
             this.BtnEditarTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditarTipoProducto.Image = global::MoyoData.Properties.Resources._2_icon__edit_pencil_;
             this.BtnEditarTipoProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditarTipoProducto.Location = new System.Drawing.Point(589, 260);
+            this.BtnEditarTipoProducto.Location = new System.Drawing.Point(621, 260);
             this.BtnEditarTipoProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditarTipoProducto.Name = "BtnEditarTipoProducto";
             this.BtnEditarTipoProducto.Size = new System.Drawing.Size(123, 50);
@@ -223,7 +218,6 @@
             // 
             // BtnAgregarTipoPorducto
             // 
-            this.BtnAgregarTipoPorducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnAgregarTipoPorducto.AutoSize = true;
             this.BtnAgregarTipoPorducto.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarTipoPorducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -232,7 +226,7 @@
             this.BtnAgregarTipoPorducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregarTipoPorducto.Image = global::MoyoData.Properties.Resources._5_icon__plus_;
             this.BtnAgregarTipoPorducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregarTipoPorducto.Location = new System.Drawing.Point(431, 260);
+            this.BtnAgregarTipoPorducto.Location = new System.Drawing.Point(463, 260);
             this.BtnAgregarTipoPorducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAgregarTipoPorducto.Name = "BtnAgregarTipoPorducto";
             this.BtnAgregarTipoPorducto.Size = new System.Drawing.Size(138, 50);
@@ -242,11 +236,10 @@
             // 
             // LblUnidadesDeMedida
             // 
-            this.LblUnidadesDeMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblUnidadesDeMedida.AutoSize = true;
             this.LblUnidadesDeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblUnidadesDeMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUnidadesDeMedida.Location = new System.Drawing.Point(848, 217);
+            this.LblUnidadesDeMedida.Location = new System.Drawing.Point(895, 217);
             this.LblUnidadesDeMedida.Name = "LblUnidadesDeMedida";
             this.LblUnidadesDeMedida.Size = new System.Drawing.Size(232, 31);
             this.LblUnidadesDeMedida.TabIndex = 47;
@@ -254,7 +247,6 @@
             // 
             // BtnEditarUnidadDeMedida
             // 
-            this.BtnEditarUnidadDeMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEditarUnidadDeMedida.AutoSize = true;
             this.BtnEditarUnidadDeMedida.BackColor = System.Drawing.Color.Transparent;
             this.BtnEditarUnidadDeMedida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -263,7 +255,7 @@
             this.BtnEditarUnidadDeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditarUnidadDeMedida.Image = global::MoyoData.Properties.Resources._2_icon__edit_pencil_;
             this.BtnEditarUnidadDeMedida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditarUnidadDeMedida.Location = new System.Drawing.Point(972, 260);
+            this.BtnEditarUnidadDeMedida.Location = new System.Drawing.Point(1004, 260);
             this.BtnEditarUnidadDeMedida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditarUnidadDeMedida.Name = "BtnEditarUnidadDeMedida";
             this.BtnEditarUnidadDeMedida.Size = new System.Drawing.Size(123, 50);
@@ -273,7 +265,6 @@
             // 
             // BtnAgregarUnidadDeMedida
             // 
-            this.BtnAgregarUnidadDeMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAgregarUnidadDeMedida.AutoSize = true;
             this.BtnAgregarUnidadDeMedida.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarUnidadDeMedida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -282,7 +273,7 @@
             this.BtnAgregarUnidadDeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregarUnidadDeMedida.Image = global::MoyoData.Properties.Resources._5_icon__plus_;
             this.BtnAgregarUnidadDeMedida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregarUnidadDeMedida.Location = new System.Drawing.Point(814, 260);
+            this.BtnAgregarUnidadDeMedida.Location = new System.Drawing.Point(846, 260);
             this.BtnAgregarUnidadDeMedida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAgregarUnidadDeMedida.Name = "BtnAgregarUnidadDeMedida";
             this.BtnAgregarUnidadDeMedida.Size = new System.Drawing.Size(138, 50);
@@ -292,8 +283,7 @@
             // 
             // Aspectos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1186, 796);
             this.Controls.Add(this.LblUnidadesDeMedida);
