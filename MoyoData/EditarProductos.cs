@@ -20,6 +20,8 @@ namespace MoyoData
         Producto producto;
         string consulta;
         string buscarCategoria;
+        List<Categoria> categorias = new List<Categoria>();
+        List<UnidadMedida> unidadMedidas = new List<UnidadMedida>();
         public EditarProductos(Producto producto)
         {
             InitializeComponent();
@@ -118,12 +120,12 @@ namespace MoyoData
                 return;
             }
 
-            int categoria = CbxCategoriasEditarProducto.SelectedIndex + 1;
+            Categoria categoria = categorias.Find(p=> p.categoria == CbxCategoriasEditarProducto.SelectedItem.ToString());
             int idTipoProducto;
-            int idUnidadMedida = CbxUnidadesMedidasEditarProducto.SelectedIndex + 1;
+            UnidadMedida idUnidadMedida = unidadMedidas.Find(p => p.unidadMedida == CbxUnidadesMedidasEditarProducto.SelectedItem.ToString());
 
             MySqlDataReader mySqlDataReader = null;
-            string buscar = "Select idTipoProducto from tTiposproductos where TipoProducto = '" + CbxTipoProductoEditarProducto.SelectedItem + "'  AND TCategorias_idCategoria = " + categoria;
+            string buscar = "Select idTipoProducto from tTiposproductos where TipoProducto = '" + CbxTipoProductoEditarProducto.SelectedItem + "'  AND TCategorias_idCategoria = " + categoria.id;
 
             //Generación de las consultas para buscar si existe el nombre.
             MySqlCommand mySqlCommandBuscar = new MySqlCommand(buscar);
@@ -143,14 +145,14 @@ namespace MoyoData
 
 
             //Variables.
-            Producto productoActualizado = new Producto(TbxProductoEditarProducto.Text, Convert.ToInt32(NumUDStockEditarProducto.Value), Convert.ToInt32(NumUDCantidadEditarProducto.Value), Convert.ToInt32(NumUDLimiteEditarProducto.Value), idUnidadMedida, idTipoProducto);
+            Producto productoActualizado = new Producto(TbxProductoEditarProducto.Text, Convert.ToInt32(NumUDStockEditarProducto.Value), Convert.ToInt32(NumUDCantidadEditarProducto.Value), Convert.ToInt32(NumUDLimiteEditarProducto.Value), idUnidadMedida.id, idTipoProducto);
 
             //Variables para la base de datos.
             string consulta = "Update tproductos Set NombreProducto = '" + productoActualizado.producto
                                                 + "', Stock = " + productoActualizado.stock
                                                 + ", CantidadProducto = " + productoActualizado.cantidadProducto
                                                 + ", LimiteSacarProducto = " + productoActualizado.limteProducto
-                                                + ", TUnidadesMedidas_idUnidadMedida = " + idUnidadMedida.ToString()
+                                                + ", TUnidadesMedidas_idUnidadMedida = " + idUnidadMedida.id.ToString()
                                                 + ", TTiposProductos_idTipoProducto = " + idTipoProducto.ToString()
                                                 + " where NombreProducto = '" + producto.producto + "'"; 
                 MySqlCommand mySqlCommandInsertar = new MySqlCommand(consulta);
@@ -226,7 +228,8 @@ namespace MoyoData
         private void SeleccionarCategorias()
         {
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Select categoria from TCategorias";
+            consulta = "Select * from TCategorias";
+            Categoria categoria;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion.Conectar();
@@ -235,13 +238,15 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron categorías");
+                MessageBox.Show("No se encontraron categorías", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             while (mySqlDataReader.Read())
             {
-                CbxCategoriasEditarProducto.Items.Add(mySqlDataReader["Categoria"].ToString());
+                categoria = new Categoria(Convert.ToInt32(mySqlDataReader["idCategoria"].ToString()), mySqlDataReader["Categoria"].ToString());
+                CbxCategoriasEditarProducto.Items.Add(categoria.categoria);
+                categorias.Add(categoria);
             }
 
             mySqlDataReader.Close();
@@ -255,7 +260,8 @@ namespace MoyoData
         private void SeleccionarUnidadMedida()
         {
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Select UnidadMedida from TUnidadesMedidas";
+            consulta = "Select * from TUnidadesMedidas";
+            UnidadMedida unidadMedida;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion.Conectar();
@@ -264,13 +270,15 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron unidades de medida");
+                MessageBox.Show("No se encontraron unidades de medida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             while (mySqlDataReader.Read())
             {
-                CbxUnidadesMedidasEditarProducto.Items.Add(mySqlDataReader["UnidadMedida"].ToString());
+                unidadMedida = new UnidadMedida(Convert.ToInt32(mySqlDataReader["idUnidadMedida"].ToString()), mySqlDataReader["UnidadMedida"].ToString());
+                CbxUnidadesMedidasEditarProducto.Items.Add(unidadMedida.unidadMedida);
+                unidadMedidas.Add(unidadMedida);
             }
 
             mySqlDataReader.Close();

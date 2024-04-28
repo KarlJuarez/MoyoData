@@ -160,7 +160,7 @@ namespace MoyoData
         //-------------------------------------------
         private void BtnEntradaProducto_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new AgregarEntradaProducto());
+            AbrirFormularioHijo(new EntradaProductos());
         }
 
         //------------------------------------------
@@ -168,7 +168,7 @@ namespace MoyoData
         //------------------------------------------
         private void BtnSalidaProducto_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new AgregarSalidaProducto());
+            AbrirFormularioHijo(new SalidaProductos());
         }
 
         //-------------------------------------

@@ -15,7 +15,6 @@ namespace MoyoData
     public partial class AgregarUnidadMedida : Form
     {
         BaseDeDatos conexion;
-        string consulta;
         public AgregarUnidadMedida()
         {
             InitializeComponent();

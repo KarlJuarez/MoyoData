@@ -198,6 +198,7 @@ namespace MoyoData
         {
             AgregarProducto agregarProducto = new AgregarProducto();
             agregarProducto.ShowDialog();
+            ActualizarTabla();
         }
 
         //------------------------------------
@@ -205,8 +206,6 @@ namespace MoyoData
         //------------------------------------
         private void BtnEliminarProductoInventario_Click(object sender, EventArgs e)
         {
-            MySqlDataReader mySqlDataReader = null;
-            Producto producto;
             int id;
             int totalSeleccion = DgvProductos.Rows.Cast<DataGridViewRow>().
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionInventario"].Value)).Count();
@@ -216,10 +215,10 @@ namespace MoyoData
                 return;
             }
 
-            DialogResult result = MessageBox.Show("¿Quiéres borrar los productos?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Quiéres borrar los productos? Se borrarán las entradas y salidas de productos"
+                , "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
-                MessageBox.Show("Hola");
                 return;
             }
 
@@ -228,6 +227,17 @@ namespace MoyoData
                 if (Convert.ToBoolean(row.Cells["ColumSeleccionInventario"].Value))
                 {
                     id = Convert.ToInt32(row.Cells["ColumIDInventario"].Value);
+
+                    consulta = "Delete from TEntradaProductos_has_TProductos where TProductos_idProducto = " + id.ToString();
+                    MySqlCommand mySqlCommandBorrarEntradaProductos = new MySqlCommand(consulta);
+                    mySqlCommandBorrarEntradaProductos.Connection = conexion.Conectar();
+                    mySqlCommandBorrarEntradaProductos.ExecuteNonQuery();
+
+                    consulta = "Delete from TProductos_has_TSalidaProductos where TProductos_idProducto = " + id.ToString();
+                    MySqlCommand mySqlCommandBorrarSalidaProductos = new MySqlCommand(consulta);
+                    mySqlCommandBorrarSalidaProductos.Connection = conexion.Conectar();
+                    mySqlCommandBorrarSalidaProductos.ExecuteNonQuery();
+
                     consulta = "Delete from TProductos where idProducto = " + id.ToString();
                     MySqlCommand mySqlCommandBorrar = new MySqlCommand(consulta);
                     mySqlCommandBorrar.Connection = conexion.Conectar();

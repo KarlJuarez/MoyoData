@@ -16,6 +16,7 @@ namespace MoyoData
     {
         BaseDeDatos conexion;
         string consulta;
+        List<Categoria> categorias = new List<Categoria>();
         public AgregarTipoProducto()
         {
             InitializeComponent();
@@ -38,10 +39,10 @@ namespace MoyoData
             }
 
             string tipoProducto = TbxTipoProducto.Text;
-            int idTipoProducto = CbxCategoriaTipoProducto.SelectedIndex +1 ;
+            Categoria categoria = categorias.Find(p => p.categoria == CbxCategoriaTipoProducto.SelectedItem.ToString());
 
             MySqlDataReader mySqlDataReader = null;
-            string buscar = "Select * from TTiposProductos where TipoProducto = '" + tipoProducto + "' AND  TCategorias_idCategoria =" + idTipoProducto;
+            string buscar = "Select * from TTiposProductos where TipoProducto = '" + tipoProducto + "' AND  TCategorias_idCategoria =" + categoria.id;
 
             //Generación de las consultas para buscar si existe el nombre.
             MySqlCommand mySqlCommandBuscar = new MySqlCommand(buscar);
@@ -58,7 +59,7 @@ namespace MoyoData
 
             //Variables para la base de datos.
             string consulta = "Insert Into TTiposProductos (TipoProducto, TCategorias_idCategoria) " +
-                              "Values ('" + tipoProducto + "', "+ idTipoProducto.ToString() + ")";
+                              "Values ('" + tipoProducto + "', "+ categoria.id.ToString() + ")";
             MySqlCommand mySqlCommandInsertar = new MySqlCommand(consulta);
             mySqlCommandInsertar.Connection = conexion.Conectar();
             mySqlCommandInsertar.ExecuteNonQuery();
@@ -69,7 +70,8 @@ namespace MoyoData
         private void SeleccionarCategorias()
         {
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Select categoria from TCategorias";
+            consulta = "Select * from TCategorias";
+            Categoria categoria;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion.Conectar();
@@ -84,7 +86,9 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                CbxCategoriaTipoProducto.Items.Add(mySqlDataReader["Categoria"].ToString());
+                categoria = new Categoria(Convert.ToInt32(mySqlDataReader["idCategoria"].ToString()), mySqlDataReader["Categoria"].ToString());
+                CbxCategoriaTipoProducto.Items.Add(categoria.categoria);
+                categorias.Add(categoria);
             }
 
             mySqlDataReader.Close();

@@ -15,7 +15,6 @@ namespace MoyoData
     public partial class AgregarCategoria : Form
     {
         BaseDeDatos conexion;
-        string consulta;
         public AgregarCategoria()
         {
             InitializeComponent();

@@ -83,15 +83,45 @@ namespace MoyoData
             mySqlDataReader.Close();
         }
 
+
         private void BtnAgregarUsuario_Click(object sender, EventArgs e)
         {
             Registrar registrar = new Registrar();
             registrar.ShowDialog();
+            ActualizarUsuarios();
         }
 
         private void BtnEliminarUsuario_Click(object sender, EventArgs e)
         {
+            int id;
+            int totalSeleccion = DgvUsuarios.Rows.Cast<DataGridViewRow>().
+                Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionUsuarios"].Value)).Count();
+            if (totalSeleccion <= 0)
+            {
+                MessageBox.Show("Seleccione algún usuario.");
+                return;
+            }
 
+            DialogResult result = MessageBox.Show("¿Quiéres borrar los usuarios?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            foreach (DataGridViewRow row in DgvUsuarios.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells["ColumSeleccionUsuarios"].Value))
+                {
+                    id = Convert.ToInt32(row.Cells["ColumIDUsuarios"].Value);
+                    consulta = "Delete from TUsuarios where idusuario = " + id.ToString();
+                    MySqlCommand mySqlCommandBorrar = new MySqlCommand(consulta);
+                    mySqlCommandBorrar.Connection = conexion.Conectar();
+                    mySqlCommandBorrar.ExecuteNonQuery();
+
+                }
+            }
+            ActualizarUsuarios();
+            MessageBox.Show("Se ha borrado los usuarios.");
         }
 
         private void BtnEditarUsuario_Click(object sender, EventArgs e)

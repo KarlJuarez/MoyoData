@@ -18,6 +18,7 @@ namespace MoyoData
         TipoProducto tipoProducto;
         BaseDeDatos conexion = new BaseDeDatos();
         string consulta;
+        List<Categoria> categorias = new List<Categoria>();
         public EditarTipoProducto(TipoProducto tipoProducto)
         {
             InitializeComponent();
@@ -43,10 +44,11 @@ namespace MoyoData
             }
 
             string tipoProductoNombre = TbxTipoProducto.Text;
+            Categoria categoria = categorias.Find(p => p.categoria == CbxCategoriaTipoProducto.SelectedItem.ToString());
 
 
             //Variables.
-            TipoProducto tipoProductoActualizado = new TipoProducto(tipoProducto.id, tipoProductoNombre, CbxCategoriaTipoProducto.SelectedIndex+1);
+            TipoProducto tipoProductoActualizado = new TipoProducto(tipoProducto.id, tipoProductoNombre, categoria.id);
             //Variables para la base de datos.
             string consulta = "Update TTiposProductos Set TipoProducto = '" + tipoProductoActualizado.tipoProducto 
                                                 + "' , TCategorias_idCategoria = " + tipoProductoActualizado.categoria.ToString()
@@ -64,7 +66,8 @@ namespace MoyoData
         private void SeleccionarCategorias()
         {
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Select categoria from TCategorias";
+            consulta = "Select * from TCategorias";
+            Categoria categoria;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion.Conectar();
@@ -73,13 +76,15 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron categorías");
+                MessageBox.Show("No se encontraron categorías", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             while (mySqlDataReader.Read())
             {
-                CbxCategoriaTipoProducto.Items.Add(mySqlDataReader["Categoria"].ToString());
+                categoria = new Categoria(Convert.ToInt32(mySqlDataReader["idCategoria"].ToString()), mySqlDataReader["Categoria"].ToString());
+                CbxCategoriaTipoProducto.Items.Add(categoria.categoria);
+                categorias.Add(categoria);
             }
 
             mySqlDataReader.Close();

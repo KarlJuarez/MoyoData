@@ -16,7 +16,6 @@ namespace MoyoData
     {
         UnidadMedida unidadMedida;
         BaseDeDatos conexion = new BaseDeDatos();
-
         public EditarUnidadMedida(UnidadMedida unidadMedida)
         {
             InitializeComponent();

@@ -43,7 +43,7 @@ namespace MoyoData.Models
             }
             catch (MySqlException e)
             {
-                
+                return null;
             }
             return conexion;
         }

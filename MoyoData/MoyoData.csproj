@@ -172,6 +172,12 @@
     <Compile Include="EditarUsuario.Designer.cs">
       <DependentUpon>EditarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="EntradaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaProductos.Designer.cs">
+      <DependentUpon>EntradaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,7 @@
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\TipoProducto.cs" />
     <Compile Include="Models\UnidadMedida.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -188,6 +195,12 @@
     </Compile>
     <Compile Include="MostrarUsuarios.Designer.cs">
       <DependentUpon>MostrarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecuperarPassword.Designer.cs">
+      <DependentUpon>RecuperarPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Registrar.cs">
       <SubType>Form</SubType>
@@ -200,6 +213,12 @@
     </Compile>
     <Compile Include="AgregarSalidaProducto.Designer.cs">
       <DependentUpon>AgregarSalidaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaProductos.Designer.cs">
+      <DependentUpon>SalidaProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaInicio.cs">
       <SubType>Form</SubType>
@@ -249,17 +268,26 @@
     <EmbeddedResource Include="EditarUsuario.resx">
       <DependentUpon>EditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EntradaProductos.resx">
+      <DependentUpon>EntradaProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarUsuarios.resx">
       <DependentUpon>MostrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecuperarPassword.resx">
+      <DependentUpon>RecuperarPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registrar.resx">
       <DependentUpon>Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarSalidaProducto.resx">
       <DependentUpon>AgregarSalidaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaProductos.resx">
+      <DependentUpon>SalidaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaInicio.resx">
       <DependentUpon>VentanaInicio.cs</DependentUpon>

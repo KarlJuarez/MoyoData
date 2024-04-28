@@ -71,7 +71,7 @@ namespace MoyoData
             {
                 //Entidades a usar.
                 string nombreUsuario = TbxUsuario.Text;
-                string password = GenerarSHA1(TbxPassword.Text);
+                string password = Encriptar(TbxPassword.Text);
                 //string rol = ""; Se tiene planeado tener distintas vistas dependiendo el rol.
                 MySqlDataReader mySqlDataReader = null;
                 string consulta = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
@@ -123,36 +123,30 @@ namespace MoyoData
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al conectar la base de datos");
-            }            
+                MessageBox.Show("Error al conectar la base de datos"+ ex.ToString());
+            }           
         }
         #endregion
 
-        #region Cifrar cotraseña
+        #region Cifrar contraseña
         //---------------------------------------------------------------------
         //Función que cifra la contraseña.
         //---------------------------------------------------------------------
-        private string GenerarSHA1(string cadena)
+        private string Encriptar(string mensaje)
         {
-            UTF8Encoding enc = new UTF8Encoding();
-            byte[] data = enc.GetBytes(cadena);
-            byte[] resultado;
+            string hash = "moyodata";
+            byte[] data = UTF8Encoding.UTF8.GetBytes(mensaje);
 
-            SHA1CryptoServiceProvider sha = new SHA1CryptoServiceProvider();
+            MD5 md5 = MD5.Create();
+            TripleDES TripleDES = TripleDES.Create();
 
-            resultado = sha.ComputeHash(data);
+            TripleDES.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+            TripleDES.Mode = CipherMode.ECB;
 
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < resultado.Length; i++)
-            {
-                if (resultado[i] < 16)
-                {
-                    sb.Append("0");
-                }
-                sb.Append(resultado[i].ToString("x"));
-            }
+            ICryptoTransform transform = TripleDES.CreateEncryptor();
+            byte[] result = transform.TransformFinalBlock(data, 0, data.Length);
 
-            return sb.ToString();
+            return Convert.ToBase64String(result);
         }
         #endregion
 
@@ -273,5 +267,11 @@ namespace MoyoData
             }
         }
         #endregion
+
+        private void LinkLblRecuperarPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RecuperarPassword recuperarPassword = new RecuperarPassword();
+            recuperarPassword.ShowDialog();
+        }
     }
 }
