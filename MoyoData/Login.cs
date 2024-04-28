@@ -112,14 +112,11 @@ namespace MoyoData
                         return;
                     }
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al conectar la base de datos");
-            }
-            
-            
+            }            
         }
 
         //---------------------------------------------------------------------

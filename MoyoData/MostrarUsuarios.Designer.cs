@@ -34,10 +34,20 @@
             this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
+            this.DgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.BtnAgregarUsuario = new System.Windows.Forms.Button();
+            this.BtnEliminarUsuario = new System.Windows.Forms.Button();
+            this.BtnEditarUsuario = new System.Windows.Forms.Button();
+            this.ColumIDUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumUsuarioUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumPasswordUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumRolUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumSeleccionUsuarios = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlTitulo
@@ -55,10 +65,10 @@
             // 
             this.LblUsuarios.AutoSize = true;
             this.LblUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblUsuarios.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold);
             this.LblUsuarios.Location = new System.Drawing.Point(70, 20);
             this.LblUsuarios.Name = "LblUsuarios";
-            this.LblUsuarios.Size = new System.Drawing.Size(172, 38);
+            this.LblUsuarios.Size = new System.Drawing.Size(190, 37);
             this.LblUsuarios.TabIndex = 1;
             this.LblUsuarios.Text = "USUARIOS";
             // 
@@ -95,11 +105,96 @@
             this.PbxLogo.TabIndex = 1;
             this.PbxLogo.TabStop = false;
             // 
+            // DgvUsuarios
+            // 
+            this.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumIDUsuarios,
+            this.ColumUsuarioUsuarios,
+            this.ColumPasswordUsuarios,
+            this.ColumRolUsuarios,
+            this.ColumSeleccionUsuarios});
+            this.DgvUsuarios.Location = new System.Drawing.Point(49, 360);
+            this.DgvUsuarios.Name = "DgvUsuarios";
+            this.DgvUsuarios.RowHeadersWidth = 51;
+            this.DgvUsuarios.RowTemplate.Height = 24;
+            this.DgvUsuarios.Size = new System.Drawing.Size(1084, 402);
+            this.DgvUsuarios.TabIndex = 17;
+            // 
+            // BtnAgregarUsuario
+            // 
+            this.BtnAgregarUsuario.Location = new System.Drawing.Point(571, 289);
+            this.BtnAgregarUsuario.Name = "BtnAgregarUsuario";
+            this.BtnAgregarUsuario.Size = new System.Drawing.Size(175, 29);
+            this.BtnAgregarUsuario.TabIndex = 18;
+            this.BtnAgregarUsuario.Text = "Agregar usuario";
+            this.BtnAgregarUsuario.UseVisualStyleBackColor = true;
+            this.BtnAgregarUsuario.Click += new System.EventHandler(this.BtnAgregarUsuario_Click);
+            // 
+            // BtnEliminarUsuario
+            // 
+            this.BtnEliminarUsuario.Location = new System.Drawing.Point(775, 289);
+            this.BtnEliminarUsuario.Name = "BtnEliminarUsuario";
+            this.BtnEliminarUsuario.Size = new System.Drawing.Size(175, 29);
+            this.BtnEliminarUsuario.TabIndex = 19;
+            this.BtnEliminarUsuario.Text = "Eliminar usuario";
+            this.BtnEliminarUsuario.UseVisualStyleBackColor = true;
+            this.BtnEliminarUsuario.Click += new System.EventHandler(this.BtnEliminarUsuario_Click);
+            // 
+            // BtnEditarUsuario
+            // 
+            this.BtnEditarUsuario.Location = new System.Drawing.Point(977, 289);
+            this.BtnEditarUsuario.Name = "BtnEditarUsuario";
+            this.BtnEditarUsuario.Size = new System.Drawing.Size(175, 29);
+            this.BtnEditarUsuario.TabIndex = 20;
+            this.BtnEditarUsuario.Text = "Editar";
+            this.BtnEditarUsuario.UseVisualStyleBackColor = true;
+            this.BtnEditarUsuario.Click += new System.EventHandler(this.BtnEditarUsuario_Click);
+            // 
+            // ColumIDUsuarios
+            // 
+            this.ColumIDUsuarios.HeaderText = "ID";
+            this.ColumIDUsuarios.MinimumWidth = 6;
+            this.ColumIDUsuarios.Name = "ColumIDUsuarios";
+            this.ColumIDUsuarios.Width = 125;
+            // 
+            // ColumUsuarioUsuarios
+            // 
+            this.ColumUsuarioUsuarios.HeaderText = "Usuario";
+            this.ColumUsuarioUsuarios.MinimumWidth = 6;
+            this.ColumUsuarioUsuarios.Name = "ColumUsuarioUsuarios";
+            this.ColumUsuarioUsuarios.Width = 125;
+            // 
+            // ColumPasswordUsuarios
+            // 
+            this.ColumPasswordUsuarios.HeaderText = "Contraseña";
+            this.ColumPasswordUsuarios.MinimumWidth = 6;
+            this.ColumPasswordUsuarios.Name = "ColumPasswordUsuarios";
+            this.ColumPasswordUsuarios.Width = 125;
+            // 
+            // ColumRolUsuarios
+            // 
+            this.ColumRolUsuarios.HeaderText = "Rol";
+            this.ColumRolUsuarios.MinimumWidth = 6;
+            this.ColumRolUsuarios.Name = "ColumRolUsuarios";
+            this.ColumRolUsuarios.Width = 125;
+            // 
+            // ColumSeleccionUsuarios
+            // 
+            this.ColumSeleccionUsuarios.HeaderText = "Seleccion";
+            this.ColumSeleccionUsuarios.MinimumWidth = 6;
+            this.ColumSeleccionUsuarios.Name = "ColumSeleccionUsuarios";
+            this.ColumSeleccionUsuarios.Width = 125;
+            // 
             // MostrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 796);
+            this.Controls.Add(this.BtnEditarUsuario);
+            this.Controls.Add(this.BtnEliminarUsuario);
+            this.Controls.Add(this.BtnAgregarUsuario);
+            this.Controls.Add(this.DgvUsuarios);
             this.Controls.Add(this.PnlTitulo);
             this.Controls.Add(this.PnlLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -110,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
             this.PnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,5 +217,14 @@
         private System.Windows.Forms.PictureBox PbxCerrarForm;
         private System.Windows.Forms.Panel PnlLogo;
         private System.Windows.Forms.PictureBox PbxLogo;
+        private System.Windows.Forms.DataGridView DgvUsuarios;
+        private System.Windows.Forms.Button BtnAgregarUsuario;
+        private System.Windows.Forms.Button BtnEliminarUsuario;
+        private System.Windows.Forms.Button BtnEditarUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumUsuarioUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumPasswordUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumRolUsuarios;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionUsuarios;
     }
 }

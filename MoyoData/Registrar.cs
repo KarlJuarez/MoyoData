@@ -63,6 +63,11 @@ namespace MoyoData
                 return;
             }
 
+            /*if(TbxRespuestaRecuperarPassword.Text == "")
+            {
+                MessageBox.Show("Ingrese un respuesta.");
+                return;
+            }*/
 
             //Validación.
             if (CbxRegistrarRol.SelectedIndex == -1)
@@ -74,6 +79,7 @@ namespace MoyoData
             //Variables para ingresar usuario.
             string nombreUsuario = TbxRegistrarNombres.Text + " " + TbxRegistrarApellidos.Text;
             string password = GenerarSHA1(TbxRegistrarPassword.Text);
+            string respuesta = "";
             int rol = CbxRegistrarRol.SelectedIndex + 1;
 
             //Validación.
@@ -85,10 +91,9 @@ namespace MoyoData
 
             //Variables para la base de datos.
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Insert Into tusuarios (usuario, password, troles_idrol) " +
-                       "Values ('" + nombreUsuario + "', '" + password + "', " + rol + " )";
+            consulta = "Insert Into tusuarios (usuario, password, respuesta, troles_idrol) " +
+                       "Values ('" + nombreUsuario + "', '" + password + "', '"+ respuesta +"' ," + rol + " )";
             string buscar = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";
-
             //Generación de las consultas para buscar si existe el nombre.
             MySqlCommand mySqlCommandBuscar = new MySqlCommand(buscar);
             mySqlCommandBuscar.Connection = conexion.Conectar();
