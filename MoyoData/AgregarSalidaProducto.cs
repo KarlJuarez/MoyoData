@@ -331,5 +331,48 @@ namespace MoyoData
             SeleccionarProductos();
         }
         #endregion
+
+        #region Validación de campos
+        //-----------------------------------------------------
+        // Resaltar cuando el puntero entra del
+        // Textbox UsuarioSalidaProducto
+        //-----------------------------------------------------
+        private void TbxUsuarioSalidaProducto_Enter(object sender, EventArgs e)
+        {
+            if (TbxUsuarioSalidaProducto.Text == "Escribe aquí")
+            {
+                TbxUsuarioSalidaProducto.Text = "";
+                TbxUsuarioSalidaProducto.ForeColor = Color.Black;
+            }
+        }
+
+        //-----------------------------------------------------
+        // Resaltar cuando el puntero sale del
+        // Textbox UsuarioSalidaProducto
+        //-----------------------------------------------------
+        private void TbxUsuarioSalidaProducto_Leave(object sender, EventArgs e)
+        {
+            if (TbxUsuarioSalidaProducto.Text == "")
+            {
+                TbxUsuarioSalidaProducto.Text = "Escribe aquí";
+                TbxUsuarioSalidaProducto.ForeColor = Color.DimGray;
+            }
+        }
+
+        //-----------------------------------------------------
+        // Validar que el campo de TbxUsuarioEntradaProducto
+        // sólo admita la entrada de letras
+        //-----------------------------------------------------
+        private void TbxUsuarioSalidaProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 163) || (e.KeyChar >= 165 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        #endregion
     }
 }

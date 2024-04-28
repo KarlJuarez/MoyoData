@@ -38,6 +38,7 @@
             this.BtnEliminarProductoInventario = new System.Windows.Forms.Button();
             this.BtnEditarProducto = new System.Windows.Forms.Button();
             this.PnlAgregarProdcuto = new System.Windows.Forms.Panel();
+            this.BtnAgregarProductoInventario = new System.Windows.Forms.Button();
             this.DgvProductos = new System.Windows.Forms.DataGridView();
             this.ColumIDInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumProductoInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,6 @@
             this.ColumTipoInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCategoriaInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumSeleccionInventario = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.BtnAgregarProductoInventario = new System.Windows.Forms.Button();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -121,7 +121,7 @@
             this.BtnEliminarProductoInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminarProductoInventario.Image = global::MoyoData.Properties.Resources._2_icon__trash_;
             this.BtnEliminarProductoInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarProductoInventario.Location = new System.Drawing.Point(782, 198);
+            this.BtnEliminarProductoInventario.Location = new System.Drawing.Point(699, 198);
             this.BtnEliminarProductoInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEliminarProductoInventario.Name = "BtnEliminarProductoInventario";
             this.BtnEliminarProductoInventario.Size = new System.Drawing.Size(245, 50);
@@ -141,7 +141,7 @@
             this.BtnEditarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditarProducto.Image = global::MoyoData.Properties.Resources._2_icon__edit_pencil_;
             this.BtnEditarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditarProducto.Location = new System.Drawing.Point(1033, 198);
+            this.BtnEditarProducto.Location = new System.Drawing.Point(950, 198);
             this.BtnEditarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditarProducto.Name = "BtnEditarProducto";
             this.BtnEditarProducto.Size = new System.Drawing.Size(123, 50);
@@ -154,11 +154,31 @@
             // 
             this.PnlAgregarProdcuto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlAgregarProdcuto.Controls.Add(this.BtnAgregarProductoInventario);
-            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(556, 198);
+            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(473, 198);
             this.PnlAgregarProdcuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnlAgregarProdcuto.Name = "PnlAgregarProdcuto";
             this.PnlAgregarProdcuto.Size = new System.Drawing.Size(221, 50);
             this.PnlAgregarProdcuto.TabIndex = 35;
+            // 
+            // BtnAgregarProductoInventario
+            // 
+            this.BtnAgregarProductoInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAgregarProductoInventario.AutoSize = true;
+            this.BtnAgregarProductoInventario.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAgregarProductoInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAgregarProductoInventario.FlatAppearance.BorderSize = 0;
+            this.BtnAgregarProductoInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregarProductoInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarProductoInventario.Image = global::MoyoData.Properties.Resources._5_icon__plus_;
+            this.BtnAgregarProductoInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregarProductoInventario.Location = new System.Drawing.Point(0, 0);
+            this.BtnAgregarProductoInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnAgregarProductoInventario.Name = "BtnAgregarProductoInventario";
+            this.BtnAgregarProductoInventario.Size = new System.Drawing.Size(221, 50);
+            this.BtnAgregarProductoInventario.TabIndex = 3;
+            this.BtnAgregarProductoInventario.Text = "     Agregar producto";
+            this.BtnAgregarProductoInventario.UseVisualStyleBackColor = false;
+            this.BtnAgregarProductoInventario.Click += new System.EventHandler(this.BtnAgregarProductoInventario_Click);
             // 
             // DgvProductos
             // 
@@ -189,12 +209,12 @@
             this.ColumSeleccionInventario});
             this.DgvProductos.Cursor = System.Windows.Forms.Cursors.Default;
             this.DgvProductos.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.DgvProductos.Location = new System.Drawing.Point(26, 265);
+            this.DgvProductos.Location = new System.Drawing.Point(12, 265);
             this.DgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvProductos.Name = "DgvProductos";
             this.DgvProductos.RowHeadersWidth = 51;
             this.DgvProductos.RowTemplate.Height = 24;
-            this.DgvProductos.Size = new System.Drawing.Size(1126, 506);
+            this.DgvProductos.Size = new System.Drawing.Size(1140, 506);
             this.DgvProductos.TabIndex = 38;
             this.DgvProductos.TabStop = false;
             // 
@@ -241,26 +261,6 @@
             this.ColumSeleccionInventario.Name = "ColumSeleccionInventario";
             this.ColumSeleccionInventario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumSeleccionInventario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // BtnAgregarProductoInventario
-            // 
-            this.BtnAgregarProductoInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAgregarProductoInventario.AutoSize = true;
-            this.BtnAgregarProductoInventario.BackColor = System.Drawing.Color.Transparent;
-            this.BtnAgregarProductoInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAgregarProductoInventario.FlatAppearance.BorderSize = 0;
-            this.BtnAgregarProductoInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarProductoInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregarProductoInventario.Image = global::MoyoData.Properties.Resources._5_icon__plus_;
-            this.BtnAgregarProductoInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregarProductoInventario.Location = new System.Drawing.Point(0, 0);
-            this.BtnAgregarProductoInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnAgregarProductoInventario.Name = "BtnAgregarProductoInventario";
-            this.BtnAgregarProductoInventario.Size = new System.Drawing.Size(221, 50);
-            this.BtnAgregarProductoInventario.TabIndex = 3;
-            this.BtnAgregarProductoInventario.Text = "     Agregar producto";
-            this.BtnAgregarProductoInventario.UseVisualStyleBackColor = false;
-            this.BtnAgregarProductoInventario.Click += new System.EventHandler(this.BtnAgregarProductoInventario_Click);
             // 
             // Inventario
             // 

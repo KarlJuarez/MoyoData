@@ -17,8 +17,15 @@ namespace MoyoData
 {
     public partial class Login : Form
     {
+        //----------------------
+        // ATRIBUTOS
+        //----------------------
         private BaseDeDatos conexion;
         public Usuario usuario;
+
+        //-----------------------
+        // Constructor
+        //-----------------------
         public Login()
         {
             InitializeComponent();
@@ -35,6 +42,7 @@ namespace MoyoData
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg,
             int wparam, int lparam);
 
+        #region Botón para iniciar sesión
         //-------------------------------
         // Botón para iniciar sesión
         //-------------------------------
@@ -43,13 +51,13 @@ namespace MoyoData
             // Validación
             if (TbxUsuario.Text == "Usuario")
             {
-                MensajeError("Usuario obligatorio");
+                MessageBox.Show("Ingrese un usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (TbxPassword.Text == "Contraseña")
             {
-                MensajeError("Contraseña obligatoria");
+                MessageBox.Show("Ingrese la contraseña", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -121,7 +129,9 @@ namespace MoyoData
             
             
         }
+        #endregion
 
+        #region Cifrar cotraseña
         //---------------------------------------------------------------------
         //Función que cifra la contraseña.
         //---------------------------------------------------------------------
@@ -147,6 +157,7 @@ namespace MoyoData
 
             return sb.ToString();
         }
+        #endregion
 
         #region Movimiento de la ventana
         //--------------------------------
@@ -182,7 +193,7 @@ namespace MoyoData
         }
         #endregion
 
-        #region Validacion de textboxes para iniciar sesion
+        #region Validación de diseño de campos textboxes para iniciar sesion
         //-----------------------------------------------------
         // Resaltar cuando el puntero entra del
         // Textbox Usuario
@@ -235,14 +246,35 @@ namespace MoyoData
                 TbxPassword.ForeColor = Color.DimGray;
                 TbxPassword.UseSystemPasswordChar = false;
             }
-        } 
-
-        private void MensajeError(string msg)
-        {
-            LblMensajeError.Text = "    " + msg;
-            LblMensajeError.Visible = true;
         }
 
+        //-----------------------------------------------------
+        // Validar que el campo de TbxUsuario
+        // sólo admita la entrada de letras
+        //-----------------------------------------------------
+        private void TbxUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 163) || (e.KeyChar >= 165 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        //-----------------------------------------------------
+        // Validar que el campo de TbxUsuario
+        // sólo admita la entrada de letras y números
+        //-----------------------------------------------------
+        private void TbxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Sólo puede ingresar letras y números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
         #endregion
     }
 }
