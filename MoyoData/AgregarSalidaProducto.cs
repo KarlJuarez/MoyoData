@@ -274,12 +274,13 @@ namespace MoyoData
                 mySqlCommandInsertar.Connection = conexion.Conectar();
                 mySqlCommandInsertar.ExecuteNonQuery();
 
-                buscar = "Select COUNT(*) from tSalidaProductos";
+                buscar = "SELECT * FROM TSalidaProductos ORDER BY idSalidaProducto DESC LIMIT 1";
                 mySqlCommandBuscar = new MySqlCommand(buscar);
                 mySqlCommandBuscar.Connection = conexion.Conectar();
                 mySqlDataReader = mySqlCommandBuscar.ExecuteReader();
+                mySqlDataReader.Read();
 
-                indiceSalida = Convert.ToInt32(mySqlDataReader.Read());
+                indiceSalida = Convert.ToInt32(mySqlDataReader["idSalidaProducto"]);
 
                 mySqlDataReader.Close();
                 foreach (DataGridViewRow row in DgvProductosSeleccionados.Rows)
@@ -317,6 +318,7 @@ namespace MoyoData
 
                 MessageBox.Show("Se ha registrado el producto");
             }
+            this.Close();
 
         }
         #endregion

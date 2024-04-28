@@ -19,7 +19,7 @@ namespace MoyoData
         //---------------------------//
         BaseDeDatos conexion = new BaseDeDatos();
         string consulta;
-        List<string> categorias = new List<string>();
+        List<Categoria> categorias = new List<Categoria>();
 
         public AgregarEntradaProducto()
         {
@@ -44,7 +44,8 @@ namespace MoyoData
         private void ObtenerCategoria()
         {
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Select categoria from TCategorias";
+            consulta = "Select * from TCategorias";
+            Categoria categoria;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion.Conectar();
@@ -59,7 +60,8 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                categorias.Add(mySqlDataReader["categoria"].ToString());
+                categoria = new Categoria(Convert.ToInt32(mySqlDataReader["idcategoria"]), mySqlDataReader["categoria"].ToString());
+                categorias.Add(categoria);
             }
 
             mySqlDataReader.Close();
@@ -115,8 +117,8 @@ namespace MoyoData
             BaseDeDatos conexion2 = new BaseDeDatos();
             MySqlDataReader mySqlDataReader = null;
             consulta = "Select * from TTiposProductos Where idTipoProducto = " + id;
+            Categoria categoria;
             string tipoProducto;
-            string categoria;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion2.Conectar();
@@ -132,9 +134,9 @@ namespace MoyoData
             mySqlDataReader.Read();
 
             tipoProducto = mySqlDataReader["TipoProducto"].ToString();
-            categoria = categorias[Convert.ToInt32(mySqlDataReader["TCategorias_idCategoria"]) - 1];
+            categoria = categorias.Find(p => p.id == Convert.ToInt32(mySqlDataReader["TCategorias_IdCategoria"]));
             mySqlDataReader.Close();
-            return Tuple.Create(tipoProducto, categoria);
+            return Tuple.Create(tipoProducto, categoria.categoria);
         }
 
         #endregion
@@ -266,61 +268,61 @@ namespace MoyoData
                 mySqlDataReader.Close();
                 return;
             }
-            else
-            {
-                mySqlDataReader.Read();
-                idUsuario = Convert.ToInt32(mySqlDataReader["idUsuario"]);
-                //Variables para la base de datos.
-                consulta = "Insert Into tEntradaproductos (FechaIngreso, TUsuarios_idUsuario) " +
-                                  "Values ('" + Fecha.ToString("yyyy/MM/dd H:mm:ss") + "', " + idUsuario + ")";
 
-                mySqlDataReader.Close();
-                MySqlCommand mySqlCommandInsertar = new MySqlCommand(consulta);
+            mySqlDataReader.Read();
+            idUsuario = Convert.ToInt32(mySqlDataReader["idUsuario"]);
+            //Variables para la base de datos.
+            consulta = "Insert Into tEntradaproductos (FechaIngreso, TUsuarios_idUsuario) " +
+                              "Values ('" + Fecha.ToString("yyyy/MM/dd H:mm:ss") + "', " + idUsuario + ")";
+
+            mySqlDataReader.Close();
+            MySqlCommand mySqlCommandInsertar = new MySqlCommand(consulta);
+            mySqlCommandInsertar.Connection = conexion.Conectar();
+            mySqlCommandInsertar.ExecuteNonQuery();
+
+            buscar = "SELECT * FROM TEntradaProductos ORDER BY idEntradaProducto DESC LIMIT 1";
+            mySqlCommandBuscar = new MySqlCommand(buscar);
+            mySqlCommandBuscar.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommandBuscar.ExecuteReader();
+            mySqlDataReader.Read();
+
+            indiceEntrada = Convert.ToInt32(mySqlDataReader["idEntradaProducto"]);
+
+            mySqlDataReader.Close();
+            foreach (DataGridViewRow row in DgvProductosSeleccionados.Rows)
+            {
+                indiceProducto = Convert.ToInt32(row.Cells["ColumIDSeleccionados"].Value);
+                cantidadProducto = Convert.ToInt32(row.Cells["ColumCantidadSeleccionados"].Value);
+                int cantidadActualProducto;
+
+                consulta = "Insert Into TEntradaProductos_has_TProductos (TEntradaProductos_idEntradaProducto, TProductos_idProducto, CantidadProducto)" +
+                           "Values (" + indiceEntrada.ToString() + ", " + indiceProducto.ToString() + ", " + cantidadProducto.ToString() + ")";
+
+                mySqlCommandInsertar = new MySqlCommand(consulta);
                 mySqlCommandInsertar.Connection = conexion.Conectar();
                 mySqlCommandInsertar.ExecuteNonQuery();
 
-                buscar = "Select COUNT(*) from tEntradaProductos";
+                buscar = "Select cantidadProducto from tProductos where idProducto = " + indiceProducto.ToString();
                 mySqlCommandBuscar = new MySqlCommand(buscar);
                 mySqlCommandBuscar.Connection = conexion.Conectar();
                 mySqlDataReader = mySqlCommandBuscar.ExecuteReader();
 
-                indiceEntrada = Convert.ToInt32(mySqlDataReader.Read());
-
+                mySqlDataReader.Read();
+                cantidadActualProducto = Convert.ToInt32(mySqlDataReader["cantidadProducto"]) + cantidadProducto;
                 mySqlDataReader.Close();
-                foreach (DataGridViewRow row in DgvProductosSeleccionados.Rows)
-                {
-                    indiceProducto = Convert.ToInt32(row.Cells["ColumIDSeleccionados"].Value);
-                    cantidadProducto = Convert.ToInt32(row.Cells["ColumCantidadSeleccionados"].Value);
-                    int cantidadActualProducto;
 
-                    consulta = "Insert Into TEntradaProductos_has_TProductos (TEntradaProductos_idEntradaProducto, TProductos_idProducto, CantidadProducto)" +
-                               "Values (" + indiceEntrada.ToString() + ", " + indiceProducto.ToString() + ", " + cantidadProducto.ToString() + ")";
+                consulta = "Update TProductos Set cantidadProducto = " + cantidadActualProducto.ToString() + "  Where idProducto = " + indiceProducto.ToString();
 
-                    mySqlCommandInsertar = new MySqlCommand(consulta);
-                    mySqlCommandInsertar.Connection = conexion.Conectar();
-                    mySqlCommandInsertar.ExecuteNonQuery();
-
-                    buscar = "Select cantidadProducto from tProductos where idProducto = " + indiceProducto.ToString();
-                    mySqlCommandBuscar = new MySqlCommand(buscar);
-                    mySqlCommandBuscar.Connection = conexion.Conectar();
-                    mySqlDataReader = mySqlCommandBuscar.ExecuteReader();
-
-                    mySqlDataReader.Read();
-                    cantidadActualProducto = Convert.ToInt32(mySqlDataReader["cantidadProducto"]) + cantidadProducto;
-                    mySqlDataReader.Close();
-
-                    consulta = "Update TProductos Set cantidadProducto = " + cantidadActualProducto.ToString() + "  Where idProducto = " + indiceProducto.ToString();
-
-                    MySqlCommand mySqlCommandActualizar = new MySqlCommand(consulta);
-                    mySqlCommandActualizar.Connection = conexion.Conectar();
-                    mySqlCommandActualizar.ExecuteNonQuery();
-                }
-
-                ActualizarTabla();
-                DgvProductosSeleccionados.Rows.Clear();
-
-                MessageBox.Show("Se ha registrado el producto");
+                MySqlCommand mySqlCommandActualizar = new MySqlCommand(consulta);
+                mySqlCommandActualizar.Connection = conexion.Conectar();
+                mySqlCommandActualizar.ExecuteNonQuery();
             }
+
+            ActualizarTabla();
+            DgvProductosSeleccionados.Rows.Clear();
+
+            MessageBox.Show("Se ha registrado el producto");
+            this.Close();
         }
         #endregion
 

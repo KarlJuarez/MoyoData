@@ -18,7 +18,8 @@ namespace MoyoData
     {
         BaseDeDatos conexion;
         string consulta;
-        string buscarCategoria;
+        List<Categoria> categorias = new List<Categoria>();
+        List<UnidadMedida>unidadMedidas = new List<UnidadMedida>(); 
         public AgregarProducto()
         {
             InitializeComponent();
@@ -61,7 +62,8 @@ namespace MoyoData
         private void SeleccionarCategorias()
         {
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Select categoria from TCategorias";
+            consulta = "Select * from TCategorias";
+            Categoria categoria;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion.Conectar();
@@ -76,7 +78,9 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                CbxCategoriasAgregarProducto.Items.Add(mySqlDataReader["Categoria"].ToString());
+                categoria = new Categoria(Convert.ToInt32(mySqlDataReader["idCategoria"].ToString()), mySqlDataReader["Categoria"].ToString());
+                CbxCategoriasAgregarProducto.Items.Add(categoria.categoria);
+                categorias.Add(categoria);
             }
 
             mySqlDataReader.Close();
@@ -90,7 +94,8 @@ namespace MoyoData
         private void SeleccionarUnidadMedida()
         {
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Select UnidadMedida from TUnidadesMedidas";
+            consulta = "Select * from TUnidadesMedidas";
+            UnidadMedida unidadMedida;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion.Conectar();
@@ -105,7 +110,9 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                CbxUnidadesMedidasAgregarProducto.Items.Add(mySqlDataReader["UnidadMedida"].ToString());
+                unidadMedida = new UnidadMedida(Convert.ToInt32(mySqlDataReader["idUnidadMedida"].ToString()), mySqlDataReader["UnidadMedida"].ToString());
+                CbxUnidadesMedidasAgregarProducto.Items.Add(unidadMedida.unidadMedida);
+                unidadMedidas.Add(unidadMedida);
             }
 
             mySqlDataReader.Close();
@@ -155,12 +162,12 @@ namespace MoyoData
                 return;
             }
 
-            int categoria = CbxCategoriasAgregarProducto.SelectedIndex + 1;
+            Categoria categoria = categorias.Find(p => p.categoria == CbxCategoriasAgregarProducto.SelectedItem.ToString());
             int idTipoProducto;
-            int idUnidadMedida = CbxUnidadesMedidasAgregarProducto.SelectedIndex + 1;
+            UnidadMedida unidadMedida = unidadMedidas.Find(p => p.unidadMedida == CbxUnidadesMedidasAgregarProducto.SelectedItem.ToString());
 
             MySqlDataReader mySqlDataReader = null;
-            string buscar = "Select idTipoProducto from tTiposproductos where TipoProducto = '" + CbxTipoProductoAgregarProducto.SelectedItem + "'  AND TCategorias_idCategoria = " + categoria;
+            string buscar = "Select idTipoProducto from tTiposproductos where TipoProducto = '" + CbxTipoProductoAgregarProducto.SelectedItem + "'  AND TCategorias_idCategoria = " + categoria.id;
 
             //Generación de las consultas para buscar si existe el nombre.
             MySqlCommand mySqlCommandBuscar = new MySqlCommand(buscar);
@@ -180,7 +187,7 @@ namespace MoyoData
 
 
             //Variables.
-            Producto producto = new Producto(TbxProductoAgregarProducto.Text, Convert.ToInt32(NumUDCantidadAgregarProducto.Value), Convert.ToInt32(NumUDCantidadAgregarProducto.Value), Convert.ToInt32(NumUDLimiteAgregarProducto.Value), idUnidadMedida, idTipoProducto);
+            Producto producto = new Producto(TbxProductoAgregarProducto.Text, Convert.ToInt32(NumUDCantidadAgregarProducto.Value), Convert.ToInt32(NumUDCantidadAgregarProducto.Value), Convert.ToInt32(NumUDLimiteAgregarProducto.Value), unidadMedida.id , idTipoProducto);
 
             //Variables para la base de datos.
             string consulta = "Insert Into tproductos (NombreProducto, Stock, CantidadProducto, LimiteSacarProducto, " +

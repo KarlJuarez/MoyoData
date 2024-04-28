@@ -20,15 +20,51 @@ namespace MoyoData
         //---------------------//
         BaseDeDatos conexion = new BaseDeDatos();
         string consulta;
-        List<string> categorias = new List<string>();
-
-        public Inventario()
+        List<Categoria> categorias = new List<Categoria>();
+        Usuario usuario;
+        List<Rol> roles = new List<Rol>();
+        string idRol;
+        public Inventario(Usuario usuario)
         {
             InitializeComponent();
-            ObtenerCategoria();
+            this.usuario = usuario;
+            SeleccionarCategorias();
             SeleccionarProductos();
+            SeleccionarRoles();
+            idRol = roles.Find(p => p.rol == "Administrador").id.ToString();
+
+            if (this.usuario.rol != idRol)
+            {
+                BtnEditarProducto.Dispose();
+                BtnEliminarProductoInventario.Dispose();
+            }
         }
 
+        private void SeleccionarRoles()
+        {
+            MySqlDataReader mySqlDataReader = null;
+            consulta = "Select * from TRoles";
+            Rol rol;
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+            mySqlCommand.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (!mySqlDataReader.HasRows)
+            {
+                mySqlDataReader.Close();
+                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            while (mySqlDataReader.Read())
+            {
+                rol = new Rol(Convert.ToInt32(mySqlDataReader["idRol"].ToString()), mySqlDataReader["Rol"].ToString());
+                roles.Add(rol);
+            }
+
+            mySqlDataReader.Close();
+        }
         //--------------------------
         // Cerrar formulario
         //--------------------------
@@ -41,10 +77,11 @@ namespace MoyoData
         //-----------------------------
         // Obtener categoria
         //-----------------------------
-        private void ObtenerCategoria()
+        private void SeleccionarCategorias()
         {
             MySqlDataReader mySqlDataReader = null;
-            consulta = "Select categoria from TCategorias";
+            consulta = "Select * from TCategorias";
+            Categoria categoria;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion.Conectar();
@@ -59,7 +96,8 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                categorias.Add(mySqlDataReader["categoria"].ToString());
+                categoria = new Categoria(Convert.ToInt32(mySqlDataReader["idCategoria"].ToString()), mySqlDataReader["Categoria"].ToString());
+                categorias.Add(categoria);
             }
 
             mySqlDataReader.Close();
@@ -114,7 +152,7 @@ namespace MoyoData
             MySqlDataReader mySqlDataReader = null;
             consulta = "Select * from TTiposProductos Where idTipoProducto = " + id;
             string tipoProducto;
-            string categoria;
+            Categoria categoria;
 
             MySqlCommand mySqlCommand = new MySqlCommand(consulta);
             mySqlCommand.Connection = conexion2.Conectar();
@@ -130,9 +168,9 @@ namespace MoyoData
             mySqlDataReader.Read();
 
             tipoProducto = mySqlDataReader["TipoProducto"].ToString();
-            categoria = categorias[Convert.ToInt32(mySqlDataReader["TCategorias_idCategoria"]) - 1];
+            categoria = categorias.Find(p=>p.id == Convert.ToInt32(mySqlDataReader["TCategorias_idCategoria"]));
             mySqlDataReader.Close();
-            return Tuple.Create(tipoProducto, categoria);
+            return Tuple.Create(tipoProducto, categoria.categoria);
         }
 
         #endregion
@@ -198,6 +236,7 @@ namespace MoyoData
         {
             AgregarProducto agregarProducto = new AgregarProducto();
             agregarProducto.ShowDialog();
+            ActualizarTabla();
         }
 
         //------------------------------------
@@ -205,8 +244,6 @@ namespace MoyoData
         //------------------------------------
         private void BtnEliminarProductoInventario_Click(object sender, EventArgs e)
         {
-            MySqlDataReader mySqlDataReader = null;
-            Producto producto;
             int id;
             int totalSeleccion = DgvProductos.Rows.Cast<DataGridViewRow>().
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionInventario"].Value)).Count();
@@ -216,10 +253,10 @@ namespace MoyoData
                 return;
             }
 
-            DialogResult result = MessageBox.Show("¿Quiéres borrar los productos?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Quiéres borrar los productos? Se borrarán las entradas y salidas de productos"
+                , "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
-                MessageBox.Show("Hola");
                 return;
             }
 
@@ -228,6 +265,17 @@ namespace MoyoData
                 if (Convert.ToBoolean(row.Cells["ColumSeleccionInventario"].Value))
                 {
                     id = Convert.ToInt32(row.Cells["ColumIDInventario"].Value);
+
+                    consulta = "Delete from TEntradaProductos_has_TProductos where TProductos_idProducto = " + id.ToString();
+                    MySqlCommand mySqlCommandBorrarEntradaProductos = new MySqlCommand(consulta);
+                    mySqlCommandBorrarEntradaProductos.Connection = conexion.Conectar();
+                    mySqlCommandBorrarEntradaProductos.ExecuteNonQuery();
+
+                    consulta = "Delete from TProductos_has_TSalidaProductos where TProductos_idProducto = " + id.ToString();
+                    MySqlCommand mySqlCommandBorrarSalidaProductos = new MySqlCommand(consulta);
+                    mySqlCommandBorrarSalidaProductos.Connection = conexion.Conectar();
+                    mySqlCommandBorrarSalidaProductos.ExecuteNonQuery();
+
                     consulta = "Delete from TProductos where idProducto = " + id.ToString();
                     MySqlCommand mySqlCommandBorrar = new MySqlCommand(consulta);
                     mySqlCommandBorrar.Connection = conexion.Conectar();

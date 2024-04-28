@@ -11,6 +11,7 @@ namespace MoyoData.Models
         //---------------------------------------------------------------------
         //Variables.
         //---------------------------------------------------------------------
+        public int Id;
         public string producto;
         public int stock;
         public int cantidadProducto;
@@ -28,6 +29,11 @@ namespace MoyoData.Models
             this.limteProducto = limiteProducto;
             this.unidadMedida = unidadMedida;
             this.tipoProducto = tipoProducto;
+        }
+
+        public Producto(int ID, string producto) { 
+            this.Id = ID;
+            this.producto = producto;
         }
     }
 }

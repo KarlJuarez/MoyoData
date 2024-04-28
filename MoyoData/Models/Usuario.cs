@@ -14,6 +14,7 @@ namespace MoyoData.Models
         //---------------------------------------------------------------------
         //Variables.
         //---------------------------------------------------------------------
+        public int id;
         public string usuario;
         public string password;
         public string rol;
@@ -26,6 +27,12 @@ namespace MoyoData.Models
             this.usuario = usuario;
             this.password = password;   
             this.rol = rol;
-        }  
+        }
+
+        public Usuario(int id, string usuario)
+        {
+            this.id = id;
+            this.usuario = usuario;
+        }
     }
 }

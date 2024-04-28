@@ -35,14 +35,14 @@
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.BtnAgregarUsuario = new System.Windows.Forms.Button();
-            this.BtnEliminarUsuario = new System.Windows.Forms.Button();
-            this.BtnEditarUsuario = new System.Windows.Forms.Button();
             this.ColumIDUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumUsuarioUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumPasswordUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumRolUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumSeleccionUsuarios = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.BtnAgregarUsuario = new System.Windows.Forms.Button();
+            this.BtnEliminarUsuario = new System.Windows.Forms.Button();
+            this.BtnEditarUsuario = new System.Windows.Forms.Button();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -107,6 +107,8 @@
             // 
             // DgvUsuarios
             // 
+            this.DgvUsuarios.AllowUserToAddRows = false;
+            this.DgvUsuarios.AllowUserToDeleteRows = false;
             this.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumIDUsuarios,
@@ -120,36 +122,6 @@
             this.DgvUsuarios.RowTemplate.Height = 24;
             this.DgvUsuarios.Size = new System.Drawing.Size(1084, 402);
             this.DgvUsuarios.TabIndex = 17;
-            // 
-            // BtnAgregarUsuario
-            // 
-            this.BtnAgregarUsuario.Location = new System.Drawing.Point(571, 289);
-            this.BtnAgregarUsuario.Name = "BtnAgregarUsuario";
-            this.BtnAgregarUsuario.Size = new System.Drawing.Size(175, 29);
-            this.BtnAgregarUsuario.TabIndex = 18;
-            this.BtnAgregarUsuario.Text = "Agregar usuario";
-            this.BtnAgregarUsuario.UseVisualStyleBackColor = true;
-            this.BtnAgregarUsuario.Click += new System.EventHandler(this.BtnAgregarUsuario_Click);
-            // 
-            // BtnEliminarUsuario
-            // 
-            this.BtnEliminarUsuario.Location = new System.Drawing.Point(775, 289);
-            this.BtnEliminarUsuario.Name = "BtnEliminarUsuario";
-            this.BtnEliminarUsuario.Size = new System.Drawing.Size(175, 29);
-            this.BtnEliminarUsuario.TabIndex = 19;
-            this.BtnEliminarUsuario.Text = "Eliminar usuario";
-            this.BtnEliminarUsuario.UseVisualStyleBackColor = true;
-            this.BtnEliminarUsuario.Click += new System.EventHandler(this.BtnEliminarUsuario_Click);
-            // 
-            // BtnEditarUsuario
-            // 
-            this.BtnEditarUsuario.Location = new System.Drawing.Point(977, 289);
-            this.BtnEditarUsuario.Name = "BtnEditarUsuario";
-            this.BtnEditarUsuario.Size = new System.Drawing.Size(175, 29);
-            this.BtnEditarUsuario.TabIndex = 20;
-            this.BtnEditarUsuario.Text = "Editar";
-            this.BtnEditarUsuario.UseVisualStyleBackColor = true;
-            this.BtnEditarUsuario.Click += new System.EventHandler(this.BtnEditarUsuario_Click);
             // 
             // ColumIDUsuarios
             // 
@@ -185,6 +157,36 @@
             this.ColumSeleccionUsuarios.MinimumWidth = 6;
             this.ColumSeleccionUsuarios.Name = "ColumSeleccionUsuarios";
             this.ColumSeleccionUsuarios.Width = 125;
+            // 
+            // BtnAgregarUsuario
+            // 
+            this.BtnAgregarUsuario.Location = new System.Drawing.Point(571, 289);
+            this.BtnAgregarUsuario.Name = "BtnAgregarUsuario";
+            this.BtnAgregarUsuario.Size = new System.Drawing.Size(175, 29);
+            this.BtnAgregarUsuario.TabIndex = 18;
+            this.BtnAgregarUsuario.Text = "Agregar usuario";
+            this.BtnAgregarUsuario.UseVisualStyleBackColor = true;
+            this.BtnAgregarUsuario.Click += new System.EventHandler(this.BtnAgregarUsuario_Click);
+            // 
+            // BtnEliminarUsuario
+            // 
+            this.BtnEliminarUsuario.Location = new System.Drawing.Point(775, 289);
+            this.BtnEliminarUsuario.Name = "BtnEliminarUsuario";
+            this.BtnEliminarUsuario.Size = new System.Drawing.Size(175, 29);
+            this.BtnEliminarUsuario.TabIndex = 19;
+            this.BtnEliminarUsuario.Text = "Eliminar usuario";
+            this.BtnEliminarUsuario.UseVisualStyleBackColor = true;
+            this.BtnEliminarUsuario.Click += new System.EventHandler(this.BtnEliminarUsuario_Click);
+            // 
+            // BtnEditarUsuario
+            // 
+            this.BtnEditarUsuario.Location = new System.Drawing.Point(977, 289);
+            this.BtnEditarUsuario.Name = "BtnEditarUsuario";
+            this.BtnEditarUsuario.Size = new System.Drawing.Size(175, 29);
+            this.BtnEditarUsuario.TabIndex = 20;
+            this.BtnEditarUsuario.Text = "Editar";
+            this.BtnEditarUsuario.UseVisualStyleBackColor = true;
+            this.BtnEditarUsuario.Click += new System.EventHandler(this.BtnEditarUsuario_Click);
             // 
             // MostrarUsuarios
             // 

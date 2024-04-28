@@ -76,6 +76,7 @@
             this.LinkLblRecuperarPassword.TabIndex = 0;
             this.LinkLblRecuperarPassword.TabStop = true;
             this.LinkLblRecuperarPassword.Text = "¿Olvidaste tu contraseña?";
+            this.LinkLblRecuperarPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblRecuperarPassword_LinkClicked);
             // 
             // BtnIniciarSesion
             // 
@@ -96,11 +97,11 @@
             // 
             this.TbxPassword.BackColor = System.Drawing.Color.White;
             this.TbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TbxPassword.Font = new System.Drawing.Font("Rosario", 10F);
+            this.TbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TbxPassword.ForeColor = System.Drawing.Color.DimGray;
             this.TbxPassword.Location = new System.Drawing.Point(54, 161);
             this.TbxPassword.Name = "TbxPassword";
-            this.TbxPassword.Size = new System.Drawing.Size(289, 21);
+            this.TbxPassword.Size = new System.Drawing.Size(289, 19);
             this.TbxPassword.TabIndex = 2;
             this.TbxPassword.Text = "Contraseña";
             this.TbxPassword.Enter += new System.EventHandler(this.TbxPassword_Enter);
@@ -111,11 +112,11 @@
             // 
             this.TbxUsuario.BackColor = System.Drawing.Color.White;
             this.TbxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TbxUsuario.Font = new System.Drawing.Font("Rosario", 10F);
+            this.TbxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TbxUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.TbxUsuario.Location = new System.Drawing.Point(54, 104);
             this.TbxUsuario.Name = "TbxUsuario";
-            this.TbxUsuario.Size = new System.Drawing.Size(289, 21);
+            this.TbxUsuario.Size = new System.Drawing.Size(289, 19);
             this.TbxUsuario.TabIndex = 1;
             this.TbxUsuario.Text = "Usuario";
             this.TbxUsuario.Enter += new System.EventHandler(this.TbxUsuario_Enter);

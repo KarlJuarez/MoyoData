@@ -18,15 +18,57 @@ namespace MoyoData
         string consulta;
         BaseDeDatos conexion = new BaseDeDatos();
         List<string> categorias = new List<string>();
-
-        public Aspectos()
+        List<Rol> roles = new List<Rol>();
+        Usuario usuario;
+        string idRol;
+        public Aspectos(Usuario usuario)
         {
             InitializeComponent();
             CargarCategorias();
             CargarTiposProductos();
             CargarUnidadesMedidas();
+            SeleccionarRoles();
+            this.usuario = usuario;
+            idRol = roles.Find(p => p.rol == "Administrador").id.ToString();
+
+            if (this.usuario.rol != idRol)
+            {
+                BtnAgregarCategoria.Dispose();
+                BtnEditarCategoria.Dispose();
+                BtnAgregarTipoPorducto.Dispose();
+                BtnEditarTipoProducto.Dispose();
+                BtnAgregarUnidadDeMedida.Dispose();
+                BtnEditarUnidadDeMedida.Dispose();
+                DgvUnidadesDeMedida.Dispose();
+                LblUnidadesDeMedida.Dispose();
+            }
         }
 
+        private void SeleccionarRoles()
+        {
+            MySqlDataReader mySqlDataReader = null;
+            consulta = "Select * from TRoles";
+            Rol rol;
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+            mySqlCommand.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (!mySqlDataReader.HasRows)
+            {
+                mySqlDataReader.Close();
+                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            while (mySqlDataReader.Read())
+            {
+                rol = new Rol(Convert.ToInt32(mySqlDataReader["idRol"].ToString()), mySqlDataReader["Rol"].ToString());
+                roles.Add(rol);
+            }
+
+            mySqlDataReader.Close();
+        }
         //------------------------
         // Cerrar formulario
         //------------------------
