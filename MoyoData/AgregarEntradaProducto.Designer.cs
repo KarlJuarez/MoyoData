@@ -138,6 +138,7 @@
             // 
             // BtnEntradaProductoAgregar
             // 
+            this.BtnEntradaProductoAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEntradaProductoAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
             this.BtnEntradaProductoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntradaProductoAgregar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
@@ -174,6 +175,7 @@
             // 
             // BtnEntradaProductoIngresar
             // 
+            this.BtnEntradaProductoIngresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEntradaProductoIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
             this.BtnEntradaProductoIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntradaProductoIngresar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
@@ -299,10 +301,15 @@
             this.TbxUsuarioEntradaProducto.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxUsuarioEntradaProducto.ForeColor = System.Drawing.Color.DimGray;
             this.TbxUsuarioEntradaProducto.Location = new System.Drawing.Point(77, 238);
+            this.TbxUsuarioEntradaProducto.MaxLength = 25;
             this.TbxUsuarioEntradaProducto.Name = "TbxUsuarioEntradaProducto";
-            this.TbxUsuarioEntradaProducto.Size = new System.Drawing.Size(267, 21);
+            this.TbxUsuarioEntradaProducto.ShortcutsEnabled = false;
+            this.TbxUsuarioEntradaProducto.Size = new System.Drawing.Size(252, 21);
             this.TbxUsuarioEntradaProducto.TabIndex = 16;
             this.TbxUsuarioEntradaProducto.Text = "Escribe aquí";
+            this.TbxUsuarioEntradaProducto.Enter += new System.EventHandler(this.TbxUsuarioEntradaProducto_Enter);
+            this.TbxUsuarioEntradaProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxUsuarioEntradaProducto_KeyPress);
+            this.TbxUsuarioEntradaProducto.Leave += new System.EventHandler(this.TbxUsuarioEntradaProducto_Leave);
             // 
             // NumUDCantidadEntradaProducto
             // 
@@ -313,15 +320,16 @@
             this.NumUDCantidadEntradaProducto.Name = "NumUDCantidadEntradaProducto";
             this.NumUDCantidadEntradaProducto.Size = new System.Drawing.Size(270, 28);
             this.NumUDCantidadEntradaProducto.TabIndex = 17;
+            this.NumUDCantidadEntradaProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumUDCantidadEntradaProducto_KeyPress);
             // 
             // LblGuionBajoUsuario
             // 
             this.LblGuionBajoUsuario.AutoSize = true;
             this.LblGuionBajoUsuario.Location = new System.Drawing.Point(74, 249);
             this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
-            this.LblGuionBajoUsuario.Size = new System.Drawing.Size(273, 16);
+            this.LblGuionBajoUsuario.Size = new System.Drawing.Size(308, 16);
             this.LblGuionBajoUsuario.TabIndex = 18;
-            this.LblGuionBajoUsuario.Text = "______________________________________";
+            this.LblGuionBajoUsuario.Text = "___________________________________________";
             // 
             // LblProductos
             // 
@@ -343,7 +351,7 @@
             this.LblProductosSeleccionados.TabIndex = 20;
             this.LblProductosSeleccionados.Text = "Productos seleccionados";
             // 
-            // EntradaProducto
+            // AgregarEntradaProducto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -365,7 +373,7 @@
             this.Controls.Add(this.LblGuionBajoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "EntradaProducto";
+            this.Name = "AgregarEntradaProducto";
             this.Text = "EntradaProducto";
             this.PnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();

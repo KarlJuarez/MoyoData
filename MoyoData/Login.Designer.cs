@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.PnlIzquierdo = new System.Windows.Forms.Panel();
-            this.LblMensajeError = new System.Windows.Forms.Label();
             this.LinkLblRecuperarPassword = new System.Windows.Forms.LinkLabel();
             this.BtnIniciarSesion = new System.Windows.Forms.Button();
             this.TbxPassword = new System.Windows.Forms.TextBox();
@@ -51,7 +50,6 @@
             // PnlIzquierdo
             // 
             this.PnlIzquierdo.BackColor = System.Drawing.Color.White;
-            this.PnlIzquierdo.Controls.Add(this.LblMensajeError);
             this.PnlIzquierdo.Controls.Add(this.LinkLblRecuperarPassword);
             this.PnlIzquierdo.Controls.Add(this.BtnIniciarSesion);
             this.PnlIzquierdo.Controls.Add(this.TbxPassword);
@@ -65,19 +63,6 @@
             this.PnlIzquierdo.Size = new System.Drawing.Size(395, 330);
             this.PnlIzquierdo.TabIndex = 1;
             this.PnlIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
-            // 
-            // LblMensajeError
-            // 
-            this.LblMensajeError.AutoSize = true;
-            this.LblMensajeError.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMensajeError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblMensajeError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblMensajeError.Location = new System.Drawing.Point(23, 214);
-            this.LblMensajeError.Name = "LblMensajeError";
-            this.LblMensajeError.Size = new System.Drawing.Size(134, 16);
-            this.LblMensajeError.TabIndex = 7;
-            this.LblMensajeError.Text = "Mensaje de error";
-            this.LblMensajeError.Visible = false;
             // 
             // LinkLblRecuperarPassword
             // 
@@ -119,6 +104,7 @@
             this.TbxPassword.TabIndex = 2;
             this.TbxPassword.Text = "Contraseña";
             this.TbxPassword.Enter += new System.EventHandler(this.TbxPassword_Enter);
+            this.TbxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxPassword_KeyPress);
             this.TbxPassword.Leave += new System.EventHandler(this.TbxPassword_Leave);
             // 
             // TbxUsuario
@@ -133,6 +119,7 @@
             this.TbxUsuario.TabIndex = 1;
             this.TbxUsuario.Text = "Usuario";
             this.TbxUsuario.Enter += new System.EventHandler(this.TbxUsuario_Enter);
+            this.TbxUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxUsuario_KeyPress);
             this.TbxUsuario.Leave += new System.EventHandler(this.TbxUsuario_Leave);
             // 
             // PbxNombreEmpresa
@@ -232,7 +219,6 @@
         private System.Windows.Forms.Label LblGuionBajoPassword;
         private System.Windows.Forms.Label LblGuionBajoUsuario;
         private System.Windows.Forms.PictureBox PbxHormiga;
-        private System.Windows.Forms.Label LblMensajeError;
         private System.Windows.Forms.LinkLabel LinkLblRecuperarPassword;
     }
 }

@@ -46,6 +46,9 @@
             this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.TbxRespuestaRecuperarPassword = new System.Windows.Forms.TextBox();
+            this.LblRespuestaRecuperarPassword = new System.Windows.Forms.Label();
+            this.LblGuionBajoRespuesta = new System.Windows.Forms.Label();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -179,10 +182,15 @@
             this.TbxRegistrarNombres.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarNombres.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRegistrarNombres.Location = new System.Drawing.Point(226, 359);
+            this.TbxRegistrarNombres.MaxLength = 25;
             this.TbxRegistrarNombres.Name = "TbxRegistrarNombres";
-            this.TbxRegistrarNombres.Size = new System.Drawing.Size(267, 21);
+            this.TbxRegistrarNombres.ShortcutsEnabled = false;
+            this.TbxRegistrarNombres.Size = new System.Drawing.Size(309, 21);
             this.TbxRegistrarNombres.TabIndex = 24;
             this.TbxRegistrarNombres.Text = "Escribe aquí";
+            this.TbxRegistrarNombres.Enter += new System.EventHandler(this.TbxRegistrarNombres_Enter);
+            this.TbxRegistrarNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxRegistrarNombres_KeyPress);
+            this.TbxRegistrarNombres.Leave += new System.EventHandler(this.TbxRegistrarNombres_Leave);
             // 
             // TbxRegistrarApellidos
             // 
@@ -191,10 +199,15 @@
             this.TbxRegistrarApellidos.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarApellidos.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRegistrarApellidos.Location = new System.Drawing.Point(667, 359);
+            this.TbxRegistrarApellidos.MaxLength = 25;
             this.TbxRegistrarApellidos.Name = "TbxRegistrarApellidos";
-            this.TbxRegistrarApellidos.Size = new System.Drawing.Size(267, 21);
+            this.TbxRegistrarApellidos.ShortcutsEnabled = false;
+            this.TbxRegistrarApellidos.Size = new System.Drawing.Size(309, 21);
             this.TbxRegistrarApellidos.TabIndex = 25;
             this.TbxRegistrarApellidos.Text = "Escribe aquí";
+            this.TbxRegistrarApellidos.Enter += new System.EventHandler(this.TbxRegistrarApellidos_Enter);
+            this.TbxRegistrarApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxRegistrarApellidos_KeyPress);
+            this.TbxRegistrarApellidos.Leave += new System.EventHandler(this.TbxRegistrarApellidos_Leave);
             // 
             // TbxRegistrarPassword
             // 
@@ -203,10 +216,15 @@
             this.TbxRegistrarPassword.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarPassword.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRegistrarPassword.Location = new System.Drawing.Point(667, 529);
+            this.TbxRegistrarPassword.MaxLength = 50;
             this.TbxRegistrarPassword.Name = "TbxRegistrarPassword";
-            this.TbxRegistrarPassword.Size = new System.Drawing.Size(267, 21);
+            this.TbxRegistrarPassword.ShortcutsEnabled = false;
+            this.TbxRegistrarPassword.Size = new System.Drawing.Size(309, 21);
             this.TbxRegistrarPassword.TabIndex = 26;
             this.TbxRegistrarPassword.Text = "Escribe aquí";
+            this.TbxRegistrarPassword.Enter += new System.EventHandler(this.TbxRegistrarPassword_Enter);
+            this.TbxRegistrarPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxRegistrarPassword_KeyPress);
+            this.TbxRegistrarPassword.Leave += new System.EventHandler(this.TbxRegistrarPassword_Leave);
             // 
             // LblGuionBajoUsuario
             // 
@@ -235,11 +253,50 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "______________________________________";
             // 
+            // TbxRespuestaRecuperarPassword
+            // 
+            this.TbxRespuestaRecuperarPassword.BackColor = System.Drawing.Color.White;
+            this.TbxRespuestaRecuperarPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbxRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 10F);
+            this.TbxRespuestaRecuperarPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.TbxRespuestaRecuperarPassword.Location = new System.Drawing.Point(226, 663);
+            this.TbxRespuestaRecuperarPassword.MaxLength = 20;
+            this.TbxRespuestaRecuperarPassword.Name = "TbxRespuestaRecuperarPassword";
+            this.TbxRespuestaRecuperarPassword.ShortcutsEnabled = false;
+            this.TbxRespuestaRecuperarPassword.Size = new System.Drawing.Size(308, 21);
+            this.TbxRespuestaRecuperarPassword.TabIndex = 41;
+            this.TbxRespuestaRecuperarPassword.Text = "Escribe aquí";
+            this.TbxRespuestaRecuperarPassword.Enter += new System.EventHandler(this.TbxRespuestaRecuperarPassword_Enter);
+            this.TbxRespuestaRecuperarPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxRespuestaRecuperarPassword_KeyPress);
+            this.TbxRespuestaRecuperarPassword.Leave += new System.EventHandler(this.TbxRespuestaRecuperarPassword_Leave);
+            // 
+            // LblRespuestaRecuperarPassword
+            // 
+            this.LblRespuestaRecuperarPassword.AutoSize = true;
+            this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(219, 598);
+            this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
+            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(452, 31);
+            this.LblRespuestaRecuperarPassword.TabIndex = 40;
+            this.LblRespuestaRecuperarPassword.Text = "Respuesta de recuperación de contraseña";
+            // 
+            // LblGuionBajoRespuesta
+            // 
+            this.LblGuionBajoRespuesta.AutoSize = true;
+            this.LblGuionBajoRespuesta.Location = new System.Drawing.Point(221, 668);
+            this.LblGuionBajoRespuesta.Name = "LblGuionBajoRespuesta";
+            this.LblGuionBajoRespuesta.Size = new System.Drawing.Size(314, 21);
+            this.LblGuionBajoRespuesta.TabIndex = 42;
+            this.LblGuionBajoRespuesta.Text = "______________________________________";
+            // 
             // Registrar
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1186, 796);
+            this.Controls.Add(this.TbxRespuestaRecuperarPassword);
+            this.Controls.Add(this.LblRespuestaRecuperarPassword);
+            this.Controls.Add(this.LblGuionBajoRespuesta);
             this.Controls.Add(this.TbxRegistrarPassword);
             this.Controls.Add(this.TbxRegistrarApellidos);
             this.Controls.Add(this.TbxRegistrarNombres);
@@ -288,5 +345,8 @@
         private System.Windows.Forms.Label LblGuionBajoUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TbxRespuestaRecuperarPassword;
+        private System.Windows.Forms.Label LblRespuestaRecuperarPassword;
+        private System.Windows.Forms.Label LblGuionBajoRespuesta;
     }
 }

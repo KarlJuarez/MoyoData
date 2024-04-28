@@ -228,21 +228,21 @@ namespace MoyoData
         //-----------------------
         private void BtnEntradaProductoIngresar_Click(object sender, EventArgs e)
         {
-            //Validación.
+            //Validación
             if (TbxUsuarioEntradaProducto.Text == "Ingrese al usuario")
             {
-                MessageBox.Show("Ingrese al usuario");
+                MessageBox.Show("Ingrese al usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (DgvProductosSeleccionados.RowCount == 0)
             {
-                MessageBox.Show("Ingrese algún producto.");
+                MessageBox.Show("Ingrese algún producto.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (DtpFechaEntradaProducto.Value == null)
             {
-                MessageBox.Show("Seleccione una fecha.");
+                MessageBox.Show("Seleccione una fecha.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -333,6 +333,63 @@ namespace MoyoData
             DgvProductos.Rows.Clear();
             SeleccionarProductos();
         }
+        #endregion
+
+        #region Validación de campos
+        //-----------------------------------------------------
+        // Resaltar cuando el puntero entra del
+        // Textbox EntradaProducto
+        //-----------------------------------------------------
+        private void TbxUsuarioEntradaProducto_Enter(object sender, EventArgs e)
+        {
+            if (TbxUsuarioEntradaProducto.Text == "Escribe aquí")
+            {
+                TbxUsuarioEntradaProducto.Text = "";
+                TbxUsuarioEntradaProducto.ForeColor = Color.Black;
+            }
+        }
+
+        //-----------------------------------------------------
+        // Resaltar cuando el puntero sale del
+        // Textbox EntradaProducto
+        //-----------------------------------------------------
+        private void TbxUsuarioEntradaProducto_Leave(object sender, EventArgs e)
+        {
+            if (TbxUsuarioEntradaProducto.Text == "")
+            {
+                TbxUsuarioEntradaProducto.Text = "Escribe aquí";
+                TbxUsuarioEntradaProducto.ForeColor = Color.DimGray;
+            }
+        }
+
+        //-----------------------------------------------------
+        // Validar que el campo de TbxUsuarioEntradaProducto
+        // sólo admita la entrada de letras
+        //-----------------------------------------------------
+        private void TbxUsuarioEntradaProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 163) || (e.KeyChar >= 165 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        //--------------------------------------------------------
+        // Validar que el campo de NumUDCantidadEntradaProducto
+        // sólo admita la entrada de números
+        //--------------------------------------------------------
+        private void NumUDCantidadEntradaProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Sólo puede ingresar números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
         #endregion
     }
 }

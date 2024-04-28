@@ -78,7 +78,7 @@
             // 
             this.LblMenu.AutoSize = true;
             this.LblMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMenu.Location = new System.Drawing.Point(109, 37);
+            this.LblMenu.Location = new System.Drawing.Point(98, 42);
             this.LblMenu.Name = "LblMenu";
             this.LblMenu.Size = new System.Drawing.Size(66, 28);
             this.LblMenu.TabIndex = 1;
@@ -266,7 +266,7 @@
             this.BtnAspectos.Name = "BtnAspectos";
             this.BtnAspectos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.BtnAspectos.Size = new System.Drawing.Size(229, 61);
-            this.BtnAspectos.TabIndex = 6;
+            this.BtnAspectos.TabIndex = 5;
             this.BtnAspectos.Text = "          Aspectos";
             this.BtnAspectos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAspectos.UseVisualStyleBackColor = true;
@@ -285,7 +285,7 @@
             this.BtnCerrarSesion.Name = "BtnCerrarSesion";
             this.BtnCerrarSesion.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.BtnCerrarSesion.Size = new System.Drawing.Size(275, 61);
-            this.BtnCerrarSesion.TabIndex = 5;
+            this.BtnCerrarSesion.TabIndex = 6;
             this.BtnCerrarSesion.Text = "           Cerrar Sesión";
             this.BtnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCerrarSesion.UseVisualStyleBackColor = true;

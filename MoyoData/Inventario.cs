@@ -190,6 +190,16 @@ namespace MoyoData
             SeleccionarProductos();
         }
 
+        #region Agregar y eliminar producto del inventario
+        //----------------------------------
+        // Agregar producto al inventario
+        //----------------------------------
+        private void BtnAgregarProductoInventario_Click(object sender, EventArgs e)
+        {
+            AgregarProducto agregarProducto = new AgregarProducto();
+            agregarProducto.ShowDialog();
+        }
+
         //------------------------------------
         // Eliminar producto del inventario
         //------------------------------------
@@ -229,10 +239,6 @@ namespace MoyoData
             MessageBox.Show("Se ha borrado los producto");
         }
 
-        private void BtnAgregarProductoInventario_Click(object sender, EventArgs e)
-        {
-            AgregarProducto agregarProducto = new AgregarProducto();
-            agregarProducto.ShowDialog();
-        }
+        #endregion
     }
 }

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,6 +36,16 @@ namespace MoyoData
             CbxTipoProductoEditarProducto.SelectedIndex = BuscarIndiceTipoProducto(producto.tipoProducto);//
         }
 
+        //--------------------------------
+        // Importación para arrastrar
+        // ventana
+        //--------------------------------
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg,
+            int wparam, int lparam);
+
         //----------------------
         // Cerrar formulario
         //----------------------
@@ -43,6 +54,19 @@ namespace MoyoData
             this.Close();
         }
 
+        //----------------------------------
+        // Arrastrar ventana
+        //----------------------------------
+        private void PnlTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        #region Botón para editar producto
+        //----------------------
+        // Editar producto
+        //----------------------
         private void BtnEditarProducto_Click(object sender, EventArgs e)
         {
             //Validación.
@@ -135,7 +159,12 @@ namespace MoyoData
                 MessageBox.Show("Se ha actualizado el producto");
             this.Close();
         }
+        #endregion
 
+        #region Buscar categoria
+        //----------------------
+        // Buscar categoría
+        //----------------------
         private int BuscarCategoria(int id)
         {
             MySqlDataReader mySqlDataReader = null;
@@ -156,7 +185,12 @@ namespace MoyoData
             mySqlDataReader.Close();
             return categoria;
         }
+        #endregion
 
+        #region Buscar en índice el tipo de producto
+        //------------------------------------------
+        // Buscar en índice el tipo de producto
+        //------------------------------------------
         private int BuscarIndiceTipoProducto(int idtipoProducto)
         {
             MySqlDataReader mySqlDataReader = null;
@@ -183,9 +217,11 @@ namespace MoyoData
             MessageBox.Show("No se encontró el índice.");
             return -1;
         }
+        #endregion
 
+        #region Mostrar las categorias
         //---------------------------------------------------------------------
-        //Función para mostrar las categorías.
+        //Función para mostrar las categorías
         //---------------------------------------------------------------------
         private void SeleccionarCategorias()
         {
@@ -210,9 +246,11 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
 
+        #region Seleccionar unidades de medida
         //---------------------------------------------------------------------
-        //Función para mostrar las categorías.
+        //Función para seleccionar unidades de medida
         //---------------------------------------------------------------------
         private void SeleccionarUnidadMedida()
         {
@@ -237,12 +275,20 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
 
+        //-----------------------------
+        //
+        //-----------------------------
         private void CbxCategoriasEditarProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
             IngresarTipoProductos();
         }
 
+        #region Ingresar tipo de producto
+        //-----------------------------
+        // Ingresar tipo de producto
+        //-----------------------------
         private void IngresarTipoProductos()
         {
             //Limpiamos el combobox.
@@ -272,5 +318,49 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
+
+        #region Validación de campos
+        //-----------------------------------------------------
+        // Resaltar cuando el puntero entra del
+        // Textbox EditarProducto
+        //-----------------------------------------------------
+        private void TbxProductoEditarProducto_Enter(object sender, EventArgs e)
+        {
+            if (TbxProductoEditarProducto.Text == "Escribe aquí")
+            {
+                TbxProductoEditarProducto.Text = "";
+                TbxProductoEditarProducto.ForeColor = Color.Black;
+            }
+        }
+
+        //-----------------------------------------------------
+        // Resaltar cuando el puntero sale del
+        // Textbox EditarProducto
+        //-----------------------------------------------------
+        private void TbxProductoEditarProducto_Leave(object sender, EventArgs e)
+        {
+            if (TbxProductoEditarProducto.Text == "Escribe aquí")
+            {
+                TbxProductoEditarProducto.Text = "";
+                TbxProductoEditarProducto.ForeColor = Color.DimGray;
+            }
+        }
+
+        //-----------------------------------------------------
+        // Validar que el campo de TbxProductoEditarProducto
+        // sólo admita la entrada de letras y números
+        //-----------------------------------------------------
+        private void TbxProductoEditarProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 126) || (e.KeyChar == 156) || (e.KeyChar == 158) || (e.KeyChar == 159) || (e.KeyChar >= 166 && e.KeyChar <= 180) || (e.KeyChar >= 184 && e.KeyChar <= 197) || (e.KeyChar >= 200 && e.KeyChar <= 209) || (e.KeyChar == 213) || (e.KeyChar >= 217 && e.KeyChar <= 223) || (e.KeyChar >= 230 && e.KeyChar <= 232) || (e.KeyChar >= 236 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Sólo puede ingresar letras y números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+        #endregion
+
     }
 }
