@@ -16,12 +16,19 @@ namespace MoyoData
 {
     public partial class EditarProductos : Form
     {
+        //-----------------------------------//
+        // ATRIBUTOS
+        //-----------------------------------//
         BaseDeDatos conexion = new BaseDeDatos();
         Producto producto;
         string consulta;
         string buscarCategoria;
         List<Categoria> categorias = new List<Categoria>();
         List<UnidadMedida> unidadMedidas = new List<UnidadMedida>();
+
+        //-----------------------
+        // Constructor
+        //-----------------------
         public EditarProductos(Producto producto)
         {
             InitializeComponent();
@@ -74,49 +81,49 @@ namespace MoyoData
             //Validación.
             if (TbxProductoEditarProducto.Text == "")
             {
-                MessageBox.Show("Ingrese un producto");
+                MessageBox.Show("Ingrese un producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (NumUDCantidadEditarProducto.Value <= 0)
             {
-                MessageBox.Show("Ingrese un número para la cantidad del producto.");
+                MessageBox.Show("Ingrese un número para la cantidad del producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (NumUDStockEditarProducto.Value <= 0)
             {
-                MessageBox.Show("Ingrese un número para el stock.");
+                MessageBox.Show("Ingrese un número para el stock", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (NumUDLimiteEditarProducto.Value <= 0)
             {
-                MessageBox.Show("Ingrese un número para el límite al sacar el producto.");
+                MessageBox.Show("Ingrese un número para el límite al sacar el producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (CbxUnidadesMedidasEditarProducto.SelectedIndex == -1)
             {
-                MessageBox.Show("Seleccione una unidad de medida.");
+                MessageBox.Show("Seleccione una unidad de medida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (CbxCategoriasEditarProducto.SelectedIndex == -1)
             {
-                MessageBox.Show("Seleccione una categoría.");
+                MessageBox.Show("Seleccione una categoría", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (CbxTipoProductoEditarProducto.SelectedIndex == -1)
             {
-                MessageBox.Show("Seleccione un tipo de producto.");
+                MessageBox.Show("Seleccione un tipo de producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (NumUDCantidadEditarProducto.Value > NumUDStockEditarProducto.Value)
             {
-                MessageBox.Show("Ingrese una cantidad menor al stock para poder actualizar");
+                MessageBox.Show("Ingrese una cantidad menor al stock para poder actualizar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -138,7 +145,7 @@ namespace MoyoData
             }
             else
             {
-                MessageBox.Show("No se encontró el id del producto.");
+                MessageBox.Show("No se encontró el id del producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             mySqlDataReader.Close();
@@ -158,7 +165,7 @@ namespace MoyoData
                 MySqlCommand mySqlCommandInsertar = new MySqlCommand(consulta);
                 mySqlCommandInsertar.Connection = conexion.Conectar();
                 mySqlCommandInsertar.ExecuteNonQuery();
-                MessageBox.Show("Se ha actualizado el producto");
+                MessageBox.Show("Se ha actualizado el producto", "Operación exitosa", MessageBoxButtons.OK);
             this.Close();
         }
         #endregion
@@ -216,7 +223,7 @@ namespace MoyoData
                 }
             }
 
-            MessageBox.Show("No se encontró el índice.");
+            MessageBox.Show("No se encontró el índice", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return -1;
         }
         #endregion
@@ -285,13 +292,15 @@ namespace MoyoData
         }
         #endregion
 
+        #region Cambiar index seleccionado
         //-----------------------------
-        //
+        // Cambiar index seleccionado
         //-----------------------------
         private void CbxCategoriasEditarProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
             IngresarTipoProductos();
         }
+        #endregion
 
         #region Ingresar tipo de producto
         //-----------------------------
@@ -315,7 +324,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron tipos de productos con esa categoría");
+                MessageBox.Show("No se encontraron tipos de productos con esa categoría", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -361,7 +370,7 @@ namespace MoyoData
         //-----------------------------------------------------
         private void TbxProductoEditarProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 126) || (e.KeyChar == 156) || (e.KeyChar == 158) || (e.KeyChar == 159) || (e.KeyChar >= 166 && e.KeyChar <= 180) || (e.KeyChar >= 184 && e.KeyChar <= 197) || (e.KeyChar >= 200 && e.KeyChar <= 209) || (e.KeyChar == 213) || (e.KeyChar >= 217 && e.KeyChar <= 223) || (e.KeyChar >= 230 && e.KeyChar <= 232) || (e.KeyChar >= 236 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Sólo puede ingresar letras y números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;

@@ -63,7 +63,7 @@ namespace MoyoData
 
             if (conexion.Conectar() == null)
             {
-                MessageBox.Show("Error al conectar la base de datos.");
+                MessageBox.Show("Error al conectar la base de datos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -81,7 +81,7 @@ namespace MoyoData
 
                 if (mySqlCommand.Connection == null)
                 {
-                    MessageBox.Show("No se pudo conectar a la base de datos.");
+                    MessageBox.Show("No se pudo conectar a la base de datos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
 
@@ -89,7 +89,7 @@ namespace MoyoData
                 if (!mySqlDataReader.HasRows)
                 {
                     mySqlDataReader.Close();
-                    MessageBox.Show("No se encontraron resultados.");
+                    MessageBox.Show("No se encontraron resultados", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
 
@@ -99,12 +99,12 @@ namespace MoyoData
 
                     if (password != usuario.password)
                     {
-                        MessageBox.Show("Constraseña incorrecta.");
+                        MessageBox.Show("Constraseña incorrecta", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         mySqlDataReader.Close();
                         return;
                     }
 
-                    MessageBox.Show("Validación exitosa.");
+                    MessageBox.Show("Bienvenido", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mySqlDataReader.Close();
                     VentanaInicio VentanaInicio = new VentanaInicio(usuario);
                     this.Hide();
@@ -237,7 +237,7 @@ namespace MoyoData
         //-----------------------------------------------------
         private void TbxUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 163) || (e.KeyChar >= 165 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -246,7 +246,7 @@ namespace MoyoData
         }
 
         //-----------------------------------------------------
-        // Validar que el campo de TbxUsuario
+        // Validar que el campo de TbxPassword
         // sólo admita la entrada de letras y números
         //-----------------------------------------------------
         private void TbxPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -260,6 +260,9 @@ namespace MoyoData
         }
         #endregion
 
+        //------------------------------
+        // Recuperar la contraseña
+        //------------------------------
         private void LinkLblRecuperarPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RecuperarPassword recuperarPassword = new RecuperarPassword();

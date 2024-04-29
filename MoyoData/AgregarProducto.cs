@@ -16,10 +16,17 @@ namespace MoyoData
 {
     public partial class AgregarProducto : Form
     {
+        //-----------------------------------//
+        // ATRIBUTOS
+        //-----------------------------------//
         BaseDeDatos conexion;
         string consulta;
         List<Categoria> categorias = new List<Categoria>();
-        List<UnidadMedida>unidadMedidas = new List<UnidadMedida>(); 
+        List<UnidadMedida>unidadMedidas = new List<UnidadMedida>();
+
+        //-----------------------
+        // Constructor
+        //-----------------------
         public AgregarProducto()
         {
             InitializeComponent();
@@ -263,7 +270,7 @@ namespace MoyoData
         //-----------------------------------------------------
         private void TbxProductoAgregarProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 126) || (e.KeyChar == 156) || (e.KeyChar == 158) || (e.KeyChar == 159) || (e.KeyChar >= 166 && e.KeyChar <= 180) || (e.KeyChar >= 184 && e.KeyChar <= 197) || (e.KeyChar >= 200 && e.KeyChar <= 209) || (e.KeyChar == 213) || (e.KeyChar >= 217 && e.KeyChar <= 223) || (e.KeyChar >= 230 && e.KeyChar <= 232) || (e.KeyChar >= 236 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Sólo puede ingresar letras y números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;

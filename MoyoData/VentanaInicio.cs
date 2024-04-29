@@ -25,6 +25,9 @@ namespace MoyoData
         string consulta;
         string idRol;
 
+        //-----------------
+        // Constructor
+        //-----------------
         public VentanaInicio(Usuario usuario)
         {
             InitializeComponent();
@@ -38,32 +41,6 @@ namespace MoyoData
                 BtnUsuarios.Dispose();
             }
         }
-        private void SeleccionarRoles()
-        {
-            MySqlDataReader mySqlDataReader = null;
-            consulta = "Select * from TRoles";
-            Rol rol;
-
-            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
-            mySqlCommand.Connection = conexion.Conectar();
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            if (!mySqlDataReader.HasRows)
-            {
-                mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-
-            while (mySqlDataReader.Read())
-            {
-                rol = new Rol(Convert.ToInt32(mySqlDataReader["idRol"].ToString()), mySqlDataReader["Rol"].ToString());
-                roles.Add(rol);
-            }
-
-            mySqlDataReader.Close();
-        }
-
         #region Movimiento de la ventana
         //--------------------------------
         // Importación para arrastrar
@@ -111,6 +88,37 @@ namespace MoyoData
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
+
+        #region Función para seleccionar roles
+        //------------------------
+        // Seleccionar roles
+        //------------------------
+        private void SeleccionarRoles()
+        {
+            MySqlDataReader mySqlDataReader = null;
+            consulta = "Select * from TRoles";
+            Rol rol;
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+            mySqlCommand.Connection = conexion.Conectar();
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (!mySqlDataReader.HasRows)
+            {
+                mySqlDataReader.Close();
+                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            while (mySqlDataReader.Read())
+            {
+                rol = new Rol(Convert.ToInt32(mySqlDataReader["idRol"].ToString()), mySqlDataReader["Rol"].ToString());
+                roles.Add(rol);
+            }
+
+            mySqlDataReader.Close();
         }
         #endregion
 
@@ -217,6 +225,7 @@ namespace MoyoData
         }
         #endregion
 
+        #region Botón para cerrar sesión
         //-------------------------------------
         // Cerrar sesión del usuario
         //-------------------------------------
@@ -227,6 +236,6 @@ namespace MoyoData
             login.Show();
             this.Close();
         }
-
+        #endregion
     }
 }

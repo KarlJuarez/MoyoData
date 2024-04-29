@@ -116,6 +116,7 @@
             this.TbxUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.TbxUsuario.Location = new System.Drawing.Point(54, 104);
             this.TbxUsuario.Name = "TbxUsuario";
+            this.TbxUsuario.ShortcutsEnabled = false;
             this.TbxUsuario.Size = new System.Drawing.Size(289, 19);
             this.TbxUsuario.TabIndex = 1;
             this.TbxUsuario.Text = "Usuario";
@@ -185,6 +186,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.BtnIniciarSesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));

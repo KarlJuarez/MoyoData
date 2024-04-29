@@ -585,17 +585,6 @@
         YII=
 </value>
   </data>
-  <data name="BtnAspectos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAARpJREFUOE+llAERAjEMBCsBCUhAChKQgANwAE7AATgAB+AACZDt/HVa+KQP3MzN
-        fJv0em3STw5mxpXxYLwZnwMvwxyxyVgaH0aJeGSjrvDOqAVn49o4NwoLIyK1641xFARIwB1CPZCjk2Ck
-        AbtKDBdTQa5EuaoCHcFzRpyCjIE1MkMxizsWeSAWxU9GNHKRjvXgR8glWvkoDLy703VEDumEksMH9CDB
-        KAeUnK+SA5Sc+/BRN/A7eoJcF/HcCSpK1MwS9O5RnZKLogGl99ArjOK5U2hGdXvk0oNaptmMZ8PkP0/v
-        o4/3RolOcUqOxLZMjIEACZAjsGvtmE5ASE8NYiQEIrrkiLhr/jA9IEwbXI0SoWeZI5b/LC1SegF414K/
-        pFAeHAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="BtnCerrarSesion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -603,6 +592,17 @@
         USQPj5hyksUolz++5FVuohfBt7zINO6S0PS5S2KWRLi6YMbM2jKCUIQAM8aBBx3cke+Adce4IpEAmCOM
         hcV52eJNVsyR+hW/i7UMRSB9XJVIyB0BbygUARZ/yJT/JMIhkV0OSOtRbxltk17kKa078aRFKSsDqmW7
         rVmdKwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="BtnAspectos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAARpJREFUOE+llAERAjEMBCsBCUhAChKQgANwAE7AATgAB+AACZDt/HVa+KQP3MzN
+        fJv0em3STw5mxpXxYLwZnwMvwxyxyVgaH0aJeGSjrvDOqAVn49o4NwoLIyK1641xFARIwB1CPZCjk2Ck
+        AbtKDBdTQa5EuaoCHcFzRpyCjIE1MkMxizsWeSAWxU9GNHKRjvXgR8glWvkoDLy703VEDumEksMH9CDB
+        KAeUnK+SA5Sc+/BRN/A7eoJcF/HcCSpK1MwS9O5RnZKLogGl99ArjOK5U2hGdXvk0oNaptmMZ8PkP0/v
+        o4/3RolOcUqOxLZMjIEACZAjsGvtmE5ASE8NYiQEIrrkiLhr/jA9IEwbXI0SoWeZI5b/LC1SegF414K/
+        pFAeHAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -21,6 +21,10 @@ namespace MoyoData
         BaseDeDatos conexion = new BaseDeDatos();
         string consulta;
         List<string> categorias = new List<string>();
+
+        //-----------------------
+        // Constructor
+        //-----------------------
         public AgregarSalidaProducto()
         {
             InitializeComponent();
@@ -362,12 +366,12 @@ namespace MoyoData
         }
 
         //-----------------------------------------------------
-        // Validar que el campo de TbxUsuarioEntradaProducto
+        // Validar que el campo de TbxUsuarioSalidaProducto
         // sólo admita la entrada de letras
         //-----------------------------------------------------
         private void TbxUsuarioSalidaProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 163) || (e.KeyChar >= 165 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;

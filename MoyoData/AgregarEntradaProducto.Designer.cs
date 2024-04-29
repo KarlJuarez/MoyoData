@@ -140,6 +140,7 @@
             // 
             this.BtnEntradaProductoAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEntradaProductoAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
+            this.BtnEntradaProductoAgregar.FlatAppearance.BorderSize = 0;
             this.BtnEntradaProductoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntradaProductoAgregar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
             this.BtnEntradaProductoAgregar.Location = new System.Drawing.Point(836, 706);
@@ -177,6 +178,7 @@
             // 
             this.BtnEntradaProductoIngresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEntradaProductoIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
+            this.BtnEntradaProductoIngresar.FlatAppearance.BorderSize = 0;
             this.BtnEntradaProductoIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntradaProductoIngresar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
             this.BtnEntradaProductoIngresar.Location = new System.Drawing.Point(1004, 706);
@@ -191,6 +193,7 @@
             // 
             this.DgvProductos.AllowUserToAddRows = false;
             this.DgvProductos.AllowUserToDeleteRows = false;
+            this.DgvProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumID,
@@ -261,6 +264,7 @@
             // DgvProductosSeleccionados
             // 
             this.DgvProductosSeleccionados.AllowUserToAddRows = false;
+            this.DgvProductosSeleccionados.BackgroundColor = System.Drawing.Color.White;
             this.DgvProductosSeleccionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductosSeleccionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumIDSeleccionados,
@@ -320,6 +324,7 @@
             this.NumUDCantidadEntradaProducto.Name = "NumUDCantidadEntradaProducto";
             this.NumUDCantidadEntradaProducto.Size = new System.Drawing.Size(270, 28);
             this.NumUDCantidadEntradaProducto.TabIndex = 17;
+            this.NumUDCantidadEntradaProducto.ThousandsSeparator = true;
             this.NumUDCantidadEntradaProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumUDCantidadEntradaProducto_KeyPress);
             // 
             // LblGuionBajoUsuario
@@ -374,6 +379,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarEntradaProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EntradaProducto";
             this.PnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();

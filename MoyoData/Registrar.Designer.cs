@@ -38,8 +38,6 @@
             this.LblApellidos = new System.Windows.Forms.Label();
             this.LblRol = new System.Windows.Forms.Label();
             this.LblNombres = new System.Windows.Forms.Label();
-            this.PnlLogo = new System.Windows.Forms.Panel();
-            this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.TbxRegistrarNombres = new System.Windows.Forms.TextBox();
             this.TbxRegistrarApellidos = new System.Windows.Forms.TextBox();
             this.TbxRegistrarPassword = new System.Windows.Forms.TextBox();
@@ -49,22 +47,24 @@
             this.TbxRespuestaRecuperarPassword = new System.Windows.Forms.TextBox();
             this.LblRespuestaRecuperarPassword = new System.Windows.Forms.Label();
             this.LblGuionBajoRespuesta = new System.Windows.Forms.Label();
+            this.PbxNombreEmpresa = new System.Windows.Forms.PictureBox();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
-            this.PnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlTitulo
             // 
             this.PnlTitulo.BackColor = System.Drawing.Color.Maroon;
+            this.PnlTitulo.Controls.Add(this.PbxNombreEmpresa);
             this.PnlTitulo.Controls.Add(this.LblRegistrar);
             this.PnlTitulo.Controls.Add(this.PbxCerrarForm);
             this.PnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlTitulo.Location = new System.Drawing.Point(0, 100);
+            this.PnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.PnlTitulo.Name = "PnlTitulo";
             this.PnlTitulo.Size = new System.Drawing.Size(1186, 73);
             this.PnlTitulo.TabIndex = 23;
+            this.PnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlTitulo_MouseDown);
             // 
             // LblRegistrar
             // 
@@ -96,7 +96,7 @@
             this.BtnRegistrarUsuario.FlatAppearance.BorderSize = 0;
             this.BtnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistrarUsuario.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnRegistrarUsuario.Location = new System.Drawing.Point(1004, 706);
+            this.BtnRegistrarUsuario.Location = new System.Drawing.Point(997, 482);
             this.BtnRegistrarUsuario.Name = "BtnRegistrarUsuario";
             this.BtnRegistrarUsuario.Size = new System.Drawing.Size(143, 56);
             this.BtnRegistrarUsuario.TabIndex = 20;
@@ -109,7 +109,7 @@
             this.CbxRegistrarRol.BackColor = System.Drawing.Color.White;
             this.CbxRegistrarRol.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.CbxRegistrarRol.FormattingEnabled = true;
-            this.CbxRegistrarRol.Location = new System.Drawing.Point(225, 527);
+            this.CbxRegistrarRol.Location = new System.Drawing.Point(230, 353);
             this.CbxRegistrarRol.Name = "CbxRegistrarRol";
             this.CbxRegistrarRol.Size = new System.Drawing.Size(309, 29);
             this.CbxRegistrarRol.TabIndex = 19;
@@ -118,7 +118,7 @@
             // 
             this.LblPassword.AutoSize = true;
             this.LblPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPassword.Location = new System.Drawing.Point(660, 473);
+            this.LblPassword.Location = new System.Drawing.Point(665, 299);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(135, 31);
             this.LblPassword.TabIndex = 17;
@@ -128,7 +128,7 @@
             // 
             this.LblApellidos.AutoSize = true;
             this.LblApellidos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblApellidos.Location = new System.Drawing.Point(660, 294);
+            this.LblApellidos.Location = new System.Drawing.Point(665, 120);
             this.LblApellidos.Name = "LblApellidos";
             this.LblApellidos.Size = new System.Drawing.Size(128, 31);
             this.LblApellidos.TabIndex = 16;
@@ -138,7 +138,7 @@
             // 
             this.LblRol.AutoSize = true;
             this.LblRol.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRol.Location = new System.Drawing.Point(219, 473);
+            this.LblRol.Location = new System.Drawing.Point(224, 299);
             this.LblRol.Name = "LblRol";
             this.LblRol.Size = new System.Drawing.Size(48, 31);
             this.LblRol.TabIndex = 15;
@@ -148,32 +148,11 @@
             // 
             this.LblNombres.AutoSize = true;
             this.LblNombres.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombres.Location = new System.Drawing.Point(219, 294);
+            this.LblNombres.Location = new System.Drawing.Point(224, 120);
             this.LblNombres.Name = "LblNombres";
             this.LblNombres.Size = new System.Drawing.Size(128, 31);
             this.LblNombres.TabIndex = 14;
             this.LblNombres.Text = "Nombre(s)";
-            // 
-            // PnlLogo
-            // 
-            this.PnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
-            this.PnlLogo.Controls.Add(this.PbxLogo);
-            this.PnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.PnlLogo.Name = "PnlLogo";
-            this.PnlLogo.Size = new System.Drawing.Size(1186, 100);
-            this.PnlLogo.TabIndex = 13;
-            // 
-            // PbxLogo
-            // 
-            this.PbxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.PbxLogo.Image = global::MoyoData.Properties.Resources.Group_3;
-            this.PbxLogo.Location = new System.Drawing.Point(377, 28);
-            this.PbxLogo.Name = "PbxLogo";
-            this.PbxLogo.Size = new System.Drawing.Size(415, 44);
-            this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxLogo.TabIndex = 1;
-            this.PbxLogo.TabStop = false;
             // 
             // TbxRegistrarNombres
             // 
@@ -181,7 +160,7 @@
             this.TbxRegistrarNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxRegistrarNombres.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarNombres.ForeColor = System.Drawing.Color.DimGray;
-            this.TbxRegistrarNombres.Location = new System.Drawing.Point(226, 359);
+            this.TbxRegistrarNombres.Location = new System.Drawing.Point(231, 185);
             this.TbxRegistrarNombres.MaxLength = 25;
             this.TbxRegistrarNombres.Name = "TbxRegistrarNombres";
             this.TbxRegistrarNombres.ShortcutsEnabled = false;
@@ -198,7 +177,7 @@
             this.TbxRegistrarApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxRegistrarApellidos.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarApellidos.ForeColor = System.Drawing.Color.DimGray;
-            this.TbxRegistrarApellidos.Location = new System.Drawing.Point(667, 359);
+            this.TbxRegistrarApellidos.Location = new System.Drawing.Point(672, 185);
             this.TbxRegistrarApellidos.MaxLength = 25;
             this.TbxRegistrarApellidos.Name = "TbxRegistrarApellidos";
             this.TbxRegistrarApellidos.ShortcutsEnabled = false;
@@ -215,7 +194,7 @@
             this.TbxRegistrarPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxRegistrarPassword.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.TbxRegistrarPassword.Location = new System.Drawing.Point(667, 529);
+            this.TbxRegistrarPassword.Location = new System.Drawing.Point(672, 355);
             this.TbxRegistrarPassword.MaxLength = 50;
             this.TbxRegistrarPassword.Name = "TbxRegistrarPassword";
             this.TbxRegistrarPassword.ShortcutsEnabled = false;
@@ -229,7 +208,7 @@
             // LblGuionBajoUsuario
             // 
             this.LblGuionBajoUsuario.AutoSize = true;
-            this.LblGuionBajoUsuario.Location = new System.Drawing.Point(221, 364);
+            this.LblGuionBajoUsuario.Location = new System.Drawing.Point(226, 190);
             this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
             this.LblGuionBajoUsuario.Size = new System.Drawing.Size(314, 21);
             this.LblGuionBajoUsuario.TabIndex = 37;
@@ -238,7 +217,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(662, 364);
+            this.label1.Location = new System.Drawing.Point(667, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(314, 21);
             this.label1.TabIndex = 38;
@@ -247,7 +226,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(662, 535);
+            this.label2.Location = new System.Drawing.Point(667, 361);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(314, 21);
             this.label2.TabIndex = 39;
@@ -259,7 +238,7 @@
             this.TbxRespuestaRecuperarPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRespuestaRecuperarPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.TbxRespuestaRecuperarPassword.Location = new System.Drawing.Point(226, 663);
+            this.TbxRespuestaRecuperarPassword.Location = new System.Drawing.Point(231, 489);
             this.TbxRespuestaRecuperarPassword.MaxLength = 20;
             this.TbxRespuestaRecuperarPassword.Name = "TbxRespuestaRecuperarPassword";
             this.TbxRespuestaRecuperarPassword.ShortcutsEnabled = false;
@@ -274,7 +253,7 @@
             // 
             this.LblRespuestaRecuperarPassword.AutoSize = true;
             this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(219, 598);
+            this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(224, 424);
             this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
             this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(452, 31);
             this.LblRespuestaRecuperarPassword.TabIndex = 40;
@@ -283,17 +262,28 @@
             // LblGuionBajoRespuesta
             // 
             this.LblGuionBajoRespuesta.AutoSize = true;
-            this.LblGuionBajoRespuesta.Location = new System.Drawing.Point(221, 668);
+            this.LblGuionBajoRespuesta.Location = new System.Drawing.Point(226, 494);
             this.LblGuionBajoRespuesta.Name = "LblGuionBajoRespuesta";
             this.LblGuionBajoRespuesta.Size = new System.Drawing.Size(314, 21);
             this.LblGuionBajoRespuesta.TabIndex = 42;
             this.LblGuionBajoRespuesta.Text = "______________________________________";
             // 
+            // PbxNombreEmpresa
+            // 
+            this.PbxNombreEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("PbxNombreEmpresa.Image")));
+            this.PbxNombreEmpresa.Location = new System.Drawing.Point(808, 23);
+            this.PbxNombreEmpresa.Name = "PbxNombreEmpresa";
+            this.PbxNombreEmpresa.Size = new System.Drawing.Size(276, 28);
+            this.PbxNombreEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxNombreEmpresa.TabIndex = 13;
+            this.PbxNombreEmpresa.TabStop = false;
+            // 
             // Registrar
             // 
+            this.AcceptButton = this.BtnRegistrarUsuario;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1186, 796);
+            this.ClientSize = new System.Drawing.Size(1186, 573);
             this.Controls.Add(this.TbxRespuestaRecuperarPassword);
             this.Controls.Add(this.LblRespuestaRecuperarPassword);
             this.Controls.Add(this.LblGuionBajoRespuesta);
@@ -307,7 +297,6 @@
             this.Controls.Add(this.LblApellidos);
             this.Controls.Add(this.LblRol);
             this.Controls.Add(this.LblNombres);
-            this.Controls.Add(this.PnlLogo);
             this.Controls.Add(this.LblGuionBajoUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -315,12 +304,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Escribe aquí";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
-            this.PnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,8 +326,6 @@
         private System.Windows.Forms.Label LblApellidos;
         private System.Windows.Forms.Label LblRol;
         private System.Windows.Forms.Label LblNombres;
-        private System.Windows.Forms.Panel PnlLogo;
-        private System.Windows.Forms.PictureBox PbxLogo;
         private System.Windows.Forms.TextBox TbxRegistrarNombres;
         private System.Windows.Forms.TextBox TbxRegistrarApellidos;
         private System.Windows.Forms.TextBox TbxRegistrarPassword;
@@ -348,5 +335,6 @@
         private System.Windows.Forms.TextBox TbxRespuestaRecuperarPassword;
         private System.Windows.Forms.Label LblRespuestaRecuperarPassword;
         private System.Windows.Forms.Label LblGuionBajoRespuesta;
+        private System.Windows.Forms.PictureBox PbxNombreEmpresa;
     }
 }

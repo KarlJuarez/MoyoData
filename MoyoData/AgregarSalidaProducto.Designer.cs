@@ -125,6 +125,7 @@
             // 
             this.DgvProductosSeleccionados.AllowUserToAddRows = false;
             this.DgvProductosSeleccionados.AllowUserToDeleteRows = false;
+            this.DgvProductosSeleccionados.BackgroundColor = System.Drawing.Color.White;
             this.DgvProductosSeleccionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductosSeleccionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumIDSeleccionados,
@@ -162,6 +163,7 @@
             // 
             this.DgvProductos.AllowUserToAddRows = false;
             this.DgvProductos.AllowUserToDeleteRows = false;
+            this.DgvProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumID,
@@ -233,6 +235,7 @@
             // 
             this.BtnSalidaProductoHacerPrestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSalidaProductoHacerPrestamo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
+            this.BtnSalidaProductoHacerPrestamo.FlatAppearance.BorderSize = 0;
             this.BtnSalidaProductoHacerPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalidaProductoHacerPrestamo.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
             this.BtnSalidaProductoHacerPrestamo.Location = new System.Drawing.Point(1004, 706);
@@ -247,6 +250,7 @@
             // 
             this.BtnSalidaProductoAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSalidaProductoAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
+            this.BtnSalidaProductoAgregar.FlatAppearance.BorderSize = 0;
             this.BtnSalidaProductoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalidaProductoAgregar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
             this.BtnSalidaProductoAgregar.Location = new System.Drawing.Point(836, 706);
@@ -320,6 +324,7 @@
             this.NumUDCantidadSalidaProducto.Name = "NumUDCantidadSalidaProducto";
             this.NumUDCantidadSalidaProducto.Size = new System.Drawing.Size(270, 28);
             this.NumUDCantidadSalidaProducto.TabIndex = 35;
+            this.NumUDCantidadSalidaProducto.ThousandsSeparator = true;
             // 
             // LblGuionBajoUsuario
             // 
@@ -373,6 +378,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarSalidaProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SalidaProducto";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();

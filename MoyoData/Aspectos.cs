@@ -14,13 +14,19 @@ namespace MoyoData
 {
     public partial class Aspectos : Form
     {
-        //Atrobutos
+        //-----------------------------------//
+        // ATRIBUTOS
+        //-----------------------------------//
         string consulta;
         BaseDeDatos conexion = new BaseDeDatos();
         List<string> categorias = new List<string>();
         List<Rol> roles = new List<Rol>();
         Usuario usuario;
         string idRol;
+
+        //-----------------------
+        // Constructor
+        //-----------------------
         public Aspectos(Usuario usuario)
         {
             InitializeComponent();
@@ -44,6 +50,18 @@ namespace MoyoData
             }
         }
 
+        //------------------------
+        // Cerrar formulario
+        //------------------------
+        private void PbxCerrarForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #region Función para seleccionar rol
+        //-----------------------
+        // Seleccionar rol
+        //-----------------------
         private void SeleccionarRoles()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -57,7 +75,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se encontraron roles", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -69,14 +87,12 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
-        //------------------------
-        // Cerrar formulario
-        //------------------------
-        private void PbxCerrarForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        #endregion
 
+        #region Función para cargar las categorías
+        //-----------------------
+        // Cargar categorías
+        //-----------------------
         private void CargarCategorias()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -89,7 +105,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron categorías");
+                MessageBox.Show("No se encontraron categorías", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -101,7 +117,12 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
 
+        #region Función para cargar los tipos de producto
+        //---------------------------
+        // Cargar tipos de producto
+        //---------------------------
         private void CargarTiposProductos()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -114,7 +135,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron tipos de productos.");
+                MessageBox.Show("No se encontraron tipos de productos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -125,7 +146,12 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
 
+        #region Función para cargar las unidades de medida
+        //-----------------------------
+        // Cargar unidades de medida
+        //-----------------------------
         private void CargarUnidadesMedidas()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -138,7 +164,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron unidades de medida");
+                MessageBox.Show("No se encontraron unidades de medida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -149,14 +175,24 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
 
+        #region Botón para agregar categoría
+        //-----------------------------
+        // Agregar categoría
+        //-----------------------------
         private void BtnAgregarCategoria_Click(object sender, EventArgs e)
         {
             AgregarCategoria agregarCategoria = new AgregarCategoria();
             agregarCategoria.ShowDialog();
             ActualizarCategorias();
         }
+        #endregion
 
+        #region Botón para editar categoría
+        //-----------------------------
+        // Editar categoría
+        //-----------------------------
         private void BtnEditarCategoria_Click(object sender, EventArgs e)
         {
             MySqlDataReader mySqlDataReader = null;
@@ -166,7 +202,7 @@ namespace MoyoData
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionCategorias"].Value)).Count();
             if (totalSeleccion <= 0)
             {
-                MessageBox.Show("Seleccione alguna unidad de medida.");
+                MessageBox.Show("Seleccione alguna unidad de medida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -191,20 +227,35 @@ namespace MoyoData
 
             ActualizarCategorias();
         }
+        #endregion
 
+        #region Función para actualizar categorías
+        //-----------------------------
+        // Actualizar categorías
+        //-----------------------------
         private void ActualizarCategorias()
         {
             DgvCategorias.Rows.Clear();
             CargarCategorias();
         }
+        #endregion
 
+        #region Botón para agregar un tipo de producto
+        //-----------------------------
+        // Agregar tipo de producto
+        //-----------------------------
         private void BtnAgregarTipoPorducto_Click(object sender, EventArgs e)
         {
             AgregarTipoProducto agregarTipoProducto = new AgregarTipoProducto();
             agregarTipoProducto.ShowDialog();
             ActualizarTablaTipoProducto();
         }
+        #endregion
 
+        #region Botón para editar un tipo de producto
+        //-----------------------------
+        // Editar tipo de producto
+        //-----------------------------
         private void BtnEditarTipoProducto_Click(object sender, EventArgs e)
         {
             MySqlDataReader mySqlDataReader = null;
@@ -214,7 +265,7 @@ namespace MoyoData
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionTiposProductos"].Value)).Count();
             if (totalSeleccion <= 0)
             {
-                MessageBox.Show("Seleccione algún tipo de producto.");
+                MessageBox.Show("Seleccione algún tipo de producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -239,20 +290,35 @@ namespace MoyoData
 
             ActualizarTablaTipoProducto();
         }
+        #endregion
 
+        #region Función para actualizar la tabla de tipo de productos
+        //-----------------------------------------
+        // Actualizar tabla de tipo de productos
+        //-----------------------------------------
         private void ActualizarTablaTipoProducto()
         {
             DgvTiposProductos.Rows.Clear();
             CargarTiposProductos();
         }
+        #endregion
 
+        #region Botón para agregar unidad de medida
+        //-----------------------------
+        // Agregar unidad de medida
+        //-----------------------------
         private void BtnAgregarUnidadDeMedida_Click(object sender, EventArgs e)
         {
             AgregarUnidadMedida agregarUnidadMedida = new AgregarUnidadMedida();
             agregarUnidadMedida.ShowDialog();
             ActualizarMedidas();
         }
+        #endregion
 
+        #region Botón para editar unidad de medida
+        //-----------------------------
+        // Editar unidad de medida
+        //-----------------------------
         private void BtnEditarUnidadDeMedida_Click(object sender, EventArgs e)
         {
             MySqlDataReader mySqlDataReader = null;
@@ -262,7 +328,7 @@ namespace MoyoData
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionUnidadesMedidas"].Value)).Count();
             if (totalSeleccion <= 0)
             {
-                MessageBox.Show("Seleccione alguna unidad de medida.");
+                MessageBox.Show("Seleccione alguna unidad de medida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -287,11 +353,17 @@ namespace MoyoData
 
             ActualizarMedidas();
         }
+        #endregion
 
+        #region Función para actualizar las unidades de medida
+        //-----------------------------
+        // Actualizar unidades de medida
+        //-----------------------------
         private void ActualizarMedidas()
         {
             DgvUnidadesDeMedida.Rows.Clear();
             CargarUnidadesMedidas();
         }
+        #endregion
     }
 }

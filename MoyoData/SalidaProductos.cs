@@ -14,6 +14,9 @@ namespace MoyoData
 {
     public partial class SalidaProductos : Form
     {
+        //-----------------------------------//
+        // ATRIBUTOS
+        //-----------------------------------//
         BaseDeDatos conexion = new BaseDeDatos();
         string consulta;
         List<Producto> productos = new List<Producto>();
@@ -21,6 +24,10 @@ namespace MoyoData
         List<Rol> roles = new List<Rol>();
         Usuario usuario;
         string idRol;
+
+        //-----------------------
+        // Constructor
+        //-----------------------
         public SalidaProductos(Usuario usuario)
         {
             InitializeComponent();
@@ -37,6 +44,10 @@ namespace MoyoData
             }
         }
 
+        #region Función para seleccionar roles
+        //-----------------------
+        // Seleccionar roles
+        //-----------------------
         private void SeleccionarRoles()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -62,6 +73,12 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
+
+        #region Función para seleccionar productos
+        //-------------------------
+        // Seleccionar productos
+        //-------------------------
         private void SeleccionarProductos()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -75,7 +92,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron productos");
+                MessageBox.Show("No se encontraron productos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -86,7 +103,12 @@ namespace MoyoData
             }
             mySqlDataReader.Close();
         }
+        #endregion
 
+        #region Función para seleccionar usuarios
+        //-----------------------------
+        // Seleccionar usuarios
+        //-----------------------------
         private void SeleccionarUsuarios()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -100,7 +122,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron usuarios");
+                MessageBox.Show("No se encontraron usuarios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -111,7 +133,12 @@ namespace MoyoData
             }
             mySqlDataReader.Close();
         }
+        #endregion
 
+        #region Función para cargar datos en DgvSalidaProductos
+        //----------------------------------------
+        // Cargar datos en DgvSalidaProductos
+        //----------------------------------------
         private void CargarDatos()
         {
             DgvSalidaProductos.Rows.Clear();
@@ -129,7 +156,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron salidas de productos");
+                MessageBox.Show("No se encontraron salidas de productos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -165,14 +192,24 @@ namespace MoyoData
             }
             mySqlDataReader.Close();
         }
+        #endregion
 
+        #region Botón para agregar salida de producto
+        //-----------------------------
+        // Agregar salida de producto
+        //-----------------------------
         private void BtnSalidaProductoAgregar_Click(object sender, EventArgs e)
         {
             AgregarSalidaProducto agregarSalidaProducto = new AgregarSalidaProducto();
             agregarSalidaProducto.ShowDialog();
             CargarDatos();
         }
+        #endregion
 
+        #region Botón para eliminar salida de producto
+        //-------------------------------
+        // Eliminar salida de producto
+        //-------------------------------
         private void BtnSalidaProductoEliminar_Click(object sender, EventArgs e)
         {
             int id;
@@ -180,7 +217,7 @@ namespace MoyoData
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccion"].Value)).Count();
             if (totalSeleccion <= 0)
             {
-                MessageBox.Show("Seleccione alguna salida de productos.");
+                MessageBox.Show("Seleccione alguna salida de productos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -210,7 +247,8 @@ namespace MoyoData
                 }
             }
             CargarDatos();
-            MessageBox.Show("Se ha borrado las salidas de productos.");
+            MessageBox.Show("Se ha borrado las salidas de productos", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        #endregion
     }
 }

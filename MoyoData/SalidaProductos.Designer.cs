@@ -36,25 +36,28 @@
             this.ColumProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumSeleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.BtnSalidaProductoEliminar = new System.Windows.Forms.Button();
             this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
             this.PnlTitulo = new System.Windows.Forms.Panel();
             this.LblSalida = new System.Windows.Forms.Label();
-            this.BtnSalidaProductoAgregar = new System.Windows.Forms.Button();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.LblSalidaProductos = new System.Windows.Forms.Label();
             this.PnlLogo = new System.Windows.Forms.Panel();
+            this.BtnSalidaProductoEliminar = new System.Windows.Forms.Button();
+            this.PnlAgregarProdcuto = new System.Windows.Forms.Panel();
+            this.BtnSalidaProductoAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSalidaProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             this.PnlLogo.SuspendLayout();
+            this.PnlAgregarProdcuto.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvSalidaProductos
             // 
             this.DgvSalidaProductos.AllowUserToAddRows = false;
             this.DgvSalidaProductos.AllowUserToDeleteRows = false;
+            this.DgvSalidaProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvSalidaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvSalidaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumID,
@@ -63,7 +66,7 @@
             this.ColumProducto,
             this.ColumCantidad,
             this.ColumSeleccion});
-            this.DgvSalidaProductos.Location = new System.Drawing.Point(54, 298);
+            this.DgvSalidaProductos.Location = new System.Drawing.Point(54, 287);
             this.DgvSalidaProductos.Name = "DgvSalidaProductos";
             this.DgvSalidaProductos.RowHeadersWidth = 51;
             this.DgvSalidaProductos.RowTemplate.Height = 24;
@@ -114,20 +117,6 @@
             this.ColumSeleccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ColumSeleccion.Width = 125;
             // 
-            // BtnSalidaProductoEliminar
-            // 
-            this.BtnSalidaProductoEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSalidaProductoEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
-            this.BtnSalidaProductoEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalidaProductoEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnSalidaProductoEliminar.Location = new System.Drawing.Point(1013, 219);
-            this.BtnSalidaProductoEliminar.Name = "BtnSalidaProductoEliminar";
-            this.BtnSalidaProductoEliminar.Size = new System.Drawing.Size(143, 56);
-            this.BtnSalidaProductoEliminar.TabIndex = 38;
-            this.BtnSalidaProductoEliminar.Text = "Eliminar";
-            this.BtnSalidaProductoEliminar.UseVisualStyleBackColor = false;
-            this.BtnSalidaProductoEliminar.Click += new System.EventHandler(this.BtnSalidaProductoEliminar_Click);
-            // 
             // PbxCerrarForm
             // 
             this.PbxCerrarForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -154,26 +143,12 @@
             // 
             this.LblSalida.AutoSize = true;
             this.LblSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold);
+            this.LblSalida.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
             this.LblSalida.Location = new System.Drawing.Point(70, 20);
             this.LblSalida.Name = "LblSalida";
-            this.LblSalida.Size = new System.Drawing.Size(393, 37);
+            this.LblSalida.Size = new System.Drawing.Size(351, 38);
             this.LblSalida.TabIndex = 1;
             this.LblSalida.Text = "SALIDA DE PRODUCTO";
-            // 
-            // BtnSalidaProductoAgregar
-            // 
-            this.BtnSalidaProductoAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSalidaProductoAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
-            this.BtnSalidaProductoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalidaProductoAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnSalidaProductoAgregar.Location = new System.Drawing.Point(855, 218);
-            this.BtnSalidaProductoAgregar.Name = "BtnSalidaProductoAgregar";
-            this.BtnSalidaProductoAgregar.Size = new System.Drawing.Size(143, 56);
-            this.BtnSalidaProductoAgregar.TabIndex = 36;
-            this.BtnSalidaProductoAgregar.Text = "Extraer producto";
-            this.BtnSalidaProductoAgregar.UseVisualStyleBackColor = false;
-            this.BtnSalidaProductoAgregar.Click += new System.EventHandler(this.BtnSalidaProductoAgregar_Click);
             // 
             // PbxLogo
             // 
@@ -189,10 +164,10 @@
             // LblSalidaProductos
             // 
             this.LblSalidaProductos.AutoSize = true;
-            this.LblSalidaProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSalidaProductos.Location = new System.Drawing.Point(63, 229);
+            this.LblSalidaProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
+            this.LblSalidaProductos.Location = new System.Drawing.Point(48, 234);
             this.LblSalidaProductos.Name = "LblSalidaProductos";
-            this.LblSalidaProductos.Size = new System.Drawing.Size(419, 29);
+            this.LblSalidaProductos.Size = new System.Drawing.Size(364, 31);
             this.LblSalidaProductos.TabIndex = 40;
             this.LblSalidaProductos.Text = "Registro de entrada de productos";
             // 
@@ -206,17 +181,69 @@
             this.PnlLogo.Size = new System.Drawing.Size(1168, 100);
             this.PnlLogo.TabIndex = 35;
             // 
+            // BtnSalidaProductoEliminar
+            // 
+            this.BtnSalidaProductoEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSalidaProductoEliminar.AutoSize = true;
+            this.BtnSalidaProductoEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSalidaProductoEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSalidaProductoEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnSalidaProductoEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalidaProductoEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalidaProductoEliminar.Image = global::MoyoData.Properties.Resources._2_icon__trash_;
+            this.BtnSalidaProductoEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalidaProductoEliminar.Location = new System.Drawing.Point(816, 215);
+            this.BtnSalidaProductoEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnSalidaProductoEliminar.Name = "BtnSalidaProductoEliminar";
+            this.BtnSalidaProductoEliminar.Size = new System.Drawing.Size(245, 50);
+            this.BtnSalidaProductoEliminar.TabIndex = 40;
+            this.BtnSalidaProductoEliminar.Text = "     Eliminar producto";
+            this.BtnSalidaProductoEliminar.UseVisualStyleBackColor = false;
+            this.BtnSalidaProductoEliminar.Click += new System.EventHandler(this.BtnSalidaProductoEliminar_Click);
+            // 
+            // PnlAgregarProdcuto
+            // 
+            this.PnlAgregarProdcuto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PnlAgregarProdcuto.Controls.Add(this.BtnSalidaProductoAgregar);
+            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(587, 215);
+            this.PnlAgregarProdcuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PnlAgregarProdcuto.Name = "PnlAgregarProdcuto";
+            this.PnlAgregarProdcuto.Size = new System.Drawing.Size(221, 50);
+            this.PnlAgregarProdcuto.TabIndex = 39;
+            // 
+            // BtnSalidaProductoAgregar
+            // 
+            this.BtnSalidaProductoAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSalidaProductoAgregar.AutoSize = true;
+            this.BtnSalidaProductoAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSalidaProductoAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSalidaProductoAgregar.FlatAppearance.BorderSize = 0;
+            this.BtnSalidaProductoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalidaProductoAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalidaProductoAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalidaProductoAgregar.Image")));
+            this.BtnSalidaProductoAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalidaProductoAgregar.Location = new System.Drawing.Point(0, 0);
+            this.BtnSalidaProductoAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnSalidaProductoAgregar.Name = "BtnSalidaProductoAgregar";
+            this.BtnSalidaProductoAgregar.Size = new System.Drawing.Size(221, 50);
+            this.BtnSalidaProductoAgregar.TabIndex = 3;
+            this.BtnSalidaProductoAgregar.Text = "     Extraer producto";
+            this.BtnSalidaProductoAgregar.UseVisualStyleBackColor = false;
+            this.BtnSalidaProductoAgregar.Click += new System.EventHandler(this.BtnSalidaProductoAgregar_Click);
+            // 
             // SalidaProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1168, 749);
-            this.Controls.Add(this.DgvSalidaProductos);
             this.Controls.Add(this.BtnSalidaProductoEliminar);
+            this.Controls.Add(this.PnlAgregarProdcuto);
+            this.Controls.Add(this.DgvSalidaProductos);
             this.Controls.Add(this.PnlTitulo);
-            this.Controls.Add(this.BtnSalidaProductoAgregar);
             this.Controls.Add(this.LblSalidaProductos);
             this.Controls.Add(this.PnlLogo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SalidaProductos";
             this.Text = "SalidaProductos";
             ((System.ComponentModel.ISupportInitialize)(this.DgvSalidaProductos)).EndInit();
@@ -225,6 +252,8 @@
             this.PnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
             this.PnlLogo.ResumeLayout(false);
+            this.PnlAgregarProdcuto.ResumeLayout(false);
+            this.PnlAgregarProdcuto.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,13 +268,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidad;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccion;
-        private System.Windows.Forms.Button BtnSalidaProductoEliminar;
         private System.Windows.Forms.PictureBox PbxCerrarForm;
         private System.Windows.Forms.Panel PnlTitulo;
         private System.Windows.Forms.Label LblSalida;
-        private System.Windows.Forms.Button BtnSalidaProductoAgregar;
         private System.Windows.Forms.PictureBox PbxLogo;
         private System.Windows.Forms.Label LblSalidaProductos;
         private System.Windows.Forms.Panel PnlLogo;
+        private System.Windows.Forms.Button BtnSalidaProductoEliminar;
+        private System.Windows.Forms.Panel PnlAgregarProdcuto;
+        private System.Windows.Forms.Button BtnSalidaProductoAgregar;
     }
 }

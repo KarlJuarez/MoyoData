@@ -17,10 +17,16 @@ namespace MoyoData
 {
     public partial class MostrarUsuarios : Form
     {
-        //Atrobutos
+        //-----------------------------------//
+        // ATRIBUTOS
+        //-----------------------------------//
         string consulta;
         BaseDeDatos conexion = new BaseDeDatos();
         List<string> roles = new List<string>();
+
+        //-----------------------
+        // Constructor
+        //-----------------------
         public MostrarUsuarios()
         {
             InitializeComponent();
@@ -36,6 +42,10 @@ namespace MoyoData
             this.Close();
         }
 
+        #region Función para cargar roles
+        //-----------------------
+        // Cargar roles
+        //-----------------------
         private void CargarRoles()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -48,7 +58,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron categorías");
+                MessageBox.Show("No se encontraron categorías", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -59,7 +69,12 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
 
+        #region Función para cargar usuarios
+        //-----------------------
+        // Cargar usuarios
+        //-----------------------
         private void CargarUsuarios()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -72,7 +87,7 @@ namespace MoyoData
             if (!mySqlDataReader.HasRows)
             {
                 mySqlDataReader.Close();
-                MessageBox.Show("No se encontraron usuario.");
+                MessageBox.Show("No se encontraron usuarios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -83,15 +98,24 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
+        #endregion
 
-
+        #region Botón para agregar usuario
+        //-----------------------
+        // Agregar usuario
+        //-----------------------
         private void BtnAgregarUsuario_Click(object sender, EventArgs e)
         {
             Registrar registrar = new Registrar();
             registrar.ShowDialog();
             ActualizarUsuarios();
         }
+        #endregion
 
+        #region Botón para eliminar usuario
+        //-----------------------
+        // Eliminar usuario
+        //-----------------------
         private void BtnEliminarUsuario_Click(object sender, EventArgs e)
         {
             int id;
@@ -101,7 +125,7 @@ namespace MoyoData
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionUsuarios"].Value)).Count();
             if (totalSeleccion <= 0)
             {
-                MessageBox.Show("Seleccione algún usuario.");
+                MessageBox.Show("Seleccione algún usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -183,9 +207,14 @@ namespace MoyoData
                 }
             }
             ActualizarUsuarios();
-            MessageBox.Show("Se ha borrado los usuarios.");
+            MessageBox.Show("Se ha borrado los usuarios", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        #endregion
 
+        #region Botón para editar usuario
+        //-----------------------
+        // Editar usuario
+        //-----------------------
         private void BtnEditarUsuario_Click(object sender, EventArgs e)
         {
             MySqlDataReader mySqlDataReader = null;
@@ -195,7 +224,7 @@ namespace MoyoData
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionUsuarios"].Value)).Count();
             if (totalSeleccion <= 0)
             {
-                MessageBox.Show("Seleccione algún usuario.");
+                MessageBox.Show("Seleccione algún usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -220,12 +249,17 @@ namespace MoyoData
 
             ActualizarUsuarios();
         }
+        #endregion
 
+        #region Función para actualizar usuarios
+        //-----------------------
+        // Actualizar usuarios
+        //-----------------------
         private void ActualizarUsuarios()
         {
             DgvUsuarios.Rows.Clear();
             CargarUsuarios();
         }
-
+        #endregion
     }
 }

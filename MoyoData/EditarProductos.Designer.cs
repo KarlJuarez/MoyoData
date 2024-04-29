@@ -75,7 +75,7 @@
             this.LblLimite.Name = "LblLimite";
             this.LblLimite.Size = new System.Drawing.Size(267, 31);
             this.LblLimite.TabIndex = 59;
-            this.LblLimite.Text = "Limite al sacar producto";
+            this.LblLimite.Text = "Límite al sacar producto";
             // 
             // CbxTipoProductoEditarProducto
             // 
@@ -94,7 +94,7 @@
             this.LblTipoProducto.Name = "LblTipoProducto";
             this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
             this.LblTipoProducto.TabIndex = 57;
-            this.LblTipoProducto.Text = "Tipo de Producto";
+            this.LblTipoProducto.Text = "Tipo de producto";
             // 
             // CbxCategoriasEditarProducto
             // 
@@ -112,9 +112,9 @@
             this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCategorias.Location = new System.Drawing.Point(238, 523);
             this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(125, 31);
+            this.LblCategorias.Size = new System.Drawing.Size(114, 31);
             this.LblCategorias.TabIndex = 55;
-            this.LblCategorias.Text = "Categorias";
+            this.LblCategorias.Text = "Categoría";
             // 
             // CbxUnidadesMedidasEditarProducto
             // 
@@ -131,21 +131,22 @@
             this.LblUnidadesMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUnidadesMedida.Location = new System.Drawing.Point(692, 338);
             this.LblUnidadesMedida.Name = "LblUnidadesMedida";
-            this.LblUnidadesMedida.Size = new System.Drawing.Size(232, 31);
+            this.LblUnidadesMedida.Size = new System.Drawing.Size(209, 31);
             this.LblUnidadesMedida.TabIndex = 53;
-            this.LblUnidadesMedida.Text = "Unidades de medida";
+            this.LblUnidadesMedida.Text = "Unidad de medida";
             // 
             // BtnEditarProducto
             // 
             this.BtnEditarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEditarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
+            this.BtnEditarProducto.FlatAppearance.BorderSize = 0;
             this.BtnEditarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditarProducto.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
             this.BtnEditarProducto.Location = new System.Drawing.Point(980, 706);
             this.BtnEditarProducto.Name = "BtnEditarProducto";
             this.BtnEditarProducto.Size = new System.Drawing.Size(167, 56);
             this.BtnEditarProducto.TabIndex = 52;
-            this.BtnEditarProducto.Text = "Agregar producto";
+            this.BtnEditarProducto.Text = "Aceptar";
             this.BtnEditarProducto.UseVisualStyleBackColor = false;
             this.BtnEditarProducto.Click += new System.EventHandler(this.BtnEditarProducto_Click);
             // 
@@ -272,8 +273,8 @@
             // 
             // EditarProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AcceptButton = this.BtnEditarProducto;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1186, 796);
             this.Controls.Add(this.PbxNombreEmpresa);

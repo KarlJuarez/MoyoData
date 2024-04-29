@@ -37,21 +37,21 @@
             this.CbxUnidadesMedidasAgregarProducto = new System.Windows.Forms.ComboBox();
             this.LblUnidadesMedida = new System.Windows.Forms.Label();
             this.CbxCategoriasAgregarProducto = new System.Windows.Forms.ComboBox();
-            this.LblCategorias = new System.Windows.Forms.Label();
+            this.LblCategoria = new System.Windows.Forms.Label();
             this.CbxTipoProductoAgregarProducto = new System.Windows.Forms.ComboBox();
             this.LblTipoProducto = new System.Windows.Forms.Label();
             this.NumUDLimiteAgregarProducto = new System.Windows.Forms.NumericUpDown();
             this.LblLimite = new System.Windows.Forms.Label();
             this.PnlTitulo = new System.Windows.Forms.Panel();
-            this.LblAspectos = new System.Windows.Forms.Label();
-            this.LblGuionBajoProducto = new System.Windows.Forms.Label();
-            this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
             this.PbxNombreEmpresa = new System.Windows.Forms.PictureBox();
+            this.LblAgregarProducto = new System.Windows.Forms.Label();
+            this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
+            this.LblGuionBajo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidadAgregarProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDLimiteAgregarProducto)).BeginInit();
             this.PnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.SuspendLayout();
             // 
             // TbxProductoAgregarProducto
@@ -64,7 +64,7 @@
             this.TbxProductoAgregarProducto.MaxLength = 100;
             this.TbxProductoAgregarProducto.Name = "TbxProductoAgregarProducto";
             this.TbxProductoAgregarProducto.ShortcutsEnabled = false;
-            this.TbxProductoAgregarProducto.Size = new System.Drawing.Size(267, 21);
+            this.TbxProductoAgregarProducto.Size = new System.Drawing.Size(260, 21);
             this.TbxProductoAgregarProducto.TabIndex = 39;
             this.TbxProductoAgregarProducto.Text = "Escribe aquí";
             this.TbxProductoAgregarProducto.Enter += new System.EventHandler(this.TbxProductoAgregarProducto_Enter);
@@ -90,6 +90,7 @@
             this.NumUDCantidadAgregarProducto.Name = "NumUDCantidadAgregarProducto";
             this.NumUDCantidadAgregarProducto.Size = new System.Drawing.Size(309, 28);
             this.NumUDCantidadAgregarProducto.TabIndex = 38;
+            this.NumUDCantidadAgregarProducto.ThousandsSeparator = true;
             // 
             // LblCantidad
             // 
@@ -105,13 +106,14 @@
             // 
             this.BtnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAgregarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
+            this.BtnAgregarProducto.FlatAppearance.BorderSize = 0;
             this.BtnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregarProducto.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
             this.BtnAgregarProducto.Location = new System.Drawing.Point(1004, 706);
             this.BtnAgregarProducto.Name = "BtnAgregarProducto";
             this.BtnAgregarProducto.Size = new System.Drawing.Size(143, 56);
             this.BtnAgregarProducto.TabIndex = 36;
-            this.BtnAgregarProducto.Text = "Agregar producto";
+            this.BtnAgregarProducto.Text = "Aceptar";
             this.BtnAgregarProducto.UseVisualStyleBackColor = false;
             this.BtnAgregarProducto.Click += new System.EventHandler(this.BtnAgregarProducto_Click);
             // 
@@ -130,9 +132,9 @@
             this.LblUnidadesMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUnidadesMedida.Location = new System.Drawing.Point(659, 350);
             this.LblUnidadesMedida.Name = "LblUnidadesMedida";
-            this.LblUnidadesMedida.Size = new System.Drawing.Size(232, 31);
+            this.LblUnidadesMedida.Size = new System.Drawing.Size(209, 31);
             this.LblUnidadesMedida.TabIndex = 40;
-            this.LblUnidadesMedida.Text = "Unidades de medida";
+            this.LblUnidadesMedida.Text = "Unidad de medida";
             // 
             // CbxCategoriasAgregarProducto
             // 
@@ -144,15 +146,15 @@
             this.CbxCategoriasAgregarProducto.TabIndex = 43;
             this.CbxCategoriasAgregarProducto.SelectedIndexChanged += new System.EventHandler(this.CbxCategoriasAgregarProducto_SelectedIndexChanged);
             // 
-            // LblCategorias
+            // LblCategoria
             // 
-            this.LblCategorias.AutoSize = true;
-            this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCategorias.Location = new System.Drawing.Point(206, 443);
-            this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(125, 31);
-            this.LblCategorias.TabIndex = 42;
-            this.LblCategorias.Text = "Categorias";
+            this.LblCategoria.AutoSize = true;
+            this.LblCategoria.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCategoria.Location = new System.Drawing.Point(206, 443);
+            this.LblCategoria.Name = "LblCategoria";
+            this.LblCategoria.Size = new System.Drawing.Size(114, 31);
+            this.LblCategoria.TabIndex = 42;
+            this.LblCategoria.Text = "Categoría";
             // 
             // CbxTipoProductoAgregarProducto
             // 
@@ -171,7 +173,7 @@
             this.LblTipoProducto.Name = "LblTipoProducto";
             this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
             this.LblTipoProducto.TabIndex = 44;
-            this.LblTipoProducto.Text = "Tipo de Producto";
+            this.LblTipoProducto.Text = "Tipo de producto";
             // 
             // NumUDLimiteAgregarProducto
             // 
@@ -182,6 +184,7 @@
             this.NumUDLimiteAgregarProducto.Name = "NumUDLimiteAgregarProducto";
             this.NumUDLimiteAgregarProducto.Size = new System.Drawing.Size(309, 28);
             this.NumUDLimiteAgregarProducto.TabIndex = 47;
+            this.NumUDLimiteAgregarProducto.ThousandsSeparator = true;
             // 
             // LblLimite
             // 
@@ -191,13 +194,13 @@
             this.LblLimite.Name = "LblLimite";
             this.LblLimite.Size = new System.Drawing.Size(267, 31);
             this.LblLimite.TabIndex = 46;
-            this.LblLimite.Text = "Limite al sacar producto";
+            this.LblLimite.Text = "Límite al sacar producto";
             // 
             // PnlTitulo
             // 
             this.PnlTitulo.BackColor = System.Drawing.Color.Maroon;
             this.PnlTitulo.Controls.Add(this.PbxNombreEmpresa);
-            this.PnlTitulo.Controls.Add(this.LblAspectos);
+            this.PnlTitulo.Controls.Add(this.LblAgregarProducto);
             this.PnlTitulo.Controls.Add(this.PbxCerrarForm);
             this.PnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlTitulo.Location = new System.Drawing.Point(0, 0);
@@ -206,25 +209,26 @@
             this.PnlTitulo.TabIndex = 49;
             this.PnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlTitulo_MouseDown);
             // 
-            // LblAspectos
+            // PbxNombreEmpresa
             // 
-            this.LblAspectos.AutoSize = true;
-            this.LblAspectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblAspectos.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
-            this.LblAspectos.Location = new System.Drawing.Point(70, 20);
-            this.LblAspectos.Name = "LblAspectos";
-            this.LblAspectos.Size = new System.Drawing.Size(339, 38);
-            this.LblAspectos.TabIndex = 1;
-            this.LblAspectos.Text = "AGREGAR PRODUCTO";
+            this.PbxNombreEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("PbxNombreEmpresa.Image")));
+            this.PbxNombreEmpresa.Location = new System.Drawing.Point(788, 24);
+            this.PbxNombreEmpresa.Name = "PbxNombreEmpresa";
+            this.PbxNombreEmpresa.Size = new System.Drawing.Size(276, 28);
+            this.PbxNombreEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxNombreEmpresa.TabIndex = 12;
+            this.PbxNombreEmpresa.TabStop = false;
             // 
-            // LblGuionBajoProducto
+            // LblAgregarProducto
             // 
-            this.LblGuionBajoProducto.AutoSize = true;
-            this.LblGuionBajoProducto.Location = new System.Drawing.Point(207, 305);
-            this.LblGuionBajoProducto.Name = "LblGuionBajoProducto";
-            this.LblGuionBajoProducto.Size = new System.Drawing.Size(273, 16);
-            this.LblGuionBajoProducto.TabIndex = 50;
-            this.LblGuionBajoProducto.Text = "______________________________________";
+            this.LblAgregarProducto.AutoSize = true;
+            this.LblAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblAgregarProducto.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblAgregarProducto.Location = new System.Drawing.Point(70, 20);
+            this.LblAgregarProducto.Name = "LblAgregarProducto";
+            this.LblAgregarProducto.Size = new System.Drawing.Size(339, 38);
+            this.LblAgregarProducto.TabIndex = 1;
+            this.LblAgregarProducto.Text = "AGREGAR PRODUCTO";
             // 
             // PbxCerrarForm
             // 
@@ -238,29 +242,28 @@
             this.PbxCerrarForm.TabStop = false;
             this.PbxCerrarForm.Click += new System.EventHandler(this.PbxCerrarForm_Click);
             // 
-            // PbxNombreEmpresa
+            // LblGuionBajo
             // 
-            this.PbxNombreEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("PbxNombreEmpresa.Image")));
-            this.PbxNombreEmpresa.Location = new System.Drawing.Point(788, 24);
-            this.PbxNombreEmpresa.Name = "PbxNombreEmpresa";
-            this.PbxNombreEmpresa.Size = new System.Drawing.Size(276, 28);
-            this.PbxNombreEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxNombreEmpresa.TabIndex = 12;
-            this.PbxNombreEmpresa.TabStop = false;
+            this.LblGuionBajo.AutoSize = true;
+            this.LblGuionBajo.Location = new System.Drawing.Point(207, 305);
+            this.LblGuionBajo.Name = "LblGuionBajo";
+            this.LblGuionBajo.Size = new System.Drawing.Size(273, 16);
+            this.LblGuionBajo.TabIndex = 50;
+            this.LblGuionBajo.Text = "______________________________________";
             // 
             // AgregarProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AcceptButton = this.BtnAgregarProducto;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1168, 749);
+            this.ClientSize = new System.Drawing.Size(1186, 796);
             this.Controls.Add(this.PnlTitulo);
             this.Controls.Add(this.NumUDLimiteAgregarProducto);
             this.Controls.Add(this.LblLimite);
             this.Controls.Add(this.CbxTipoProductoAgregarProducto);
             this.Controls.Add(this.LblTipoProducto);
             this.Controls.Add(this.CbxCategoriasAgregarProducto);
-            this.Controls.Add(this.LblCategorias);
+            this.Controls.Add(this.LblCategoria);
             this.Controls.Add(this.CbxUnidadesMedidasAgregarProducto);
             this.Controls.Add(this.LblUnidadesMedida);
             this.Controls.Add(this.BtnAgregarProducto);
@@ -268,7 +271,7 @@
             this.Controls.Add(this.LblCantidad);
             this.Controls.Add(this.TbxProductoAgregarProducto);
             this.Controls.Add(this.LblProducto);
-            this.Controls.Add(this.LblGuionBajoProducto);
+            this.Controls.Add(this.LblGuionBajo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1186, 796);
@@ -280,8 +283,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumUDLimiteAgregarProducto)).EndInit();
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,14 +300,14 @@
         private System.Windows.Forms.ComboBox CbxUnidadesMedidasAgregarProducto;
         private System.Windows.Forms.Label LblUnidadesMedida;
         private System.Windows.Forms.ComboBox CbxCategoriasAgregarProducto;
-        private System.Windows.Forms.Label LblCategorias;
+        private System.Windows.Forms.Label LblCategoria;
         private System.Windows.Forms.ComboBox CbxTipoProductoAgregarProducto;
         private System.Windows.Forms.Label LblTipoProducto;
         private System.Windows.Forms.NumericUpDown NumUDLimiteAgregarProducto;
         private System.Windows.Forms.Label LblLimite;
         private System.Windows.Forms.Panel PnlTitulo;
-        private System.Windows.Forms.Label LblAspectos;
-        private System.Windows.Forms.Label LblGuionBajoProducto;
+        private System.Windows.Forms.Label LblAgregarProducto;
+        private System.Windows.Forms.Label LblGuionBajo;
         private System.Windows.Forms.PictureBox PbxCerrarForm;
         private System.Windows.Forms.PictureBox PbxNombreEmpresa;
     }

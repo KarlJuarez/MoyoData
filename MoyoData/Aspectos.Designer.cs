@@ -35,27 +35,27 @@
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.DgvCategorias = new System.Windows.Forms.DataGridView();
+            this.ColumIDCategorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumCategoriaCategorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumSeleccionCategorias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnAgregarCategoria = new System.Windows.Forms.Button();
             this.BtnEditarCategoria = new System.Windows.Forms.Button();
             this.LblCategorias = new System.Windows.Forms.Label();
             this.DgvTiposProductos = new System.Windows.Forms.DataGridView();
+            this.ColumIDTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumTipoProductoTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumCategoriaTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumSeleccionTiposProductos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DgvUnidadesDeMedida = new System.Windows.Forms.DataGridView();
+            this.ColumIDUnidadesMedidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumUnidadMedidadUnidadesMedidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumSeleccionUnidadesMedidas = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.LblTiposProducto = new System.Windows.Forms.Label();
             this.BtnEditarTipoProducto = new System.Windows.Forms.Button();
             this.BtnAgregarTipoPorducto = new System.Windows.Forms.Button();
             this.LblUnidadesDeMedida = new System.Windows.Forms.Label();
             this.BtnEditarUnidadDeMedida = new System.Windows.Forms.Button();
             this.BtnAgregarUnidadDeMedida = new System.Windows.Forms.Button();
-            this.ColumIDCategorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumCategoriaCategorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionCategorias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumIDTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumTipoProductoTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumCategoriaTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionTiposProductos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumIDUnidadesMedidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumUnidadMedidadUnidadesMedidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionUnidadesMedidas = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -80,10 +80,10 @@
             // 
             this.LblAspectos.AutoSize = true;
             this.LblAspectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblAspectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold);
+            this.LblAspectos.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
             this.LblAspectos.Location = new System.Drawing.Point(70, 20);
             this.LblAspectos.Name = "LblAspectos";
-            this.LblAspectos.Size = new System.Drawing.Size(199, 37);
+            this.LblAspectos.Size = new System.Drawing.Size(181, 38);
             this.LblAspectos.TabIndex = 1;
             this.LblAspectos.Text = "ASPECTOS";
             // 
@@ -122,6 +122,7 @@
             // 
             // DgvCategorias
             // 
+            this.DgvCategorias.BackgroundColor = System.Drawing.Color.White;
             this.DgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumIDCategorias,
@@ -131,8 +132,31 @@
             this.DgvCategorias.Name = "DgvCategorias";
             this.DgvCategorias.RowHeadersWidth = 51;
             this.DgvCategorias.RowTemplate.Height = 24;
-            this.DgvCategorias.Size = new System.Drawing.Size(375, 418);
+            this.DgvCategorias.Size = new System.Drawing.Size(334, 418);
             this.DgvCategorias.TabIndex = 15;
+            // 
+            // ColumIDCategorias
+            // 
+            this.ColumIDCategorias.HeaderText = "ID";
+            this.ColumIDCategorias.MinimumWidth = 6;
+            this.ColumIDCategorias.Name = "ColumIDCategorias";
+            this.ColumIDCategorias.Width = 125;
+            // 
+            // ColumCategoriaCategorias
+            // 
+            this.ColumCategoriaCategorias.HeaderText = "Categoria";
+            this.ColumCategoriaCategorias.MinimumWidth = 6;
+            this.ColumCategoriaCategorias.Name = "ColumCategoriaCategorias";
+            this.ColumCategoriaCategorias.Width = 125;
+            // 
+            // ColumSeleccionCategorias
+            // 
+            this.ColumSeleccionCategorias.HeaderText = "Seleccion";
+            this.ColumSeleccionCategorias.MinimumWidth = 6;
+            this.ColumSeleccionCategorias.Name = "ColumSeleccionCategorias";
+            this.ColumSeleccionCategorias.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccionCategorias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumSeleccionCategorias.Width = 125;
             // 
             // BtnAgregarCategoria
             // 
@@ -179,13 +203,13 @@
             this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCategorias.Location = new System.Drawing.Point(149, 217);
             this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(145, 29);
+            this.LblCategorias.Size = new System.Drawing.Size(125, 31);
             this.LblCategorias.TabIndex = 39;
             this.LblCategorias.Text = "Categorías";
-            //
+            // 
             // DgvTiposProductos
             // 
-            this.DgvTiposProductos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.DgvTiposProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvTiposProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvTiposProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumIDTiposProductos,
@@ -193,14 +217,45 @@
             this.ColumCategoriaTiposProductos,
             this.ColumSeleccionTiposProductos});
             this.DgvTiposProductos.Location = new System.Drawing.Point(445, 315);
-            this.DgvTiposProductos.Name = "DgvTiposProducto";
+            this.DgvTiposProductos.Name = "DgvTiposProductos";
             this.DgvTiposProductos.RowHeadersWidth = 51;
             this.DgvTiposProductos.RowTemplate.Height = 24;
             this.DgvTiposProductos.Size = new System.Drawing.Size(319, 418);
             this.DgvTiposProductos.TabIndex = 40;
             // 
+            // ColumIDTiposProductos
+            // 
+            this.ColumIDTiposProductos.HeaderText = "ID";
+            this.ColumIDTiposProductos.MinimumWidth = 6;
+            this.ColumIDTiposProductos.Name = "ColumIDTiposProductos";
+            this.ColumIDTiposProductos.Width = 125;
+            // 
+            // ColumTipoProductoTiposProductos
+            // 
+            this.ColumTipoProductoTiposProductos.HeaderText = "Tipo de producto";
+            this.ColumTipoProductoTiposProductos.MinimumWidth = 6;
+            this.ColumTipoProductoTiposProductos.Name = "ColumTipoProductoTiposProductos";
+            this.ColumTipoProductoTiposProductos.Width = 125;
+            // 
+            // ColumCategoriaTiposProductos
+            // 
+            this.ColumCategoriaTiposProductos.HeaderText = "Categoria";
+            this.ColumCategoriaTiposProductos.MinimumWidth = 6;
+            this.ColumCategoriaTiposProductos.Name = "ColumCategoriaTiposProductos";
+            this.ColumCategoriaTiposProductos.Width = 125;
+            // 
+            // ColumSeleccionTiposProductos
+            // 
+            this.ColumSeleccionTiposProductos.HeaderText = "Seleccion";
+            this.ColumSeleccionTiposProductos.MinimumWidth = 6;
+            this.ColumSeleccionTiposProductos.Name = "ColumSeleccionTiposProductos";
+            this.ColumSeleccionTiposProductos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccionTiposProductos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumSeleccionTiposProductos.Width = 125;
+            // 
             // DgvUnidadesDeMedida
             // 
+            this.DgvUnidadesDeMedida.BackgroundColor = System.Drawing.Color.White;
             this.DgvUnidadesDeMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUnidadesDeMedida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumIDUnidadesMedidas,
@@ -213,6 +268,27 @@
             this.DgvUnidadesDeMedida.Size = new System.Drawing.Size(319, 418);
             this.DgvUnidadesDeMedida.TabIndex = 41;
             // 
+            // ColumIDUnidadesMedidas
+            // 
+            this.ColumIDUnidadesMedidas.HeaderText = "ID";
+            this.ColumIDUnidadesMedidas.MinimumWidth = 6;
+            this.ColumIDUnidadesMedidas.Name = "ColumIDUnidadesMedidas";
+            this.ColumIDUnidadesMedidas.Width = 125;
+            // 
+            // ColumUnidadMedidadUnidadesMedidas
+            // 
+            this.ColumUnidadMedidadUnidadesMedidas.HeaderText = "Unidad de medida";
+            this.ColumUnidadMedidadUnidadesMedidas.MinimumWidth = 6;
+            this.ColumUnidadMedidadUnidadesMedidas.Name = "ColumUnidadMedidadUnidadesMedidas";
+            this.ColumUnidadMedidadUnidadesMedidas.Width = 125;
+            // 
+            // ColumSeleccionUnidadesMedidas
+            // 
+            this.ColumSeleccionUnidadesMedidas.HeaderText = "Seleccion";
+            this.ColumSeleccionUnidadesMedidas.MinimumWidth = 6;
+            this.ColumSeleccionUnidadesMedidas.Name = "ColumSeleccionUnidadesMedidas";
+            this.ColumSeleccionUnidadesMedidas.Width = 125;
+            // 
             // LblTiposProducto
             // 
             this.LblTiposProducto.AutoSize = true;
@@ -220,7 +296,7 @@
             this.LblTiposProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTiposProducto.Location = new System.Drawing.Point(515, 217);
             this.LblTiposProducto.Name = "LblTiposProducto";
-            this.LblTiposProducto.Size = new System.Drawing.Size(232, 29);
+            this.LblTiposProducto.Size = new System.Drawing.Size(206, 31);
             this.LblTiposProducto.TabIndex = 44;
             this.LblTiposProducto.Text = "Tipos de producto";
             // 
@@ -269,7 +345,7 @@
             this.LblUnidadesDeMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUnidadesDeMedida.Location = new System.Drawing.Point(895, 217);
             this.LblUnidadesDeMedida.Name = "LblUnidadesDeMedida";
-            this.LblUnidadesDeMedida.Size = new System.Drawing.Size(264, 29);
+            this.LblUnidadesDeMedida.Size = new System.Drawing.Size(232, 31);
             this.LblUnidadesDeMedida.TabIndex = 47;
             this.LblUnidadesDeMedida.Text = "Unidades de medida";
             // 
@@ -311,80 +387,6 @@
             this.BtnAgregarUnidadDeMedida.UseVisualStyleBackColor = false;
             this.BtnAgregarUnidadDeMedida.Click += new System.EventHandler(this.BtnAgregarUnidadDeMedida_Click);
             // 
-            // ColumIDCategorias
-            // 
-            this.ColumIDCategorias.HeaderText = "ID";
-            this.ColumIDCategorias.MinimumWidth = 6;
-            this.ColumIDCategorias.Name = "ColumIDCategorias";
-            this.ColumIDCategorias.Width = 125;
-            // 
-            // ColumCategoriaCategorias
-            // 
-            this.ColumCategoriaCategorias.HeaderText = "Categoria";
-            this.ColumCategoriaCategorias.MinimumWidth = 6;
-            this.ColumCategoriaCategorias.Name = "ColumCategoriaCategorias";
-            this.ColumCategoriaCategorias.Width = 125;
-            // 
-            // ColumSeleccionCategorias
-            // 
-            this.ColumSeleccionCategorias.HeaderText = "Seleccion";
-            this.ColumSeleccionCategorias.MinimumWidth = 6;
-            this.ColumSeleccionCategorias.Name = "ColumSeleccionCategorias";
-            this.ColumSeleccionCategorias.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumSeleccionCategorias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumSeleccionCategorias.Width = 125;
-            // 
-            // ColumIDTiposProductos
-            // 
-            this.ColumIDTiposProductos.HeaderText = "ID";
-            this.ColumIDTiposProductos.MinimumWidth = 6;
-            this.ColumIDTiposProductos.Name = "ColumIDTiposProductos";
-            this.ColumIDTiposProductos.Width = 125;
-            // 
-            // ColumTipoProductoTiposProductos
-            // 
-            this.ColumTipoProductoTiposProductos.HeaderText = "Tipo de producto";
-            this.ColumTipoProductoTiposProductos.MinimumWidth = 6;
-            this.ColumTipoProductoTiposProductos.Name = "ColumTipoProductoTiposProductos";
-            this.ColumTipoProductoTiposProductos.Width = 125;
-            // 
-            // ColumCategoriaTiposProductos
-            // 
-            this.ColumCategoriaTiposProductos.HeaderText = "Categoria";
-            this.ColumCategoriaTiposProductos.MinimumWidth = 6;
-            this.ColumCategoriaTiposProductos.Name = "ColumCategoriaTiposProductos";
-            this.ColumCategoriaTiposProductos.Width = 125;
-            // 
-            // ColumSeleccionTiposProductos
-            // 
-            this.ColumSeleccionTiposProductos.HeaderText = "Seleccion";
-            this.ColumSeleccionTiposProductos.MinimumWidth = 6;
-            this.ColumSeleccionTiposProductos.Name = "ColumSeleccionTiposProductos";
-            this.ColumSeleccionTiposProductos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumSeleccionTiposProductos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumSeleccionTiposProductos.Width = 125;
-            // 
-            // ColumIDUnidadesMedidas
-            // 
-            this.ColumIDUnidadesMedidas.HeaderText = "ID";
-            this.ColumIDUnidadesMedidas.MinimumWidth = 6;
-            this.ColumIDUnidadesMedidas.Name = "ColumIDUnidadesMedidas";
-            this.ColumIDUnidadesMedidas.Width = 125;
-            // 
-            // ColumUnidadMedidadUnidadesMedidas
-            // 
-            this.ColumUnidadMedidadUnidadesMedidas.HeaderText = "Unidad de medida";
-            this.ColumUnidadMedidadUnidadesMedidas.MinimumWidth = 6;
-            this.ColumUnidadMedidadUnidadesMedidas.Name = "ColumUnidadMedidadUnidadesMedidas";
-            this.ColumUnidadMedidadUnidadesMedidas.Width = 125;
-            // 
-            // ColumSeleccionUnidadesMedidas
-            // 
-            this.ColumSeleccionUnidadesMedidas.HeaderText = "Seleccion";
-            this.ColumSeleccionUnidadesMedidas.MinimumWidth = 6;
-            this.ColumSeleccionUnidadesMedidas.Name = "ColumSeleccionUnidadesMedidas";
-            this.ColumSeleccionUnidadesMedidas.Width = 125;
-            // 
             // Aspectos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -405,6 +407,7 @@
             this.Controls.Add(this.PnlTitulo);
             this.Controls.Add(this.PnlLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Aspectos";
             this.Text = "Aspectos";
             this.PnlTitulo.ResumeLayout(false);

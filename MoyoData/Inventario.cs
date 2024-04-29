@@ -24,6 +24,10 @@ namespace MoyoData
         Usuario usuario;
         List<Rol> roles = new List<Rol>();
         string idRol;
+
+        //---------------------
+        // Constructor
+        //---------------------
         public Inventario(Usuario usuario)
         {
             InitializeComponent();
@@ -40,6 +44,18 @@ namespace MoyoData
             }
         }
 
+        //--------------------------
+        // Cerrar formulario
+        //--------------------------
+        private void PbxCerrarForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #region Función para seleccionar roles
+        //---------------------
+        // Seleccionar roles
+        //---------------------
         private void SeleccionarRoles()
         {
             MySqlDataReader mySqlDataReader = null;
@@ -65,13 +81,7 @@ namespace MoyoData
 
             mySqlDataReader.Close();
         }
-        //--------------------------
-        // Cerrar formulario
-        //--------------------------
-        private void PbxCerrarForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        #endregion
 
         #region Obtener categoria
         //-----------------------------
@@ -219,6 +229,7 @@ namespace MoyoData
         }
         #endregion
 
+        #region Función par actualizar tabla
         //-----------------------------
         // Actualizar tabla
         //-----------------------------
@@ -227,6 +238,7 @@ namespace MoyoData
             DgvProductos.Rows.Clear();
             SeleccionarProductos();
         }
+        #endregion
 
         #region Agregar y eliminar producto del inventario
         //----------------------------------
