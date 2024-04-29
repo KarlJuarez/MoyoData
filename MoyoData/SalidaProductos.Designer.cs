@@ -127,6 +127,7 @@
             this.PbxCerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbxCerrarForm.TabIndex = 11;
             this.PbxCerrarForm.TabStop = false;
+            this.PbxCerrarForm.Click += new System.EventHandler(this.PbxCerrarForm_Click);
             // 
             // PnlTitulo
             // 
@@ -143,10 +144,10 @@
             // 
             this.LblSalida.AutoSize = true;
             this.LblSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblSalida.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold);
             this.LblSalida.Location = new System.Drawing.Point(70, 20);
             this.LblSalida.Name = "LblSalida";
-            this.LblSalida.Size = new System.Drawing.Size(351, 38);
+            this.LblSalida.Size = new System.Drawing.Size(393, 37);
             this.LblSalida.TabIndex = 1;
             this.LblSalida.Text = "SALIDA DE PRODUCTO";
             // 
@@ -164,10 +165,10 @@
             // LblSalidaProductos
             // 
             this.LblSalidaProductos.AutoSize = true;
-            this.LblSalidaProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
+            this.LblSalidaProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.LblSalidaProductos.Location = new System.Drawing.Point(48, 234);
             this.LblSalidaProductos.Name = "LblSalidaProductos";
-            this.LblSalidaProductos.Size = new System.Drawing.Size(364, 31);
+            this.LblSalidaProductos.Size = new System.Drawing.Size(419, 29);
             this.LblSalidaProductos.TabIndex = 40;
             this.LblSalidaProductos.Text = "Registro de entrada de productos";
             // 

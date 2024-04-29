@@ -133,7 +133,7 @@ namespace MoyoData
         private void BtnAgregarProducto_Click(object sender, EventArgs e)
         {
             //Validación.
-            if (TbxProductoAgregarProducto.Text == "")
+            if (TbxProductoAgregarProducto.Text == "Escribe aquí")
             {
                 MessageBox.Show("Ingrese un producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;

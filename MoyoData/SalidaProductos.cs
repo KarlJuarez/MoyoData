@@ -44,6 +44,14 @@ namespace MoyoData
             }
         }
 
+        //--------------------
+        // Cerrar formulario
+        //--------------------
+        private void PbxCerrarForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         #region Función para seleccionar roles
         //-----------------------
         // Seleccionar roles
