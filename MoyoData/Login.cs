@@ -72,6 +72,7 @@ namespace MoyoData
                 //Entidades a usar.
                 string nombreUsuario = TbxUsuario.Text;
                 string password = Encriptar(TbxPassword.Text);
+                
                 //string rol = ""; Se tiene planeado tener distintas vistas dependiendo el rol.
                 MySqlDataReader mySqlDataReader = null;
                 string consulta = "Select * from tusuarios where Usuario = '" + nombreUsuario + "'";

@@ -45,8 +45,6 @@ namespace MoyoData
                 BtnEditarTipoProducto.Dispose();
                 BtnAgregarUnidadDeMedida.Dispose();
                 BtnEditarUnidadDeMedida.Dispose();
-                DgvUnidadesDeMedida.Dispose();
-                LblUnidadesDeMedida.Dispose();
             }
         }
 

@@ -121,7 +121,7 @@ namespace MoyoData
             consulta = "Update tusuarios  SET Usuario = '" + nombreUsuario
                                         + "', Password = '" + password
                                         + "', Respuesta = '" + respuesta
-                                        + "', TRoles_idRol = " + rol.rol
+                                        + "', TRoles_idRol = " + rol.id
                                         + " where Usuario = '" + usuario.usuario + "'";
 
             MySqlCommand mySqlCommandInsertar = new MySqlCommand(consulta);
