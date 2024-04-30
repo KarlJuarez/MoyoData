@@ -153,7 +153,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditarCategoria";
+            this.Text = "Editar categoría";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();

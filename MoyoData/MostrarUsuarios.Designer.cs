@@ -35,15 +35,15 @@
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.BtnEliminarUsuario = new System.Windows.Forms.Button();
-            this.BtnEditarUsuario = new System.Windows.Forms.Button();
-            this.PnlAgregarProdcuto = new System.Windows.Forms.Panel();
-            this.BtnAgregarUsuario = new System.Windows.Forms.Button();
             this.ColumIDUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumUsuarioUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumPasswordUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumRolUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumSeleccionUsuarios = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.BtnEliminarUsuario = new System.Windows.Forms.Button();
+            this.BtnEditarUsuario = new System.Windows.Forms.Button();
+            this.PnlAgregarProdcuto = new System.Windows.Forms.Panel();
+            this.BtnAgregarUsuario = new System.Windows.Forms.Button();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -126,6 +126,41 @@
             this.DgvUsuarios.Size = new System.Drawing.Size(1084, 482);
             this.DgvUsuarios.TabIndex = 17;
             // 
+            // ColumIDUsuarios
+            // 
+            this.ColumIDUsuarios.HeaderText = "ID";
+            this.ColumIDUsuarios.MinimumWidth = 6;
+            this.ColumIDUsuarios.Name = "ColumIDUsuarios";
+            this.ColumIDUsuarios.Width = 125;
+            // 
+            // ColumUsuarioUsuarios
+            // 
+            this.ColumUsuarioUsuarios.HeaderText = "Usuario";
+            this.ColumUsuarioUsuarios.MinimumWidth = 6;
+            this.ColumUsuarioUsuarios.Name = "ColumUsuarioUsuarios";
+            this.ColumUsuarioUsuarios.Width = 125;
+            // 
+            // ColumPasswordUsuarios
+            // 
+            this.ColumPasswordUsuarios.HeaderText = "Contraseña";
+            this.ColumPasswordUsuarios.MinimumWidth = 6;
+            this.ColumPasswordUsuarios.Name = "ColumPasswordUsuarios";
+            this.ColumPasswordUsuarios.Width = 125;
+            // 
+            // ColumRolUsuarios
+            // 
+            this.ColumRolUsuarios.HeaderText = "Rol";
+            this.ColumRolUsuarios.MinimumWidth = 6;
+            this.ColumRolUsuarios.Name = "ColumRolUsuarios";
+            this.ColumRolUsuarios.Width = 125;
+            // 
+            // ColumSeleccionUsuarios
+            // 
+            this.ColumSeleccionUsuarios.HeaderText = "Selección";
+            this.ColumSeleccionUsuarios.MinimumWidth = 6;
+            this.ColumSeleccionUsuarios.Name = "ColumSeleccionUsuarios";
+            this.ColumSeleccionUsuarios.Width = 125;
+            // 
             // BtnEliminarUsuario
             // 
             this.BtnEliminarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -196,41 +231,6 @@
             this.BtnAgregarUsuario.UseVisualStyleBackColor = false;
             this.BtnAgregarUsuario.Click += new System.EventHandler(this.BtnAgregarUsuario_Click);
             // 
-            // ColumIDUsuarios
-            // 
-            this.ColumIDUsuarios.HeaderText = "ID";
-            this.ColumIDUsuarios.MinimumWidth = 6;
-            this.ColumIDUsuarios.Name = "ColumIDUsuarios";
-            this.ColumIDUsuarios.Width = 125;
-            // 
-            // ColumUsuarioUsuarios
-            // 
-            this.ColumUsuarioUsuarios.HeaderText = "Usuario";
-            this.ColumUsuarioUsuarios.MinimumWidth = 6;
-            this.ColumUsuarioUsuarios.Name = "ColumUsuarioUsuarios";
-            this.ColumUsuarioUsuarios.Width = 125;
-            // 
-            // ColumPasswordUsuarios
-            // 
-            this.ColumPasswordUsuarios.HeaderText = "Contraseña";
-            this.ColumPasswordUsuarios.MinimumWidth = 6;
-            this.ColumPasswordUsuarios.Name = "ColumPasswordUsuarios";
-            this.ColumPasswordUsuarios.Width = 125;
-            // 
-            // ColumRolUsuarios
-            // 
-            this.ColumRolUsuarios.HeaderText = "Rol";
-            this.ColumRolUsuarios.MinimumWidth = 6;
-            this.ColumRolUsuarios.Name = "ColumRolUsuarios";
-            this.ColumRolUsuarios.Width = 125;
-            // 
-            // ColumSeleccionUsuarios
-            // 
-            this.ColumSeleccionUsuarios.HeaderText = "Selección";
-            this.ColumSeleccionUsuarios.MinimumWidth = 6;
-            this.ColumSeleccionUsuarios.Name = "ColumSeleccionUsuarios";
-            this.ColumSeleccionUsuarios.Width = 125;
-            // 
             // MostrarUsuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -245,7 +245,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MostrarUsuarios";
-            this.Text = "MostrarUsuarios";
+            this.Text = "Usuarios";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();

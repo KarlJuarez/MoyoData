@@ -53,7 +53,7 @@
             this.BtnActualizarTipoProducto.Location = new System.Drawing.Point(340, 311);
             this.BtnActualizarTipoProducto.Name = "BtnActualizarTipoProducto";
             this.BtnActualizarTipoProducto.Size = new System.Drawing.Size(134, 42);
-            this.BtnActualizarTipoProducto.TabIndex = 5;
+            this.BtnActualizarTipoProducto.TabIndex = 4;
             this.BtnActualizarTipoProducto.Text = "Actualizar";
             this.BtnActualizarTipoProducto.UseVisualStyleBackColor = false;
             this.BtnActualizarTipoProducto.Click += new System.EventHandler(this.BtnActualizarTipoProducto_Click);
@@ -69,7 +69,7 @@
             this.TbxTipoProducto.Name = "TbxTipoProducto";
             this.TbxTipoProducto.ShortcutsEnabled = false;
             this.TbxTipoProducto.Size = new System.Drawing.Size(256, 21);
-            this.TbxTipoProducto.TabIndex = 4;
+            this.TbxTipoProducto.TabIndex = 5;
             this.TbxTipoProducto.Text = "Escribe aquí";
             this.TbxTipoProducto.Enter += new System.EventHandler(this.TbxTipoProducto_Enter);
             this.TbxTipoProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxTipoProducto_KeyPress);
@@ -176,7 +176,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditarTipoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditarTipoProducto";
+            this.Text = "Editar tipo de producto";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();

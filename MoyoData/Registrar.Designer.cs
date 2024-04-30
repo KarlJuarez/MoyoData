@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar));
             this.PnlTitulo = new System.Windows.Forms.Panel();
+            this.PbxNombreEmpresa = new System.Windows.Forms.PictureBox();
             this.LblRegistrar = new System.Windows.Forms.Label();
             this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
             this.BtnRegistrarUsuario = new System.Windows.Forms.Button();
@@ -47,10 +48,9 @@
             this.TbxRespuestaRecuperarPassword = new System.Windows.Forms.TextBox();
             this.LblRespuestaRecuperarPassword = new System.Windows.Forms.Label();
             this.LblGuionBajoRespuesta = new System.Windows.Forms.Label();
-            this.PbxNombreEmpresa = new System.Windows.Forms.PictureBox();
             this.PnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlTitulo
@@ -65,6 +65,16 @@
             this.PnlTitulo.Size = new System.Drawing.Size(1186, 73);
             this.PnlTitulo.TabIndex = 23;
             this.PnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlTitulo_MouseDown);
+            // 
+            // PbxNombreEmpresa
+            // 
+            this.PbxNombreEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("PbxNombreEmpresa.Image")));
+            this.PbxNombreEmpresa.Location = new System.Drawing.Point(808, 23);
+            this.PbxNombreEmpresa.Name = "PbxNombreEmpresa";
+            this.PbxNombreEmpresa.Size = new System.Drawing.Size(276, 28);
+            this.PbxNombreEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxNombreEmpresa.TabIndex = 13;
+            this.PbxNombreEmpresa.TabStop = false;
             // 
             // LblRegistrar
             // 
@@ -99,7 +109,7 @@
             this.BtnRegistrarUsuario.Location = new System.Drawing.Point(997, 482);
             this.BtnRegistrarUsuario.Name = "BtnRegistrarUsuario";
             this.BtnRegistrarUsuario.Size = new System.Drawing.Size(143, 56);
-            this.BtnRegistrarUsuario.TabIndex = 20;
+            this.BtnRegistrarUsuario.TabIndex = 19;
             this.BtnRegistrarUsuario.Text = "Registrar";
             this.BtnRegistrarUsuario.UseVisualStyleBackColor = false;
             this.BtnRegistrarUsuario.Click += new System.EventHandler(this.BtnRegistrarUsuario_Click);
@@ -112,7 +122,7 @@
             this.CbxRegistrarRol.Location = new System.Drawing.Point(230, 353);
             this.CbxRegistrarRol.Name = "CbxRegistrarRol";
             this.CbxRegistrarRol.Size = new System.Drawing.Size(309, 29);
-            this.CbxRegistrarRol.TabIndex = 19;
+            this.CbxRegistrarRol.TabIndex = 20;
             // 
             // LblPassword
             // 
@@ -268,16 +278,6 @@
             this.LblGuionBajoRespuesta.TabIndex = 42;
             this.LblGuionBajoRespuesta.Text = "______________________________________";
             // 
-            // PbxNombreEmpresa
-            // 
-            this.PbxNombreEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("PbxNombreEmpresa.Image")));
-            this.PbxNombreEmpresa.Location = new System.Drawing.Point(808, 23);
-            this.PbxNombreEmpresa.Name = "PbxNombreEmpresa";
-            this.PbxNombreEmpresa.Size = new System.Drawing.Size(276, 28);
-            this.PbxNombreEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxNombreEmpresa.TabIndex = 13;
-            this.PbxNombreEmpresa.TabStop = false;
-            // 
             // Registrar
             // 
             this.AcceptButton = this.BtnRegistrarUsuario;
@@ -305,11 +305,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Escribe aquí";
+            this.Text = "Registrar usuario";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

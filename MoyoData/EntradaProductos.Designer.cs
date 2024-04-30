@@ -246,7 +246,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EntradaProductos";
-            this.Text = "EntradaProductos";
+            this.Text = "Entrada de productos";
             ((System.ComponentModel.ISupportInitialize)(this.DgvEntradaProductos)).EndInit();
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();

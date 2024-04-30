@@ -51,7 +51,7 @@
             this.BtnActualizarCategoria.Location = new System.Drawing.Point(341, 292);
             this.BtnActualizarCategoria.Name = "BtnActualizarCategoria";
             this.BtnActualizarCategoria.Size = new System.Drawing.Size(134, 42);
-            this.BtnActualizarCategoria.TabIndex = 8;
+            this.BtnActualizarCategoria.TabIndex = 7;
             this.BtnActualizarCategoria.Text = "Actualizar";
             this.BtnActualizarCategoria.UseVisualStyleBackColor = false;
             this.BtnActualizarCategoria.Click += new System.EventHandler(this.BtnActualizarCategoria_Click);
@@ -67,7 +67,7 @@
             this.TbxCategoria.Name = "TbxCategoria";
             this.TbxCategoria.ShortcutsEnabled = false;
             this.TbxCategoria.Size = new System.Drawing.Size(256, 21);
-            this.TbxCategoria.TabIndex = 7;
+            this.TbxCategoria.TabIndex = 8;
             this.TbxCategoria.Text = "Escribe aquí";
             this.TbxCategoria.Enter += new System.EventHandler(this.TbxCategoria_Enter);
             this.TbxCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxCategoria_KeyPress);
@@ -150,8 +150,10 @@
             this.Controls.Add(this.LblCategoria);
             this.Controls.Add(this.LblGuionBajo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarCategoria";
-            this.Text = "AgregarCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agregar categoría";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();

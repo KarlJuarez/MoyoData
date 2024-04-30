@@ -246,7 +246,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SalidaProductos";
-            this.Text = "SalidaProductos";
+            this.Text = "Salida de productos";
             ((System.ComponentModel.ISupportInitialize)(this.DgvSalidaProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
             this.PnlTitulo.ResumeLayout(false);

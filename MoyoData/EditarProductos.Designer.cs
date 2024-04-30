@@ -299,7 +299,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditarProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditarProductos";
+            this.Text = "Editar producto";
             ((System.ComponentModel.ISupportInitialize)(this.NumUDLimiteEditarProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidadEditarProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDStockEditarProducto)).EndInit();

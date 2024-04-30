@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarEntradaProducto));
-            this.PnlLogo = new System.Windows.Forms.Panel();
-            this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.LblEntradaProducto = new System.Windows.Forms.Label();
             this.LblFecha = new System.Windows.Forms.Label();
             this.LblCantidad = new System.Windows.Forms.Label();
@@ -38,6 +36,7 @@
             this.DtpFechaEntradaProducto = new System.Windows.Forms.DateTimePicker();
             this.BtnEntradaProductoAgregar = new System.Windows.Forms.Button();
             this.PnlTitulo = new System.Windows.Forms.Panel();
+            this.PbxNombreEmpresa = new System.Windows.Forms.PictureBox();
             this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
             this.BtnEntradaProductoIngresar = new System.Windows.Forms.Button();
             this.DgvProductos = new System.Windows.Forms.DataGridView();
@@ -57,35 +56,13 @@
             this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
             this.LblProductos = new System.Windows.Forms.Label();
             this.LblProductosSeleccionados = new System.Windows.Forms.Label();
-            this.PnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             this.PnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductosSeleccionados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidadEntradaProducto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PnlLogo
-            // 
-            this.PnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(20)))));
-            this.PnlLogo.Controls.Add(this.PbxLogo);
-            this.PnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.PnlLogo.Name = "PnlLogo";
-            this.PnlLogo.Size = new System.Drawing.Size(1186, 100);
-            this.PnlLogo.TabIndex = 0;
-            // 
-            // PbxLogo
-            // 
-            this.PbxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.PbxLogo.Image = global::MoyoData.Properties.Resources.Group_3;
-            this.PbxLogo.Location = new System.Drawing.Point(377, 28);
-            this.PbxLogo.Name = "PbxLogo";
-            this.PbxLogo.Size = new System.Drawing.Size(415, 44);
-            this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxLogo.TabIndex = 1;
-            this.PbxLogo.TabStop = false;
             // 
             // LblEntradaProducto
             // 
@@ -94,15 +71,15 @@
             this.LblEntradaProducto.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
             this.LblEntradaProducto.Location = new System.Drawing.Point(70, 20);
             this.LblEntradaProducto.Name = "LblEntradaProducto";
-            this.LblEntradaProducto.Size = new System.Drawing.Size(386, 38);
+            this.LblEntradaProducto.Size = new System.Drawing.Size(540, 38);
             this.LblEntradaProducto.TabIndex = 1;
-            this.LblEntradaProducto.Text = "ENTRADA DE PRODUCTO";
+            this.LblEntradaProducto.Text = "AGREGAR ENTRADA DE PRODUCTO";
             // 
             // LblFecha
             // 
             this.LblFecha.AutoSize = true;
             this.LblFecha.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFecha.Location = new System.Drawing.Point(71, 383);
+            this.LblFecha.Location = new System.Drawing.Point(60, 295);
             this.LblFecha.Name = "LblFecha";
             this.LblFecha.Size = new System.Drawing.Size(193, 31);
             this.LblFecha.TabIndex = 2;
@@ -112,7 +89,7 @@
             // 
             this.LblCantidad.AutoSize = true;
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCantidad.Location = new System.Drawing.Point(71, 293);
+            this.LblCantidad.Location = new System.Drawing.Point(60, 205);
             this.LblCantidad.Name = "LblCantidad";
             this.LblCantidad.Size = new System.Drawing.Size(110, 31);
             this.LblCantidad.TabIndex = 3;
@@ -122,7 +99,7 @@
             // 
             this.LblUsuario.AutoSize = true;
             this.LblUsuario.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUsuario.Location = new System.Drawing.Point(71, 195);
+            this.LblUsuario.Location = new System.Drawing.Point(60, 107);
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(97, 31);
             this.LblUsuario.TabIndex = 4;
@@ -131,7 +108,7 @@
             // DtpFechaEntradaProducto
             // 
             this.DtpFechaEntradaProducto.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DtpFechaEntradaProducto.Location = new System.Drawing.Point(77, 430);
+            this.DtpFechaEntradaProducto.Location = new System.Drawing.Point(66, 342);
             this.DtpFechaEntradaProducto.Name = "DtpFechaEntradaProducto";
             this.DtpFechaEntradaProducto.Size = new System.Drawing.Size(270, 23);
             this.DtpFechaEntradaProducto.TabIndex = 6;
@@ -143,7 +120,7 @@
             this.BtnEntradaProductoAgregar.FlatAppearance.BorderSize = 0;
             this.BtnEntradaProductoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntradaProductoAgregar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnEntradaProductoAgregar.Location = new System.Drawing.Point(836, 706);
+            this.BtnEntradaProductoAgregar.Location = new System.Drawing.Point(825, 618);
             this.BtnEntradaProductoAgregar.Name = "BtnEntradaProductoAgregar";
             this.BtnEntradaProductoAgregar.Size = new System.Drawing.Size(143, 56);
             this.BtnEntradaProductoAgregar.TabIndex = 8;
@@ -154,13 +131,25 @@
             // PnlTitulo
             // 
             this.PnlTitulo.BackColor = System.Drawing.Color.Maroon;
+            this.PnlTitulo.Controls.Add(this.PbxNombreEmpresa);
             this.PnlTitulo.Controls.Add(this.LblEntradaProducto);
             this.PnlTitulo.Controls.Add(this.PbxCerrarForm);
             this.PnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlTitulo.Location = new System.Drawing.Point(0, 100);
+            this.PnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.PnlTitulo.Name = "PnlTitulo";
             this.PnlTitulo.Size = new System.Drawing.Size(1186, 73);
             this.PnlTitulo.TabIndex = 12;
+            this.PnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlTitulo_MouseDown);
+            // 
+            // PbxNombreEmpresa
+            // 
+            this.PbxNombreEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("PbxNombreEmpresa.Image")));
+            this.PbxNombreEmpresa.Location = new System.Drawing.Point(812, 23);
+            this.PbxNombreEmpresa.Name = "PbxNombreEmpresa";
+            this.PbxNombreEmpresa.Size = new System.Drawing.Size(276, 28);
+            this.PbxNombreEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxNombreEmpresa.TabIndex = 13;
+            this.PbxNombreEmpresa.TabStop = false;
             // 
             // PbxCerrarForm
             // 
@@ -181,7 +170,7 @@
             this.BtnEntradaProductoIngresar.FlatAppearance.BorderSize = 0;
             this.BtnEntradaProductoIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntradaProductoIngresar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnEntradaProductoIngresar.Location = new System.Drawing.Point(1004, 706);
+            this.BtnEntradaProductoIngresar.Location = new System.Drawing.Point(993, 618);
             this.BtnEntradaProductoIngresar.Name = "BtnEntradaProductoIngresar";
             this.BtnEntradaProductoIngresar.Size = new System.Drawing.Size(143, 56);
             this.BtnEntradaProductoIngresar.TabIndex = 13;
@@ -203,7 +192,7 @@
             this.ColumTipo,
             this.ColumCategoria,
             this.ColumSeleccion});
-            this.DgvProductos.Location = new System.Drawing.Point(534, 229);
+            this.DgvProductos.Location = new System.Drawing.Point(523, 141);
             this.DgvProductos.Name = "DgvProductos";
             this.DgvProductos.RowHeadersWidth = 51;
             this.DgvProductos.RowTemplate.Height = 24;
@@ -270,7 +259,7 @@
             this.ColumIDSeleccionados,
             this.ColumProductoSeleccionados,
             this.ColumCantidadSeleccionados});
-            this.DgvProductosSeleccionados.Location = new System.Drawing.Point(77, 525);
+            this.DgvProductosSeleccionados.Location = new System.Drawing.Point(66, 437);
             this.DgvProductosSeleccionados.Name = "DgvProductosSeleccionados";
             this.DgvProductosSeleccionados.RowHeadersWidth = 51;
             this.DgvProductosSeleccionados.RowTemplate.Height = 24;
@@ -304,7 +293,7 @@
             this.TbxUsuarioEntradaProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxUsuarioEntradaProducto.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxUsuarioEntradaProducto.ForeColor = System.Drawing.Color.DimGray;
-            this.TbxUsuarioEntradaProducto.Location = new System.Drawing.Point(77, 238);
+            this.TbxUsuarioEntradaProducto.Location = new System.Drawing.Point(66, 150);
             this.TbxUsuarioEntradaProducto.MaxLength = 25;
             this.TbxUsuarioEntradaProducto.Name = "TbxUsuarioEntradaProducto";
             this.TbxUsuarioEntradaProducto.ShortcutsEnabled = false;
@@ -320,7 +309,7 @@
             this.NumUDCantidadEntradaProducto.BackColor = System.Drawing.Color.White;
             this.NumUDCantidadEntradaProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NumUDCantidadEntradaProducto.Font = new System.Drawing.Font("Roboto", 10F);
-            this.NumUDCantidadEntradaProducto.Location = new System.Drawing.Point(77, 336);
+            this.NumUDCantidadEntradaProducto.Location = new System.Drawing.Point(66, 248);
             this.NumUDCantidadEntradaProducto.Name = "NumUDCantidadEntradaProducto";
             this.NumUDCantidadEntradaProducto.Size = new System.Drawing.Size(270, 28);
             this.NumUDCantidadEntradaProducto.TabIndex = 17;
@@ -330,7 +319,7 @@
             // LblGuionBajoUsuario
             // 
             this.LblGuionBajoUsuario.AutoSize = true;
-            this.LblGuionBajoUsuario.Location = new System.Drawing.Point(74, 249);
+            this.LblGuionBajoUsuario.Location = new System.Drawing.Point(63, 161);
             this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
             this.LblGuionBajoUsuario.Size = new System.Drawing.Size(308, 16);
             this.LblGuionBajoUsuario.TabIndex = 18;
@@ -340,7 +329,7 @@
             // 
             this.LblProductos.AutoSize = true;
             this.LblProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProductos.Location = new System.Drawing.Point(528, 195);
+            this.LblProductos.Location = new System.Drawing.Point(517, 107);
             this.LblProductos.Name = "LblProductos";
             this.LblProductos.Size = new System.Drawing.Size(288, 31);
             this.LblProductos.TabIndex = 19;
@@ -350,7 +339,7 @@
             // 
             this.LblProductosSeleccionados.AutoSize = true;
             this.LblProductosSeleccionados.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProductosSeleccionados.Location = new System.Drawing.Point(71, 480);
+            this.LblProductosSeleccionados.Location = new System.Drawing.Point(60, 392);
             this.LblProductosSeleccionados.Name = "LblProductosSeleccionados";
             this.LblProductosSeleccionados.Size = new System.Drawing.Size(273, 31);
             this.LblProductosSeleccionados.TabIndex = 20;
@@ -360,7 +349,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1186, 796);
+            this.ClientSize = new System.Drawing.Size(1186, 708);
             this.Controls.Add(this.LblProductosSeleccionados);
             this.Controls.Add(this.LblProductos);
             this.Controls.Add(this.NumUDCantidadEntradaProducto);
@@ -374,17 +363,15 @@
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.LblCantidad);
             this.Controls.Add(this.LblFecha);
-            this.Controls.Add(this.PnlLogo);
             this.Controls.Add(this.LblGuionBajoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarEntradaProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EntradaProducto";
-            this.PnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
+            this.Text = "Agregar entrada de producto";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductosSeleccionados)).EndInit();
@@ -395,9 +382,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PnlLogo;
-        private System.Windows.Forms.PictureBox PbxLogo;
         private System.Windows.Forms.Label LblEntradaProducto;
         private System.Windows.Forms.Label LblFecha;
         private System.Windows.Forms.Label LblCantidad;
@@ -424,5 +408,6 @@
         private System.Windows.Forms.Label LblGuionBajoUsuario;
         private System.Windows.Forms.Label LblProductos;
         private System.Windows.Forms.Label LblProductosSeleccionados;
+        private System.Windows.Forms.PictureBox PbxNombreEmpresa;
     }
 }
