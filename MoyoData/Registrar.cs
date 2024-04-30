@@ -63,14 +63,14 @@ namespace MoyoData
         private void BtnRegistrarUsuario_Click(object sender, EventArgs e)
         {
             // Validación
-            if (TbxRegistrarNombres.Text == "")
+            if (TbxRegistrarNombres.Text == "Escribe aquí")
             {
                 MessageBox.Show("Ingrese un nombre.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             //Validación.
-            if (TbxRegistrarApellidos.Text == "")
+            if (TbxRegistrarApellidos.Text == "Escribe aquí")
             {
                 MessageBox.Show("Ingrese un apellido.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
