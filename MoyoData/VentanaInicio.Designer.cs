@@ -35,6 +35,7 @@
             this.LblMenu = new System.Windows.Forms.Label();
             this.PbxBotonMenu = new System.Windows.Forms.PictureBox();
             this.PnlFormHijo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
@@ -49,6 +50,7 @@
             this.PnlDesplegarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxBotonMenu)).BeginInit();
             this.PnlFormHijo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -58,7 +60,7 @@
             // 
             // SidebarTimer
             // 
-            this.SidebarTimer.Interval = 10;
+            this.SidebarTimer.Interval = 1;
             this.SidebarTimer.Tick += new System.EventHandler(this.SidebarTimer_Tick);
             // 
             // PnlDesplegarMenu
@@ -78,7 +80,7 @@
             // 
             this.LblMenu.AutoSize = true;
             this.LblMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMenu.ForeColor = System.Drawing.Color.White;
+            this.LblMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
             this.LblMenu.Location = new System.Drawing.Point(84, 42);
             this.LblMenu.Name = "LblMenu";
             this.LblMenu.Size = new System.Drawing.Size(66, 28);
@@ -99,7 +101,8 @@
             // 
             // PnlFormHijo
             // 
-            this.PnlFormHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(166)))), ((int)(((byte)(19)))));
+            this.PnlFormHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(31)))));
+            this.PnlFormHijo.Controls.Add(this.pictureBox1);
             this.PnlFormHijo.Controls.Add(this.BtnMinimizar);
             this.PnlFormHijo.Controls.Add(this.PbxLogo);
             this.PnlFormHijo.Controls.Add(this.BtnCerrar);
@@ -109,6 +112,16 @@
             this.PnlFormHijo.Size = new System.Drawing.Size(1198, 796);
             this.PnlFormHijo.TabIndex = 2;
             this.PnlFormHijo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlFormHijo_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(251, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(742, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // BtnMinimizar
             // 
@@ -128,7 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
-            this.PbxLogo.Location = new System.Drawing.Point(331, 175);
+            this.PbxLogo.Location = new System.Drawing.Point(332, 209);
             this.PbxLogo.Name = "PbxLogo";
             this.PbxLogo.Size = new System.Drawing.Size(575, 445);
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -309,6 +322,7 @@
             this.PnlDesplegarMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxBotonMenu)).EndInit();
             this.PnlFormHijo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
@@ -335,5 +349,6 @@
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.PictureBox BtnMinimizar;
         private System.Windows.Forms.Button BtnAspectos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

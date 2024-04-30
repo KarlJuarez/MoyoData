@@ -123,6 +123,7 @@
             // 
             // DgvCategorias
             // 
+            this.DgvCategorias.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvCategorias.BackgroundColor = System.Drawing.Color.White;
             this.DgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -161,6 +162,7 @@
             // 
             // BtnAgregarCategoria
             // 
+            this.BtnAgregarCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAgregarCategoria.AutoSize = true;
             this.BtnAgregarCategoria.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -180,6 +182,7 @@
             // 
             // BtnEditarCategoria
             // 
+            this.BtnEditarCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditarCategoria.AutoSize = true;
             this.BtnEditarCategoria.BackColor = System.Drawing.Color.Transparent;
             this.BtnEditarCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -199,18 +202,20 @@
             // 
             // LblCategorias
             // 
+            this.LblCategorias.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LblCategorias.AutoSize = true;
             this.LblCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCategorias.ForeColor = System.Drawing.Color.Black;
             this.LblCategorias.Location = new System.Drawing.Point(149, 217);
             this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(126, 36);
+            this.LblCategorias.Size = new System.Drawing.Size(125, 31);
             this.LblCategorias.TabIndex = 39;
             this.LblCategorias.Text = "Categorías";
             // 
             // DgvTiposProductos
             // 
+            this.DgvTiposProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvTiposProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvTiposProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvTiposProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -257,6 +262,7 @@
             // 
             // DgvUnidadesDeMedida
             // 
+            this.DgvUnidadesDeMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvUnidadesDeMedida.BackgroundColor = System.Drawing.Color.White;
             this.DgvUnidadesDeMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUnidadesDeMedida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -293,18 +299,20 @@
             // 
             // LblTiposProducto
             // 
+            this.LblTiposProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LblTiposProducto.AutoSize = true;
             this.LblTiposProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblTiposProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTiposProducto.ForeColor = System.Drawing.Color.Black;
             this.LblTiposProducto.Location = new System.Drawing.Point(515, 217);
             this.LblTiposProducto.Name = "LblTiposProducto";
-            this.LblTiposProducto.Size = new System.Drawing.Size(206, 36);
+            this.LblTiposProducto.Size = new System.Drawing.Size(206, 31);
             this.LblTiposProducto.TabIndex = 44;
             this.LblTiposProducto.Text = "Tipos de producto";
             // 
             // BtnEditarTipoProducto
             // 
+            this.BtnEditarTipoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditarTipoProducto.AutoSize = true;
             this.BtnEditarTipoProducto.BackColor = System.Drawing.Color.Transparent;
             this.BtnEditarTipoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -324,6 +332,7 @@
             // 
             // BtnAgregarTipoPorducto
             // 
+            this.BtnAgregarTipoPorducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAgregarTipoPorducto.AutoSize = true;
             this.BtnAgregarTipoPorducto.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarTipoPorducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -343,18 +352,20 @@
             // 
             // LblUnidadesDeMedida
             // 
+            this.LblUnidadesDeMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LblUnidadesDeMedida.AutoSize = true;
             this.LblUnidadesDeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblUnidadesDeMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUnidadesDeMedida.ForeColor = System.Drawing.Color.Black;
             this.LblUnidadesDeMedida.Location = new System.Drawing.Point(895, 217);
             this.LblUnidadesDeMedida.Name = "LblUnidadesDeMedida";
-            this.LblUnidadesDeMedida.Size = new System.Drawing.Size(233, 36);
+            this.LblUnidadesDeMedida.Size = new System.Drawing.Size(232, 31);
             this.LblUnidadesDeMedida.TabIndex = 47;
             this.LblUnidadesDeMedida.Text = "Unidades de medida";
             // 
             // BtnEditarUnidadDeMedida
             // 
+            this.BtnEditarUnidadDeMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditarUnidadDeMedida.AutoSize = true;
             this.BtnEditarUnidadDeMedida.BackColor = System.Drawing.Color.Transparent;
             this.BtnEditarUnidadDeMedida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -374,6 +385,7 @@
             // 
             // BtnAgregarUnidadDeMedida
             // 
+            this.BtnAgregarUnidadDeMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAgregarUnidadDeMedida.AutoSize = true;
             this.BtnAgregarUnidadDeMedida.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarUnidadDeMedida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;

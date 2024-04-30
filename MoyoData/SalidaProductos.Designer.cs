@@ -57,6 +57,7 @@
             // 
             this.DgvSalidaProductos.AllowUserToAddRows = false;
             this.DgvSalidaProductos.AllowUserToDeleteRows = false;
+            this.DgvSalidaProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvSalidaProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvSalidaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvSalidaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -165,11 +166,12 @@
             // 
             // LblSalidaProductos
             // 
+            this.LblSalidaProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LblSalidaProductos.AutoSize = true;
             this.LblSalidaProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSalidaProductos.Location = new System.Drawing.Point(48, 234);
             this.LblSalidaProductos.Name = "LblSalidaProductos";
-            this.LblSalidaProductos.Size = new System.Drawing.Size(366, 36);
+            this.LblSalidaProductos.Size = new System.Drawing.Size(364, 31);
             this.LblSalidaProductos.TabIndex = 40;
             this.LblSalidaProductos.Text = "Registro de entrada de productos";
             // 
@@ -185,7 +187,7 @@
             // 
             // BtnSalidaProductoEliminar
             // 
-            this.BtnSalidaProductoEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSalidaProductoEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnSalidaProductoEliminar.AutoSize = true;
             this.BtnSalidaProductoEliminar.BackColor = System.Drawing.Color.Transparent;
             this.BtnSalidaProductoEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -194,7 +196,7 @@
             this.BtnSalidaProductoEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalidaProductoEliminar.Image = global::MoyoData.Properties.Resources._2_icon__trash_;
             this.BtnSalidaProductoEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalidaProductoEliminar.Location = new System.Drawing.Point(816, 215);
+            this.BtnSalidaProductoEliminar.Location = new System.Drawing.Point(889, 215);
             this.BtnSalidaProductoEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSalidaProductoEliminar.Name = "BtnSalidaProductoEliminar";
             this.BtnSalidaProductoEliminar.Size = new System.Drawing.Size(245, 50);
@@ -205,9 +207,9 @@
             // 
             // PnlAgregarProdcuto
             // 
-            this.PnlAgregarProdcuto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PnlAgregarProdcuto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PnlAgregarProdcuto.Controls.Add(this.BtnSalidaProductoAgregar);
-            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(587, 215);
+            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(660, 215);
             this.PnlAgregarProdcuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnlAgregarProdcuto.Name = "PnlAgregarProdcuto";
             this.PnlAgregarProdcuto.Size = new System.Drawing.Size(221, 50);

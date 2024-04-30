@@ -113,7 +113,7 @@
             // 
             // BtnEliminarProductoInventario
             // 
-            this.BtnEliminarProductoInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEliminarProductoInventario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEliminarProductoInventario.AutoSize = true;
             this.BtnEliminarProductoInventario.BackColor = System.Drawing.Color.Transparent;
             this.BtnEliminarProductoInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -122,7 +122,7 @@
             this.BtnEliminarProductoInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminarProductoInventario.Image = global::MoyoData.Properties.Resources._2_icon__trash_;
             this.BtnEliminarProductoInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarProductoInventario.Location = new System.Drawing.Point(699, 198);
+            this.BtnEliminarProductoInventario.Location = new System.Drawing.Point(778, 199);
             this.BtnEliminarProductoInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEliminarProductoInventario.Name = "BtnEliminarProductoInventario";
             this.BtnEliminarProductoInventario.Size = new System.Drawing.Size(245, 50);
@@ -133,7 +133,7 @@
             // 
             // BtnEditarProducto
             // 
-            this.BtnEditarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEditarProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditarProducto.AutoSize = true;
             this.BtnEditarProducto.BackColor = System.Drawing.Color.Transparent;
             this.BtnEditarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -142,7 +142,7 @@
             this.BtnEditarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditarProducto.Image = global::MoyoData.Properties.Resources._2_icon__edit_pencil_;
             this.BtnEditarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditarProducto.Location = new System.Drawing.Point(950, 198);
+            this.BtnEditarProducto.Location = new System.Drawing.Point(1029, 199);
             this.BtnEditarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditarProducto.Name = "BtnEditarProducto";
             this.BtnEditarProducto.Size = new System.Drawing.Size(123, 50);
@@ -153,9 +153,9 @@
             // 
             // PnlAgregarProdcuto
             // 
-            this.PnlAgregarProdcuto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PnlAgregarProdcuto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PnlAgregarProdcuto.Controls.Add(this.BtnAgregarProductoInventario);
-            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(473, 198);
+            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(552, 199);
             this.PnlAgregarProdcuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnlAgregarProdcuto.Name = "PnlAgregarProdcuto";
             this.PnlAgregarProdcuto.Size = new System.Drawing.Size(221, 50);
@@ -186,6 +186,7 @@
             this.DgvProductos.AllowUserToAddRows = false;
             this.DgvProductos.AllowUserToDeleteRows = false;
             this.DgvProductos.AllowUserToOrderColumns = true;
+            this.DgvProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvProductos.BackgroundColor = System.Drawing.Color.White;

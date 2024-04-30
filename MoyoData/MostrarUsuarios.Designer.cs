@@ -112,6 +112,7 @@
             // 
             this.DgvUsuarios.AllowUserToAddRows = false;
             this.DgvUsuarios.AllowUserToDeleteRows = false;
+            this.DgvUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -164,7 +165,7 @@
             // 
             // BtnEliminarUsuario
             // 
-            this.BtnEliminarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEliminarUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEliminarUsuario.AutoSize = true;
             this.BtnEliminarUsuario.BackColor = System.Drawing.Color.Transparent;
             this.BtnEliminarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -173,7 +174,7 @@
             this.BtnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminarUsuario.Image = global::MoyoData.Properties.Resources._2_icon__trash_;
             this.BtnEliminarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarUsuario.Location = new System.Drawing.Point(694, 208);
+            this.BtnEliminarUsuario.Location = new System.Drawing.Point(759, 209);
             this.BtnEliminarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEliminarUsuario.Name = "BtnEliminarUsuario";
             this.BtnEliminarUsuario.Size = new System.Drawing.Size(245, 50);
@@ -184,7 +185,7 @@
             // 
             // BtnEditarUsuario
             // 
-            this.BtnEditarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEditarUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditarUsuario.AutoSize = true;
             this.BtnEditarUsuario.BackColor = System.Drawing.Color.Transparent;
             this.BtnEditarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -193,7 +194,7 @@
             this.BtnEditarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditarUsuario.Image = global::MoyoData.Properties.Resources._2_icon__edit_pencil_;
             this.BtnEditarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditarUsuario.Location = new System.Drawing.Point(945, 208);
+            this.BtnEditarUsuario.Location = new System.Drawing.Point(1010, 209);
             this.BtnEditarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditarUsuario.Name = "BtnEditarUsuario";
             this.BtnEditarUsuario.Size = new System.Drawing.Size(123, 50);
@@ -204,9 +205,9 @@
             // 
             // PnlAgregarProdcuto
             // 
-            this.PnlAgregarProdcuto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PnlAgregarProdcuto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PnlAgregarProdcuto.Controls.Add(this.BtnAgregarUsuario);
-            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(468, 208);
+            this.PnlAgregarProdcuto.Location = new System.Drawing.Point(533, 209);
             this.PnlAgregarProdcuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnlAgregarProdcuto.Name = "PnlAgregarProdcuto";
             this.PnlAgregarProdcuto.Size = new System.Drawing.Size(221, 50);
