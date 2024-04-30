@@ -48,6 +48,7 @@
             this.BtnActualizarCategoria.FlatAppearance.BorderSize = 0;
             this.BtnActualizarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizarCategoria.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnActualizarCategoria.ForeColor = System.Drawing.Color.White;
             this.BtnActualizarCategoria.Location = new System.Drawing.Point(333, 291);
             this.BtnActualizarCategoria.Name = "BtnActualizarCategoria";
             this.BtnActualizarCategoria.Size = new System.Drawing.Size(134, 42);
@@ -84,6 +85,7 @@
             this.LblEditarCategoria.AutoSize = true;
             this.LblEditarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblEditarCategoria.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblEditarCategoria.ForeColor = System.Drawing.Color.White;
             this.LblEditarCategoria.Location = new System.Drawing.Point(20, 19);
             this.LblEditarCategoria.Name = "LblEditarCategoria";
             this.LblEditarCategoria.Size = new System.Drawing.Size(307, 38);
@@ -108,7 +110,7 @@
             this.LblCategoria.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCategoria.Location = new System.Drawing.Point(340, 166);
             this.LblCategoria.Name = "LblCategoria";
-            this.LblCategoria.Size = new System.Drawing.Size(114, 31);
+            this.LblCategoria.Size = new System.Drawing.Size(115, 36);
             this.LblCategoria.TabIndex = 13;
             this.LblCategoria.Text = "Categoría";
             // 

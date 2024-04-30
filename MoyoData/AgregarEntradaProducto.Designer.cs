@@ -69,6 +69,7 @@
             this.LblEntradaProducto.AutoSize = true;
             this.LblEntradaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblEntradaProducto.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblEntradaProducto.ForeColor = System.Drawing.Color.White;
             this.LblEntradaProducto.Location = new System.Drawing.Point(70, 20);
             this.LblEntradaProducto.Name = "LblEntradaProducto";
             this.LblEntradaProducto.Size = new System.Drawing.Size(540, 38);
@@ -81,7 +82,7 @@
             this.LblFecha.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFecha.Location = new System.Drawing.Point(60, 295);
             this.LblFecha.Name = "LblFecha";
-            this.LblFecha.Size = new System.Drawing.Size(193, 31);
+            this.LblFecha.Size = new System.Drawing.Size(193, 36);
             this.LblFecha.TabIndex = 2;
             this.LblFecha.Text = "Fecha de entrega";
             // 
@@ -91,7 +92,7 @@
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCantidad.Location = new System.Drawing.Point(60, 205);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
+            this.LblCantidad.Size = new System.Drawing.Size(111, 36);
             this.LblCantidad.TabIndex = 3;
             this.LblCantidad.Text = "Cantidad";
             // 
@@ -101,7 +102,7 @@
             this.LblUsuario.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsuario.Location = new System.Drawing.Point(60, 107);
             this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(97, 31);
+            this.LblUsuario.Size = new System.Drawing.Size(98, 36);
             this.LblUsuario.TabIndex = 4;
             this.LblUsuario.Text = "Usuario";
             // 
@@ -120,11 +121,12 @@
             this.BtnEntradaProductoAgregar.FlatAppearance.BorderSize = 0;
             this.BtnEntradaProductoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntradaProductoAgregar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEntradaProductoAgregar.ForeColor = System.Drawing.Color.White;
             this.BtnEntradaProductoAgregar.Location = new System.Drawing.Point(825, 618);
             this.BtnEntradaProductoAgregar.Name = "BtnEntradaProductoAgregar";
             this.BtnEntradaProductoAgregar.Size = new System.Drawing.Size(143, 56);
             this.BtnEntradaProductoAgregar.TabIndex = 8;
-            this.BtnEntradaProductoAgregar.Text = "Agregar producto";
+            this.BtnEntradaProductoAgregar.Text = "Agregar";
             this.BtnEntradaProductoAgregar.UseVisualStyleBackColor = false;
             this.BtnEntradaProductoAgregar.Click += new System.EventHandler(this.BtnEntradaProductoAgregar_Click);
             // 
@@ -170,6 +172,7 @@
             this.BtnEntradaProductoIngresar.FlatAppearance.BorderSize = 0;
             this.BtnEntradaProductoIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntradaProductoIngresar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEntradaProductoIngresar.ForeColor = System.Drawing.Color.White;
             this.BtnEntradaProductoIngresar.Location = new System.Drawing.Point(993, 618);
             this.BtnEntradaProductoIngresar.Name = "BtnEntradaProductoIngresar";
             this.BtnEntradaProductoIngresar.Size = new System.Drawing.Size(143, 56);
@@ -331,7 +334,7 @@
             this.LblProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductos.Location = new System.Drawing.Point(517, 107);
             this.LblProductos.Name = "LblProductos";
-            this.LblProductos.Size = new System.Drawing.Size(288, 31);
+            this.LblProductos.Size = new System.Drawing.Size(289, 36);
             this.LblProductos.TabIndex = 19;
             this.LblProductos.Text = "Productos en el inventario";
             // 
@@ -341,7 +344,7 @@
             this.LblProductosSeleccionados.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductosSeleccionados.Location = new System.Drawing.Point(60, 392);
             this.LblProductosSeleccionados.Name = "LblProductosSeleccionados";
-            this.LblProductosSeleccionados.Size = new System.Drawing.Size(273, 31);
+            this.LblProductosSeleccionados.Size = new System.Drawing.Size(275, 36);
             this.LblProductosSeleccionados.TabIndex = 20;
             this.LblProductosSeleccionados.Text = "Productos seleccionados";
             // 

@@ -92,6 +92,7 @@
             this.LblSalidaProducto.AutoSize = true;
             this.LblSalidaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblSalidaProducto.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblSalidaProducto.ForeColor = System.Drawing.Color.White;
             this.LblSalidaProducto.Location = new System.Drawing.Point(70, 20);
             this.LblSalidaProducto.Name = "LblSalidaProducto";
             this.LblSalidaProducto.Size = new System.Drawing.Size(505, 38);
@@ -227,6 +228,7 @@
             this.BtnSalidaProductoHacerPrestamo.FlatAppearance.BorderSize = 0;
             this.BtnSalidaProductoHacerPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalidaProductoHacerPrestamo.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnSalidaProductoHacerPrestamo.ForeColor = System.Drawing.Color.White;
             this.BtnSalidaProductoHacerPrestamo.Location = new System.Drawing.Point(989, 630);
             this.BtnSalidaProductoHacerPrestamo.Name = "BtnSalidaProductoHacerPrestamo";
             this.BtnSalidaProductoHacerPrestamo.Size = new System.Drawing.Size(143, 56);
@@ -242,11 +244,12 @@
             this.BtnSalidaProductoAgregar.FlatAppearance.BorderSize = 0;
             this.BtnSalidaProductoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalidaProductoAgregar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnSalidaProductoAgregar.ForeColor = System.Drawing.Color.White;
             this.BtnSalidaProductoAgregar.Location = new System.Drawing.Point(821, 630);
             this.BtnSalidaProductoAgregar.Name = "BtnSalidaProductoAgregar";
             this.BtnSalidaProductoAgregar.Size = new System.Drawing.Size(143, 56);
             this.BtnSalidaProductoAgregar.TabIndex = 29;
-            this.BtnSalidaProductoAgregar.Text = "Agregar producto";
+            this.BtnSalidaProductoAgregar.Text = "Agregar ";
             this.BtnSalidaProductoAgregar.UseVisualStyleBackColor = false;
             this.BtnSalidaProductoAgregar.Click += new System.EventHandler(this.BtnSalidaProductoAgregar_Click);
             // 
@@ -264,7 +267,7 @@
             this.LblUsuario.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsuario.Location = new System.Drawing.Point(58, 105);
             this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(97, 31);
+            this.LblUsuario.Size = new System.Drawing.Size(98, 36);
             this.LblUsuario.TabIndex = 26;
             this.LblUsuario.Text = "Usuario";
             // 
@@ -274,7 +277,7 @@
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCantidad.Location = new System.Drawing.Point(58, 203);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
+            this.LblCantidad.Size = new System.Drawing.Size(111, 36);
             this.LblCantidad.TabIndex = 25;
             this.LblCantidad.Text = "Cantidad";
             // 
@@ -284,7 +287,7 @@
             this.LblFecha.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFecha.Location = new System.Drawing.Point(58, 293);
             this.LblFecha.Name = "LblFecha";
-            this.LblFecha.Size = new System.Drawing.Size(227, 31);
+            this.LblFecha.Size = new System.Drawing.Size(228, 36);
             this.LblFecha.TabIndex = 24;
             this.LblFecha.Text = "Fecha de expedición";
             // 
@@ -330,7 +333,7 @@
             this.LblProductosSeleccionados.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductosSeleccionados.Location = new System.Drawing.Point(58, 390);
             this.LblProductosSeleccionados.Name = "LblProductosSeleccionados";
-            this.LblProductosSeleccionados.Size = new System.Drawing.Size(273, 31);
+            this.LblProductosSeleccionados.Size = new System.Drawing.Size(275, 36);
             this.LblProductosSeleccionados.TabIndex = 38;
             this.LblProductosSeleccionados.Text = "Productos seleccionados";
             // 
@@ -340,7 +343,7 @@
             this.LblProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductos.Location = new System.Drawing.Point(515, 105);
             this.LblProductos.Name = "LblProductos";
-            this.LblProductos.Size = new System.Drawing.Size(288, 31);
+            this.LblProductos.Size = new System.Drawing.Size(289, 36);
             this.LblProductos.TabIndex = 37;
             this.LblProductos.Text = "Productos en el inventario";
             // 

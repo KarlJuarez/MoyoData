@@ -81,6 +81,7 @@
             this.LblAspectos.AutoSize = true;
             this.LblAspectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblAspectos.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblAspectos.ForeColor = System.Drawing.Color.White;
             this.LblAspectos.Location = new System.Drawing.Point(70, 20);
             this.LblAspectos.Name = "LblAspectos";
             this.LblAspectos.Size = new System.Drawing.Size(181, 38);
@@ -201,9 +202,10 @@
             this.LblCategorias.AutoSize = true;
             this.LblCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCategorias.ForeColor = System.Drawing.Color.Black;
             this.LblCategorias.Location = new System.Drawing.Point(149, 217);
             this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(125, 31);
+            this.LblCategorias.Size = new System.Drawing.Size(126, 36);
             this.LblCategorias.TabIndex = 39;
             this.LblCategorias.Text = "Categorías";
             // 
@@ -294,9 +296,10 @@
             this.LblTiposProducto.AutoSize = true;
             this.LblTiposProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblTiposProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTiposProducto.ForeColor = System.Drawing.Color.Black;
             this.LblTiposProducto.Location = new System.Drawing.Point(515, 217);
             this.LblTiposProducto.Name = "LblTiposProducto";
-            this.LblTiposProducto.Size = new System.Drawing.Size(206, 31);
+            this.LblTiposProducto.Size = new System.Drawing.Size(206, 36);
             this.LblTiposProducto.TabIndex = 44;
             this.LblTiposProducto.Text = "Tipos de producto";
             // 
@@ -343,9 +346,10 @@
             this.LblUnidadesDeMedida.AutoSize = true;
             this.LblUnidadesDeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblUnidadesDeMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUnidadesDeMedida.ForeColor = System.Drawing.Color.Black;
             this.LblUnidadesDeMedida.Location = new System.Drawing.Point(895, 217);
             this.LblUnidadesDeMedida.Name = "LblUnidadesDeMedida";
-            this.LblUnidadesDeMedida.Size = new System.Drawing.Size(232, 31);
+            this.LblUnidadesDeMedida.Size = new System.Drawing.Size(233, 36);
             this.LblUnidadesDeMedida.TabIndex = 47;
             this.LblUnidadesDeMedida.Text = "Unidades de medida";
             // 

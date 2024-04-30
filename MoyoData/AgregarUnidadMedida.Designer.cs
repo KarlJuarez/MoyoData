@@ -79,7 +79,7 @@
             this.LblUnidadMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUnidadMedida.Location = new System.Drawing.Point(289, 155);
             this.LblUnidadMedida.Name = "LblUnidadMedida";
-            this.LblUnidadMedida.Size = new System.Drawing.Size(209, 31);
+            this.LblUnidadMedida.Size = new System.Drawing.Size(210, 36);
             this.LblUnidadMedida.TabIndex = 3;
             this.LblUnidadMedida.Text = "Unidad de medida";
             // 

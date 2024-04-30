@@ -100,6 +100,7 @@
             this.LblEditarUsuario.AutoSize = true;
             this.LblEditarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblEditarUsuario.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblEditarUsuario.ForeColor = System.Drawing.Color.White;
             this.LblEditarUsuario.Location = new System.Drawing.Point(70, 20);
             this.LblEditarUsuario.Name = "LblEditarUsuario";
             this.LblEditarUsuario.Size = new System.Drawing.Size(268, 38);
@@ -148,7 +149,7 @@
             this.LblPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblPassword.Location = new System.Drawing.Point(453, 123);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(135, 31);
+            this.LblPassword.Size = new System.Drawing.Size(136, 36);
             this.LblPassword.TabIndex = 44;
             this.LblPassword.Text = "Contraseña";
             // 
@@ -158,7 +159,7 @@
             this.LblRol.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblRol.Location = new System.Drawing.Point(796, 123);
             this.LblRol.Name = "LblRol";
-            this.LblRol.Size = new System.Drawing.Size(48, 31);
+            this.LblRol.Size = new System.Drawing.Size(49, 36);
             this.LblRol.TabIndex = 42;
             this.LblRol.Text = "Rol";
             // 
@@ -168,7 +169,7 @@
             this.LblNombres.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblNombres.Location = new System.Drawing.Point(39, 123);
             this.LblNombres.Name = "LblNombres";
-            this.LblNombres.Size = new System.Drawing.Size(265, 31);
+            this.LblNombres.Size = new System.Drawing.Size(266, 36);
             this.LblNombres.TabIndex = 41;
             this.LblNombres.Text = "Nombre(s) y Apellido(s)";
             // 
@@ -204,7 +205,7 @@
             this.LblPasswordNueva.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblPasswordNueva.Location = new System.Drawing.Point(215, 330);
             this.LblPasswordNueva.Name = "LblPasswordNueva";
-            this.LblPasswordNueva.Size = new System.Drawing.Size(203, 31);
+            this.LblPasswordNueva.Size = new System.Drawing.Size(204, 36);
             this.LblPasswordNueva.TabIndex = 54;
             this.LblPasswordNueva.Text = "Nueva contraseña";
             // 
@@ -240,7 +241,7 @@
             this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(640, 330);
             this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
-            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(287, 31);
+            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(288, 36);
             this.LblRespuestaRecuperarPassword.TabIndex = 57;
             this.LblRespuestaRecuperarPassword.Text = "¿Cuál es su color favorito?";
             // 
@@ -260,6 +261,7 @@
             this.BtnEditar.FlatAppearance.BorderSize = 0;
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEditar.ForeColor = System.Drawing.Color.White;
             this.BtnEditar.Location = new System.Drawing.Point(991, 408);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(143, 56);

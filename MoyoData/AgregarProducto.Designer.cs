@@ -77,7 +77,7 @@
             this.LblProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProducto.Location = new System.Drawing.Point(206, 247);
             this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(110, 31);
+            this.LblProducto.Size = new System.Drawing.Size(111, 36);
             this.LblProducto.TabIndex = 35;
             this.LblProducto.Text = "Producto";
             // 
@@ -98,7 +98,7 @@
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCantidad.Location = new System.Drawing.Point(659, 247);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
+            this.LblCantidad.Size = new System.Drawing.Size(111, 36);
             this.LblCantidad.TabIndex = 37;
             this.LblCantidad.Text = "Cantidad";
             // 
@@ -109,6 +109,7 @@
             this.BtnAgregarProducto.FlatAppearance.BorderSize = 0;
             this.BtnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregarProducto.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnAgregarProducto.ForeColor = System.Drawing.Color.White;
             this.BtnAgregarProducto.Location = new System.Drawing.Point(1004, 706);
             this.BtnAgregarProducto.Name = "BtnAgregarProducto";
             this.BtnAgregarProducto.Size = new System.Drawing.Size(143, 56);
@@ -132,7 +133,7 @@
             this.LblUnidadesMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUnidadesMedida.Location = new System.Drawing.Point(659, 350);
             this.LblUnidadesMedida.Name = "LblUnidadesMedida";
-            this.LblUnidadesMedida.Size = new System.Drawing.Size(209, 31);
+            this.LblUnidadesMedida.Size = new System.Drawing.Size(210, 36);
             this.LblUnidadesMedida.TabIndex = 40;
             this.LblUnidadesMedida.Text = "Unidad de medida";
             // 
@@ -152,7 +153,7 @@
             this.LblCategoria.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCategoria.Location = new System.Drawing.Point(206, 443);
             this.LblCategoria.Name = "LblCategoria";
-            this.LblCategoria.Size = new System.Drawing.Size(114, 31);
+            this.LblCategoria.Size = new System.Drawing.Size(115, 36);
             this.LblCategoria.TabIndex = 42;
             this.LblCategoria.Text = "Categoría";
             // 
@@ -171,7 +172,7 @@
             this.LblTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTipoProducto.Location = new System.Drawing.Point(659, 443);
             this.LblTipoProducto.Name = "LblTipoProducto";
-            this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
+            this.LblTipoProducto.Size = new System.Drawing.Size(195, 36);
             this.LblTipoProducto.TabIndex = 44;
             this.LblTipoProducto.Text = "Tipo de producto";
             // 
@@ -192,7 +193,7 @@
             this.LblLimite.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLimite.Location = new System.Drawing.Point(206, 350);
             this.LblLimite.Name = "LblLimite";
-            this.LblLimite.Size = new System.Drawing.Size(267, 31);
+            this.LblLimite.Size = new System.Drawing.Size(268, 36);
             this.LblLimite.TabIndex = 46;
             this.LblLimite.Text = "Límite al sacar producto";
             // 
@@ -224,6 +225,7 @@
             this.LblAgregarProducto.AutoSize = true;
             this.LblAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblAgregarProducto.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblAgregarProducto.ForeColor = System.Drawing.Color.White;
             this.LblAgregarProducto.Location = new System.Drawing.Point(70, 20);
             this.LblAgregarProducto.Name = "LblAgregarProducto";
             this.LblAgregarProducto.Size = new System.Drawing.Size(339, 38);

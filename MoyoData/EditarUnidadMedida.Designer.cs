@@ -48,7 +48,7 @@
             this.LblUnidadMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblUnidadMedida.Location = new System.Drawing.Point(297, 165);
             this.LblUnidadMedida.Name = "LblUnidadMedida";
-            this.LblUnidadMedida.Size = new System.Drawing.Size(209, 31);
+            this.LblUnidadMedida.Size = new System.Drawing.Size(210, 36);
             this.LblUnidadMedida.TabIndex = 0;
             this.LblUnidadMedida.Text = "Unidad de medida";
             // 
@@ -58,6 +58,7 @@
             this.BtnActualizarUnidadMedida.FlatAppearance.BorderSize = 0;
             this.BtnActualizarUnidadMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizarUnidadMedida.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnActualizarUnidadMedida.ForeColor = System.Drawing.Color.White;
             this.BtnActualizarUnidadMedida.Location = new System.Drawing.Point(335, 286);
             this.BtnActualizarUnidadMedida.Name = "BtnActualizarUnidadMedida";
             this.BtnActualizarUnidadMedida.Size = new System.Drawing.Size(134, 42);
@@ -94,6 +95,7 @@
             this.LblAgregarCategoria.AutoSize = true;
             this.LblAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblAgregarCategoria.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAgregarCategoria.ForeColor = System.Drawing.Color.White;
             this.LblAgregarCategoria.Location = new System.Drawing.Point(20, 24);
             this.LblAgregarCategoria.Name = "LblAgregarCategoria";
             this.LblAgregarCategoria.Size = new System.Drawing.Size(369, 34);

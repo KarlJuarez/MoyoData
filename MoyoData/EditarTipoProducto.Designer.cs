@@ -50,6 +50,7 @@
             this.BtnActualizarTipoProducto.FlatAppearance.BorderSize = 0;
             this.BtnActualizarTipoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizarTipoProducto.Font = new System.Drawing.Font("Rosario", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnActualizarTipoProducto.ForeColor = System.Drawing.Color.White;
             this.BtnActualizarTipoProducto.Location = new System.Drawing.Point(340, 311);
             this.BtnActualizarTipoProducto.Name = "BtnActualizarTipoProducto";
             this.BtnActualizarTipoProducto.Size = new System.Drawing.Size(134, 42);
@@ -81,7 +82,7 @@
             this.LblTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblTipoProducto.Location = new System.Drawing.Point(77, 152);
             this.LblTipoProducto.Name = "LblTipoProducto";
-            this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
+            this.LblTipoProducto.Size = new System.Drawing.Size(195, 36);
             this.LblTipoProducto.TabIndex = 3;
             this.LblTipoProducto.Text = "Tipo de producto";
             // 
@@ -91,7 +92,7 @@
             this.LblCategoriaTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblCategoriaTipoProducto.Location = new System.Drawing.Point(469, 152);
             this.LblCategoriaTipoProducto.Name = "LblCategoriaTipoProducto";
-            this.LblCategoriaTipoProducto.Size = new System.Drawing.Size(114, 31);
+            this.LblCategoriaTipoProducto.Size = new System.Drawing.Size(115, 36);
             this.LblCategoriaTipoProducto.TabIndex = 6;
             this.LblCategoriaTipoProducto.Text = "Categoría";
             // 
@@ -132,6 +133,7 @@
             this.LblEditarTipoProducto.AutoSize = true;
             this.LblEditarTipoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblEditarTipoProducto.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEditarTipoProducto.ForeColor = System.Drawing.Color.White;
             this.LblEditarTipoProducto.Location = new System.Drawing.Point(20, 23);
             this.LblEditarTipoProducto.Name = "LblEditarTipoProducto";
             this.LblEditarTipoProducto.Size = new System.Drawing.Size(370, 34);

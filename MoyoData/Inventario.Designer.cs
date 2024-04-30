@@ -71,6 +71,7 @@
             this.LblRegistrar.AutoSize = true;
             this.LblRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblRegistrar.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblRegistrar.ForeColor = System.Drawing.Color.White;
             this.LblRegistrar.Location = new System.Drawing.Point(70, 20);
             this.LblRegistrar.Name = "LblRegistrar";
             this.LblRegistrar.Size = new System.Drawing.Size(202, 38);

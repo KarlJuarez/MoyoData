@@ -133,6 +133,7 @@
             this.LblEntradaProducto.AutoSize = true;
             this.LblEntradaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblEntradaProducto.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblEntradaProducto.ForeColor = System.Drawing.Color.White;
             this.LblEntradaProducto.Location = new System.Drawing.Point(70, 20);
             this.LblEntradaProducto.Name = "LblEntradaProducto";
             this.LblEntradaProducto.Size = new System.Drawing.Size(386, 38);
@@ -157,7 +158,7 @@
             this.LblEntradaProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblEntradaProductos.Location = new System.Drawing.Point(48, 234);
             this.LblEntradaProductos.Name = "LblEntradaProductos";
-            this.LblEntradaProductos.Size = new System.Drawing.Size(364, 31);
+            this.LblEntradaProductos.Size = new System.Drawing.Size(366, 36);
             this.LblEntradaProductos.TabIndex = 34;
             this.LblEntradaProductos.Text = "Registro de entrada de productos";
             // 

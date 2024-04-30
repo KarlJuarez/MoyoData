@@ -78,6 +78,7 @@
             // 
             this.LblMenu.AutoSize = true;
             this.LblMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMenu.ForeColor = System.Drawing.Color.White;
             this.LblMenu.Location = new System.Drawing.Point(84, 42);
             this.LblMenu.Name = "LblMenu";
             this.LblMenu.Size = new System.Drawing.Size(66, 28);
@@ -98,7 +99,7 @@
             // 
             // PnlFormHijo
             // 
-            this.PnlFormHijo.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.PnlFormHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(166)))), ((int)(((byte)(19)))));
             this.PnlFormHijo.Controls.Add(this.BtnMinimizar);
             this.PnlFormHijo.Controls.Add(this.PbxLogo);
             this.PnlFormHijo.Controls.Add(this.BtnCerrar);

@@ -68,6 +68,7 @@
             this.LblUsuarios.AutoSize = true;
             this.LblUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblUsuarios.Font = new System.Drawing.Font("Roboto", 19F, System.Drawing.FontStyle.Bold);
+            this.LblUsuarios.ForeColor = System.Drawing.Color.White;
             this.LblUsuarios.Location = new System.Drawing.Point(70, 20);
             this.LblUsuarios.Name = "LblUsuarios";
             this.LblUsuarios.Size = new System.Drawing.Size(172, 38);

@@ -66,7 +66,7 @@
             this.LblNombres.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblNombres.Location = new System.Drawing.Point(90, 193);
             this.LblNombres.Name = "LblNombres";
-            this.LblNombres.Size = new System.Drawing.Size(265, 31);
+            this.LblNombres.Size = new System.Drawing.Size(266, 36);
             this.LblNombres.TabIndex = 52;
             this.LblNombres.Text = "Nombre(s) y Apellido(s)";
             // 
@@ -102,7 +102,7 @@
             this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(437, 193);
             this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
-            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(287, 31);
+            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(288, 36);
             this.LblRespuestaRecuperarPassword.TabIndex = 60;
             this.LblRespuestaRecuperarPassword.Text = "¿Cuál es su color favorito?";
             // 
@@ -122,6 +122,7 @@
             this.BtnRecuperarPassword.FlatAppearance.BorderSize = 0;
             this.BtnRecuperarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRecuperarPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnRecuperarPassword.ForeColor = System.Drawing.Color.White;
             this.BtnRecuperarPassword.Location = new System.Drawing.Point(334, 330);
             this.BtnRecuperarPassword.Name = "BtnRecuperarPassword";
             this.BtnRecuperarPassword.Size = new System.Drawing.Size(143, 56);
@@ -158,6 +159,7 @@
             this.LblRecuperarPassword.AutoSize = true;
             this.LblRecuperarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblRecuperarPassword.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRecuperarPassword.ForeColor = System.Drawing.Color.White;
             this.LblRecuperarPassword.Location = new System.Drawing.Point(20, 23);
             this.LblRecuperarPassword.Name = "LblRecuperarPassword";
             this.LblRecuperarPassword.Size = new System.Drawing.Size(364, 34);
