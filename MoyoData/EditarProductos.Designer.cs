@@ -62,6 +62,7 @@
             this.NumUDLimiteEditarProducto.BackColor = System.Drawing.Color.White;
             this.NumUDLimiteEditarProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NumUDLimiteEditarProducto.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NumUDLimiteEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.NumUDLimiteEditarProducto.Location = new System.Drawing.Point(245, 486);
             this.NumUDLimiteEditarProducto.Name = "NumUDLimiteEditarProducto";
             this.NumUDLimiteEditarProducto.Size = new System.Drawing.Size(270, 28);
@@ -71,15 +72,17 @@
             // 
             this.LblLimite.AutoSize = true;
             this.LblLimite.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLimite.ForeColor = System.Drawing.Color.Black;
             this.LblLimite.Location = new System.Drawing.Point(236, 434);
             this.LblLimite.Name = "LblLimite";
-            this.LblLimite.Size = new System.Drawing.Size(268, 36);
+            this.LblLimite.Size = new System.Drawing.Size(267, 31);
             this.LblLimite.TabIndex = 59;
             this.LblLimite.Text = "Límite al sacar producto";
             // 
             // CbxTipoProductoEditarProducto
             // 
             this.CbxTipoProductoEditarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxTipoProductoEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.CbxTipoProductoEditarProducto.FormattingEnabled = true;
             this.CbxTipoProductoEditarProducto.Location = new System.Drawing.Point(699, 485);
             this.CbxTipoProductoEditarProducto.Name = "CbxTipoProductoEditarProducto";
@@ -90,15 +93,17 @@
             // 
             this.LblTipoProducto.AutoSize = true;
             this.LblTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTipoProducto.ForeColor = System.Drawing.Color.Black;
             this.LblTipoProducto.Location = new System.Drawing.Point(690, 431);
             this.LblTipoProducto.Name = "LblTipoProducto";
-            this.LblTipoProducto.Size = new System.Drawing.Size(195, 36);
+            this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
             this.LblTipoProducto.TabIndex = 57;
             this.LblTipoProducto.Text = "Tipo de producto";
             // 
             // CbxCategoriasEditarProducto
             // 
             this.CbxCategoriasEditarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxCategoriasEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.CbxCategoriasEditarProducto.FormattingEnabled = true;
             this.CbxCategoriasEditarProducto.Location = new System.Drawing.Point(245, 577);
             this.CbxCategoriasEditarProducto.Name = "CbxCategoriasEditarProducto";
@@ -110,15 +115,17 @@
             // 
             this.LblCategorias.AutoSize = true;
             this.LblCategorias.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCategorias.ForeColor = System.Drawing.Color.Black;
             this.LblCategorias.Location = new System.Drawing.Point(238, 523);
             this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(115, 36);
+            this.LblCategorias.Size = new System.Drawing.Size(114, 31);
             this.LblCategorias.TabIndex = 55;
             this.LblCategorias.Text = "Categoría";
             // 
             // CbxUnidadesMedidasEditarProducto
             // 
             this.CbxUnidadesMedidasEditarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxUnidadesMedidasEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.CbxUnidadesMedidasEditarProducto.FormattingEnabled = true;
             this.CbxUnidadesMedidasEditarProducto.Location = new System.Drawing.Point(699, 392);
             this.CbxUnidadesMedidasEditarProducto.Name = "CbxUnidadesMedidasEditarProducto";
@@ -129,9 +136,10 @@
             // 
             this.LblUnidadesMedida.AutoSize = true;
             this.LblUnidadesMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUnidadesMedida.ForeColor = System.Drawing.Color.Black;
             this.LblUnidadesMedida.Location = new System.Drawing.Point(692, 338);
             this.LblUnidadesMedida.Name = "LblUnidadesMedida";
-            this.LblUnidadesMedida.Size = new System.Drawing.Size(210, 36);
+            this.LblUnidadesMedida.Size = new System.Drawing.Size(209, 31);
             this.LblUnidadesMedida.TabIndex = 53;
             this.LblUnidadesMedida.Text = "Unidad de medida";
             // 
@@ -155,6 +163,7 @@
             // 
             this.NumUDCantidadEditarProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NumUDCantidadEditarProducto.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NumUDCantidadEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.NumUDCantidadEditarProducto.Location = new System.Drawing.Point(699, 287);
             this.NumUDCantidadEditarProducto.Name = "NumUDCantidadEditarProducto";
             this.NumUDCantidadEditarProducto.Size = new System.Drawing.Size(270, 28);
@@ -164,9 +173,10 @@
             // 
             this.LblCantidad.AutoSize = true;
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCantidad.ForeColor = System.Drawing.Color.Black;
             this.LblCantidad.Location = new System.Drawing.Point(690, 235);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(111, 36);
+            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
             this.LblCantidad.TabIndex = 50;
             this.LblCantidad.Text = "Cantidad";
             // 
@@ -191,9 +201,10 @@
             // 
             this.LblProducto.AutoSize = true;
             this.LblProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProducto.ForeColor = System.Drawing.Color.Black;
             this.LblProducto.Location = new System.Drawing.Point(237, 235);
             this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(111, 36);
+            this.LblProducto.Size = new System.Drawing.Size(110, 31);
             this.LblProducto.TabIndex = 48;
             this.LblProducto.Text = "Producto";
             // 
@@ -202,6 +213,7 @@
             this.NumUDStockEditarProducto.BackColor = System.Drawing.Color.White;
             this.NumUDStockEditarProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NumUDStockEditarProducto.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NumUDStockEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.NumUDStockEditarProducto.Location = new System.Drawing.Point(247, 383);
             this.NumUDStockEditarProducto.Name = "NumUDStockEditarProducto";
             this.NumUDStockEditarProducto.Size = new System.Drawing.Size(270, 28);
@@ -211,15 +223,17 @@
             // 
             this.LblStock.AutoSize = true;
             this.LblStock.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStock.ForeColor = System.Drawing.Color.Black;
             this.LblStock.Location = new System.Drawing.Point(239, 342);
             this.LblStock.Name = "LblStock";
-            this.LblStock.Size = new System.Drawing.Size(72, 36);
+            this.LblStock.Size = new System.Drawing.Size(71, 31);
             this.LblStock.TabIndex = 61;
             this.LblStock.Text = "Stock";
             // 
             // LblGuionBajoUsuario
             // 
             this.LblGuionBajoUsuario.AutoSize = true;
+            this.LblGuionBajoUsuario.ForeColor = System.Drawing.Color.Black;
             this.LblGuionBajoUsuario.Location = new System.Drawing.Point(239, 296);
             this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
             this.LblGuionBajoUsuario.Size = new System.Drawing.Size(273, 16);
