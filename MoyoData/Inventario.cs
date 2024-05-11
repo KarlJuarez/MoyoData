@@ -265,7 +265,7 @@ namespace MoyoData
                 return;
             }
 
-            DialogResult result = MessageBox.Show("¿Quiéres borrar los productos? Se borrarán las entradas y salidas de productos"
+            DialogResult result = MessageBox.Show("¿Quieres borrar los productos? Se borrarán las entradas y salidas de productos"
                 , "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {

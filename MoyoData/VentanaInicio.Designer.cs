@@ -79,11 +79,11 @@
             // LblMenu
             // 
             this.LblMenu.AutoSize = true;
-            this.LblMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMenu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
-            this.LblMenu.Location = new System.Drawing.Point(84, 42);
+            this.LblMenu.Location = new System.Drawing.Point(80, 42);
             this.LblMenu.Name = "LblMenu";
-            this.LblMenu.Size = new System.Drawing.Size(66, 28);
+            this.LblMenu.Size = new System.Drawing.Size(55, 23);
             this.LblMenu.TabIndex = 1;
             this.LblMenu.Text = "Menú";
             // 

@@ -58,6 +58,8 @@
             this.DgvEntradaProductos.AllowUserToAddRows = false;
             this.DgvEntradaProductos.AllowUserToDeleteRows = false;
             this.DgvEntradaProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgvEntradaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvEntradaProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvEntradaProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvEntradaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvEntradaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -79,35 +81,30 @@
             this.ColumID.HeaderText = "ID";
             this.ColumID.MinimumWidth = 6;
             this.ColumID.Name = "ColumID";
-            this.ColumID.Width = 125;
             // 
             // ColumFecha
             // 
             this.ColumFecha.HeaderText = "Fecha";
             this.ColumFecha.MinimumWidth = 6;
             this.ColumFecha.Name = "ColumFecha";
-            this.ColumFecha.Width = 125;
             // 
             // ColumUsuario
             // 
             this.ColumUsuario.HeaderText = "Usuario";
             this.ColumUsuario.MinimumWidth = 6;
             this.ColumUsuario.Name = "ColumUsuario";
-            this.ColumUsuario.Width = 125;
             // 
             // ColumProducto
             // 
             this.ColumProducto.HeaderText = "Producto";
             this.ColumProducto.MinimumWidth = 6;
             this.ColumProducto.Name = "ColumProducto";
-            this.ColumProducto.Width = 125;
             // 
             // ColumCantidad
             // 
             this.ColumCantidad.HeaderText = "Cantidad";
             this.ColumCantidad.MinimumWidth = 6;
             this.ColumCantidad.Name = "ColumCantidad";
-            this.ColumCantidad.Width = 125;
             // 
             // ColumSeleccion
             // 
@@ -116,7 +113,6 @@
             this.ColumSeleccion.Name = "ColumSeleccion";
             this.ColumSeleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumSeleccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumSeleccion.Width = 125;
             // 
             // PnlTitulo
             // 

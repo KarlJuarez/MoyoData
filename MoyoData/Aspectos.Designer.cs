@@ -124,6 +124,8 @@
             // DgvCategorias
             // 
             this.DgvCategorias.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvCategorias.BackgroundColor = System.Drawing.Color.White;
             this.DgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -142,14 +144,12 @@
             this.ColumIDCategorias.HeaderText = "ID";
             this.ColumIDCategorias.MinimumWidth = 6;
             this.ColumIDCategorias.Name = "ColumIDCategorias";
-            this.ColumIDCategorias.Width = 125;
             // 
             // ColumCategoriaCategorias
             // 
             this.ColumCategoriaCategorias.HeaderText = "Categoria";
             this.ColumCategoriaCategorias.MinimumWidth = 6;
             this.ColumCategoriaCategorias.Name = "ColumCategoriaCategorias";
-            this.ColumCategoriaCategorias.Width = 125;
             // 
             // ColumSeleccionCategorias
             // 
@@ -158,7 +158,6 @@
             this.ColumSeleccionCategorias.Name = "ColumSeleccionCategorias";
             this.ColumSeleccionCategorias.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumSeleccionCategorias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumSeleccionCategorias.Width = 125;
             // 
             // BtnAgregarCategoria
             // 
@@ -216,6 +215,8 @@
             // DgvTiposProductos
             // 
             this.DgvTiposProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgvTiposProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvTiposProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvTiposProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvTiposProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvTiposProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -223,11 +224,11 @@
             this.ColumTipoProductoTiposProductos,
             this.ColumCategoriaTiposProductos,
             this.ColumSeleccionTiposProductos});
-            this.DgvTiposProductos.Location = new System.Drawing.Point(445, 315);
+            this.DgvTiposProductos.Location = new System.Drawing.Point(438, 315);
             this.DgvTiposProductos.Name = "DgvTiposProductos";
             this.DgvTiposProductos.RowHeadersWidth = 51;
             this.DgvTiposProductos.RowTemplate.Height = 24;
-            this.DgvTiposProductos.Size = new System.Drawing.Size(319, 418);
+            this.DgvTiposProductos.Size = new System.Drawing.Size(347, 418);
             this.DgvTiposProductos.TabIndex = 40;
             // 
             // ColumIDTiposProductos
@@ -235,21 +236,18 @@
             this.ColumIDTiposProductos.HeaderText = "ID";
             this.ColumIDTiposProductos.MinimumWidth = 6;
             this.ColumIDTiposProductos.Name = "ColumIDTiposProductos";
-            this.ColumIDTiposProductos.Width = 125;
             // 
             // ColumTipoProductoTiposProductos
             // 
             this.ColumTipoProductoTiposProductos.HeaderText = "Tipo de producto";
             this.ColumTipoProductoTiposProductos.MinimumWidth = 6;
             this.ColumTipoProductoTiposProductos.Name = "ColumTipoProductoTiposProductos";
-            this.ColumTipoProductoTiposProductos.Width = 125;
             // 
             // ColumCategoriaTiposProductos
             // 
             this.ColumCategoriaTiposProductos.HeaderText = "Categoria";
             this.ColumCategoriaTiposProductos.MinimumWidth = 6;
             this.ColumCategoriaTiposProductos.Name = "ColumCategoriaTiposProductos";
-            this.ColumCategoriaTiposProductos.Width = 125;
             // 
             // ColumSeleccionTiposProductos
             // 
@@ -258,11 +256,12 @@
             this.ColumSeleccionTiposProductos.Name = "ColumSeleccionTiposProductos";
             this.ColumSeleccionTiposProductos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumSeleccionTiposProductos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumSeleccionTiposProductos.Width = 125;
             // 
             // DgvUnidadesDeMedida
             // 
             this.DgvUnidadesDeMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgvUnidadesDeMedida.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvUnidadesDeMedida.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvUnidadesDeMedida.BackgroundColor = System.Drawing.Color.White;
             this.DgvUnidadesDeMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUnidadesDeMedida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -281,21 +280,18 @@
             this.ColumIDUnidadesMedidas.HeaderText = "ID";
             this.ColumIDUnidadesMedidas.MinimumWidth = 6;
             this.ColumIDUnidadesMedidas.Name = "ColumIDUnidadesMedidas";
-            this.ColumIDUnidadesMedidas.Width = 125;
             // 
             // ColumUnidadMedidadUnidadesMedidas
             // 
             this.ColumUnidadMedidadUnidadesMedidas.HeaderText = "Unidad de medida";
             this.ColumUnidadMedidadUnidadesMedidas.MinimumWidth = 6;
             this.ColumUnidadMedidadUnidadesMedidas.Name = "ColumUnidadMedidadUnidadesMedidas";
-            this.ColumUnidadMedidadUnidadesMedidas.Width = 125;
             // 
             // ColumSeleccionUnidadesMedidas
             // 
             this.ColumSeleccionUnidadesMedidas.HeaderText = "Seleccion";
             this.ColumSeleccionUnidadesMedidas.MinimumWidth = 6;
             this.ColumSeleccionUnidadesMedidas.Name = "ColumSeleccionUnidadesMedidas";
-            this.ColumSeleccionUnidadesMedidas.Width = 125;
             // 
             // LblTiposProducto
             // 

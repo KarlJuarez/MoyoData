@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarEntradaProducto));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblEntradaProducto = new System.Windows.Forms.Label();
             this.LblFecha = new System.Windows.Forms.Label();
             this.LblCantidad = new System.Windows.Forms.Label();
@@ -82,7 +84,7 @@
             this.LblFecha.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFecha.Location = new System.Drawing.Point(60, 295);
             this.LblFecha.Name = "LblFecha";
-            this.LblFecha.Size = new System.Drawing.Size(193, 36);
+            this.LblFecha.Size = new System.Drawing.Size(193, 31);
             this.LblFecha.TabIndex = 2;
             this.LblFecha.Text = "Fecha de entrega";
             // 
@@ -92,7 +94,7 @@
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCantidad.Location = new System.Drawing.Point(60, 205);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(111, 36);
+            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
             this.LblCantidad.TabIndex = 3;
             this.LblCantidad.Text = "Cantidad";
             // 
@@ -102,17 +104,21 @@
             this.LblUsuario.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsuario.Location = new System.Drawing.Point(60, 107);
             this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(98, 36);
+            this.LblUsuario.Size = new System.Drawing.Size(97, 31);
             this.LblUsuario.TabIndex = 4;
             this.LblUsuario.Text = "Usuario";
             // 
             // DtpFechaEntradaProducto
             // 
+            this.DtpFechaEntradaProducto.Checked = false;
             this.DtpFechaEntradaProducto.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpFechaEntradaProducto.Location = new System.Drawing.Point(66, 342);
+            this.DtpFechaEntradaProducto.MaxDate = new System.DateTime(2300, 1, 1, 0, 0, 0, 0);
+            this.DtpFechaEntradaProducto.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.DtpFechaEntradaProducto.Name = "DtpFechaEntradaProducto";
             this.DtpFechaEntradaProducto.Size = new System.Drawing.Size(270, 23);
             this.DtpFechaEntradaProducto.TabIndex = 6;
+            this.DtpFechaEntradaProducto.Value = new System.DateTime(2024, 5, 3, 0, 0, 0, 0);
             // 
             // BtnEntradaProductoAgregar
             // 
@@ -185,7 +191,17 @@
             // 
             this.DgvProductos.AllowUserToAddRows = false;
             this.DgvProductos.AllowUserToDeleteRows = false;
+            this.DgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvProductos.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumID,
@@ -197,7 +213,7 @@
             this.ColumSeleccion});
             this.DgvProductos.Location = new System.Drawing.Point(523, 141);
             this.DgvProductos.Name = "DgvProductos";
-            this.DgvProductos.RowHeadersWidth = 51;
+            this.DgvProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.DgvProductos.RowTemplate.Height = 24;
             this.DgvProductos.Size = new System.Drawing.Size(613, 440);
             this.DgvProductos.TabIndex = 14;
@@ -207,42 +223,36 @@
             this.ColumID.HeaderText = "ID";
             this.ColumID.MinimumWidth = 6;
             this.ColumID.Name = "ColumID";
-            this.ColumID.Width = 125;
             // 
             // ColumProducto
             // 
             this.ColumProducto.HeaderText = "Producto";
             this.ColumProducto.MinimumWidth = 6;
             this.ColumProducto.Name = "ColumProducto";
-            this.ColumProducto.Width = 125;
             // 
             // ColumStock
             // 
             this.ColumStock.HeaderText = "Stock";
             this.ColumStock.MinimumWidth = 6;
             this.ColumStock.Name = "ColumStock";
-            this.ColumStock.Width = 125;
             // 
             // ColumCantidad
             // 
             this.ColumCantidad.HeaderText = "Cantidad";
             this.ColumCantidad.MinimumWidth = 6;
             this.ColumCantidad.Name = "ColumCantidad";
-            this.ColumCantidad.Width = 125;
             // 
             // ColumTipo
             // 
             this.ColumTipo.HeaderText = "Tipo";
             this.ColumTipo.MinimumWidth = 6;
             this.ColumTipo.Name = "ColumTipo";
-            this.ColumTipo.Width = 125;
             // 
             // ColumCategoria
             // 
             this.ColumCategoria.HeaderText = "Categoría";
             this.ColumCategoria.MinimumWidth = 6;
             this.ColumCategoria.Name = "ColumCategoria";
-            this.ColumCategoria.Width = 125;
             // 
             // ColumSeleccion
             // 
@@ -251,12 +261,21 @@
             this.ColumSeleccion.Name = "ColumSeleccion";
             this.ColumSeleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumSeleccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumSeleccion.Width = 125;
             // 
             // DgvProductosSeleccionados
             // 
             this.DgvProductosSeleccionados.AllowUserToAddRows = false;
+            this.DgvProductosSeleccionados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvProductosSeleccionados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvProductosSeleccionados.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvProductosSeleccionados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DgvProductosSeleccionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductosSeleccionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumIDSeleccionados,
@@ -274,21 +293,18 @@
             this.ColumIDSeleccionados.HeaderText = "ID";
             this.ColumIDSeleccionados.MinimumWidth = 6;
             this.ColumIDSeleccionados.Name = "ColumIDSeleccionados";
-            this.ColumIDSeleccionados.Width = 125;
             // 
             // ColumProductoSeleccionados
             // 
             this.ColumProductoSeleccionados.HeaderText = "Producto";
             this.ColumProductoSeleccionados.MinimumWidth = 6;
             this.ColumProductoSeleccionados.Name = "ColumProductoSeleccionados";
-            this.ColumProductoSeleccionados.Width = 125;
             // 
             // ColumCantidadSeleccionados
             // 
             this.ColumCantidadSeleccionados.HeaderText = "Cantidad";
             this.ColumCantidadSeleccionados.MinimumWidth = 6;
             this.ColumCantidadSeleccionados.Name = "ColumCantidadSeleccionados";
-            this.ColumCantidadSeleccionados.Width = 125;
             // 
             // TbxUsuarioEntradaProducto
             // 
@@ -334,7 +350,7 @@
             this.LblProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductos.Location = new System.Drawing.Point(517, 107);
             this.LblProductos.Name = "LblProductos";
-            this.LblProductos.Size = new System.Drawing.Size(289, 36);
+            this.LblProductos.Size = new System.Drawing.Size(288, 31);
             this.LblProductos.TabIndex = 19;
             this.LblProductos.Text = "Productos en el inventario";
             // 
@@ -344,7 +360,7 @@
             this.LblProductosSeleccionados.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductosSeleccionados.Location = new System.Drawing.Point(60, 392);
             this.LblProductosSeleccionados.Name = "LblProductosSeleccionados";
-            this.LblProductosSeleccionados.Size = new System.Drawing.Size(275, 36);
+            this.LblProductosSeleccionados.Size = new System.Drawing.Size(273, 31);
             this.LblProductosSeleccionados.TabIndex = 20;
             this.LblProductosSeleccionados.Text = "Productos seleccionados";
             // 
