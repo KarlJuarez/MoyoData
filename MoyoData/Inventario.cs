@@ -235,7 +235,7 @@ namespace MoyoData
         }
         #endregion
 
-        #region Función par actualizar tabla
+        #region Función para actualizar tabla
         //-----------------------------
         // Actualizar tabla
         //-----------------------------

@@ -143,14 +143,30 @@ namespace MoyoData
             {
                 if (Convert.ToBoolean(row.Cells["ColumSeleccionUsuarios"].Value))
                 {
+                    MySqlCommand mySqlCommand = new MySqlCommand();
+                    if (row.Cells["ColumRolUsuarios"].Value.ToString() == "Administrador")
+                    {
+                        int idrol = roles.IndexOf(Convert.ToString(row.Cells["ColumRolUsuarios"].Value)) + 1;
+
+                        consulta = "Select Count(*) from TUsuarios where TRoles_idrol = " + idrol;
+
+                        mySqlCommand = new MySqlCommand(consulta);
+                        mySqlCommand.Connection = conexion.Conectar();
+                        int NumeroFilas = Convert.ToInt32( mySqlCommand.ExecuteScalar());
+
+                        if (NumeroFilas <= 1)
+                        {
+                            MessageBox.Show("Único usuario administrador.\nDebe existir por lo menos un administrador", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
+
                     id = Convert.ToInt32(row.Cells["ColumIDUsuarios"].Value);
 
-                    MySqlDataReader mySqlDataReader = null;
                     consulta = "Select * from TSalidaProductos where TUsuarios_idUsuario = " + id;
-
-                    MySqlCommand mySqlCommand = new MySqlCommand(consulta);
+                    mySqlCommand = new MySqlCommand(consulta);
                     mySqlCommand.Connection = conexion.Conectar();
-                    mySqlDataReader = mySqlCommand.ExecuteReader();
+                    MySqlDataReader mySqlDataReader = mySqlCommand.ExecuteReader();
 
                     if (mySqlDataReader.HasRows)
                     {
@@ -207,7 +223,6 @@ namespace MoyoData
                     MySqlCommand mySqlCommandBorrar = new MySqlCommand(consulta);
                     mySqlCommandBorrar.Connection = conexion.Conectar();
                     mySqlCommandBorrar.ExecuteNonQuery();
-
                 }
             }
             ActualizarUsuarios();
