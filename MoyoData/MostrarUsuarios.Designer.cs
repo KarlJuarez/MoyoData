@@ -35,15 +35,15 @@
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.ColumIDUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumUsuarioUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumPasswordUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumRolUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionUsuarios = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnEliminarUsuario = new System.Windows.Forms.Button();
             this.BtnEditarUsuario = new System.Windows.Forms.Button();
             this.PnlAgregarProdcuto = new System.Windows.Forms.Panel();
             this.BtnAgregarUsuario = new System.Windows.Forms.Button();
+            this.ColumSeleccionUsuarios = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumIDUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumUsuarioUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumPasswordUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumRolUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -112,56 +112,23 @@
             // 
             this.DgvUsuarios.AllowUserToAddRows = false;
             this.DgvUsuarios.AllowUserToDeleteRows = false;
+            this.DgvUsuarios.AllowUserToResizeColumns = false;
+            this.DgvUsuarios.AllowUserToResizeRows = false;
             this.DgvUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumSeleccionUsuarios,
             this.ColumIDUsuarios,
             this.ColumUsuarioUsuarios,
             this.ColumPasswordUsuarios,
-            this.ColumRolUsuarios,
-            this.ColumSeleccionUsuarios});
+            this.ColumRolUsuarios});
             this.DgvUsuarios.Location = new System.Drawing.Point(49, 280);
             this.DgvUsuarios.Name = "DgvUsuarios";
             this.DgvUsuarios.RowHeadersWidth = 51;
             this.DgvUsuarios.RowTemplate.Height = 24;
             this.DgvUsuarios.Size = new System.Drawing.Size(1084, 482);
             this.DgvUsuarios.TabIndex = 17;
-            // 
-            // ColumIDUsuarios
-            // 
-            this.ColumIDUsuarios.HeaderText = "ID";
-            this.ColumIDUsuarios.MinimumWidth = 6;
-            this.ColumIDUsuarios.Name = "ColumIDUsuarios";
-            this.ColumIDUsuarios.Width = 125;
-            // 
-            // ColumUsuarioUsuarios
-            // 
-            this.ColumUsuarioUsuarios.HeaderText = "Usuario";
-            this.ColumUsuarioUsuarios.MinimumWidth = 6;
-            this.ColumUsuarioUsuarios.Name = "ColumUsuarioUsuarios";
-            this.ColumUsuarioUsuarios.Width = 125;
-            // 
-            // ColumPasswordUsuarios
-            // 
-            this.ColumPasswordUsuarios.HeaderText = "Contraseña";
-            this.ColumPasswordUsuarios.MinimumWidth = 6;
-            this.ColumPasswordUsuarios.Name = "ColumPasswordUsuarios";
-            this.ColumPasswordUsuarios.Width = 125;
-            // 
-            // ColumRolUsuarios
-            // 
-            this.ColumRolUsuarios.HeaderText = "Rol";
-            this.ColumRolUsuarios.MinimumWidth = 6;
-            this.ColumRolUsuarios.Name = "ColumRolUsuarios";
-            this.ColumRolUsuarios.Width = 125;
-            // 
-            // ColumSeleccionUsuarios
-            // 
-            this.ColumSeleccionUsuarios.HeaderText = "Selección";
-            this.ColumSeleccionUsuarios.MinimumWidth = 6;
-            this.ColumSeleccionUsuarios.Name = "ColumSeleccionUsuarios";
-            this.ColumSeleccionUsuarios.Width = 125;
             // 
             // BtnEliminarUsuario
             // 
@@ -233,6 +200,41 @@
             this.BtnAgregarUsuario.UseVisualStyleBackColor = false;
             this.BtnAgregarUsuario.Click += new System.EventHandler(this.BtnAgregarUsuario_Click);
             // 
+            // ColumSeleccionUsuarios
+            // 
+            this.ColumSeleccionUsuarios.HeaderText = "Selección";
+            this.ColumSeleccionUsuarios.MinimumWidth = 6;
+            this.ColumSeleccionUsuarios.Name = "ColumSeleccionUsuarios";
+            this.ColumSeleccionUsuarios.Width = 125;
+            // 
+            // ColumIDUsuarios
+            // 
+            this.ColumIDUsuarios.HeaderText = "ID";
+            this.ColumIDUsuarios.MinimumWidth = 6;
+            this.ColumIDUsuarios.Name = "ColumIDUsuarios";
+            this.ColumIDUsuarios.Width = 125;
+            // 
+            // ColumUsuarioUsuarios
+            // 
+            this.ColumUsuarioUsuarios.HeaderText = "Usuario";
+            this.ColumUsuarioUsuarios.MinimumWidth = 6;
+            this.ColumUsuarioUsuarios.Name = "ColumUsuarioUsuarios";
+            this.ColumUsuarioUsuarios.Width = 125;
+            // 
+            // ColumPasswordUsuarios
+            // 
+            this.ColumPasswordUsuarios.HeaderText = "Contraseña";
+            this.ColumPasswordUsuarios.MinimumWidth = 6;
+            this.ColumPasswordUsuarios.Name = "ColumPasswordUsuarios";
+            this.ColumPasswordUsuarios.Width = 125;
+            // 
+            // ColumRolUsuarios
+            // 
+            this.ColumRolUsuarios.HeaderText = "Rol";
+            this.ColumRolUsuarios.MinimumWidth = 6;
+            this.ColumRolUsuarios.Name = "ColumRolUsuarios";
+            this.ColumRolUsuarios.Width = 125;
+            // 
             // MostrarUsuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -273,10 +275,10 @@
         private System.Windows.Forms.Button BtnEditarUsuario;
         private System.Windows.Forms.Panel PnlAgregarProdcuto;
         private System.Windows.Forms.Button BtnAgregarUsuario;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumUsuarioUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumPasswordUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumRolUsuarios;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionUsuarios;
     }
 }

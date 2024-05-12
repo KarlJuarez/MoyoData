@@ -32,6 +32,10 @@ namespace MoyoData
             InitializeComponent();
             CargarRoles();
             CargarUsuarios();
+            DgvUsuarios.Columns[1].ReadOnly = true;
+            DgvUsuarios.Columns[2].ReadOnly = true;
+            DgvUsuarios.Columns[3].ReadOnly = true;
+            DgvUsuarios.Columns[4].ReadOnly = true;
         }
 
         //----------------------
@@ -93,7 +97,7 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                DgvUsuarios.Rows.Add(mySqlDataReader["idUsuario"].ToString(), mySqlDataReader["Usuario"].ToString(), mySqlDataReader["Password"].ToString(), roles[Convert.ToInt32(mySqlDataReader["TRoles_idRol"]) - 1], false);
+                DgvUsuarios.Rows.Add(false, mySqlDataReader["idUsuario"].ToString(), mySqlDataReader["Usuario"].ToString(), mySqlDataReader["Password"].ToString(), roles[Convert.ToInt32(mySqlDataReader["TRoles_idRol"]) - 1]);
             }
 
             mySqlDataReader.Close();
