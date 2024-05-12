@@ -47,6 +47,7 @@
             // CbxCategoriaTipoProducto
             // 
             this.CbxCategoriaTipoProducto.BackColor = System.Drawing.Color.White;
+            this.CbxCategoriaTipoProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategoriaTipoProducto.FormattingEnabled = true;
             this.CbxCategoriaTipoProducto.Location = new System.Drawing.Point(479, 233);
             this.CbxCategoriaTipoProducto.Name = "CbxCategoriaTipoProducto";

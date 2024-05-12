@@ -61,7 +61,7 @@
             this.TbxProductoAgregarProducto.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxProductoAgregarProducto.ForeColor = System.Drawing.Color.DimGray;
             this.TbxProductoAgregarProducto.Location = new System.Drawing.Point(213, 296);
-            this.TbxProductoAgregarProducto.MaxLength = 60;
+            this.TbxProductoAgregarProducto.MaxLength = 100;
             this.TbxProductoAgregarProducto.Name = "TbxProductoAgregarProducto";
             this.TbxProductoAgregarProducto.ShortcutsEnabled = false;
             this.TbxProductoAgregarProducto.Size = new System.Drawing.Size(260, 21);
@@ -77,7 +77,7 @@
             this.LblProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProducto.Location = new System.Drawing.Point(206, 247);
             this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(110, 31);
+            this.LblProducto.Size = new System.Drawing.Size(111, 36);
             this.LblProducto.TabIndex = 35;
             this.LblProducto.Text = "Producto";
             // 
@@ -98,7 +98,7 @@
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCantidad.Location = new System.Drawing.Point(659, 247);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
+            this.LblCantidad.Size = new System.Drawing.Size(111, 36);
             this.LblCantidad.TabIndex = 37;
             this.LblCantidad.Text = "Cantidad";
             // 
@@ -121,6 +121,7 @@
             // CbxUnidadesMedidasAgregarProducto
             // 
             this.CbxUnidadesMedidasAgregarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxUnidadesMedidasAgregarProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxUnidadesMedidasAgregarProducto.FormattingEnabled = true;
             this.CbxUnidadesMedidasAgregarProducto.Location = new System.Drawing.Point(665, 404);
             this.CbxUnidadesMedidasAgregarProducto.Name = "CbxUnidadesMedidasAgregarProducto";
@@ -133,13 +134,14 @@
             this.LblUnidadesMedida.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUnidadesMedida.Location = new System.Drawing.Point(659, 350);
             this.LblUnidadesMedida.Name = "LblUnidadesMedida";
-            this.LblUnidadesMedida.Size = new System.Drawing.Size(209, 31);
+            this.LblUnidadesMedida.Size = new System.Drawing.Size(210, 36);
             this.LblUnidadesMedida.TabIndex = 40;
             this.LblUnidadesMedida.Text = "Unidad de medida";
             // 
             // CbxCategoriasAgregarProducto
             // 
             this.CbxCategoriasAgregarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxCategoriasAgregarProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategoriasAgregarProducto.FormattingEnabled = true;
             this.CbxCategoriasAgregarProducto.Location = new System.Drawing.Point(212, 488);
             this.CbxCategoriasAgregarProducto.Name = "CbxCategoriasAgregarProducto";
@@ -153,13 +155,14 @@
             this.LblCategoria.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCategoria.Location = new System.Drawing.Point(206, 443);
             this.LblCategoria.Name = "LblCategoria";
-            this.LblCategoria.Size = new System.Drawing.Size(114, 31);
+            this.LblCategoria.Size = new System.Drawing.Size(115, 36);
             this.LblCategoria.TabIndex = 42;
             this.LblCategoria.Text = "Categoría";
             // 
             // CbxTipoProductoAgregarProducto
             // 
             this.CbxTipoProductoAgregarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxTipoProductoAgregarProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxTipoProductoAgregarProducto.FormattingEnabled = true;
             this.CbxTipoProductoAgregarProducto.Location = new System.Drawing.Point(665, 488);
             this.CbxTipoProductoAgregarProducto.Name = "CbxTipoProductoAgregarProducto";
@@ -172,7 +175,7 @@
             this.LblTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTipoProducto.Location = new System.Drawing.Point(659, 443);
             this.LblTipoProducto.Name = "LblTipoProducto";
-            this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
+            this.LblTipoProducto.Size = new System.Drawing.Size(195, 36);
             this.LblTipoProducto.TabIndex = 44;
             this.LblTipoProducto.Text = "Tipo de producto";
             // 
@@ -193,7 +196,7 @@
             this.LblLimite.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLimite.Location = new System.Drawing.Point(206, 350);
             this.LblLimite.Name = "LblLimite";
-            this.LblLimite.Size = new System.Drawing.Size(267, 31);
+            this.LblLimite.Size = new System.Drawing.Size(268, 36);
             this.LblLimite.TabIndex = 46;
             this.LblLimite.Text = "Límite al sacar producto";
             // 

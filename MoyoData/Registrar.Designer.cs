@@ -120,6 +120,7 @@
             // CbxRegistrarRol
             // 
             this.CbxRegistrarRol.BackColor = System.Drawing.Color.White;
+            this.CbxRegistrarRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxRegistrarRol.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.CbxRegistrarRol.FormattingEnabled = true;
             this.CbxRegistrarRol.Location = new System.Drawing.Point(230, 353);

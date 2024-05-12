@@ -75,13 +75,14 @@
             this.LblLimite.ForeColor = System.Drawing.Color.Black;
             this.LblLimite.Location = new System.Drawing.Point(236, 434);
             this.LblLimite.Name = "LblLimite";
-            this.LblLimite.Size = new System.Drawing.Size(267, 31);
+            this.LblLimite.Size = new System.Drawing.Size(268, 36);
             this.LblLimite.TabIndex = 59;
             this.LblLimite.Text = "Límite al sacar producto";
             // 
             // CbxTipoProductoEditarProducto
             // 
             this.CbxTipoProductoEditarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxTipoProductoEditarProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxTipoProductoEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.CbxTipoProductoEditarProducto.FormattingEnabled = true;
             this.CbxTipoProductoEditarProducto.Location = new System.Drawing.Point(699, 485);
@@ -96,13 +97,14 @@
             this.LblTipoProducto.ForeColor = System.Drawing.Color.Black;
             this.LblTipoProducto.Location = new System.Drawing.Point(690, 431);
             this.LblTipoProducto.Name = "LblTipoProducto";
-            this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
+            this.LblTipoProducto.Size = new System.Drawing.Size(195, 36);
             this.LblTipoProducto.TabIndex = 57;
             this.LblTipoProducto.Text = "Tipo de producto";
             // 
             // CbxCategoriasEditarProducto
             // 
             this.CbxCategoriasEditarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxCategoriasEditarProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategoriasEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.CbxCategoriasEditarProducto.FormattingEnabled = true;
             this.CbxCategoriasEditarProducto.Location = new System.Drawing.Point(245, 577);
@@ -118,13 +120,14 @@
             this.LblCategorias.ForeColor = System.Drawing.Color.Black;
             this.LblCategorias.Location = new System.Drawing.Point(238, 523);
             this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(114, 31);
+            this.LblCategorias.Size = new System.Drawing.Size(115, 36);
             this.LblCategorias.TabIndex = 55;
             this.LblCategorias.Text = "Categoría";
             // 
             // CbxUnidadesMedidasEditarProducto
             // 
             this.CbxUnidadesMedidasEditarProducto.BackColor = System.Drawing.Color.White;
+            this.CbxUnidadesMedidasEditarProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxUnidadesMedidasEditarProducto.ForeColor = System.Drawing.Color.Black;
             this.CbxUnidadesMedidasEditarProducto.FormattingEnabled = true;
             this.CbxUnidadesMedidasEditarProducto.Location = new System.Drawing.Point(699, 392);
@@ -139,7 +142,7 @@
             this.LblUnidadesMedida.ForeColor = System.Drawing.Color.Black;
             this.LblUnidadesMedida.Location = new System.Drawing.Point(692, 338);
             this.LblUnidadesMedida.Name = "LblUnidadesMedida";
-            this.LblUnidadesMedida.Size = new System.Drawing.Size(209, 31);
+            this.LblUnidadesMedida.Size = new System.Drawing.Size(210, 36);
             this.LblUnidadesMedida.TabIndex = 53;
             this.LblUnidadesMedida.Text = "Unidad de medida";
             // 
@@ -176,7 +179,7 @@
             this.LblCantidad.ForeColor = System.Drawing.Color.Black;
             this.LblCantidad.Location = new System.Drawing.Point(690, 235);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
+            this.LblCantidad.Size = new System.Drawing.Size(111, 36);
             this.LblCantidad.TabIndex = 50;
             this.LblCantidad.Text = "Cantidad";
             // 
@@ -187,7 +190,7 @@
             this.TbxProductoEditarProducto.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxProductoEditarProducto.ForeColor = System.Drawing.Color.DimGray;
             this.TbxProductoEditarProducto.Location = new System.Drawing.Point(243, 287);
-            this.TbxProductoEditarProducto.MaxLength = 100;
+            this.TbxProductoEditarProducto.MaxLength = 60;
             this.TbxProductoEditarProducto.Name = "TbxProductoEditarProducto";
             this.TbxProductoEditarProducto.ShortcutsEnabled = false;
             this.TbxProductoEditarProducto.Size = new System.Drawing.Size(267, 21);
@@ -204,7 +207,7 @@
             this.LblProducto.ForeColor = System.Drawing.Color.Black;
             this.LblProducto.Location = new System.Drawing.Point(237, 235);
             this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(110, 31);
+            this.LblProducto.Size = new System.Drawing.Size(111, 36);
             this.LblProducto.TabIndex = 48;
             this.LblProducto.Text = "Producto";
             // 
@@ -226,7 +229,7 @@
             this.LblStock.ForeColor = System.Drawing.Color.Black;
             this.LblStock.Location = new System.Drawing.Point(239, 342);
             this.LblStock.Name = "LblStock";
-            this.LblStock.Size = new System.Drawing.Size(71, 31);
+            this.LblStock.Size = new System.Drawing.Size(72, 36);
             this.LblStock.TabIndex = 61;
             this.LblStock.Text = "Stock";
             // 

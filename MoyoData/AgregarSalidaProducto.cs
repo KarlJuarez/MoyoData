@@ -31,6 +31,8 @@ namespace MoyoData
             InitializeComponent();
             ObtenerCategoria();
             SeleccionarProductos();
+            DtpFechaSalidaProducto.MinDate = DateTime.Now;
+            DtpFechaSalidaProducto.MaxDate = DateTime.Now;
         }
 
         //--------------------------------

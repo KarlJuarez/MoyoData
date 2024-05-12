@@ -136,6 +136,7 @@
             // CbxEditarRol
             // 
             this.CbxEditarRol.BackColor = System.Drawing.Color.White;
+            this.CbxEditarRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxEditarRol.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.CbxEditarRol.FormattingEnabled = true;
             this.CbxEditarRol.Location = new System.Drawing.Point(802, 179);
