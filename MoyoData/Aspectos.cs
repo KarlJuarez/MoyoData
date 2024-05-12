@@ -31,8 +31,15 @@ namespace MoyoData
         {
             InitializeComponent();
             CargarCategorias();
+            DgvCategorias.Columns[1].ReadOnly = true;
+            DgvCategorias.Columns[2].ReadOnly = true;
             CargarTiposProductos();
+            DgvTiposProductos.Columns[1].ReadOnly = true;
+            DgvTiposProductos.Columns[2].ReadOnly = true;
+            DgvTiposProductos.Columns[3].ReadOnly = true;
             CargarUnidadesMedidas();
+            DgvUnidadesDeMedida.Columns[1].ReadOnly = true;
+            DgvUnidadesDeMedida.Columns[2].ReadOnly = true;
             SeleccionarRoles();
             this.usuario = usuario;
             idRol = roles.Find(p => p.rol == "Administrador").id.ToString();
@@ -109,9 +116,10 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                DgvCategorias.Rows.Add(mySqlDataReader["idCategoria"].ToString(), mySqlDataReader["Categoria"].ToString(), false);
+                DgvCategorias.Rows.Add(false, mySqlDataReader["idCategoria"].ToString(), mySqlDataReader["Categoria"].ToString());
                 categorias.Add(mySqlDataReader["Categoria"].ToString());
             }
+
 
             mySqlDataReader.Close();
         }
@@ -139,7 +147,7 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                DgvTiposProductos.Rows.Add(mySqlDataReader["idTipoProducto"].ToString(), mySqlDataReader["TipoProducto"].ToString(), categorias[Convert.ToInt32(mySqlDataReader["TCategorias_idCategoria"])-1]);
+                DgvTiposProductos.Rows.Add(false, mySqlDataReader["idTipoProducto"].ToString(), mySqlDataReader["TipoProducto"].ToString(), categorias[Convert.ToInt32(mySqlDataReader["TCategorias_idCategoria"])-1]);
             }
 
             mySqlDataReader.Close();
@@ -168,7 +176,7 @@ namespace MoyoData
 
             while (mySqlDataReader.Read())
             {
-                DgvUnidadesDeMedida.Rows.Add(mySqlDataReader["idUnidadMedida"].ToString(), mySqlDataReader["UnidadMedida"].ToString(), false);
+                DgvUnidadesDeMedida.Rows.Add(false, mySqlDataReader["idUnidadMedida"].ToString(), mySqlDataReader["UnidadMedida"].ToString());
             }
 
             mySqlDataReader.Close();
@@ -200,7 +208,7 @@ namespace MoyoData
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccionCategorias"].Value)).Count();
             if (totalSeleccion <= 0)
             {
-                MessageBox.Show("Seleccione alguna unidad de medida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione alguna categoría", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 

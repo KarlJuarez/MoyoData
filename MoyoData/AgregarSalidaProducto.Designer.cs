@@ -38,13 +38,6 @@
             this.ColumProductosSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCantidadSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgvProductos = new System.Windows.Forms.DataGridView();
-            this.ColumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnSalidaProductoHacerPrestamo = new System.Windows.Forms.Button();
             this.BtnSalidaProductoAgregar = new System.Windows.Forms.Button();
             this.DtpFechaSalidaProducto = new System.Windows.Forms.DateTimePicker();
@@ -56,6 +49,13 @@
             this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
             this.LblProductosSeleccionados = new System.Windows.Forms.Label();
             this.LblProductos = new System.Windows.Forms.Label();
+            this.ColumSeleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxNombreEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
@@ -115,6 +115,7 @@
             // 
             this.DgvProductosSeleccionados.AllowUserToAddRows = false;
             this.DgvProductosSeleccionados.AllowUserToDeleteRows = false;
+            this.DgvProductosSeleccionados.AllowUserToResizeRows = false;
             this.DgvProductosSeleccionados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProductosSeleccionados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvProductosSeleccionados.BackgroundColor = System.Drawing.Color.White;
@@ -125,6 +126,7 @@
             this.ColumCantidadSeleccionados});
             this.DgvProductosSeleccionados.Location = new System.Drawing.Point(64, 435);
             this.DgvProductosSeleccionados.Name = "DgvProductosSeleccionados";
+            this.DgvProductosSeleccionados.ReadOnly = true;
             this.DgvProductosSeleccionados.RowHeadersWidth = 51;
             this.DgvProductosSeleccionados.RowTemplate.Height = 24;
             this.DgvProductosSeleccionados.Size = new System.Drawing.Size(426, 249);
@@ -152,68 +154,26 @@
             // 
             this.DgvProductos.AllowUserToAddRows = false;
             this.DgvProductos.AllowUserToDeleteRows = false;
+            this.DgvProductos.AllowUserToResizeColumns = false;
+            this.DgvProductos.AllowUserToResizeRows = false;
             this.DgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumSeleccion,
             this.ColumID,
             this.ColumProducto,
             this.ColumStock,
             this.ColumLimite,
             this.ColumTipo,
-            this.ColumCategoria,
-            this.ColumSeleccion});
+            this.ColumCategoria});
             this.DgvProductos.Location = new System.Drawing.Point(521, 139);
             this.DgvProductos.Name = "DgvProductos";
             this.DgvProductos.RowHeadersWidth = 51;
             this.DgvProductos.RowTemplate.Height = 24;
             this.DgvProductos.Size = new System.Drawing.Size(613, 440);
             this.DgvProductos.TabIndex = 32;
-            // 
-            // ColumID
-            // 
-            this.ColumID.HeaderText = "ID";
-            this.ColumID.MinimumWidth = 6;
-            this.ColumID.Name = "ColumID";
-            // 
-            // ColumProducto
-            // 
-            this.ColumProducto.HeaderText = "Producto";
-            this.ColumProducto.MinimumWidth = 6;
-            this.ColumProducto.Name = "ColumProducto";
-            // 
-            // ColumStock
-            // 
-            this.ColumStock.HeaderText = "Stock";
-            this.ColumStock.MinimumWidth = 6;
-            this.ColumStock.Name = "ColumStock";
-            // 
-            // ColumLimite
-            // 
-            this.ColumLimite.HeaderText = "Limite";
-            this.ColumLimite.MinimumWidth = 6;
-            this.ColumLimite.Name = "ColumLimite";
-            // 
-            // ColumTipo
-            // 
-            this.ColumTipo.HeaderText = "Tipo";
-            this.ColumTipo.MinimumWidth = 6;
-            this.ColumTipo.Name = "ColumTipo";
-            // 
-            // ColumCategoria
-            // 
-            this.ColumCategoria.HeaderText = "Categoría";
-            this.ColumCategoria.MinimumWidth = 6;
-            this.ColumCategoria.Name = "ColumCategoria";
-            // 
-            // ColumSeleccion
-            // 
-            this.ColumSeleccion.HeaderText = "Selección";
-            this.ColumSeleccion.MinimumWidth = 6;
-            this.ColumSeleccion.Name = "ColumSeleccion";
-            this.ColumSeleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumSeleccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BtnSalidaProductoHacerPrestamo
             // 
@@ -261,7 +221,7 @@
             this.LblUsuario.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsuario.Location = new System.Drawing.Point(58, 105);
             this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(97, 31);
+            this.LblUsuario.Size = new System.Drawing.Size(98, 36);
             this.LblUsuario.TabIndex = 26;
             this.LblUsuario.Text = "Usuario";
             // 
@@ -271,7 +231,7 @@
             this.LblCantidad.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCantidad.Location = new System.Drawing.Point(58, 203);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(110, 31);
+            this.LblCantidad.Size = new System.Drawing.Size(111, 36);
             this.LblCantidad.TabIndex = 25;
             this.LblCantidad.Text = "Cantidad";
             // 
@@ -281,7 +241,7 @@
             this.LblFecha.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFecha.Location = new System.Drawing.Point(58, 293);
             this.LblFecha.Name = "LblFecha";
-            this.LblFecha.Size = new System.Drawing.Size(227, 31);
+            this.LblFecha.Size = new System.Drawing.Size(228, 36);
             this.LblFecha.TabIndex = 24;
             this.LblFecha.Text = "Fecha de expedición";
             // 
@@ -327,7 +287,7 @@
             this.LblProductosSeleccionados.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductosSeleccionados.Location = new System.Drawing.Point(58, 390);
             this.LblProductosSeleccionados.Name = "LblProductosSeleccionados";
-            this.LblProductosSeleccionados.Size = new System.Drawing.Size(273, 31);
+            this.LblProductosSeleccionados.Size = new System.Drawing.Size(275, 36);
             this.LblProductosSeleccionados.TabIndex = 38;
             this.LblProductosSeleccionados.Text = "Productos seleccionados";
             // 
@@ -337,9 +297,53 @@
             this.LblProductos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductos.Location = new System.Drawing.Point(515, 105);
             this.LblProductos.Name = "LblProductos";
-            this.LblProductos.Size = new System.Drawing.Size(288, 31);
+            this.LblProductos.Size = new System.Drawing.Size(289, 36);
             this.LblProductos.TabIndex = 37;
             this.LblProductos.Text = "Productos en el inventario";
+            // 
+            // ColumSeleccion
+            // 
+            this.ColumSeleccion.HeaderText = "Selección";
+            this.ColumSeleccion.MinimumWidth = 6;
+            this.ColumSeleccion.Name = "ColumSeleccion";
+            this.ColumSeleccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ColumID
+            // 
+            this.ColumID.HeaderText = "ID";
+            this.ColumID.MinimumWidth = 6;
+            this.ColumID.Name = "ColumID";
+            // 
+            // ColumProducto
+            // 
+            this.ColumProducto.HeaderText = "Producto";
+            this.ColumProducto.MinimumWidth = 6;
+            this.ColumProducto.Name = "ColumProducto";
+            // 
+            // ColumStock
+            // 
+            this.ColumStock.HeaderText = "Stock";
+            this.ColumStock.MinimumWidth = 6;
+            this.ColumStock.Name = "ColumStock";
+            // 
+            // ColumLimite
+            // 
+            this.ColumLimite.HeaderText = "Limite";
+            this.ColumLimite.MinimumWidth = 6;
+            this.ColumLimite.Name = "ColumLimite";
+            // 
+            // ColumTipo
+            // 
+            this.ColumTipo.HeaderText = "Tipo";
+            this.ColumTipo.MinimumWidth = 6;
+            this.ColumTipo.Name = "ColumTipo";
+            // 
+            // ColumCategoria
+            // 
+            this.ColumCategoria.HeaderText = "Categoría";
+            this.ColumCategoria.MinimumWidth = 6;
+            this.ColumCategoria.Name = "ColumCategoria";
             // 
             // AgregarSalidaProducto
             // 
@@ -395,16 +399,16 @@
         private System.Windows.Forms.Label LblGuionBajoUsuario;
         private System.Windows.Forms.Label LblProductosSeleccionados;
         private System.Windows.Forms.Label LblProductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDSeleccionados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumProductosSeleccionados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidadSeleccionados;
+        private System.Windows.Forms.PictureBox PbxNombreEmpresa;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumLimite;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCategoria;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDSeleccionados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumProductosSeleccionados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidadSeleccionados;
-        private System.Windows.Forms.PictureBox PbxNombreEmpresa;
     }
 }

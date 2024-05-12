@@ -35,6 +35,11 @@ namespace MoyoData
             SeleccionarUsuarios();
             CargarDatos();
             SeleccionarRoles();
+            DgvSalidaProductos.Columns[1].ReadOnly = true;
+            DgvSalidaProductos.Columns[2].ReadOnly = true;
+            DgvSalidaProductos.Columns[3].ReadOnly = true;
+            DgvSalidaProductos.Columns[4].ReadOnly = true;
+            DgvSalidaProductos.Columns[5].ReadOnly = true;
             this.usuario = usuario;
             idRol = roles.Find(p => p.rol == "Administrador").id.ToString();
 
@@ -172,8 +177,8 @@ namespace MoyoData
             {
                 id = Convert.ToInt32(mySqlDataReader["TSalidaProductos_idSalidaProducto"]);
                 producto = productos.Find(p => p.Id == Convert.ToInt32(mySqlDataReader["TProductos_idProducto"]));
-                DgvSalidaProductos.Rows.Add(id, "", "", producto.producto,
-                                            mySqlDataReader["CantidadProducto"], false);
+                DgvSalidaProductos.Rows.Add(false, id, "", "", producto.producto,
+                                            mySqlDataReader["CantidadProducto"]);
             }
 
             mySqlDataReader.Close();

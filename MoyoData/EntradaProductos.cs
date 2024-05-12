@@ -35,6 +35,11 @@ namespace MoyoData
             SeleccionarUsuarios();
             SeleccionarRoles();
             CargarDatos();
+            DgvEntradaProductos.Columns[1].ReadOnly = true;
+            DgvEntradaProductos.Columns[2].ReadOnly = true;
+            DgvEntradaProductos.Columns[3].ReadOnly = true;
+            DgvEntradaProductos.Columns[4].ReadOnly = true;
+            DgvEntradaProductos.Columns[5].ReadOnly = true;
             this.usuario = usuario;
             idRol = roles.Find(p => p.rol == "Administrador").id.ToString();
 
@@ -172,8 +177,8 @@ namespace MoyoData
             {
                 id = Convert.ToInt32(mySqlDataReader["TEntradaProductos_idEntradaProducto"]);
                 producto = productos.Find(p => p.Id == Convert.ToInt32(mySqlDataReader["TProductos_idProducto"]));
-                DgvEntradaProductos.Rows.Add(id, "", "", producto.producto,
-                                            mySqlDataReader["CantidadProducto"], false);
+                DgvEntradaProductos.Rows.Add(false, id, "", "", producto.producto,
+                                            mySqlDataReader["CantidadProducto"]);
             }
 
             mySqlDataReader.Close();
@@ -225,7 +230,7 @@ namespace MoyoData
                 Where(p => Convert.ToBoolean(p.Cells["ColumSeleccion"].Value)).Count();
             if (totalSeleccion <= 0)
             {
-                MessageBox.Show("Seleccione alguna salida de producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seleccione alguna entrada de producto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

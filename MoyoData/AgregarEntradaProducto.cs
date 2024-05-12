@@ -123,8 +123,15 @@ namespace MoyoData
                                         Convert.ToInt32(mySqlDataReader["TUnidadesMedidas_idUnidadMedida"]),
                                         Convert.ToInt32(mySqlDataReader["TTiposProductos_idTipoProducto"]));
                 tipoProducto = SeleccionarTipoCategoria(mySqlDataReader["TTiposProductos_idTipoProducto"].ToString());
-                DgvProductos.Rows.Add(Convert.ToInt32(mySqlDataReader["idProducto"]), producto.producto, producto.stock.ToString(), producto.cantidadProducto.ToString(), tipoProducto.Item1, tipoProducto.Item2, false);
+                DgvProductos.Rows.Add(false, Convert.ToInt32(mySqlDataReader["idProducto"]), producto.producto, producto.stock.ToString(), producto.cantidadProducto.ToString(), tipoProducto.Item1, tipoProducto.Item2);
             }
+
+            DgvProductos.Columns[1].ReadOnly = true;
+            DgvProductos.Columns[2].ReadOnly = true;
+            DgvProductos.Columns[3].ReadOnly = true;
+            DgvProductos.Columns[4].ReadOnly = true;
+            DgvProductos.Columns[5].ReadOnly = true;
+            DgvProductos.Columns[6].ReadOnly = true;
 
             mySqlDataReader.Close();
         }

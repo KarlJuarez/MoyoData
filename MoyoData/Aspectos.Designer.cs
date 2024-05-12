@@ -35,27 +35,27 @@
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.DgvCategorias = new System.Windows.Forms.DataGridView();
+            this.ColumSeleccionCategorias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumIDCategorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCategoriaCategorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionCategorias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnAgregarCategoria = new System.Windows.Forms.Button();
             this.BtnEditarCategoria = new System.Windows.Forms.Button();
             this.LblCategorias = new System.Windows.Forms.Label();
             this.DgvTiposProductos = new System.Windows.Forms.DataGridView();
-            this.ColumIDTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumTipoProductoTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumCategoriaTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionTiposProductos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DgvUnidadesDeMedida = new System.Windows.Forms.DataGridView();
-            this.ColumIDUnidadesMedidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumUnidadMedidadUnidadesMedidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionUnidadesMedidas = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.LblTiposProducto = new System.Windows.Forms.Label();
             this.BtnEditarTipoProducto = new System.Windows.Forms.Button();
             this.BtnAgregarTipoPorducto = new System.Windows.Forms.Button();
             this.LblUnidadesDeMedida = new System.Windows.Forms.Label();
             this.BtnEditarUnidadDeMedida = new System.Windows.Forms.Button();
             this.BtnAgregarUnidadDeMedida = new System.Windows.Forms.Button();
+            this.ColumSeleccionTiposProductos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumIDTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumTipoProductoTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumCategoriaTiposProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumSeleccionUnidadesMedidas = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumIDUnidadesMedidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumUnidadMedidadUnidadesMedidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -123,21 +123,31 @@
             // 
             // DgvCategorias
             // 
+            this.DgvCategorias.AllowUserToAddRows = false;
+            this.DgvCategorias.AllowUserToDeleteRows = false;
             this.DgvCategorias.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvCategorias.BackgroundColor = System.Drawing.Color.White;
             this.DgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumSeleccionCategorias,
             this.ColumIDCategorias,
-            this.ColumCategoriaCategorias,
-            this.ColumSeleccionCategorias});
+            this.ColumCategoriaCategorias});
             this.DgvCategorias.Location = new System.Drawing.Point(55, 315);
             this.DgvCategorias.Name = "DgvCategorias";
             this.DgvCategorias.RowHeadersWidth = 51;
             this.DgvCategorias.RowTemplate.Height = 24;
             this.DgvCategorias.Size = new System.Drawing.Size(334, 418);
             this.DgvCategorias.TabIndex = 15;
+            // 
+            // ColumSeleccionCategorias
+            // 
+            this.ColumSeleccionCategorias.HeaderText = "Seleccion";
+            this.ColumSeleccionCategorias.MinimumWidth = 6;
+            this.ColumSeleccionCategorias.Name = "ColumSeleccionCategorias";
+            this.ColumSeleccionCategorias.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccionCategorias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // ColumIDCategorias
             // 
@@ -150,14 +160,6 @@
             this.ColumCategoriaCategorias.HeaderText = "Categoria";
             this.ColumCategoriaCategorias.MinimumWidth = 6;
             this.ColumCategoriaCategorias.Name = "ColumCategoriaCategorias";
-            // 
-            // ColumSeleccionCategorias
-            // 
-            this.ColumSeleccionCategorias.HeaderText = "Seleccion";
-            this.ColumSeleccionCategorias.MinimumWidth = 6;
-            this.ColumSeleccionCategorias.Name = "ColumSeleccionCategorias";
-            this.ColumSeleccionCategorias.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumSeleccionCategorias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BtnAgregarCategoria
             // 
@@ -208,22 +210,24 @@
             this.LblCategorias.ForeColor = System.Drawing.Color.Black;
             this.LblCategorias.Location = new System.Drawing.Point(149, 217);
             this.LblCategorias.Name = "LblCategorias";
-            this.LblCategorias.Size = new System.Drawing.Size(125, 31);
+            this.LblCategorias.Size = new System.Drawing.Size(126, 36);
             this.LblCategorias.TabIndex = 39;
             this.LblCategorias.Text = "Categorías";
             // 
             // DgvTiposProductos
             // 
+            this.DgvTiposProductos.AllowUserToAddRows = false;
+            this.DgvTiposProductos.AllowUserToDeleteRows = false;
             this.DgvTiposProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvTiposProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvTiposProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvTiposProductos.BackgroundColor = System.Drawing.Color.White;
             this.DgvTiposProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvTiposProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumSeleccionTiposProductos,
             this.ColumIDTiposProductos,
             this.ColumTipoProductoTiposProductos,
-            this.ColumCategoriaTiposProductos,
-            this.ColumSeleccionTiposProductos});
+            this.ColumCategoriaTiposProductos});
             this.DgvTiposProductos.Location = new System.Drawing.Point(438, 315);
             this.DgvTiposProductos.Name = "DgvTiposProductos";
             this.DgvTiposProductos.RowHeadersWidth = 51;
@@ -231,67 +235,25 @@
             this.DgvTiposProductos.Size = new System.Drawing.Size(347, 418);
             this.DgvTiposProductos.TabIndex = 40;
             // 
-            // ColumIDTiposProductos
-            // 
-            this.ColumIDTiposProductos.HeaderText = "ID";
-            this.ColumIDTiposProductos.MinimumWidth = 6;
-            this.ColumIDTiposProductos.Name = "ColumIDTiposProductos";
-            // 
-            // ColumTipoProductoTiposProductos
-            // 
-            this.ColumTipoProductoTiposProductos.HeaderText = "Tipo de producto";
-            this.ColumTipoProductoTiposProductos.MinimumWidth = 6;
-            this.ColumTipoProductoTiposProductos.Name = "ColumTipoProductoTiposProductos";
-            // 
-            // ColumCategoriaTiposProductos
-            // 
-            this.ColumCategoriaTiposProductos.HeaderText = "Categoria";
-            this.ColumCategoriaTiposProductos.MinimumWidth = 6;
-            this.ColumCategoriaTiposProductos.Name = "ColumCategoriaTiposProductos";
-            // 
-            // ColumSeleccionTiposProductos
-            // 
-            this.ColumSeleccionTiposProductos.HeaderText = "Seleccion";
-            this.ColumSeleccionTiposProductos.MinimumWidth = 6;
-            this.ColumSeleccionTiposProductos.Name = "ColumSeleccionTiposProductos";
-            this.ColumSeleccionTiposProductos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumSeleccionTiposProductos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // DgvUnidadesDeMedida
             // 
+            this.DgvUnidadesDeMedida.AllowUserToAddRows = false;
+            this.DgvUnidadesDeMedida.AllowUserToDeleteRows = false;
             this.DgvUnidadesDeMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvUnidadesDeMedida.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvUnidadesDeMedida.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvUnidadesDeMedida.BackgroundColor = System.Drawing.Color.White;
             this.DgvUnidadesDeMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUnidadesDeMedida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumSeleccionUnidadesMedidas,
             this.ColumIDUnidadesMedidas,
-            this.ColumUnidadMedidadUnidadesMedidas,
-            this.ColumSeleccionUnidadesMedidas});
+            this.ColumUnidadMedidadUnidadesMedidas});
             this.DgvUnidadesDeMedida.Location = new System.Drawing.Point(831, 315);
             this.DgvUnidadesDeMedida.Name = "DgvUnidadesDeMedida";
             this.DgvUnidadesDeMedida.RowHeadersWidth = 51;
             this.DgvUnidadesDeMedida.RowTemplate.Height = 24;
             this.DgvUnidadesDeMedida.Size = new System.Drawing.Size(319, 418);
             this.DgvUnidadesDeMedida.TabIndex = 41;
-            // 
-            // ColumIDUnidadesMedidas
-            // 
-            this.ColumIDUnidadesMedidas.HeaderText = "ID";
-            this.ColumIDUnidadesMedidas.MinimumWidth = 6;
-            this.ColumIDUnidadesMedidas.Name = "ColumIDUnidadesMedidas";
-            // 
-            // ColumUnidadMedidadUnidadesMedidas
-            // 
-            this.ColumUnidadMedidadUnidadesMedidas.HeaderText = "Unidad de medida";
-            this.ColumUnidadMedidadUnidadesMedidas.MinimumWidth = 6;
-            this.ColumUnidadMedidadUnidadesMedidas.Name = "ColumUnidadMedidadUnidadesMedidas";
-            // 
-            // ColumSeleccionUnidadesMedidas
-            // 
-            this.ColumSeleccionUnidadesMedidas.HeaderText = "Seleccion";
-            this.ColumSeleccionUnidadesMedidas.MinimumWidth = 6;
-            this.ColumSeleccionUnidadesMedidas.Name = "ColumSeleccionUnidadesMedidas";
             // 
             // LblTiposProducto
             // 
@@ -302,7 +264,7 @@
             this.LblTiposProducto.ForeColor = System.Drawing.Color.Black;
             this.LblTiposProducto.Location = new System.Drawing.Point(515, 217);
             this.LblTiposProducto.Name = "LblTiposProducto";
-            this.LblTiposProducto.Size = new System.Drawing.Size(206, 31);
+            this.LblTiposProducto.Size = new System.Drawing.Size(206, 36);
             this.LblTiposProducto.TabIndex = 44;
             this.LblTiposProducto.Text = "Tipos de producto";
             // 
@@ -355,7 +317,7 @@
             this.LblUnidadesDeMedida.ForeColor = System.Drawing.Color.Black;
             this.LblUnidadesDeMedida.Location = new System.Drawing.Point(895, 217);
             this.LblUnidadesDeMedida.Name = "LblUnidadesDeMedida";
-            this.LblUnidadesDeMedida.Size = new System.Drawing.Size(232, 31);
+            this.LblUnidadesDeMedida.Size = new System.Drawing.Size(233, 36);
             this.LblUnidadesDeMedida.TabIndex = 47;
             this.LblUnidadesDeMedida.Text = "Unidades de medida";
             // 
@@ -398,6 +360,50 @@
             this.BtnAgregarUnidadDeMedida.Text = "Agregar";
             this.BtnAgregarUnidadDeMedida.UseVisualStyleBackColor = false;
             this.BtnAgregarUnidadDeMedida.Click += new System.EventHandler(this.BtnAgregarUnidadDeMedida_Click);
+            // 
+            // ColumSeleccionTiposProductos
+            // 
+            this.ColumSeleccionTiposProductos.HeaderText = "Seleccion";
+            this.ColumSeleccionTiposProductos.MinimumWidth = 6;
+            this.ColumSeleccionTiposProductos.Name = "ColumSeleccionTiposProductos";
+            this.ColumSeleccionTiposProductos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccionTiposProductos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ColumIDTiposProductos
+            // 
+            this.ColumIDTiposProductos.HeaderText = "ID";
+            this.ColumIDTiposProductos.MinimumWidth = 6;
+            this.ColumIDTiposProductos.Name = "ColumIDTiposProductos";
+            // 
+            // ColumTipoProductoTiposProductos
+            // 
+            this.ColumTipoProductoTiposProductos.HeaderText = "Tipo de producto";
+            this.ColumTipoProductoTiposProductos.MinimumWidth = 6;
+            this.ColumTipoProductoTiposProductos.Name = "ColumTipoProductoTiposProductos";
+            // 
+            // ColumCategoriaTiposProductos
+            // 
+            this.ColumCategoriaTiposProductos.HeaderText = "Categoria";
+            this.ColumCategoriaTiposProductos.MinimumWidth = 6;
+            this.ColumCategoriaTiposProductos.Name = "ColumCategoriaTiposProductos";
+            // 
+            // ColumSeleccionUnidadesMedidas
+            // 
+            this.ColumSeleccionUnidadesMedidas.HeaderText = "Seleccion";
+            this.ColumSeleccionUnidadesMedidas.MinimumWidth = 6;
+            this.ColumSeleccionUnidadesMedidas.Name = "ColumSeleccionUnidadesMedidas";
+            // 
+            // ColumIDUnidadesMedidas
+            // 
+            this.ColumIDUnidadesMedidas.HeaderText = "ID";
+            this.ColumIDUnidadesMedidas.MinimumWidth = 6;
+            this.ColumIDUnidadesMedidas.Name = "ColumIDUnidadesMedidas";
+            // 
+            // ColumUnidadMedidadUnidadesMedidas
+            // 
+            this.ColumUnidadMedidadUnidadesMedidas.HeaderText = "Unidad de medida";
+            this.ColumUnidadMedidadUnidadesMedidas.MinimumWidth = 6;
+            this.ColumUnidadMedidadUnidadesMedidas.Name = "ColumUnidadMedidadUnidadesMedidas";
             // 
             // Aspectos
             // 
@@ -454,15 +460,15 @@
         private System.Windows.Forms.Label LblUnidadesDeMedida;
         private System.Windows.Forms.Button BtnEditarUnidadDeMedida;
         private System.Windows.Forms.Button BtnAgregarUnidadDeMedida;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionCategorias;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDCategorias;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCategoriaCategorias;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionCategorias;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionTiposProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDTiposProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumTipoProductoTiposProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCategoriaTiposProductos;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionTiposProductos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionUnidadesMedidas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDUnidadesMedidas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumUnidadMedidadUnidadesMedidas;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionUnidadesMedidas;
     }
 }

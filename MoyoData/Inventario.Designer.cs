@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PnlTitulo = new System.Windows.Forms.Panel();
             this.LblRegistrar = new System.Windows.Forms.Label();
             this.PbxCerrarForm = new System.Windows.Forms.PictureBox();
@@ -42,13 +40,13 @@
             this.PnlAgregarProdcuto = new System.Windows.Forms.Panel();
             this.BtnAgregarProductoInventario = new System.Windows.Forms.Button();
             this.DgvProductos = new System.Windows.Forms.DataGridView();
+            this.ColumSeleccionInventario = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumIDInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumProductoInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumStockInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCantidadInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumTipoInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCategoriaInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumSeleccionInventario = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCerrarForm)).BeginInit();
             this.PnlLogo.SuspendLayout();
@@ -187,14 +185,15 @@
             // 
             this.DgvProductos.AllowUserToAddRows = false;
             this.DgvProductos.AllowUserToDeleteRows = false;
-            this.DgvProductos.AllowUserToOrderColumns = true;
+            this.DgvProductos.AllowUserToResizeColumns = false;
+            this.DgvProductos.AllowUserToResizeRows = false;
             this.DgvProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvProductos.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 10F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.NullValue = null;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(37)))), ((int)(((byte)(28)))));
@@ -203,39 +202,31 @@
             this.DgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumSeleccionInventario,
             this.ColumIDInventario,
             this.ColumProductoInventario,
             this.ColumStockInventario,
             this.ColumCantidadInventario,
             this.ColumTipoInventario,
-            this.ColumCategoriaInventario,
-            this.ColumSeleccionInventario});
+            this.ColumCategoriaInventario});
             this.DgvProductos.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvProductos.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvProductos.ImeMode = System.Windows.Forms.ImeMode.On;
             this.DgvProductos.Location = new System.Drawing.Point(12, 265);
             this.DgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvProductos.Name = "DgvProductos";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.DgvProductos.RowTemplate.Height = 24;
             this.DgvProductos.Size = new System.Drawing.Size(1140, 506);
             this.DgvProductos.TabIndex = 38;
             this.DgvProductos.TabStop = false;
+            // 
+            // ColumSeleccionInventario
+            // 
+            this.ColumSeleccionInventario.HeaderText = "Selección";
+            this.ColumSeleccionInventario.MinimumWidth = 6;
+            this.ColumSeleccionInventario.Name = "ColumSeleccionInventario";
+            this.ColumSeleccionInventario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumSeleccionInventario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // ColumIDInventario
             // 
@@ -272,14 +263,6 @@
             this.ColumCategoriaInventario.HeaderText = "Categoría";
             this.ColumCategoriaInventario.MinimumWidth = 6;
             this.ColumCategoriaInventario.Name = "ColumCategoriaInventario";
-            // 
-            // ColumSeleccionInventario
-            // 
-            this.ColumSeleccionInventario.HeaderText = "Selección";
-            this.ColumSeleccionInventario.MinimumWidth = 6;
-            this.ColumSeleccionInventario.Name = "ColumSeleccionInventario";
-            this.ColumSeleccionInventario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumSeleccionInventario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Inventario
             // 
@@ -321,12 +304,12 @@
         private System.Windows.Forms.Panel PnlAgregarProdcuto;
         private System.Windows.Forms.DataGridView DgvProductos;
         private System.Windows.Forms.Button BtnAgregarProductoInventario;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumIDInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumProductoInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumStockInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidadInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumTipoInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCategoriaInventario;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumSeleccionInventario;
     }
 }
