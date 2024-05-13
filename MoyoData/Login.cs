@@ -178,6 +178,9 @@ namespace MoyoData
         #endregion
 
         #region Validación de diseño de campos textboxes para iniciar sesion
+
+        // TbxUsuario
+
         //-----------------------------------------------------
         // Resaltar cuando el puntero entra del
         // Textbox Usuario
@@ -203,6 +206,22 @@ namespace MoyoData
                 TbxUsuario.ForeColor= Color.DimGray;
             }
         }
+
+        //-----------------------------------------------------
+        // Validar que el campo de TbxUsuario
+        // sólo admita la entrada de letras
+        //-----------------------------------------------------
+        private void TbxUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        // TbxPassword
 
         //-----------------------------------------------------
         // Resaltar cuando el puntero entra del
@@ -232,19 +251,6 @@ namespace MoyoData
             }
         }
 
-        //-----------------------------------------------------
-        // Validar que el campo de TbxUsuario
-        // sólo admita la entrada de letras
-        //-----------------------------------------------------
-        private void TbxUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
 
         //-----------------------------------------------------
         // Validar que el campo de TbxPassword

@@ -60,7 +60,7 @@
             this.LblCategoriaTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCategoriaTipoProducto.Location = new System.Drawing.Point(473, 185);
             this.LblCategoriaTipoProducto.Name = "LblCategoriaTipoProducto";
-            this.LblCategoriaTipoProducto.Size = new System.Drawing.Size(115, 36);
+            this.LblCategoriaTipoProducto.Size = new System.Drawing.Size(114, 31);
             this.LblCategoriaTipoProducto.TabIndex = 11;
             this.LblCategoriaTipoProducto.Text = "Categoría";
             // 
@@ -102,7 +102,7 @@
             this.LblTipoProducto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTipoProducto.Location = new System.Drawing.Point(70, 185);
             this.LblTipoProducto.Name = "LblTipoProducto";
-            this.LblTipoProducto.Size = new System.Drawing.Size(195, 36);
+            this.LblTipoProducto.Size = new System.Drawing.Size(195, 31);
             this.LblTipoProducto.TabIndex = 8;
             this.LblTipoProducto.Text = "Tipo de producto";
             // 

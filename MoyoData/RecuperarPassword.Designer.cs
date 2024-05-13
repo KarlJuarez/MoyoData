@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecuperarPassword));
             this.TbxRecuperarNombres = new System.Windows.Forms.TextBox();
-            this.LblNombres = new System.Windows.Forms.Label();
+            this.LblNombreCompleto = new System.Windows.Forms.Label();
             this.LblGuionBajoUsuario = new System.Windows.Forms.Label();
             this.TbxRespuestaRecuperarPassword = new System.Windows.Forms.TextBox();
             this.LblRespuestaRecuperarPassword = new System.Windows.Forms.Label();
@@ -61,15 +61,15 @@
             this.TbxRecuperarNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxRecuperarNombres_KeyPress);
             this.TbxRecuperarNombres.Leave += new System.EventHandler(this.TbxRecuperarNombres_Leave);
             // 
-            // LblNombres
+            // LblNombreCompleto
             // 
-            this.LblNombres.AutoSize = true;
-            this.LblNombres.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
-            this.LblNombres.Location = new System.Drawing.Point(90, 193);
-            this.LblNombres.Name = "LblNombres";
-            this.LblNombres.Size = new System.Drawing.Size(266, 36);
-            this.LblNombres.TabIndex = 52;
-            this.LblNombres.Text = "Nombre(s) y Apellido(s)";
+            this.LblNombreCompleto.AutoSize = true;
+            this.LblNombreCompleto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
+            this.LblNombreCompleto.Location = new System.Drawing.Point(90, 193);
+            this.LblNombreCompleto.Name = "LblNombreCompleto";
+            this.LblNombreCompleto.Size = new System.Drawing.Size(211, 31);
+            this.LblNombreCompleto.TabIndex = 52;
+            this.LblNombreCompleto.Text = "Nombre y Apellido";
             // 
             // LblGuionBajoUsuario
             // 
@@ -103,7 +103,7 @@
             this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(437, 193);
             this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
-            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(309, 36);
+            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(308, 31);
             this.LblRespuestaRecuperarPassword.TabIndex = 60;
             this.LblRespuestaRecuperarPassword.Text = "¿Cuál es tu comida favorita?";
             // 
@@ -191,7 +191,7 @@
             this.Controls.Add(this.LblRespuestaRecuperarPassword);
             this.Controls.Add(this.LblGuionBajoRespuesta);
             this.Controls.Add(this.TbxRecuperarNombres);
-            this.Controls.Add(this.LblNombres);
+            this.Controls.Add(this.LblNombreCompleto);
             this.Controls.Add(this.LblGuionBajoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -210,7 +210,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox TbxRecuperarNombres;
-        private System.Windows.Forms.Label LblNombres;
+        private System.Windows.Forms.Label LblNombreCompleto;
         private System.Windows.Forms.Label LblGuionBajoUsuario;
         private System.Windows.Forms.TextBox TbxRespuestaRecuperarPassword;
         private System.Windows.Forms.Label LblRespuestaRecuperarPassword;

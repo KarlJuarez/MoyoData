@@ -156,7 +156,7 @@ namespace MoyoData
 
                         if (NumeroFilas <= 1)
                         {
-                            MessageBox.Show("Único usuario administrador.\nDebe existir por lo menos un administrador", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Único usuario administrador.\nDebe existir por lo menos un administrador", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             return;
                         }
                     }

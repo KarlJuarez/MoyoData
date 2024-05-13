@@ -227,7 +227,7 @@ namespace MoyoData
         //-----------------------------------------------------
         private void TbxRegistrarNombres_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -269,7 +269,7 @@ namespace MoyoData
         //-----------------------------------------------------
         private void TbxRegistrarApellidos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Sólo puede ingresar letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -306,7 +306,7 @@ namespace MoyoData
         }
 
         //-----------------------------------------------------
-        // Validar que el campo de TbxRegistrarApellidos
+        // Validar que el campo de TbxRegistrarPassword
         // sólo admita la entrada de letras y números
         //-----------------------------------------------------
         private void TbxRegistrarPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -348,7 +348,7 @@ namespace MoyoData
         }
 
         //-----------------------------------------------------
-        // Validar que el campo de TbxRegistrarApellidos
+        // Validar que el campo de TbxRegistrarPassword
         // sólo admita la entrada de letras
         //-----------------------------------------------------
         private void TbxRespuestaRecuperarPassword_KeyPress(object sender, KeyPressEventArgs e)

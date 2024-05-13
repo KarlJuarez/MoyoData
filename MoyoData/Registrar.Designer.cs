@@ -36,9 +36,9 @@
             this.BtnRegistrarUsuario = new System.Windows.Forms.Button();
             this.CbxRegistrarRol = new System.Windows.Forms.ComboBox();
             this.LblPassword = new System.Windows.Forms.Label();
-            this.LblApellidos = new System.Windows.Forms.Label();
+            this.LblApellido = new System.Windows.Forms.Label();
             this.LblRol = new System.Windows.Forms.Label();
-            this.LblNombres = new System.Windows.Forms.Label();
+            this.LblNombre = new System.Windows.Forms.Label();
             this.TbxRegistrarNombres = new System.Windows.Forms.TextBox();
             this.TbxRegistrarApellidos = new System.Windows.Forms.TextBox();
             this.TbxRegistrarPassword = new System.Windows.Forms.TextBox();
@@ -125,7 +125,7 @@
             this.CbxRegistrarRol.FormattingEnabled = true;
             this.CbxRegistrarRol.Location = new System.Drawing.Point(230, 353);
             this.CbxRegistrarRol.Name = "CbxRegistrarRol";
-            this.CbxRegistrarRol.Size = new System.Drawing.Size(309, 33);
+            this.CbxRegistrarRol.Size = new System.Drawing.Size(309, 29);
             this.CbxRegistrarRol.TabIndex = 20;
             // 
             // LblPassword
@@ -134,19 +134,19 @@
             this.LblPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPassword.Location = new System.Drawing.Point(665, 299);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(136, 36);
+            this.LblPassword.Size = new System.Drawing.Size(135, 31);
             this.LblPassword.TabIndex = 17;
             this.LblPassword.Text = "Contraseña";
             // 
-            // LblApellidos
+            // LblApellido
             // 
-            this.LblApellidos.AutoSize = true;
-            this.LblApellidos.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblApellidos.Location = new System.Drawing.Point(665, 120);
-            this.LblApellidos.Name = "LblApellidos";
-            this.LblApellidos.Size = new System.Drawing.Size(129, 36);
-            this.LblApellidos.TabIndex = 16;
-            this.LblApellidos.Text = "Apellido(s)";
+            this.LblApellido.AutoSize = true;
+            this.LblApellido.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblApellido.Location = new System.Drawing.Point(665, 120);
+            this.LblApellido.Name = "LblApellido";
+            this.LblApellido.Size = new System.Drawing.Size(101, 31);
+            this.LblApellido.TabIndex = 16;
+            this.LblApellido.Text = "Apellido";
             // 
             // LblRol
             // 
@@ -154,19 +154,19 @@
             this.LblRol.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRol.Location = new System.Drawing.Point(224, 299);
             this.LblRol.Name = "LblRol";
-            this.LblRol.Size = new System.Drawing.Size(49, 36);
+            this.LblRol.Size = new System.Drawing.Size(48, 31);
             this.LblRol.TabIndex = 15;
             this.LblRol.Text = "Rol";
             // 
-            // LblNombres
+            // LblNombre
             // 
-            this.LblNombres.AutoSize = true;
-            this.LblNombres.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombres.Location = new System.Drawing.Point(224, 120);
-            this.LblNombres.Name = "LblNombres";
-            this.LblNombres.Size = new System.Drawing.Size(129, 36);
-            this.LblNombres.TabIndex = 14;
-            this.LblNombres.Text = "Nombre(s)";
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.Location = new System.Drawing.Point(224, 120);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(101, 31);
+            this.LblNombre.TabIndex = 14;
+            this.LblNombre.Text = "Nombre";
             // 
             // TbxRegistrarNombres
             // 
@@ -224,7 +224,7 @@
             this.LblGuionBajoUsuario.AutoSize = true;
             this.LblGuionBajoUsuario.Location = new System.Drawing.Point(226, 190);
             this.LblGuionBajoUsuario.Name = "LblGuionBajoUsuario";
-            this.LblGuionBajoUsuario.Size = new System.Drawing.Size(316, 25);
+            this.LblGuionBajoUsuario.Size = new System.Drawing.Size(314, 21);
             this.LblGuionBajoUsuario.TabIndex = 37;
             this.LblGuionBajoUsuario.Text = "______________________________________";
             // 
@@ -233,7 +233,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(667, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 25);
+            this.label1.Size = new System.Drawing.Size(314, 21);
             this.label1.TabIndex = 38;
             this.label1.Text = "______________________________________";
             // 
@@ -242,7 +242,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(667, 361);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(316, 25);
+            this.label2.Size = new System.Drawing.Size(314, 21);
             this.label2.TabIndex = 39;
             this.label2.Text = "______________________________________";
             // 
@@ -269,7 +269,7 @@
             this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(224, 424);
             this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
-            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(309, 36);
+            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(308, 31);
             this.LblRespuestaRecuperarPassword.TabIndex = 40;
             this.LblRespuestaRecuperarPassword.Text = "¿Cuál es tu comida favorita?";
             // 
@@ -278,7 +278,7 @@
             this.LblGuionBajoRespuesta.AutoSize = true;
             this.LblGuionBajoRespuesta.Location = new System.Drawing.Point(226, 494);
             this.LblGuionBajoRespuesta.Name = "LblGuionBajoRespuesta";
-            this.LblGuionBajoRespuesta.Size = new System.Drawing.Size(316, 25);
+            this.LblGuionBajoRespuesta.Size = new System.Drawing.Size(314, 21);
             this.LblGuionBajoRespuesta.TabIndex = 42;
             this.LblGuionBajoRespuesta.Text = "______________________________________";
             // 
@@ -310,9 +310,9 @@
             this.Controls.Add(this.BtnRegistrarUsuario);
             this.Controls.Add(this.CbxRegistrarRol);
             this.Controls.Add(this.LblPassword);
-            this.Controls.Add(this.LblApellidos);
+            this.Controls.Add(this.LblApellido);
             this.Controls.Add(this.LblRol);
-            this.Controls.Add(this.LblNombres);
+            this.Controls.Add(this.LblNombre);
             this.Controls.Add(this.LblGuionBajoUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -339,9 +339,9 @@
         private System.Windows.Forms.Button BtnRegistrarUsuario;
         private System.Windows.Forms.ComboBox CbxRegistrarRol;
         private System.Windows.Forms.Label LblPassword;
-        private System.Windows.Forms.Label LblApellidos;
+        private System.Windows.Forms.Label LblApellido;
         private System.Windows.Forms.Label LblRol;
-        private System.Windows.Forms.Label LblNombres;
+        private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.TextBox TbxRegistrarNombres;
         private System.Windows.Forms.TextBox TbxRegistrarApellidos;
         private System.Windows.Forms.TextBox TbxRegistrarPassword;

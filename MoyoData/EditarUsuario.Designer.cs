@@ -38,7 +38,7 @@
             this.CbxEditarRol = new System.Windows.Forms.ComboBox();
             this.LblPassword = new System.Windows.Forms.Label();
             this.LblRol = new System.Windows.Forms.Label();
-            this.LblNombres = new System.Windows.Forms.Label();
+            this.LblNombreCompleto = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TbxPasswordNueva = new System.Windows.Forms.TextBox();
             this.LblPasswordNueva = new System.Windows.Forms.Label();
@@ -150,7 +150,7 @@
             this.LblPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblPassword.Location = new System.Drawing.Point(453, 123);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(136, 36);
+            this.LblPassword.Size = new System.Drawing.Size(135, 31);
             this.LblPassword.TabIndex = 44;
             this.LblPassword.Text = "Contraseña";
             // 
@@ -160,19 +160,19 @@
             this.LblRol.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblRol.Location = new System.Drawing.Point(796, 123);
             this.LblRol.Name = "LblRol";
-            this.LblRol.Size = new System.Drawing.Size(49, 36);
+            this.LblRol.Size = new System.Drawing.Size(48, 31);
             this.LblRol.TabIndex = 42;
             this.LblRol.Text = "Rol";
             // 
-            // LblNombres
+            // LblNombreCompleto
             // 
-            this.LblNombres.AutoSize = true;
-            this.LblNombres.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
-            this.LblNombres.Location = new System.Drawing.Point(39, 123);
-            this.LblNombres.Name = "LblNombres";
-            this.LblNombres.Size = new System.Drawing.Size(266, 36);
-            this.LblNombres.TabIndex = 41;
-            this.LblNombres.Text = "Nombre(s) y Apellido(s)";
+            this.LblNombreCompleto.AutoSize = true;
+            this.LblNombreCompleto.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
+            this.LblNombreCompleto.Location = new System.Drawing.Point(39, 123);
+            this.LblNombreCompleto.Name = "LblNombreCompleto";
+            this.LblNombreCompleto.Size = new System.Drawing.Size(211, 31);
+            this.LblNombreCompleto.TabIndex = 41;
+            this.LblNombreCompleto.Text = "Nombre y Apellido";
             // 
             // label2
             // 
@@ -206,7 +206,7 @@
             this.LblPasswordNueva.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblPasswordNueva.Location = new System.Drawing.Point(215, 330);
             this.LblPasswordNueva.Name = "LblPasswordNueva";
-            this.LblPasswordNueva.Size = new System.Drawing.Size(204, 36);
+            this.LblPasswordNueva.Size = new System.Drawing.Size(203, 31);
             this.LblPasswordNueva.TabIndex = 54;
             this.LblPasswordNueva.Text = "Nueva contraseña";
             // 
@@ -242,7 +242,7 @@
             this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(640, 330);
             this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
-            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(309, 36);
+            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(308, 31);
             this.LblRespuestaRecuperarPassword.TabIndex = 57;
             this.LblRespuestaRecuperarPassword.Text = "¿Cuál es tu comida favorita?";
             // 
@@ -328,7 +328,7 @@
             this.Controls.Add(this.CbxEditarRol);
             this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.LblRol);
-            this.Controls.Add(this.LblNombres);
+            this.Controls.Add(this.LblNombreCompleto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LblGuionBajoRespuesta);
             this.Controls.Add(this.label4);
@@ -356,7 +356,7 @@
         private System.Windows.Forms.ComboBox CbxEditarRol;
         private System.Windows.Forms.Label LblPassword;
         private System.Windows.Forms.Label LblRol;
-        private System.Windows.Forms.Label LblNombres;
+        private System.Windows.Forms.Label LblNombreCompleto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TbxPasswordNueva;
         private System.Windows.Forms.Label LblPasswordNueva;

@@ -176,6 +176,7 @@ namespace MoyoData
         #endregion
 
         #region Validación de campos
+
         // TbxRecuperarNombres
 
         //-----------------------------------------------------
@@ -230,6 +231,7 @@ namespace MoyoData
             {
                 TbxRespuestaRecuperarPassword.Text = "";
                 TbxRespuestaRecuperarPassword.ForeColor = Color.Black;
+                TbxRespuestaRecuperarPassword.UseSystemPasswordChar = true;
             }
         }
 
@@ -243,6 +245,7 @@ namespace MoyoData
             {
                 TbxRespuestaRecuperarPassword.Text = "Escribe aquí";
                 TbxRespuestaRecuperarPassword.ForeColor = Color.DimGray;
+                TbxRespuestaRecuperarPassword.UseSystemPasswordChar = false;
             }
         }
 
