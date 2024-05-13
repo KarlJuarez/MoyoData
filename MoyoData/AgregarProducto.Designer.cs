@@ -61,7 +61,7 @@
             this.TbxProductoAgregarProducto.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxProductoAgregarProducto.ForeColor = System.Drawing.Color.DimGray;
             this.TbxProductoAgregarProducto.Location = new System.Drawing.Point(213, 296);
-            this.TbxProductoAgregarProducto.MaxLength = 100;
+            this.TbxProductoAgregarProducto.MaxLength = 50;
             this.TbxProductoAgregarProducto.Name = "TbxProductoAgregarProducto";
             this.TbxProductoAgregarProducto.ShortcutsEnabled = false;
             this.TbxProductoAgregarProducto.Size = new System.Drawing.Size(260, 21);

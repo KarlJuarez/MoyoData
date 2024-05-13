@@ -64,7 +64,7 @@
             this.TbxCategoria.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxCategoria.ForeColor = System.Drawing.Color.DimGray;
             this.TbxCategoria.Location = new System.Drawing.Point(281, 219);
-            this.TbxCategoria.MaxLength = 45;
+            this.TbxCategoria.MaxLength = 30;
             this.TbxCategoria.Name = "TbxCategoria";
             this.TbxCategoria.ShortcutsEnabled = false;
             this.TbxCategoria.Size = new System.Drawing.Size(256, 21);

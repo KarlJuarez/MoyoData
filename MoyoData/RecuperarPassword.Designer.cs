@@ -52,6 +52,7 @@
             this.TbxRecuperarNombres.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRecuperarNombres.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRecuperarNombres.Location = new System.Drawing.Point(96, 246);
+            this.TbxRecuperarNombres.MaxLength = 40;
             this.TbxRecuperarNombres.Name = "TbxRecuperarNombres";
             this.TbxRecuperarNombres.Size = new System.Drawing.Size(253, 21);
             this.TbxRecuperarNombres.TabIndex = 63;
@@ -86,7 +87,7 @@
             this.TbxRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRespuestaRecuperarPassword.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRespuestaRecuperarPassword.Location = new System.Drawing.Point(443, 246);
-            this.TbxRespuestaRecuperarPassword.MaxLength = 20;
+            this.TbxRespuestaRecuperarPassword.MaxLength = 25;
             this.TbxRespuestaRecuperarPassword.Name = "TbxRespuestaRecuperarPassword";
             this.TbxRespuestaRecuperarPassword.ShortcutsEnabled = false;
             this.TbxRespuestaRecuperarPassword.Size = new System.Drawing.Size(258, 21);
@@ -102,9 +103,9 @@
             this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold);
             this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(437, 193);
             this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
-            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(288, 36);
+            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(309, 36);
             this.LblRespuestaRecuperarPassword.TabIndex = 60;
-            this.LblRespuestaRecuperarPassword.Text = "¿Cuál es su color favorito?";
+            this.LblRespuestaRecuperarPassword.Text = "¿Cuál es tu comida favorita?";
             // 
             // LblGuionBajoRespuesta
             // 

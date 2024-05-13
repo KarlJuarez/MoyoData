@@ -86,7 +86,7 @@
             this.TbxTipoProducto.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxTipoProducto.ForeColor = System.Drawing.Color.DimGray;
             this.TbxTipoProducto.Location = new System.Drawing.Point(76, 232);
-            this.TbxTipoProducto.MaxLength = 40;
+            this.TbxTipoProducto.MaxLength = 30;
             this.TbxTipoProducto.Name = "TbxTipoProducto";
             this.TbxTipoProducto.ShortcutsEnabled = false;
             this.TbxTipoProducto.Size = new System.Drawing.Size(270, 21);

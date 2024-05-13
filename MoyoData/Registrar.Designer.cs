@@ -175,7 +175,7 @@
             this.TbxRegistrarNombres.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarNombres.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRegistrarNombres.Location = new System.Drawing.Point(231, 185);
-            this.TbxRegistrarNombres.MaxLength = 25;
+            this.TbxRegistrarNombres.MaxLength = 20;
             this.TbxRegistrarNombres.Name = "TbxRegistrarNombres";
             this.TbxRegistrarNombres.ShortcutsEnabled = false;
             this.TbxRegistrarNombres.Size = new System.Drawing.Size(309, 21);
@@ -192,7 +192,7 @@
             this.TbxRegistrarApellidos.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarApellidos.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRegistrarApellidos.Location = new System.Drawing.Point(672, 185);
-            this.TbxRegistrarApellidos.MaxLength = 25;
+            this.TbxRegistrarApellidos.MaxLength = 19;
             this.TbxRegistrarApellidos.Name = "TbxRegistrarApellidos";
             this.TbxRegistrarApellidos.ShortcutsEnabled = false;
             this.TbxRegistrarApellidos.Size = new System.Drawing.Size(309, 21);
@@ -209,7 +209,7 @@
             this.TbxRegistrarPassword.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRegistrarPassword.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRegistrarPassword.Location = new System.Drawing.Point(672, 355);
-            this.TbxRegistrarPassword.MaxLength = 50;
+            this.TbxRegistrarPassword.MaxLength = 25;
             this.TbxRegistrarPassword.Name = "TbxRegistrarPassword";
             this.TbxRegistrarPassword.ShortcutsEnabled = false;
             this.TbxRegistrarPassword.Size = new System.Drawing.Size(309, 21);
@@ -253,7 +253,7 @@
             this.TbxRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxRespuestaRecuperarPassword.ForeColor = System.Drawing.Color.DimGray;
             this.TbxRespuestaRecuperarPassword.Location = new System.Drawing.Point(231, 489);
-            this.TbxRespuestaRecuperarPassword.MaxLength = 20;
+            this.TbxRespuestaRecuperarPassword.MaxLength = 25;
             this.TbxRespuestaRecuperarPassword.Name = "TbxRespuestaRecuperarPassword";
             this.TbxRespuestaRecuperarPassword.ShortcutsEnabled = false;
             this.TbxRespuestaRecuperarPassword.Size = new System.Drawing.Size(308, 21);
@@ -269,9 +269,9 @@
             this.LblRespuestaRecuperarPassword.Font = new System.Drawing.Font("Rosario", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRespuestaRecuperarPassword.Location = new System.Drawing.Point(224, 424);
             this.LblRespuestaRecuperarPassword.Name = "LblRespuestaRecuperarPassword";
-            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(285, 36);
+            this.LblRespuestaRecuperarPassword.Size = new System.Drawing.Size(309, 36);
             this.LblRespuestaRecuperarPassword.TabIndex = 40;
-            this.LblRespuestaRecuperarPassword.Text = "¿Cúal es tu color favorito?";
+            this.LblRespuestaRecuperarPassword.Text = "¿Cuál es tu comida favorita?";
             // 
             // LblGuionBajoRespuesta
             // 

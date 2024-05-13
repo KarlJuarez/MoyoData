@@ -121,7 +121,7 @@
             this.TbxUnidadMedida.Font = new System.Drawing.Font("Rosario", 10F);
             this.TbxUnidadMedida.ForeColor = System.Drawing.Color.DimGray;
             this.TbxUnidadMedida.Location = new System.Drawing.Point(284, 220);
-            this.TbxUnidadMedida.MaxLength = 45;
+            this.TbxUnidadMedida.MaxLength = 30;
             this.TbxUnidadMedida.Name = "TbxUnidadMedida";
             this.TbxUnidadMedida.ShortcutsEnabled = false;
             this.TbxUnidadMedida.Size = new System.Drawing.Size(256, 21);
